@@ -5,7 +5,11 @@
     background-color: var(--blue-color);
     position: sticky;
 }
-.header_menu{}
+.header_menu{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .header_menu ul{
     display: flex;
 }
