@@ -11,6 +11,9 @@
   background-color: var(--blue-color);
   position: sticky;
 }
+.header_logo{
+  display: none;
+}
 .header_menu {
   display: flex;
   align-items: center;
@@ -32,6 +35,9 @@
   font-size: 32px;
   line-height: 100%;
   color: var(--white-color);
+}
+.menu-icon{
+  display: none;
 }
 /* end header  */
 
@@ -77,7 +83,7 @@
 .our-image {
   width: 100%;
   text-align: center;
-  padding: 60px;
+  padding: 60px 0;
 }
 .our-image > img {
   width: 50%;
@@ -344,7 +350,9 @@ text-align: center;
 .text-footer{
   font-weight: 700;
 }
-
+.nav_footer{
+  display: none;
+}
 /* footer head */
 .footer_bottom{
   background: rgba(170, 191, 242, 0.15);
