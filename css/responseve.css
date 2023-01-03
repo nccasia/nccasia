@@ -133,7 +133,7 @@
   /* end .family */
 
   .ncc_project-progress {
-    padding: 28px 0;
+    padding: 28px 24px;
   }
   .ncc_project-list {
     display: grid;
