@@ -39,6 +39,9 @@
 .menu-icon {
   display: none;
 }
+.navbar-collapse{
+  display: none;
+}
 /* end header  */
 
 .about {
