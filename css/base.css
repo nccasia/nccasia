@@ -69,13 +69,13 @@
   .grid-template{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 12px 50px;
+    grid-gap: 32px 50px;
     text-align: center;
   }
 
   .grid {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1272px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 16px;
   }
