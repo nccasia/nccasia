@@ -232,7 +232,7 @@
   justify-content: center;
   padding: 48px 0 40px 0;
 }
-.ncc_project-button > button {
+.button-primary {
   font-weight: 700;
   font-size: 24px;
   line-height: 130%;
@@ -401,4 +401,41 @@
   color: var(--blue-color);
   text-align: center;
   margin-top: 16px;
+}
+/* modal */
+.modal {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7);
+}
+.modal_popup {
+  position: relative;
+  top: 50%;
+  margin: auto;
+  transform: translateY(-50%);
+  border: 3px solid var(--blue-color);
+  border-radius: 24px;
+  margin: auto;
+  padding-bottom: 40px;
+  max-width: max-content;
+  background: #f2f6fd;
+  overflow: hidden;
+}
+.modal_popup_header {
+  background: var(--blue-1);
+  line-height: 31.2px;
+  padding: 16px ;
+  text-align: center;
+}
+.modal_popup_main {
+  display: flex;
+  padding: 24px 40px 0;
+  justify-content: space-between;
+}
+.modal-input {
+  padding: 0 16px;
+  width: 536px;
+  margin-right: 24px;
 }
