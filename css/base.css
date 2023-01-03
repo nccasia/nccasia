@@ -5,6 +5,7 @@
     font-family: 'Dongle', sans-serif;
 }
 :root{
+    --blue-1:#AABFF2;
     --blue-color: #3E50AF;
     --blue-color-gp:#6572B7;
     --white-color: #FFFFFF;
@@ -78,4 +79,7 @@
     max-width: 1272px;
     margin: 0 auto;
     padding: 0 16px;
+  }
+  .hide{
+    display: none;
   }

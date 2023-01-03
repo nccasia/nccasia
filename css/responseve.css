@@ -240,6 +240,20 @@
   .footer_bottom-container {
     padding: 16px 0;
   }
+  /* popUp */
+  .modal_popup {
+    width: calc(100% - 30px);
+    padding-bottom: 24px;
+  }
+  .modal_popup_main {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px 0;
+  }
+  .modal-input {
+    width: 100%;
+    margin: 0 0 20px;
+  }
 }
 
 @media (max-width: 650px) {
