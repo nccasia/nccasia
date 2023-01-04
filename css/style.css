@@ -493,11 +493,14 @@
 
 .showPopup {
   animation: opac 0.8s;
+  display: none ;
 }
 
 .hidePopup {
   animation: show 0.8s;
   animation-fill-mode: forwards;
+  display: block !important;
+
 }
 
 @keyframes show {

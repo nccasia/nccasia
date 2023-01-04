@@ -6,22 +6,23 @@ btnMenu &&
     if (navCol.classList.contains("navbar-collapse-active")) {
       navCol.classList.add("hidePopup");
       navCol && navCol.classList.remove("navbar-collapse-active");
-      btnMenu.classList.toggle("toggled");
+      btnMenu.classList.remove("toggled");
     } else {
-      navCol.style.display = "block";
+    
       navCol && navCol.classList.add("navbar-collapse-active");
-      btnMenu.classList.toggle("toggled");
+      btnMenu.classList.add("toggled");
     }
   });
 
 navCol.addEventListener("animationend", function () {
   if (this.classList.contains("hidePopup")) {
-    this.style.display = "none";
+
     this.classList.remove("hidePopup");
   }
+
 });
 function hide(element) {
   navCol && navCol.classList.toggle("navbar-collapse-active");
   navCol.classList.add("hidePopup");
-  btnMenu.classList.toggle("toggled");
+  btnMenu.classList.remove("toggled");
 }
