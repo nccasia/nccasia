@@ -13,6 +13,7 @@
     width: 100%;
     top: 0;
     z-index: 999;
+    position: relative;
   }
   .header_logo {
     display: block;
@@ -24,7 +25,7 @@
     align-items: center;
   }
   .header-image {
-    margin-top: 65px;
+    /* margin-top: 65px; */
   }
   .menu-icon {
     display: block;
@@ -43,7 +44,29 @@
     height: 48px;
     background-color: var(--blue-color);
   }
-
+  .navbar-collapse{
+    display: none;
+    background-color: var(--blue-color);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+  .navbar-collapse ul li{
+    list-style: none;
+    text-align: center;
+    padding: 8px 0 16px 0;
+  }
+  .navbar-collapse ul li a{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: var(--white-color);
+    text-transform: uppercase;
+  }
+  .navbar-collapse-active{
+    display: block;
+}
   /* end  header  */
   .grid {
     padding: 0 16px;

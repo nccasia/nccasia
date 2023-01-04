@@ -1,5 +1,4 @@
-.header {
-}
+
 .header-image {
   max-width: 100%;
 }
@@ -37,6 +36,9 @@
   color: var(--white-color);
 }
 .menu-icon {
+  display: none;
+}
+.navbar-collapse{
   display: none;
 }
 /* end header  */
