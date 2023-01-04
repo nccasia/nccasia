@@ -11,4 +11,6 @@ btnMenu &&
 
   function hide(element){
     navCol && navCol.classList.toggle("navbar-collapse-active");
+    btnMenu.classList.toggle("toggled");
+
  }
