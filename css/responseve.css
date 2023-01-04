@@ -148,6 +148,14 @@
   .grid-template {
     grid-gap: 40px;
   }
+  .sub-button-mb{
+    display: block;
+    position: unset;
+    transform: none;
+  }
+  .project_item:hover > .sub-button {
+    display: none;
+  }
   /* end .project */
 
   .family_image {

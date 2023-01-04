@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Dongle', sans-serif;
+    scroll-behavior: smooth;
 }
 :root{
     --blue-1:#AABFF2;
@@ -79,7 +80,4 @@
     max-width: 1272px;
     margin: 0 auto;
     padding: 0 16px;
-  }
-  .hide{
-    display: none;
   }

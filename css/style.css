@@ -1,5 +1,4 @@
-.header {
-}
+
 .header-image {
   max-width: 100%;
 }
@@ -127,6 +126,43 @@
   font-size: 24px;
   line-height: 100%;
   color: var(--blue-color-gp);
+
+}
+.project_item > div,
+.project_item > p {
+  transition: opacity .2s ease-out 100ms
+}
+.project_item:hover > div,
+.project_item:hover > p {
+  opacity: 0.5;
+
+}
+
+.project_item:hover > .sub-button {
+  display: block;
+}
+.project_item {
+  position: relative;
+}
+.sub-button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--blue-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 8px;
+  z-index: 2;
+  padding: 12px 16px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  white-space: nowrap;
+}
+.sub-button:hover {
+  background: #aabff2;
 }
 
 /* end servive */
@@ -416,10 +452,16 @@
 .modal {
   position: fixed;
   top: 0;
-  height: 100vh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  background-color: transparent;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all ease 1s;
+
+  transform: scale(1);
 }
+
 .modal_popup {
   position: relative;
   top: 50%;
@@ -432,11 +474,13 @@
   max-width: max-content;
   background: #f2f6fd;
   overflow: hidden;
+  animation: mymove 102s linear;
+  /* transform: scale(1);  */
 }
 .modal_popup_header {
   background: var(--blue-1);
   line-height: 31.2px;
-  padding: 16px ;
+  padding: 16px;
   text-align: center;
 }
 .modal_popup_main {
@@ -448,4 +492,30 @@
   padding: 0 16px;
   width: 536px;
   margin-right: 24px;
+}
+
+.showPopup {
+  animation: opac 0.8s;
+}
+
+.hidePopup {
+  animation: show 0.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
