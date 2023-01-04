@@ -458,7 +458,6 @@
   z-index: 99;
   background: rgba(0, 0, 0, 0.5);
   transition: all ease 1s;
-
   transform: scale(1);
 }
 
@@ -474,8 +473,6 @@
   max-width: max-content;
   background: #f2f6fd;
   overflow: hidden;
-  animation: mymove 102s linear;
-  /* transform: scale(1);  */
 }
 .modal_popup_header {
   background: var(--blue-1);
