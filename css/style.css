@@ -492,12 +492,12 @@
 }
 
 .showPopup {
-  animation: opac 0.8s;
+  animation: opac 0.3s;
   display: none ;
 }
 
 .hidePopup {
-  animation: show 0.8s;
+  animation: show 0.3s;
   animation-fill-mode: forwards;
   display: block !important;
 
