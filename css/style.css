@@ -1,6 +1,12 @@
-.header-image {
-  max-width: 100%;
+.header-image{
+  display: flex;
+  justify-content: center;
 }
+.header-image>img {
+  max-width: 2400px;
+  max-height: 1600px;
+}
+
 .header_nav {
   height: 48px;
   background-color: var(--blue-color);
