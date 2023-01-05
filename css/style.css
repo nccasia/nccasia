@@ -93,7 +93,7 @@
   text-align: center;
   padding: 60px 0;
 }
-.our-image > img {
+.our-image img {
   max-width: 750px;
   max-height: 1000px;
   display: inline-block;
