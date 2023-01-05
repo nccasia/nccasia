@@ -475,20 +475,22 @@
                     <p>Get connected! We would love to hear from you. Please fill in the form below,
                         leave a message and we will contact with you as soon as possible.</p>
                 </div>
-                <div class="contact_form">
-                    <div class="contact_form-group">
-                        <input type="text" placeholder="First name" class="form-item">
-                        <input type="text" placeholder="you@company.com" class="form-item">
-                        <input type="text" placeholder="+1 (555) 000-0000" class="form-item">
+                <form action="" class="form">
+                    <div class="contact_form">
+                        <div class="contact_form-group">
+                            <input type="text" placeholder="First name" class="form-item" id="fistName">
+                            <input type="text" placeholder="you@company.com" class="form-item" id="email">
+                            <input type="text" placeholder="+1 (555) 000-0000" class="form-item" id="phone">
+                        </div>
+                        <div class="contact_form-textarea">
+                            <textarea class="form-item form-textarea" placeholder="Your message" id="content"></textarea>
+                        </div>
                     </div>
-                    <div class="contact_form-textarea">
-                        <textarea class="form-item form-textarea" placeholder="Your message" id="content"></textarea>
-                    </div>
-                </div>
 
-                <div class="ncc_project-button btn-send">
-                    <button class="button-primary">SEND</button>
+                    <div class="ncc_project-button btn-send">
+                        <button class="button-primary" type="submit">SEND</button>
                 </div>
+                </form>
             </div>
         </section>
     </main>
