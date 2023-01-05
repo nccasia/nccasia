@@ -89,7 +89,7 @@
 .our-image {
   width: 100%;
   display: flex;
-  text-align: center;
+  justify-content: center;
   padding: 60px 0;
 }
 .our-image img {
