@@ -256,10 +256,8 @@
 .ncc_project-image {
   width: 100%;
 }
-.ncc_project-image > img {
+.ncc_project-image img {
   display: inline-block;
-  max-width: 120px;
-  max-height: 120px;
 }
 
 .ncc_project-item > h3 {
