@@ -1,14 +1,19 @@
-
 .header-image {
   max-width: 100%;
 }
 .header-image > img {
   width: 100%;
 }
+.header{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 999;
+}
 .header_nav {
   height: 46px;
   background-color: var(--blue-color);
-  position: sticky;
+  
 }
 .header_logo {
   display: none;
@@ -35,17 +40,17 @@
   line-height: 100%;
   color: var(--white-color);
 }
-.header_menu ul li:hover{
+.header_menu ul li:hover {
   background-color: var(--blue-1);
   animation-timing-function: ease-in;
 }
-.header_menu ul li a:hover{
+.header_menu ul li a:hover {
   color: var(--blue-color);
 }
 .menu-icon {
   display: none;
 }
-.navbar-collapse{
+.navbar-collapse {
   display: none;
 }
 /* end header  */
@@ -126,16 +131,14 @@
   font-size: 24px;
   line-height: 100%;
   color: var(--blue-color-gp);
-
 }
 .project_item > div,
 .project_item > p {
-  transition: opacity .2s ease-out 100ms
+  transition: opacity 0.2s ease-out 100ms;
 }
 .project_item:hover > div,
 .project_item:hover > p {
   opacity: 0.5;
-
 }
 
 .project_item:hover > .sub-button {
@@ -493,14 +496,13 @@
 
 .showPopup {
   animation: opac 0.3s;
-  display: none ;
+  display: none;
 }
 
 .hidePopup {
   animation: show 0.3s;
   animation-fill-mode: forwards;
   display: block !important;
-
 }
 
 @keyframes show {
@@ -520,29 +522,29 @@
   }
 }
 /* animation icon */
-.menu-icon-btn{
-  display:block;
+.menu-icon-btn {
+  display: block;
   position: relative;
-  background-color:transparent;
-  width: 60px; 
-  height: 60px; 
-  margin:50px auto;
-  border-radius:50%;
-  border:none;
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+  margin: 50px auto;
+  border-radius: 50%;
+  border: none;
 }
 
 .menu-icon-close,
 .menu-icon-close::before,
 .menu-icon-close::after {
   position: absolute;
-  width: 28px; 
+  width: 28px;
   height: 4px;
   border-radius: 17px;
-  background-color: #AABFF2;
+  background-color: #aabff2;
 }
 .menu-icon-close::after,
-.menu-icon-close::before{
-   width: 16px; 
+.menu-icon-close::before {
+  width: 16px;
 }
 
 .menu-icon-close {
@@ -581,7 +583,7 @@
   width: 16px;
   height: 5px;
   top: 8px;
-  left:8px;
+  left: 8px;
   transform: rotate(90deg);
   background-color: whitle;
 }
@@ -590,12 +592,36 @@
   width: 16px;
   height: 5px;
   top: -8px;
-  left:8px;
+  left: 8px;
   transform: rotate(90deg);
   background-color: whitle;
 }
 
 /* TRANSITION */
-.menu-icon-close, .menu-icon-close::after, .menu-icon-close::before  {
+.menu-icon-close,
+.menu-icon-close::after,
+.menu-icon-close::before {
   transition: all 0.3s linear;
+}
+
+/* recaptcha */
+.error {
+  color: red;
+  font-size: 16px;
+}
+
+.success {
+  color: green;
+  font-size: 16px;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.col-recapcha {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
 }

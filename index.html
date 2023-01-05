@@ -19,10 +19,10 @@
 </head>
 
 <body>
+    <div class="header-image">
+        <img src="./assets/images/header_img.png" alt="">
+    </div>
     <div class="header">
-        <div class="header-image">
-            <img src="./assets/images/header_img.png" alt="">
-        </div>
         <div class="header_nav">
             <div class="header_logo">
                 <img src="./assets/images/Logo_header.png" alt="">
@@ -39,53 +39,52 @@
                     <li><a href="#contact">contact</a></li>
                 </ul>
             </div>
-                <div class="menu-icon">
-                    <button class="menu-icon-btn">
-                        <span class="menu-icon-close"></span>
-                        <!-- <img src="./assets/images/Menu.svg" alt=""> -->
-                    </button>
-                </div>
-                <div class="navbar-collapse web-b collapse showPopup">
-                    <ul class="navbar-nav ml-auto">
+            <div class="menu-icon">
+                <button class="menu-icon-btn">
+                    <span class="menu-icon-close"></span>
+                    <!-- <img src="./assets/images/Menu.svg" alt=""> -->
+                </button>
+            </div>
+            <div class="navbar-collapse web-b collapse showPopup">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-l nav-item">
-                        <span class="nav-link hover title-t active"
-                        ><a class="sub_menu-link" onclick="hide(this);" href="#">HOME</a>
+                        <span class="nav-link hover title-t active"><a class="sub_menu-link" onclick="hide(this);"
+                                href="#">HOME</a>
                         </span>
                     </li>
                     <li class="nav-l nav-item">
-                        <span class="nav-link hover title-t"
-                        ><a class="sub_menu-link" onclick="hide(this);" href="#about">ABOUT</a
-                        ><span class="iconDrop"></span>
+                        <span class="nav-link hover title-t"><a class="sub_menu-link" onclick="hide(this);"
+                                href="#about">ABOUT</a><span class="iconDrop"></span>
                         </span>
                     </li>
                     <li class="nav-l nav-item">
-                        <span class="nav-link hover title-t"
-                        ><a class="sub_menu-link" onclick="hide(this);" href="#services">SERVICES</a>
+                        <span class="nav-link hover title-t"><a class="sub_menu-link" onclick="hide(this);"
+                                href="#services">SERVICES</a>
                         </span>
                     </li>
                     <li class="nav-l nav-item">
-                        <span class="nav-link hover title-t"
-                        ><a class="sub_menu-link" onclick="hide(this);" href="#portfolio">portfolio</a>
+                        <span class="nav-link hover title-t"><a class="sub_menu-link" onclick="hide(this);"
+                                href="#portfolio">portfolio</a>
                         </span>
                     </li>
                     <li class="nav-l nav-item">
-                        <span class="nav-link hover title-t"
-                        ><a class="sub_menu-link" onclick="hide(this);" href="#people">people</a>
+                        <span class="nav-link hover title-t"><a class="sub_menu-link" onclick="hide(this);"
+                                href="#people">people</a>
                         </span>
                     </li>
                     <li class="nav-l nav-item">
-                        <span class="nav-link hover title-t"
-                        ><a class="sub_menu-link" onclick="hide(this);" href="#survey">survey</a>
+                        <span class="nav-link hover title-t"><a class="sub_menu-link" onclick="hide(this);"
+                                href="#survey">survey</a>
                         </span>
                     </li>
                     <li class="nav-l nav-item">
-                        <span class="nav-link hover title-t"
-                        ><a class="sub_menu-link" onclick="hide(this);" href="#contact">contact</a>
+                        <span class="nav-link hover title-t"><a class="sub_menu-link" onclick="hide(this);"
+                                href="#contact">contact</a>
                         </span>
                     </li>
-                    </ul>
-              </div>
-                
+                </ul>
+            </div>
+
         </div>
     </div>
     <!-- end header  -->
@@ -275,12 +274,13 @@
                     </div>
                     <p>It has been a long journey for NCC. Let's pause for a few minutes to see our outstanding
                         projects.</p>
-                   <div><button style="width: max-content;margin: 24px auto;" class="sub-button sub-button-mb">View our casestudy</button></div> 
+                    <div><button style="width: max-content;margin: 24px auto;" class="sub-button sub-button-mb">View our
+                            casestudy</button></div>
 
                 </div>
                 <div class="project_list grid-template">
                     <div class="project_item">
-                       <button class="sub-button">View our casestudy</button>
+                        <button class="sub-button">View our casestudy</button>
 
                         <div class="project_image-img">
                             <img src="./assets/images/project_Proptech-img.png" alt="">
@@ -465,7 +465,7 @@
         </section>
         <!-- end ncc_project -->
         <section class="contact">
-            <div class="grid contact_container">
+            <form class="grid contact_container form">
                 <div class="contact-heading heading" id="contact">
                     <div class="heading_text">
                         <h2>CONTACT US</h2>
@@ -473,23 +473,31 @@
                     <p>Get connected! We would love to hear from you. Please fill in the form below,
                         leave a message and we will contact with you as soon as possible.</p>
                 </div>
-                <form action="" class="form">
-                    <div class="contact_form">
-                        <div class="contact_form-group">
-                            <input type="text" placeholder="First name" class="form-item">
-                            <input type="text" placeholder="you@company.com" class="form-item">
-                            <input type="text" placeholder="+1 (555) 000-0000" class="form-item">
-                        </div>
-                        <div class="contact_form-textarea">
-                            <textarea class="form-item form-textarea" placeholder="Your message" id="content"></textarea>
-                        </div>
+                <div class="contact_form">
+                    <div class="contact_form-group">
+                        <input type="text" placeholder="First name" id="fullName" name="fullName" class="form-item">
+                        <input type="text" placeholder="you@company.com" id="email" name="email" class="form-item">
+                        <input type="text" placeholder="+1 (555) 000-0000" id="phone" name="phone" class="form-item">
                     </div>
-
-                    <div class="ncc_project-button btn-send">
-                        <button class="button-primary" type="submit">SEND</button>
+                    <div class="contact_form-textarea">
+                        <textarea id="content" name="content" class="form-item form-textarea" placeholder="Your message"
+                            id="content"></textarea>
+                    </div>
                 </div>
-                </form>
-            </div>
+                <div class="col-recapcha">
+                    <div class="g-recaptcha" data-sitekey="6LcZhg8UAAAAAD0tWmrTzvVDZ-HLOLCdthN0dVLU">
+                    </div>
+                </div>
+                <div class="ncc_project-button btn-send">
+                    <button type="submit" class="button-primary">SEND</button>
+                </div>
+                <button type="button" class="button-primary loading d-none"><i class="fa fa-spinner"
+                        aria-hidden="true"></i></button>
+
+                <span class="error" id="nameError"></span>
+                <span class="success" id="nameSuccess"></span>
+                <span class="error" id="nameMiss"></span>
+            </form>
         </section>
     </main>
     <!-- end main  -->
@@ -681,10 +689,10 @@
                             <a href="https://twitter.com/nccsoft" target="_blank">
                                 <img src="./assets/images/tweet.svg" alt="">
                             </a>
-                            
+
                         </div>
                         <div class="footer_social-image">
-                            <a href="https://www.facebook.com/nccsoft.com.vn" target="_blank" >
+                            <a href="https://www.facebook.com/nccsoft.com.vn" target="_blank">
                                 <img src="./assets/images/facebook.svg" alt="">
                             </a>
                         </div>
@@ -702,8 +710,8 @@
         </div>
     </footer>
     <!-- popup -->
- 
-    <div class="modal showPopup"  >
+
+    <div class="modal showPopup">
         <div class="modal_popup">
             <div class="modal_popup_header heading_title">
                 <h3>Leave Us Your information And We Will Contact You Soon</h3>
@@ -713,11 +721,69 @@
                 <button class="button-primary">SEND ></button>
             </div>
         </div>
-   
-    </div>
-   </div>
 
-   <script type="application/ld+json">
+    </div>
+    </div>
+
+    <script>
+        function printMess(elemId, message) {
+            document.getElementById(elemId).innerHTML = message;
+        }
+        const formEl = document.querySelector(".form");
+        formEl.addEventListener('submit', event => {
+            event.preventDefault();
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const content = document.getElementById('content').value;
+            const gresponse = grecaptcha.getResponse();
+
+            grecaptcha.ready(function () {
+
+                if (fullName === '' || email === '' || phone === '' || content === '' || gresponse === "") {
+                    document.getElementById("nameMiss").innerHTML = "Please fill out all required fields.";
+                    return;
+                }
+
+                Array.from(formEl.elements).forEach(formElement => formElement.disabled = true);
+                const data = {
+                    email: email,
+                    content: `Name: ${fullName}\n Phone: ${phone}\n Content: ${content}`,
+                    gresponse: gresponse
+                }
+                const btnSubmit = formEl.querySelector('button[type="submit"]');
+                const btnLoading = formEl.querySelector('button[type="button"]');
+                btnSubmit.classList.add('d-none');
+                btnLoading.classList.remove('d-none');
+
+                fetch('https://email.ncc.asia/ncc-site-api-sendmail', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }).then(res => {
+                    if (!res.ok) {
+                        return res.text().then(text => { throw new Error(text) })
+                    }
+                    else {
+                        printMess('nameSuccess', 'Thank you, your submission has been received.')
+                        document.getElementById("nameMiss").remove();
+                        formEl.reset();
+                    }
+                }).catch(err => {
+                    printMess('nameError', 'Oops, something went wrong. Please try again later.')
+                }).finally(() => {
+                    formEl.reset();
+                    Array.from(formEl.elements).forEach(formElement => formElement.disabled = false);
+                    btnSubmit.classList.remove('d-none');
+                    btnLoading.classList.add('d-none');
+                })
+            });
+        });
+    </script>
+
+    <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@graph": [
@@ -780,7 +846,7 @@
     }
   </script>
 
-  <script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "http://schema.org/",
       "@type": "Product",
@@ -811,7 +877,7 @@
       }
     }
   </script>
-  <script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "http://schema.org/",
       "@type": "Product",
@@ -842,7 +908,7 @@
       }
     }
   </script>
-  <script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "http://schema.org/",
       "@type": "Product",
@@ -873,7 +939,7 @@
       }
     }
   </script>
-  <script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "http://schema.org/",
       "@type": "Product",
@@ -904,7 +970,7 @@
       }
     }
   </script>
-  <script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "http://schema.org/",
       "@type": "Product",
@@ -935,7 +1001,7 @@
       }
     }
   </script>
-  <script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "http://schema.org/",
       "@type": "Product",
@@ -966,7 +1032,7 @@
       }
     }
   </script>
-  <script type="application/ld+json">
+    <script type="application/ld+json">
     {
         "@context": "http://schema.org/",
         "@type": "Product",
@@ -999,8 +1065,9 @@
     }
   </script>
 
-   <script src="./js/popup.js"></script>
-   <script src="./js/header.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>
