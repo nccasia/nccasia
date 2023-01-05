@@ -116,8 +116,8 @@
   .our_image-img,
   .service_image-img,
   .project_image-img img {
-    width: 88px;
-    height: 88px;
+    width: 88px !important;
+    height: 88px !important;
   }
 
   .service_list {
