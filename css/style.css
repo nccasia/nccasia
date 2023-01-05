@@ -1,11 +1,16 @@
 .header-image {
   max-width: 100%;
 }
-
 .header_nav {
   height: 46px;
   background-color: var(--blue-color);
+  
+}
+.header{
   position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 999;
 }
 .header_logo {
   display: none;
