@@ -659,3 +659,45 @@
   width: 100%;
   margin-top: 40px;
 }
+/* animation ccroll Show up */
+.scrollBox{
+  transition: transform 0.5s , opacity 1s;
+}
+.scrollBox2{
+  transition: transform 0.5s , opacity 1s;
+}
+.scrollBox.left-sort{
+  transform: translateX(-60px);
+  opacity: 0;
+}
+.scrollBox.right-sort{
+  transform: translateX(60px);
+  opacity: 0;
+}
+.scrollBox.top-sort{
+  transform: translateY(-10px) ;
+  opacity: 0;
+}
+.scrollBox2.top-sort{
+  transform: translateY(-10px) ;
+  opacity: 0;
+}
+.scrollBox.bottom-sort{
+  transform: translateY(10px) ;
+  opacity: 0;
+}
+
+.scrollBox.left-long{
+  transform: translateX(-350px);
+}
+.scrollBox.right-long{
+  transform: translateX(350px);
+}
+.scrollBox.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+.scrollBox2.active{
+  transform: translateX(0);
+  opacity: 1;
+}
