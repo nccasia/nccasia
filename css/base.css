@@ -3,12 +3,17 @@
  font-display: swap;
 }
 
+html,body{
+  overflow-x: hidden;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Dongle", sans-serif;
   scroll-behavior: smooth;
+ 
+
 }
 :root {
   --blue-1: #aabff2;
