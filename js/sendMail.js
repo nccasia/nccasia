@@ -29,6 +29,7 @@ formEl.addEventListener('submit', event => {
         btnLoading.classList.remove('d-none');
 
         fetch('https://email.ncc.asia/ncc-site-api-sendmail', {
+            mode: 'cors',
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
