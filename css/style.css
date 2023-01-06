@@ -72,6 +72,7 @@
 .header_menu ul li:hover {
   background-color: var(--blue-1);
   animation-timing-function: ease-in;
+  border-radius: 5px;
 }
 .header_menu ul li a:hover {
   color: var(--blue-color);
