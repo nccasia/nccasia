@@ -104,6 +104,8 @@
   padding: 60px 0;
 }
 .our-image img {
+  width: 750px !important;
+  height: 1000px !important;
   display: inline-block;
 }
 .our_list {

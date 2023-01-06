@@ -288,7 +288,7 @@
     content: ' ';
     display: block;
     position: absolute;
-    background-image: url(../assets/images/logo.png);
+    background-image: url(../assets/images/logo.webp);
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
