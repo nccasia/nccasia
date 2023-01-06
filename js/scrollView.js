@@ -38,7 +38,7 @@ function addObserver(el, options) {
                   clearInterval(counter);
                 }
               }, duration);
-            }, index * 600);
+            }, index * 300);
           });}
         }
         observer.unobserve(entry.target);
