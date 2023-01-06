@@ -24,7 +24,7 @@
 .header_menu {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .header_menu ul {
   display: flex;
@@ -43,7 +43,14 @@
   line-height: 100%;
   color: var(--white-color);
 }
-.header_menu ul li:hover {
+.header_link a{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: var(--white-color);
+}
+.header_menu ul li:hover, .header_link a:hover {
   background-color: var(--blue-1);
   animation-timing-function: ease-in;
 }
@@ -61,7 +68,13 @@
 .about {
   padding: 96px 0px;
 }
-
+.about_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
 .about_list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -91,7 +104,27 @@
   color: var(--blue-color-gp);
   margin-top: 12px;
 }
+.link_dowmload-profile{
+  display: flex;
+  background-color: var(--blue-color);
+  width: 383px;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+    gap: 10px;
+  border-radius: 8px;
+}
 
+.icon>img{
+  max-width: 17px;
+  max-height: 17px;
+}
+.link_dowmload-profile .text_download{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  color: var(--white-color);
+}
 /* end about  */
 .our {
   padding: 96px 0;
