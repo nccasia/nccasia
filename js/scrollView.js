@@ -24,6 +24,8 @@ function addObserver(el, options) {
           options.cb(el);
         } else {
           entry.target.classList.add("active");
+         if(el.classList.contains('scrollBox2')){
+
           valueDisplays.forEach((valueDisplay, index) => {
             setTimeout(function () {
               let startValue = 0;
@@ -36,8 +38,8 @@ function addObserver(el, options) {
                   clearInterval(counter);
                 }
               }, duration);
-            }, index * 700);
-          });
+            }, index * 600);
+          });}
         }
         observer.unobserve(entry.target);
       }
