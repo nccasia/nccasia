@@ -8,9 +8,10 @@
 }
 
 .header_nav {
-  height: 48px;
+  height: 77px;
   background-color: var(--blue-color);
-  
+  display: flex;
+  align-items: center;
 }
 .header{
   position: sticky;
@@ -37,22 +38,41 @@
 }
 
 .header_menu ul li a {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 32px;
+  font-weight: 700;
+  font-size: 25px;
   line-height: 100%;
   color: var(--white-color);
 }
-.header_link a{
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 100%;
-  color: var(--white-color);
+.header_link .header_link-button{
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 130%;
+  border-radius: 8px;
+  padding: 10px;
+
 }
-.header_menu ul li:hover, .header_link a:hover {
+.header_link{
+  gap: 30px
+}
+.header_link .header_link-career {
+  background-color: var(--blue-color);
+  border: 1px solid var(--white-color);
+
+}
+
+.header_link .header_link-career a{
+  color: var(--white-color);
+  
+}
+.header_link .header_link-contact {
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+
+}
+.header_menu ul li:hover {
   background-color: var(--blue-1);
   animation-timing-function: ease-in;
+  border-radius: 5px;
 }
 .header_menu ul li a:hover {
   color: var(--blue-color);
@@ -116,6 +136,7 @@
 }
 
 .icon>img{
+  display: inline-block;
   max-width: 17px;
   max-height: 17px;
 }
