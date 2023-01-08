@@ -1,3 +1,61 @@
+@media  (min-device-width: 768px) and (max-device-width: 1024px) {
+ 
+ .mbscreen{
+  transform: translateX(0) !important;
+ }
+ .our_image-img,
+ .service_image-img,
+ .project_image-img img {
+   width: 88px !important;
+   height: 88px !important;
+ }
+
+ .service_list {
+   display: grid;
+   grid-template-columns: 1fr;
+   padding: 40px 0 0;
+ }
+ img {
+   display: inline-block;
+ }
+ .our_item > p {
+   font-size: 24px;
+ }
+
+ /* end .service  */
+ .project,
+  .family,
+  .ncc_project,
+  .contact {
+    padding: 40px 0;
+  }
+  .project_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service {
+    padding: 40px 0%;
+  }
+
+  .grid-template {
+    grid-gap: 40px;
+  }
+  .sub-button-mb{
+    display: block;
+    position: unset;
+    transform: none;
+  }
+  .project_item:hover > .sub-button {
+    display: none;
+  }
+  /* end .project */
+  .service,.about_box,.our,.project,.family,.ncc_project{
+    padding-left:15% ;
+    padding-right:15% ;
+  } 
+}
+
 @media (max-width: 768px) {
   .header {
     display: flex;
@@ -118,53 +176,8 @@
   }
 
   /* end our  */
-  .our_image-img,
-  .service_image-img,
-  .project_image-img img {
-    width: 88px !important;
-    height: 88px !important;
-  }
-
-  .service_list {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 40px 0 0;
-  }
-  img {
-    display: inline-block;
-  }
-  .our_item > p {
-    font-size: 24px;
-  }
-
-  /* end .service  */
-  .project,
-  .family,
-  .ncc_project,
-  .contact {
-    padding: 40px 0;
-  }
-  .project_list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .service {
-    padding: 40px 0;
-  }
-
-  .grid-template {
-    grid-gap: 40px;
-  }
-  .sub-button-mb{
-    display: block;
-    position: unset;
-    transform: none;
-  }
-  .project_item:hover > .sub-button {
-    display: none;
-  }
-  /* end .project */
+ 
+  
 
   .family_image {
     padding-top: 36px;
@@ -272,11 +285,7 @@
     margin: 0 0 20px;
   }
   /* scroll view */
-  
- .mbscreen{
-  transform: translateX(0) !important;
 
- }
 }
 
 @media (max-width: 650px) {
