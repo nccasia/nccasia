@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .header {
     display: flex;
     flex-direction: column-reverse;
@@ -103,7 +103,11 @@
   .heading p {
     font-size: 22px;
   }
-  .our-image > img {
+  .our-image img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .out-image_map {
     width: 100% !important;
     height: 100% !important;
   }
