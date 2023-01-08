@@ -135,12 +135,6 @@
   border-radius: 8px;
   padding: 30px;
 }
-
-.icon>img{
-  display: inline-block;
-  max-width: 17px;
-  max-height: 17px;
-}
 .link_dowmload-profile .text_download{
   font-weight: 700;
   font-size: 24px;
@@ -716,11 +710,11 @@
   transition: transform 0.5s , opacity 1s;
 }
 .scrollBox.left-sort{
-  transform: translateX(-60px);
+  transform: translateX(-2%);
   opacity: 0;
 }
 .scrollBox.right-sort{
-  transform: translateX(60px);
+  transform: translateX(2%);
   opacity: 0;
 }
 .scrollBox.top-sort{
@@ -737,10 +731,11 @@
 }
 
 .scrollBox.left-long{
-  transform: translateX(-250px);
+  transform: translateX(-30%);
 }
 .scrollBox.right-long{
-  transform: translateX(250px);
+  transform: translateX(30%);
+
 }
 .scrollBox.active{
   transform: translateX(0);

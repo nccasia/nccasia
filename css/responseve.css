@@ -1,59 +1,26 @@
-@media  (min-device-width: 768px) and (max-device-width: 1024px) {
- 
- .mbscreen{
-  transform: translateX(0) !important;
- }
- .our_image-img,
- .service_image-img,
- .project_image-img img {
-   width: 88px !important;
-   height: 88px !important;
- }
-
- .service_list {
-   display: grid;
-   grid-template-columns: 1fr;
-   padding: 40px 0 0;
- }
- img {
-   display: inline-block;
- }
- .our_item > p {
-   font-size: 24px;
- }
-
- /* end .service  */
- .project,
-  .family,
-  .ncc_project,
-  .contact {
-    padding: 40px 0;
+@media (min-device-width: 0px) and (max-device-width: 1024px) {
+  .mbscreen {
+    transform: translateX(0) !important;
   }
-  .project_list {
+  .service,
+  .about,
+  .our,
+  .project,
+  .family,
+  .ncc_project {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .header_menu ul li a {
+    font-size: 16px;
+  }
+  .service_list,
+  .project_list,
+  .our_list,
+  .ncc_project-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .service {
-    padding: 40px 0%;
-  }
-
-  .grid-template {
-    grid-gap: 40px;
-  }
-  .sub-button-mb{
-    display: block;
-    position: unset;
-    transform: none;
-  }
-  .project_item:hover > .sub-button {
-    display: none;
-  }
-  /* end .project */
-  .service,.about_box,.our,.project,.family,.ncc_project{
-    padding-left:15% ;
-    padding-right:15% ;
-  } 
 }
 
 @media (max-width: 768px) {
@@ -101,7 +68,7 @@
     height: 48px !important;
     background-color: var(--blue-color);
   }
-  .navbar-collapse{
+  .navbar-collapse {
     display: none;
     background-color: var(--blue-color);
     width: 100%;
@@ -110,22 +77,69 @@
     top: 60px;
     left: 0;
   }
-  .navbar-collapse ul li{
+  .navbar-collapse ul li {
     list-style: none;
     text-align: center;
     padding: 8px 0 16px 0;
   }
-  .navbar-collapse ul li a{
+  .navbar-collapse ul li a {
     font-weight: 400;
     font-size: 32px;
     line-height: 100%;
     color: var(--white-color);
     text-transform: uppercase;
   }
-  .navbar-collapse-active{
+  .navbar-collapse-active {
     display: block;
-}
+  }
   /* end  header  */
+  .our_image-img,
+  .service_image-img,
+  .project_image-img img {
+    width: 88px !important;
+    height: 88px !important;
+  }
+
+  .service_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 40px 0 0;
+  }
+  img {
+    display: inline-block;
+  }
+  .our_item > p {
+    font-size: 24px;
+  }
+
+  /* end .service  */
+  .project,
+  .family,
+  .ncc_project,
+  .contact {
+    padding: 40px 0;
+  }
+  /* .project_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  } */
+
+  .service {
+    padding: 40px 0%;
+  }
+
+  .grid-template {
+    grid-gap: 40px;
+  }
+  .sub-button-mb {
+    display: block;
+    position: unset;
+    transform: none;
+  }
+  .project_item:hover > .sub-button {
+    display: none;
+  }
+  /* end .project */
   .grid {
     padding: 0 16px;
   }
@@ -170,14 +184,12 @@
     height: 100% !important;
   }
   .our_list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
     padding: 40px 0 0;
   }
 
   /* end our  */
- 
-  
 
   .family_image {
     padding-top: 36px;
@@ -188,8 +200,8 @@
     padding: 28px 24px;
   }
   .ncc_project-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
     grid-gap: 16px;
   }
   .ncc_project-content {
@@ -285,7 +297,6 @@
     margin: 0 0 20px;
   }
   /* scroll view */
-
 }
 
 @media (max-width: 650px) {
@@ -304,8 +315,8 @@
   .footer_social-image {
     padding: 0 28px;
   }
-  .nav_footer-adreess::before{
-    content: ' ';
+  .nav_footer-adreess::before {
+    content: " ";
     display: block;
     position: absolute;
     background-image: url(../assets/images/logo.webp);
