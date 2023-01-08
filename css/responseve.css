@@ -2,14 +2,9 @@
   .mbscreen {
     transform: translateX(0) !important;
   }
-  .service,
-  .about,
-  .our,
-  .project,
-  .family,
-  .ncc_project {
-    padding-left: 15%;
-    padding-right: 15%;
+ .grid{
+  padding-left: 32px;
+  padding-right: 32px;
   }
   .header_menu ul li a {
     font-size: 16px;
@@ -20,6 +15,7 @@
   .ncc_project-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+   
   }
 }
 
