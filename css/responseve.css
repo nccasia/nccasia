@@ -119,10 +119,6 @@
   .contact {
     padding: 40px 0;
   }
-  /* .project_list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  } */
 
   .service {
     padding: 40px 0%;
@@ -184,8 +180,6 @@
     height: 100% !important;
   }
   .our_list {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
     padding: 40px 0 0;
   }
 
@@ -200,8 +194,6 @@
     padding: 28px 24px;
   }
   .ncc_project-list {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
     grid-gap: 16px;
   }
   .ncc_project-content {
