@@ -135,12 +135,6 @@
   border-radius: 8px;
   padding: 30px;
 }
-
-.icon>img{
-  display: inline-block;
-  max-width: 17px;
-  max-height: 17px;
-}
 .link_dowmload-profile .text_download{
   font-weight: 700;
   font-size: 24px;
