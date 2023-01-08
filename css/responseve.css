@@ -117,7 +117,11 @@
   .heading p {
     font-size: 22px;
   }
-  .our-image > img {
+  .our-image img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .out-image_map {
     width: 100% !important;
     height: 100% !important;
   }
@@ -282,11 +286,11 @@
     margin: 0 0 20px;
   }
   /* scroll view */
-/*   
+  
  .mbscreen{
   transform: translateX(0) !important;
 
- } */
+ }
 }
 
 @media (max-width: 650px) {

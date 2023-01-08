@@ -152,6 +152,33 @@
   justify-content: center;
   padding: 60px 0;
 }
+.out-image_map{
+  width: 750px;
+  position: relative;
+  height: 1000px;
+}
+.out-image_map div{
+  height: 150px;
+  position: absolute;
+  width: 150px;
+  background: red;
+}
+.text_TranNhan{
+  top: 6.7%;
+  left: 42%;
+}
+.text_LeLinh{
+  top: 14.3%;
+  left: 9%;
+}
+.text_TungNguyen{
+  top: 21.5%;
+  left: 66%;
+}
+.text_PhucDuong{
+  top: 29.5%;
+  left: 33%;
+}
 .our-image img {
   width: 750px !important;
   height: 1000px !important;
