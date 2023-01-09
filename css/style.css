@@ -1,8 +1,8 @@
-.header-image{
+.header-image {
   display: flex;
   justify-content: center;
 }
-.header-image>img {
+.header-image > img {
   max-width: 2400px;
   max-height: 1600px;
 }
@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
 }
-.header{
+.header {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -43,31 +43,27 @@
   line-height: 100%;
   color: var(--white-color);
 }
-.header_link .header_link-button{
+.header_link .header_link-button {
   font-weight: 700;
   font-size: 25px;
   line-height: 130%;
   border-radius: 8px;
   padding: 10px;
-
 }
-.header_link{
-  gap: 30px
+.header_link {
+  gap: 30px;
 }
 .header_link .header_link-career {
   background-color: var(--blue-color);
   border: 1px solid var(--white-color);
-
 }
 
-.header_link .header_link-career a{
+.header_link .header_link-career a {
   color: var(--white-color);
-  
 }
 .header_link .header_link-contact {
   color: var(--blue-color);
   border: 1px solid var(--blue-color);
-
 }
 .header_menu ul li:hover {
   background-color: var(--blue-1);
@@ -88,7 +84,7 @@
 .about {
   padding: 96px 0px;
 }
-.about_box{
+.about_box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -124,7 +120,7 @@
   color: var(--blue-color-gp);
   margin-top: 12px;
 }
-.link_dowmload-profile{
+.link_dowmload-profile {
   display: flex;
   background-color: var(--blue-color);
   max-width: 383px;
@@ -135,7 +131,7 @@
   border-radius: 8px;
   padding: 30px;
 }
-.link_dowmload-profile .text_download{
+.link_dowmload-profile .text_download {
   font-weight: 700;
   font-size: 24px;
   line-height: 130%;
@@ -152,32 +148,49 @@
   justify-content: center;
   padding: 60px 0;
 }
-.out-image_map{
+.out-image_map {
   width: 750px;
   position: relative;
   height: 1000px;
 }
-.out-image_map div{
-  height: 150px;
+.out-image_map .text {
   position: absolute;
-  width: 150px;
-  background: red;
+  flex-direction: column;
+  background: #3e50af;
+  border: 2px solid #aabff2;
+  border-radius: 12px;
+  max-width: 316px;
+  height: 200px;
+  padding: 16px;
 }
-.text_TranNhan{
-  top: 6.7%;
-  left: 42%;
+.title_name {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: center;
+  text-transform: capitalize;
+  color: #ffffff;
+  padding-bottom: 4px;
 }
-.text_LeLinh{
-  top: 14.3%;
-  left: 9%;
+.title_position {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  text-transform: capitalize;
+  color: #ffffff;
+  padding-bottom: 12px;
 }
-.text_TungNguyen{
-  top: 21.5%;
-  left: 66%;
-}
-.text_PhucDuong{
-  top: 29.5%;
-  left: 33%;
+.title_description {
+  font-family: "Dongle";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  color: #ffffff;
 }
 .our-image img {
   width: 750px !important;
@@ -703,45 +716,44 @@
   margin-top: 40px;
 }
 /* animation ccroll Show up */
-.scrollBox{
-  transition: transform 0.5s , opacity 1s;
+.scrollBox {
+  transition: transform 0.5s, opacity 1s;
 }
-.scrollBox2{
-  transition: transform 0.5s , opacity 1s;
+.scrollBox2 {
+  transition: transform 0.5s, opacity 1s;
 }
-.scrollBox.left-sort{
+.scrollBox.left-sort {
   transform: translateX(-2%);
   opacity: 0;
 }
-.scrollBox.right-sort{
+.scrollBox.right-sort {
   transform: translateX(2%);
   opacity: 0;
 }
-.scrollBox.top-sort{
-  transform: translateY(-10px) ;
+.scrollBox.top-sort {
+  transform: translateY(-10px);
   opacity: 0;
 }
-.scrollBox2.top-sort{
-  transform: translateY(-10px) ;
+.scrollBox2.top-sort {
+  transform: translateY(-10px);
   opacity: 0;
 }
-.scrollBox.bottom-sort{
-  transform: translateY(10px) ;
+.scrollBox.bottom-sort {
+  transform: translateY(10px);
   opacity: 0;
 }
 
-.scrollBox.left-long{
+.scrollBox.left-long {
   transform: translateX(-30%);
 }
-.scrollBox.right-long{
+.scrollBox.right-long {
   transform: translateX(30%);
-
 }
-.scrollBox.active{
+.scrollBox.active {
   transform: translateX(0);
   opacity: 1;
 }
-.scrollBox2.active{
+.scrollBox2.active {
   transform: translateX(0);
   opacity: 1;
 }
