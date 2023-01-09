@@ -38,14 +38,16 @@
 }
 
 .header_menu ul li a {
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 16px;
   line-height: 100%;
   color: var(--white-color);
 }
 .header_link .header_link-button{
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 130%;
   border-radius: 8px;
   padding: 10px;
