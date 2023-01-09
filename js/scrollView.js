@@ -2,12 +2,12 @@ let valueDisplays = document.querySelectorAll(".num-count");
 let interval = 900;
 const areaTranNhan = document.getElementById("trannhan");
 const areaLeLinh = document.getElementById("lelinh");
-const areaTungNguyen = document.getElementById("tungnguyen");
+const areaManhTien = document.getElementById("manhtien");
 const areaPhucDuong = document.getElementById("phucduong");
 
 const elTranNhan = document.querySelector(".text_TranNhan");
 const elLeLinh = document.querySelector(".text_LeLinh");
-const elTungNguyen = document.querySelector(".text_TungNguyen");
+const elManhTien = document.querySelector(".text_ManhTien");
 const elPhucDuong = document.querySelector(".text_PhucDuong");
 
 function scrollTrigger(selector, options = {}) {
@@ -66,30 +66,30 @@ scrollTrigger(".scrollBox2", {
 //animation number cout
 let width;
 let height;
+let imgTopX = 393 / 750;
+let imgTopY = 330 / 1000;
+let imgLeftX = 146 / 750;
+let imgLeftY = 405 / 1000;
+let imgBottomX = 324 / 750;
+let imgBottomY = 556 / 1000;
+let imgRightX = 576 / 750;
+let imgRightY = 473 / 1000;
 
 const changeCoords = (areaID) => {
   let newCoords;
   const radiusImg = 100 / 750;
   if (areaID == "trannhan") {
-    const imgTopX = 393 / 750;
-    const imgTopY = 330 / 1000;
     newCoords = `${imgTopX * width}, ${imgTopY * height}, ${radiusImg * width}`;
   } else if (areaID == "lelinh") {
-    const imgLeftX = 146 / 750;
-    const imgLeftY = 405 / 1000;
     newCoords = `${imgLeftX * width}, ${imgLeftY * height}, ${
       radiusImg * width
     }`;
   } else if (areaID == "phucduong") {
-    const imgRightX = 324 / 750;
-    const imgRightY = 556 / 1000;
-    newCoords = `${imgRightX * width}, ${imgRightY * height}, ${
+    newCoords = `${imgBottomX * width}, ${imgBottomY * height}, ${
       radiusImg * width
     }`;
   } else {
-    const imgBottomX = 576 / 750;
-    const imgBottomY = 473 / 1000;
-    newCoords = `${imgBottomX * width}, ${imgBottomY * height}, ${
+    newCoords = `${imgRightX * width}, ${imgRightY * height}, ${
       radiusImg * width
     }`;
   }
@@ -99,14 +99,45 @@ const changeCoords = (areaID) => {
 
 const setHoverArea = (el) => {
   const x = document.getElementById(el.id);
+  let documentSize = document.body.clientWidth;
+  let size = 20;
+  if (documentSize <= 680 && documentSize >= 600) {
+    size = 50;
+  } else if (documentSize < 600 && documentSize >= 530) {
+    size = 40;
+  } else if (documentSize < 530 && documentSize >= 450) {
+    size = 25;
+  } else if (documentSize < 450) {
+    size = 10;
+  }
   if (el.id == "trannhan" && x.matches(":hover")) {
     elTranNhan.style.display = "block";
+    const widthTranNhan = elTranNhan.clientWidth / 2;
+    const heightTranNhan =
+      elTranNhan.clientHeight + elTranNhan.clientHeight / 2 + size;
+    elTranNhan.style.left = `${imgTopX * width - widthTranNhan}px`;
+    elTranNhan.style.top = `${imgTopY * height - heightTranNhan}px`;
   } else if (el.id == "lelinh" && x.matches(":hover")) {
     elLeLinh.style.display = "block";
-  } else if (el.id == "tungnguyen" && x.matches(":hover")) {
-    elTungNguyen.style.display = "block";
+    const widthLeLinh = elLeLinh.clientWidth / 2;
+    const heightLeLinh =
+      elLeLinh.clientHeight + elLeLinh.clientHeight / 2 + size;
+    elLeLinh.style.left = `${imgLeftX * width - widthLeLinh}px`;
+    elLeLinh.style.top = `${imgLeftY * height - heightLeLinh}px`;
+  } else if (el.id == "manhtien" && x.matches(":hover")) {
+    elManhTien.style.display = "block";
+    const widthManhTien = elManhTien.clientWidth / 2;
+    const heightManhTien =
+      elManhTien.clientHeight + elManhTien.clientHeight / 2 + size;
+    elManhTien.style.left = `${imgRightX * width - widthManhTien}px`;
+    elManhTien.style.top = `${imgRightY * height - heightManhTien}px`;
   } else if (el.id == "phucduong" && x.matches(":hover")) {
     elPhucDuong.style.display = "block";
+    const widthPhucDuong = elPhucDuong.clientWidth / 2;
+    const heightPhucDuong =
+      elPhucDuong.clientHeight + elPhucDuong.clientHeight / 2 + size;
+    elPhucDuong.style.left = `${imgBottomX * width - widthPhucDuong}px`;
+    elPhucDuong.style.top = `${imgBottomY * height - heightPhucDuong}px`;
   }
 };
 
@@ -121,41 +152,49 @@ function setSizeBrower() {
   height = img.clientHeight;
 }
 
-areaTranNhan.addEventListener("mousemove", function checkHover() {
-  setHoverArea(areaTranNhan);
-});
+function setHover() {
+  areaTranNhan.addEventListener("mousemove", function checkHover() {
+    setHoverArea(areaTranNhan);
+  });
 
-areaLeLinh.addEventListener("mousemove", function checkHover() {
-  setHoverArea(areaLeLinh);
-});
+  areaLeLinh.addEventListener("mousemove", function checkHover() {
+    setHoverArea(areaLeLinh);
+  });
 
-areaPhucDuong.addEventListener("mousemove", function checkHover() {
-  setHoverArea(areaPhucDuong);
-});
+  areaPhucDuong.addEventListener("mousemove", function checkHover() {
+    setHoverArea(areaPhucDuong);
+  });
 
-areaTungNguyen.addEventListener("mousemove", function checkHover() {
-  setHoverArea(areaTungNguyen);
-});
+  areaManhTien.addEventListener("mousemove", function checkHover() {
+    setHoverArea(areaManhTien);
+  });
 
-areaTranNhan.addEventListener("mouseout", function checkHover() {
-  elTranNhan.style.display = "none";
-});
+  areaTranNhan.addEventListener("mouseout", function checkHover() {
+    elTranNhan.style.display = "none";
+  });
 
-areaLeLinh.addEventListener("mouseout", function checkHover() {
-  elLeLinh.style.display = "none";
-});
+  areaLeLinh.addEventListener("mouseout", function checkHover() {
+    elLeLinh.style.display = "none";
+  });
 
-areaPhucDuong.addEventListener("mouseout", function checkHover() {
-  elPhucDuong.style.display = "none";
-});
+  areaPhucDuong.addEventListener("mouseout", function checkHover() {
+    elPhucDuong.style.display = "none";
+  });
 
-areaTungNguyen.addEventListener("mouseout", function checkHover() {
-  elTungNguyen.style.display = "none";
-});
+  areaManhTien.addEventListener("mouseout", function checkHover() {
+    elManhTien.style.display = "none";
+  });
+}
 
 setSizeBrower();
+setHover();
 window.addEventListener("resize", () => {
+  elTranNhan.style.display = "none";
+  elLeLinh.style.display = "none";
+  elPhucDuong.style.display = "none";
+  elManhTien.style.display = "none";
   setSizeBrower();
+  setHover();
   setCoordIntoAreaElement();
 });
 setCoordIntoAreaElement();

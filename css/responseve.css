@@ -2,9 +2,9 @@
   .mbscreen {
     transform: translateX(0) !important;
   }
- .grid{
-  padding-left: 32px;
-  padding-right: 32px;
+  .grid {
+    padding-left: 32px;
+    padding-right: 32px;
   }
   .header_menu ul li a {
     font-size: 16px;
@@ -15,7 +15,6 @@
   .ncc_project-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-   
   }
 }
 
@@ -77,6 +76,9 @@
     list-style: none;
     text-align: center;
     padding: 8px 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .navbar-collapse ul li a {
     font-weight: 400;
@@ -87,6 +89,27 @@
   }
   .navbar-collapse-active {
     display: block;
+  }
+  .nav-button ul{
+    padding: 0 16px;
+  }
+  .navbar-collapse ul .nav-item{
+    border: 1px solid var(--white-color);
+    padding: 16px;
+    border-radius: 8px;
+  }
+  .navbar-collapse ul .nav-item_us{
+    background-color: var(--white-color);
+    border: 1px solid var(--blue-color);
+    padding: 16px;
+    border-radius: 8px;
+  }
+  .nav-button ul li{
+    margin-bottom: 16px;
+  }
+  .nav-button ul .nav-item_us a{
+    color: var(--blue-color);
+
   }
   /* end  header  */
   .our_image-img,
@@ -130,6 +153,11 @@
   }
   .project_item:hover > .sub-button {
     display: none;
+  }
+  /* our team */
+  .out-image_map .text {
+    max-width: 280px;
+    height: 200px;
   }
   /* end .project */
   .grid {
@@ -287,7 +315,7 @@
   /* scroll view */
 }
 
-@media (max-width: 650px) {
+@media (max-width: 680px) {
   .heading .heading_text {
     width: 120px;
   }
@@ -316,5 +344,23 @@
     width: 330px;
     height: 330px;
     opacity: 0.1;
+  }
+  
+  /* our team  */
+  .out-image_map .text {
+    max-width: 150px;
+    height: 110px;
+  }
+  .title_name {
+    font-size: 12px;
+    line-height: 100%;
+  }
+  .title_position {
+    font-size: 10px;
+    line-height: 100%;
+  }
+  .title_description {
+    font-size: 12px;
+    line-height: 80%;
   }
 }
