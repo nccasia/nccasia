@@ -115,7 +115,6 @@ const setHoverArea = (el) => {
     const widthTranNhan = elTranNhan.clientWidth / 2;
     const heightTranNhan =
       elTranNhan.clientHeight + elTranNhan.clientHeight / 2 + size;
-    console.log(widthTranNhan, size, elTranNhan.clientWidth, width);
     elTranNhan.style.left = `${imgTopX * width - widthTranNhan}px`;
     elTranNhan.style.top = `${imgTopY * height - heightTranNhan}px`;
   } else if (el.id == "lelinh" && x.matches(":hover")) {
