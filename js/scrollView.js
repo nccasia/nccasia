@@ -66,30 +66,30 @@ scrollTrigger(".scrollBox2", {
 //animation number cout
 let width;
 let height;
-let imgTopX = 393 / 750;
-let imgTopY = 330 / 1000;
-let imgLeftX = 146 / 750;
-let imgLeftY = 405 / 1000;
-let imgBottomX = 324 / 750;
-let imgBottomY = 556 / 1000;
-let imgRightX = 576 / 750;
-let imgRightY = 473 / 1000;
+let widthImgTranNhan = 393 / 750;
+let heightImgTranNhan = 330 / 1000;
+let widthImgLeLinh = 146 / 750;
+let heightImgLeLinh = 405 / 1000;
+let widthImgPhucDuong = 324 / 750;
+let heightImgPhucDuong = 556 / 1000;
+let widthImgManhTien = 576 / 750;
+let heightImgManhTien = 473 / 1000;
 
 const changeCoords = (areaID) => {
   let newCoords;
   const radiusImg = 100 / 750;
   if (areaID == "trannhan") {
-    newCoords = `${imgTopX * width}, ${imgTopY * height}, ${radiusImg * width}`;
+    newCoords = `${widthImgTranNhan * width}, ${heightImgTranNhan * height}, ${radiusImg * width}`;
   } else if (areaID == "lelinh") {
-    newCoords = `${imgLeftX * width}, ${imgLeftY * height}, ${
+    newCoords = `${widthImgLeLinh * width}, ${heightImgLeLinh * height}, ${
       radiusImg * width
     }`;
   } else if (areaID == "phucduong") {
-    newCoords = `${imgBottomX * width}, ${imgBottomY * height}, ${
+    newCoords = `${widthImgPhucDuong * width}, ${heightImgPhucDuong * height}, ${
       radiusImg * width
     }`;
   } else {
-    newCoords = `${imgRightX * width}, ${imgRightY * height}, ${
+    newCoords = `${widthImgManhTien * width}, ${heightImgManhTien * height}, ${
       radiusImg * width
     }`;
   }
@@ -115,29 +115,29 @@ const setHoverArea = (el) => {
     const widthTranNhan = elTranNhan.clientWidth / 2;
     const heightTranNhan =
       elTranNhan.clientHeight + elTranNhan.clientHeight / 2 + size;
-    elTranNhan.style.left = `${imgTopX * width - widthTranNhan}px`;
-    elTranNhan.style.top = `${imgTopY * height - heightTranNhan}px`;
+    elTranNhan.style.left = `${widthImgTranNhan * width - widthTranNhan}px`;
+    elTranNhan.style.top = `${heightImgTranNhan * height - heightTranNhan}px`;
   } else if (el.id == "lelinh" && x.matches(":hover")) {
     elLeLinh.style.display = "block";
     const widthLeLinh = elLeLinh.clientWidth / 2;
     const heightLeLinh =
       elLeLinh.clientHeight + elLeLinh.clientHeight / 2 + size;
-    elLeLinh.style.left = `${imgLeftX * width - widthLeLinh}px`;
-    elLeLinh.style.top = `${imgLeftY * height - heightLeLinh}px`;
+    elLeLinh.style.left = `${widthImgLeLinh * width - widthLeLinh}px`;
+    elLeLinh.style.top = `${heightImgLeLinh * height - heightLeLinh}px`;
   } else if (el.id == "manhtien" && x.matches(":hover")) {
     elManhTien.style.display = "block";
     const widthManhTien = elManhTien.clientWidth / 2;
     const heightManhTien =
       elManhTien.clientHeight + elManhTien.clientHeight / 2 + size;
-    elManhTien.style.left = `${imgRightX * width - widthManhTien}px`;
-    elManhTien.style.top = `${imgRightY * height - heightManhTien}px`;
+    elManhTien.style.left = `${widthImgManhTien * width - widthManhTien}px`;
+    elManhTien.style.top = `${heightImgManhTien * height - heightManhTien}px`;
   } else if (el.id == "phucduong" && x.matches(":hover")) {
     elPhucDuong.style.display = "block";
     const widthPhucDuong = elPhucDuong.clientWidth / 2;
     const heightPhucDuong =
       elPhucDuong.clientHeight + elPhucDuong.clientHeight / 2 + size;
-    elPhucDuong.style.left = `${imgBottomX * width - widthPhucDuong}px`;
-    elPhucDuong.style.top = `${imgBottomY * height - heightPhucDuong}px`;
+    elPhucDuong.style.left = `${widthImgPhucDuong * width - widthPhucDuong}px`;
+    elPhucDuong.style.top = `${heightImgPhucDuong * height - heightPhucDuong}px`;
   }
 };
 
