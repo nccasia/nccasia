@@ -615,21 +615,21 @@
                 </div>
                 <div class="ncc_project-box" id="survey_0">
                     <div class="ncc_project-progress">
-                        <!-- <div class="heading_title">
+                        <div class="heading_title">
                             <h3>Progress (1/5)</h3>
                         </div>
                         <div class="ncc_project-border">
                             <div class="progress-bar"
                                 style="height:6px;width:20%; background-color: var(--blue-color); border-radius: 4px 0 0 4px">
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="ncc_project-content">
-                        <div class="ncc_project-form_other">
+                        <div class="ncc_project-form">
                             <p>Can you tell us what project do you need our support?</p>
                             <div class="ncc_project-list grid-template">
                                 <div class="ncc_project-item">
-                                    <input class="checkbox" type="checkbox">
+                                    <input class="checkbox" type="checkbox" id="web">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/ncc_lab-img.webp" height="120"
                                             width="120" alt="">
@@ -637,14 +637,14 @@
                                     <h3>WEB DEVELOPEMENT</h3>
                                 </div>
                                 <div class="ncc_project-item">
-                                    <input class="checkbox" type="checkbox">
+                                    <input class="checkbox" type="checkbox" id="mobile">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/ncc_mobile-img.webp" height="120"
                                             width="120" alt="">
                                     </div>
                                     <h3>MOBILE DEVELOPEMENT</h3>
                                 </div>
-                                <div class="ncc_project-item">
+                                <div class="ncc_project-item" id="game">
                                     <input class="checkbox" type="checkbox">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/ncc_game-img.webp " height="120"
@@ -653,7 +653,7 @@
                                     <h3>GAME DEVELOPEMENT</h3>
                                 </div>
                                 <div class="ncc_project-item">
-                                    <input class="checkbox" type="checkbox">
+                                    <input class="checkbox" type="checkbox" id="other">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/ncc_other-img.webp" height="120"
                                             width="120" alt="">
@@ -662,7 +662,7 @@
                                 </div>
                             </div>
                             <div class="ncc_project-button">
-                                <button id="button-submit_other" class="button-primary">NEXT ></button>
+                                <button id="button-submit" class="button-primary">NEXT ></button>
                             </div>
                         </div>
                         <div class="ncc_project-form_other1">
@@ -846,6 +846,64 @@
                                 <button class="button-primary  button_back" id="button-back_other4">
                                     < BACK</button>
                                         <button class="button-primary" id="button-submit_other4">NEXT ></button>
+                            </div>
+                        </div>
+                        <div class="ncc_project-form_other5">
+                            <p class="p-title">How can we contact and support you?</p>
+
+                            <div class="survey_item-inp survey_item-boder-none">
+                                <input type="text" class="form-item input inp-item" placeholder="First name">
+                                <input type="text" class="form-item input inp-item" placeholder="you@company.com">
+                                <input type="text" class="form-item input inp-item" placeholder="+1 (555) 000-0000">
+                                <input type="text" class="form-item-1 input inp-item-1"
+                                    placeholder="Other way to contact (if viable). E.g Zalo/Skype/...">
+                            </div>
+                            <div class="ncc_project-button">
+                                <button class="button-primary  button_back" id="button-back_other5">
+                                    < BACK</button>
+                                        <button class="button-primary" id="button-submit_other5">SEND></button>
+                            </div>
+                        </div>
+                        <div class="ncc_project-form_game3">
+                            <p>What is the expertise of the game?</p>
+                            <div class="ncc_project-list grid-template">
+                                <div class="ncc_project-item">
+                                    <input class="checkbox" type="checkbox" id="web">
+                                    <div class="ncc_project-image">
+                                        <img loading="lazy" src="./assets/images/education.png" height="120"
+                                            width="120" alt="">
+                                    </div>
+                                    <h3>EDUCATION/CASUAL/KIDS</h3>
+                                </div>
+                                <div class="ncc_project-item">
+                                    <input class="checkbox" type="checkbox" id="mobile">
+                                    <div class="ncc_project-image">
+                                        <img loading="lazy" src="./assets/images/rpg.png" height="120"
+                                            width="120" alt="">
+                                    </div>
+                                    <h3>RPG/ACTION/ADVENTURE</h3>
+                                </div>
+                                <div class="ncc_project-item" id="game">
+                                    <input class="checkbox" type="checkbox">
+                                    <div class="ncc_project-image">
+                                        <img loading="lazy" src="./assets/images/auto.png " height="120"
+                                            width="120" alt="">
+                                    </div>
+                                    <h3>AUTO BATTLER</h3>
+                                </div>
+                                <div class="ncc_project-item">
+                                    <input class="checkbox" type="checkbox" id="other">
+                                    <div class="ncc_project-image">
+                                        <img loading="lazy" src="./assets/images/iq.png" height="120"
+                                            width="120" alt="">
+                                    </div>
+                                    <h3>IQ/QUIZZES</h3>
+                                </div>
+                            </div>
+                            <div class="ncc_project-button">
+                                <button class="button-primary  button_back" id="button-back_other5">
+                                    < BACK</button>
+                                        <button class="button-primary" id="button-submit_other5">SEND></button>
                             </div>
                         </div>
                     </div>

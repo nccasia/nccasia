@@ -1,10 +1,15 @@
-const formOther = document.querySelector(".ncc_project-form_other");
+const checkboxWeb = document.getElementById("web");
+const checkboxMobile = document.getElementById("mobile");
+const checkboxGame = document.getElementById("game");
+const checkboxOther = document.getElementById("other");
+
+const form = document.querySelector(".ncc_project-form");
 const formOther1 = document.querySelector(".ncc_project-form_other1");
 const formOther2 = document.querySelector(".ncc_project-form_other2");
 const formOther3 = document.querySelector(".ncc_project-form_other3");
 const formOther4 = document.querySelector(".ncc_project-form_other4");
 const formOther5 = document.querySelector(".ncc_project-form_other5");
-const btnSubmitOther = document.getElementById("button-submit_other");
+const btnSubmit = document.getElementById("button-submit");
 const btnSubmitOther1 = document.getElementById("button-submit_other1");
 const btnSubmitOther2 = document.getElementById("button-submit_other2");
 const btnSubmitOther3 = document.getElementById("button-submit_other3");
@@ -17,15 +22,22 @@ const btnBackOther4 = document.getElementById("button-back_other4");
 const btnBackOther5 = document.getElementById("button-back_other5");
 
 function handleActiveFormOther() {
-  formOther.style.display = "none";
+  form.style.display = "none";
   formOther1.style.display = "block";
 }
-btnSubmitOther.addEventListener("click", function (e) {
-  handleActiveFormOther();
+btnSubmit.addEventListener("click", function (e) {
+  if (checkboxWeb.checked) {
+    handleActiveFormOther();
+  } else if (checkboxMobile.checked) {
+    handleActiveFormOther();
+  } else if (checkboxGame.checked) {
+  } else if (checkboxOther.checked) {
+    handleActiveFormOther();
+  }
 });
 
 function handleDeactiveFormOther1() {
-  formOther.style.display = "block";
+  form.style.display = "block";
   formOther1.style.display = "none";
 }
 btnBackOther1.addEventListener("click", function (e) {
@@ -98,6 +110,7 @@ btnBackOther5.addEventListener("click", function (e) {
 
 function handleActiveFormOther5() {
   formOther5.style.display = "none";
+  form.style.display = "block";
 }
 btnSubmitOther5.addEventListener("click", function (e) {
   handleActiveFormOther5();
