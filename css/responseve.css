@@ -1,3 +1,8 @@
+@media (min-device-width: 0px) and (max-device-width: 1300px){
+  .ecosystem_list{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 @media (min-device-width: 0px) and (max-device-width: 1024px) {
   .mbscreen {
     transform: translateX(0) !important;
@@ -16,7 +21,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .ecosystem_list{
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
+
 
 @media (max-width: 768px) {
   .header {
