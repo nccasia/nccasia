@@ -349,6 +349,18 @@
   background-color: var(--white-color);
 }
 
+.timeline {
+  display: none;
+}
+.progress-bar {
+  display: flex;
+}
+
+.line {
+  height: 6px;
+  width: 20%;
+}
+
 .ncc_project-progress {
   align-items: center;
   background-color: #aabff2;
@@ -502,7 +514,7 @@
 .ncc_project-form_other5 {
   display: none;
 }
-.ncc_project-form_game3{
+.ncc_project-form_game3 {
   display: none;
 }
 .p-title {
