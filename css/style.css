@@ -38,14 +38,14 @@
 }
 
 .header_menu ul li a {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 100%;
   color: var(--white-color);
 }
-.header_link .header_link-button{
-  font-family: 'Nunito', sans-serif;
+.header_link .header_link-button {
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 130%;
@@ -133,7 +133,7 @@
   border-radius: 8px;
   padding: 30px;
 }
-.link_dowmload-profile:hover{
+.link_dowmload-profile:hover {
   opacity: 0.5;
 }
 .link_dowmload-profile .text_download {
@@ -308,25 +308,25 @@
 .ecosystem_item .ecosystem_item-content {
   background-image: url(../assets/images/ecosystem-img.png);
   background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-    width: 198px;
-    height: 198px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  background-position: 50% 0;
+  background-size: cover;
+  width: 198px;
+  height: 198px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
-.ecosystem_item-content>h3 {
-  font-family: 'Nunito';
+.ecosystem_item-content > h3 {
+  font-family: "Nunito";
   font-weight: 700;
   font-size: 20px;
   line-height: 130%;
   color: var(--blue-color);
   text-align: center;
 }
-.ecosystem_item-content>a {
+.ecosystem_item-content > a {
   font-weight: 300;
   font-size: 28px;
   line-height: 100%;
@@ -462,7 +462,7 @@
   line-height: 100%;
   color: var(--blue-color-gp);
 }
-.survey_item-inp > .input  {
+.survey_item-inp > .input {
   width: 100%;
 }
 .survey_item-boder {
@@ -471,7 +471,7 @@
 .inp-item {
   margin-bottom: 28px;
 }
-.survey_inp-item>.input {
+.survey_inp-item > .input {
   width: 100%;
   height: 100px;
 }
@@ -481,26 +481,53 @@
   gap: 28px;
   margin-top: 28px;
 }
-.survey_inp-item>.text {
+.survey_inp-item > .text {
   font-weight: 400;
   font-size: 32px;
   line-height: 100%;
   color: var(--blue-color-gp);
 }
-.ncc_project-form_other1{
+.ncc_project-form_other1 {
   display: none;
 }
-.ncc_project-form_other2{
+.ncc_project-form_other2 {
   display: none;
 }
-.ncc_project-form_other3{
+.ncc_project-form_other3 {
   display: none;
 }
-.ncc_project-form_other4{
+.ncc_project-form_other4 {
   display: none;
 }
-.ncc_project-form_other5{
+.ncc_project-form_other5 {
   display: none;
+}
+.ncc_project-form_game3{
+  display: none;
+}
+.p-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  text-align: center;
+  color: var(--blue-color-gp);
+  padding: 24px 0;
+}
+.form-item-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+  border: 1px solid #aabff2;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  align-self: stretch;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+  color: #aabff2;
+  min-height: 101px;
 }
 /* end ncc_project  */
 
@@ -811,7 +838,8 @@
 }
 
 /* recaptcha */
-.error, .success {
+.error,
+.success {
   display: flex;
   justify-content: center;
 }
