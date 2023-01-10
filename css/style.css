@@ -514,14 +514,10 @@
 .ncc_project-form_other5 {
   display: none;
 }
-<<<<<<< HEAD
 .ncc_project-form_game1, .ncc_project-form_game2, .ncc_project-form_game4, .ncc_project-form_game5, .ncc_project-form_game6{
   display: none;
 }
 .ncc_project-form_game3{
-=======
-.ncc_project-form_game3 {
->>>>>>> 239eae565da66f7adc3aac9ad6f0f41dbf4df1ae
   display: none;
 }
 .p-title {
