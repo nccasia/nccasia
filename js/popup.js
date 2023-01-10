@@ -44,32 +44,27 @@ formSendEmail.addEventListener("click", (event) => {
     return printMess("emailError", "Please fill out all required fields.");
   }
 
-  fetch("http://10.10.20.16:8800/ncc-site-api-sendmail", {
+  fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    mode: "no-cors",
-    body: JSON.stringify({
-      email: email,
-      type: "case_study",
-      category: `${category}`,
-    }),
+    body: JSON.stringify(data),
   })
-    .then((res) => {
-      if (!res.success) {
-        throw new Error(res.message);
-      } else {
+    .then((result) => {
+      if (result.data.success) {
         printMess(
-          "emailSuccess",
+          "nameSuccess",
           "Thank you, your submission has been received."
         );
-        formSendEmail.reset();
+        formEl.reset();
+      } else {
+        printMess("nameError", `${result.data.message}`);
       }
     })
     .catch((err) => {
       printMess(
-        "emailError",
+        "nameError",
         "Oops, something went wrong. Please try again later."
       );
     });
