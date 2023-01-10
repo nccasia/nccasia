@@ -370,7 +370,7 @@
   padding: 0 46px;
 }
 
-.ncc_project-content > p {
+.ncc_project-content p {
   font-weight: 700;
   font-size: 32px;
   line-height: 100%;
@@ -486,6 +486,21 @@
   font-size: 32px;
   line-height: 100%;
   color: var(--blue-color-gp);
+}
+.ncc_project-form_other1{
+  display: none;
+}
+.ncc_project-form_other2{
+  display: none;
+}
+.ncc_project-form_other3{
+  display: none;
+}
+.ncc_project-form_other4{
+  display: none;
+}
+.ncc_project-form_other5{
+  display: none;
 }
 /* end ncc_project  */
 

@@ -43,18 +43,16 @@ formEl.addEventListener("submit", (event) => {
       },
       body: JSON.stringify(data),
     })
-      .then((res) => {
-        if (!res.ok) {
-          return res.text().then((text) => {
-            throw new Error(text);
-          });
-        } else {
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.data.success) {
           printMess(
             "nameSuccess",
             "Thank you, your submission has been received."
           );
-          document.getElementById("nameMiss").remove();
           formEl.reset();
+        } else {
+          printMess("nameError", `${result.data.message}`);
         }
       })
       .catch((err) => {
