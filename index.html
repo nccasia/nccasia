@@ -555,6 +555,51 @@
         </section>
         <!-- end family  -->
 
+        <section class="ecosystem">
+            <div class="grid ecosystem-container">
+                <div class="ecosystem-heading heading">
+                    <div class="heading_text" style="width: 300px;">
+                        <h2>OUR ecosystem</h2>
+                    </div>
+                    <p>We are young and smart people. We work hard but also play hard. Here is the NCC family.</p>
+                </div>
+                <div class="ecosystem_list">
+                    <div class="ecosystem_item mbscreen scrollBox top-sort">
+                        <div class="ecosystem_item-content">
+                            <h3>Nearshore Development Center</h3>
+                            <a href="https://www.nccsoft.jp/">www.nccsoft.jp</a>
+                        </div>    
+                    </div>
+                    <div style="transition-delay: .25s;" class="ecosystem_item mbscreen scrollBox top-sort">
+                        <div class="ecosystem_item-content">
+                            <h3>Dedicated Development Team</h3>
+                            <a href="https://www.defisoft.jp/">www.defisoft.jp</a>
+                        </div>    
+                    </div>
+                    <div style="transition-delay: .5s;" class="ecosystem_item mbscreen scrollBox top-sort">
+                        <div class="ecosystem_item-content">
+                            <h3>AI & Blockchain 
+                                Development Service</h3>
+                            <a href="https://www.kryptohub.co/">www.kryptohub.co</a>
+                        </div>    
+                    </div>
+                    <div style="transition-delay: .75s;" class="ecosystem_item mbscreen scrollBox top-sort">
+                        <div class="ecosystem_item-content">
+                            <h3>Enterprise Development Service</h3>
+                            <a href="www.1platform.solutions">www.1platform.solutions</a>
+                        </div>    
+                    </div>
+                    <div style="transition-delay: .95s;" class="ecosystem_item mbscreen scrollBox top-sort">
+                        <div class="ecosystem_item-content">
+                            <h3>Game Development Service</h3>
+                            <a href="www.ncc.studio">www.ncc.studio</a>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </section>
+            <!-- end ecosystem -->
+            
         <section class="ncc_project" id="survey">
             <div class="grid ncc_project-container">
                 <div class="ncc_project-heading heading">
@@ -564,17 +609,16 @@
                     <p>It has been a long journey for NCC. Let's pause for a few minutes to see our outstanding
                         projects.</p>
                 </div>
-                <div class="ncc_project-box">
+                <div class="ncc_project-box" id="survey_0">
                     <div class="ncc_project-progress">
-                        <div class="heading_title">
+                        <!-- <div class="heading_title">
                             <h3>Progress (1/5)</h3>
                         </div>
-                        <!-- <img loading="lazy" src="./assets/images/Progress bar.webp" alt=""> -->
                         <div class="ncc_project-border">
                             <div class="progress-bar"
                                 style="height:6px;width:20%; background-color: var(--blue-color); border-radius: 4px 0 0 4px">
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="ncc_project-content">
                         <p>Can you tell us what project do you need our support?</p>
@@ -617,6 +661,239 @@
                         </div>
                     </div>
                 </div>
+                <!--  -->
+                <div class="ncc_project-box" id="survey_1">
+                    <div class="ncc_project-progress">
+                        <div class="heading_title">
+                            <h3>Progress (1/5)</h3>
+                        </div>
+                        <div class="ncc_project-border">
+                            <div class="progress-bar"
+                                style="height:6px;width:20%; background-color: var(--blue-color); border-radius: 4px 0 0 4px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ncc_project-content">
+                        <p>Which technology do you prefer for the project?</p>
+                        <div class="survey_content">
+                            <div class="survey_item">
+                                <input type="checkbox" class="checkbox" id="reactjs">
+                                <label class="text" for="reactjs">ReactJs</label>
+                            </div>
+                            <div class="survey_item">
+                                <input type="checkbox" class="checkbox" id="vuejs">
+                                <label class="text" for="vuejs">VueJs</label>
+                            </div>
+                            <div class="survey_item">
+                                <input type="checkbox" class="checkbox" id="angularjs">
+                                <label class="text" for="angularjs">AngularJs</label>
+                            </div>
+                            <div class="survey_item">
+                                <input type="checkbox" class="checkbox" id="requirement">
+                                <label class="text" for="requirement">Can be anything that fit project requirement</label>
+                            </div>
+                        </div>
+                        <div class="survey_item-inp">
+                            <input type="text" class="form-item input" placeholder="other">
+                        </div>
+                        <div class="ncc_project-button">
+                            <button class="button-primary  button_back">< BACK</button>
+                            <button class="button-primary">NEXT ></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end survey_1 -->
+
+                <div class="ncc_project-box" id="survey_2">
+                    <div class="ncc_project-progress">
+                        <div class="heading_title">
+                            <h3>Progress (2/5)</h3>
+                        </div>
+                        <div class="ncc_project-border">
+                            <div class="progress-bar"
+                                style="height:6px;width:40%; background-color: var(--blue-color); border-radius: 4px 0 0 4px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ncc_project-content">
+                        <p>What features do you need on your project?</p>
+                        <div class="survey_content survey_content-list">
+                            <div class="survey_list">
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="authentication">
+                                    <label class="text" for="Authentication">Normal Authentication</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="dashboard">
+                                    <label class="text" for="dashboard">Dashboard</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="camera">
+                                    <label class="text" for="camera">Camera/Photos/Videos</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="Cart">
+                                    <label class="text" for="Cart">Shopping Cart</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="management">
+                                    <label class="text" for="management">Security Management</label>
+                                </div>
+                            </div>
+                            <div class="survey_list">
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="authentication">
+                                    <label class="text" for="authentication">Normal Authentication</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="locations">
+                                    <label class="text" for="locations">Maps/Directions/Locations</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="simplified">
+                                    <label class="text" for="simplified">Simplified/Extended Chat</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="gateway">
+                                    <label class="text" for="gateway">Payment Gateway</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="migration">
+                                    <label class="text" for="migration">Integration/Migration</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="survey_item-inp">
+                            <input type="text" class="form-item input" placeholder="other">
+                        </div>
+                        <div class="ncc_project-button">
+                            <button class="button-primary  button_back">< BACK</button>
+                            <button class="button-primary">NEXT ></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end survey_2  -->
+
+                <div class="ncc_project-box" id="survey_3">
+                    <div class="ncc_project-progress">
+                        <div class="heading_title">
+                            <h3>Progress (3/5)</h3>
+                        </div>
+                        <div class="ncc_project-border">
+                            <div class="progress-bar"
+                                style="height:6px;width:60%; background-color: var(--blue-color); border-radius: 4px 0 0 4px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ncc_project-content">
+                        <p>Can we know about the state of project?</p>
+                        <div class="survey_content">
+                            <div class="survey_item">
+                                <input type="checkbox" class="checkbox" id="authentication">
+                                <label class="text" for="authentication">Normal Authentication</label>
+                            </div>
+                            <div class="survey_item">
+                                <input type="checkbox" class="checkbox" id="network">
+                                <label class="text" for="network">Social network Authentication</label>
+                            </div>
+                            <div class="survey_item">
+                                <input type="checkbox" class="checkbox" id="dashboard">
+                                <label class="text" for="dashboard">Dashboard</label>
+                            </div>
+                            <div class="survey_item">
+                                <input type="checkbox" class="checkbox" id="locations">
+                                <label class="text" for="locations">Maps/Directions/Locations</label>
+                            </div>
+                            <div class="survey_item">
+                                <input type="checkbox" class="checkbox" id="camera">
+                                <label class="text" for="camera">Camera/Photos/Videos</label>
+                            </div>
+                        </div>
+                        <div class="ncc_project-button">
+                            <button class="button-primary  button_back">< BACK</button>
+                            <button class="button-primary">NEXT ></button>
+                        </div>
+                    </div>
+                </div>
+                    <!-- end survey_3 -->
+                <div class="ncc_project-box" id="survey_4">
+                    <div class="ncc_project-progress">
+                        <div class="heading_title">
+                            <h3>Progress (4/5)</h3>
+                        </div>
+                        <div class="ncc_project-border">
+                            <div class="progress-bar"
+                                style="height:6px;width:80%; background-color: var(--blue-color); border-radius: 4px 0 0 4px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ncc_project-content">
+                        <p>What features do you need on your project?</p>
+                        <div class="survey_content survey_content-list">
+                            <div class="survey_list">
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="CMS">
+                                    <label class="text" for="CMS">CMS</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="education">
+                                    <label class="text" for="education">Education</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="tournament">
+                                    <label class="text" for="tournament">Esport/Tournament</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="products">
+                                    <label class="text" for="products">Showroom of products</label>
+                                </div>
+                            </div>
+                            <div class="survey_list">
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="media">
+                                    <label class="text" for="media">Social Media</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="E-commerce">
+                                    <label class="text" for="E-commerce">E-commerce</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="Stock">
+                                    <label class="text" for="Stock">Stock/Crypto Currency/Financial Market</label>
+                                </div>
+                                <div class="survey_item">
+                                    <input type="checkbox" class="checkbox" id="travel">
+                                    <label class="text" for="travel">Travel</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="survey_item-inp survey_item-boder">
+                            <input type="text" class="form-item input inp-item" placeholder="other">
+                        </div>
+                        <div class="survey_inp-group">
+                            <div class="survey_inp-item">
+                                <label class="text">Can you give us other short description of your project</label>
+                                <input type="text" class="form-item input" placeholder="other">
+                            </div>
+                            <div class="survey_inp-item">
+                                <label class="text">Are there websites that you want us to based on?</label>
+                                <input type="text" class="form-item input" placeholder="other">
+                            </div>
+                            <div class="survey_inp-item">
+                                <label class="text">What do you expect to improve from those website?</label>
+                                <input type="text" class="form-item input" placeholder="other">
+                            </div>
+                            <div class="progress_bar">
+
+                            </div>
+                        </div>
+                        <div class="ncc_project-button">
+                            <button class="button-primary  button_back">< BACK</button>
+                            <button class="button-primary">NEXT ></button>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
             </div>
         </section>
         <!-- end ncc_project -->

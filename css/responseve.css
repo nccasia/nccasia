@@ -214,6 +214,9 @@
   }
   /* end .family */
 
+  .ecosystem_list {
+    grid-template-columns: 1fr;
+  }
   .ncc_project-progress {
     padding: 28px 24px;
   }
@@ -252,6 +255,9 @@
   .ncc_project-image > img {
     width: 68px;
     height: 68px;
+  }
+  .survey_content-list{
+    display: block;
   }
   /* end .ncc_project */
 

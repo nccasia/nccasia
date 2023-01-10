@@ -133,6 +133,9 @@
   border-radius: 8px;
   padding: 30px;
 }
+.link_dowmload-profile:hover{
+  opacity: 0.5;
+}
 .link_dowmload-profile .text_download {
   font-weight: 700;
   font-size: 24px;
@@ -288,6 +291,49 @@
 }
 
 /* end family  */
+.ecosystem {
+  padding: 96px 0;
+}
+.ecosystem_list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 24px;
+  padding: 70px 0 0 0;
+}
+.ecosystem_item {
+  border: 1px solid var(--blue-color);
+  border-radius: 12px;
+  padding: 0 20px;
+}
+.ecosystem_item .ecosystem_item-content {
+  background-image: url(../assets/images/ecosystem-img.png);
+  background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    width: 198px;
+    height: 198px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.ecosystem_item-content>h3 {
+  font-family: 'Nunito';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  color: var(--blue-color);
+  text-align: center;
+}
+.ecosystem_item-content>a {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 100%;
+  color: var(--blue-color);
+  border-bottom: 1px solid var(--blue-color);
+}
+
 .family_image {
   padding-top: 60px;
 }
@@ -373,6 +419,7 @@
   align-items: center;
   justify-content: center;
   padding: 48px 0 40px 0;
+  gap: 28px;
 }
 .button-primary {
   font-weight: 700;
@@ -387,7 +434,59 @@
   height: 55px;
   border: none;
 }
-
+/*  */
+.button_back {
+  background-color: var(--white-color);
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+}
+.survey_content-list {
+  display: flex;
+  gap: 150px;
+}
+.survey_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.survey_item > .checkbox {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--blue-1);
+  border-radius: 6px;
+}
+.survey_item > .text {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: var(--blue-color-gp);
+}
+.survey_item-inp > .input  {
+  width: 100%;
+}
+.survey_item-boder {
+  border-bottom: 2px solid var(--blue-1);
+}
+.inp-item {
+  margin-bottom: 28px;
+}
+.survey_inp-item>.input {
+  width: 100%;
+  height: 100px;
+}
+.survey_inp-group {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 28px;
+}
+.survey_inp-item>.text {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: var(--blue-color-gp);
+}
 /* end ncc_project  */
 
 .contact_container {
@@ -697,6 +796,10 @@
 }
 
 /* recaptcha */
+.error, .success {
+  display: flex;
+  justify-content: center;
+}
 .error {
   color: red;
   font-size: 20px;
