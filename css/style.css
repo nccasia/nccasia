@@ -515,7 +515,7 @@
   display: none;
 }
 .ncc_project-form_game1, .ncc_project-form_game2, .ncc_project-form_game4, .ncc_project-form_game5, .ncc_project-form_game6{
-  display: none;
+  display: block;
 }
 .ncc_project-form_game3{
   display: none;
@@ -546,6 +546,7 @@
 }
 .survey-boder {
   border-bottom: 2px solid var(--blue-color-gp);
+  padding-bottom: 24px;
 }
 .survey_content-item{
   display: flex;
