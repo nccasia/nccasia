@@ -514,7 +514,14 @@
 .ncc_project-form_other5 {
   display: none;
 }
+<<<<<<< HEAD
+.ncc_project-form_game1, .ncc_project-form_game2, .ncc_project-form_game4, .ncc_project-form_game5, .ncc_project-form_game6{
+  display: none;
+}
+.ncc_project-form_game3{
+=======
 .ncc_project-form_game3 {
+>>>>>>> 239eae565da66f7adc3aac9ad6f0f41dbf4df1ae
   display: none;
 }
 .p-title {
@@ -540,6 +547,30 @@
   line-height: 100%;
   color: #aabff2;
   min-height: 101px;
+}
+.survey-boder {
+  border-bottom: 2px solid var(--blue-color-gp);
+}
+.survey_content-item{
+  display: flex;
+  gap: 80px;
+}
+.survery_group{
+  gap: 28px;
+  display: flex;
+  flex-direction: column;
+}
+.survey_content-item>.inp_mg {
+  margin-bottom: 25px;
+}
+.survery_inp, .prosset .text {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: var(--blue-color-gp);
+}
+.survery_inp>.input {
+  width: 100%;
 }
 /* end ncc_project  */
 
