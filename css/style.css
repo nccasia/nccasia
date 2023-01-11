@@ -725,7 +725,7 @@
   margin-top: 16px;
 }
 /* modal */
-.modal {
+.modal,.mobile-modal {
   position: fixed;
   top: 0;
   width: 100vw;
@@ -737,7 +737,7 @@
   transform: scale(1);
 }
 
-.modal_popup {
+.modal_popup,.mobile_popup {
   position: relative;
   top: 50%;
   margin: auto;
@@ -756,10 +756,28 @@
   padding: 16px;
   text-align: center;
 }
+.mobile_popup_header{
+  background: var(--blue-1);
+  line-height: 31.2px;
+  padding: 16px;
+  text-align: center;
+}
+
+
 .modal_popup_main {
   display: flex;
   padding: 24px 40px 0;
   justify-content: space-between;
+}
+.mobile_popup_main{
+  padding: 16px;
+}
+.mobile_popup_main > h3{
+  text-align: center;
+  margin: auto;
+  font-size: 32px;
+  line-height: 100%;
+  margin-bottom: 10px;
 }
 .modal-input {
   padding: 0 16px;

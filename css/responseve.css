@@ -326,7 +326,7 @@
     padding: 16px 0;
   }
   /* popUp */
-  .modal_popup {
+  .modal_popup,.mobile_popup {
     width: calc(100% - 30px);
     padding-bottom: 24px;
   }
