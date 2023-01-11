@@ -326,8 +326,7 @@
 }
 .ecosystem_item .ecosystem_item-content1::before,
 .ecosystem_item .ecosystem_item-content2::before,
-.ecosystem_item .ecosystem_item-content3::before,
-.ecosystem_item .ecosystem_item-content4::before{
+.ecosystem_item .ecosystem_item-content3::before {
   content: ' ';
   display: block;
   position: absolute;
@@ -353,7 +352,7 @@
 .ecosystem_item .ecosystem_item-content3::before {
   background-image: url(../assets/images/ecosystem_enterprise.png);
 }
-.ecosystem_item .ecosystem_item-content4::before {
+.ecosystem_item .ecosystem_item-content4 {
   background-image: url(../assets/images/ecosystem_game-img.png);
 }
 
