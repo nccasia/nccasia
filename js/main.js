@@ -796,3 +796,11 @@ slider.addEventListener("change", (e) => {
 sliderGame.addEventListener("change", (e) => {
   changeRangerText(e, rangeTextGame);
 });
+
+
+function onlyOne(checkbox) {
+  var checkboxes = document.getElementsByName('check')
+  checkboxes.forEach((item) => {
+      if (item !== checkbox) item.checked = false
+  })
+}
