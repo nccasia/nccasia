@@ -474,11 +474,11 @@
                         <p>Our well-versed team will tailor a unique social networking and entertainment concept for
                             your specific needs
                             and requirements. </p>
-                            <button class="sub-button" data-id="3">View our casestudy</button>
+                        <button class="sub-button" data-id="3">View our casestudy</button>
 
                     </div>
                     <div class="project_item mbscreen scrollBox top-sort">
-                       
+
 
                         <div class="project_image-img">
                             <img loading="lazy" src="./assets/images/project_game-img.webp" height="180" width="180"
@@ -490,10 +490,10 @@
                         <p>Our dedicated developers, talented designers, creative artists, and brilliant programmers
                             that have a great passion for gaming will help to bring
                             your ideas to life. </p>
-                         <button class="sub-button" data-id="4">View our casestudy</button>
+                        <button class="sub-button" data-id="4">View our casestudy</button>
                     </div>
                     <div style="transition-delay: .25s;" class="project_item mbscreen scrollBox top-sort">
-                       
+
 
                         <div class="project_image-img">
                             <img loading="lazy" src="./assets/images/project_healthcare-img.webp" height="180"
@@ -505,10 +505,10 @@
                         <p>Our healthcare software helps to simplify, digitalize and increase the efficiency of work for
                             healthcare facilities, establish links of e-support for patients
                             and healthcare experts, allow people monitor their health actively. </p>
-                         <button class="sub-button" data-id="5">View our casestudy</button>
+                        <button class="sub-button" data-id="5">View our casestudy</button>
                     </div>
                     <div style="transition-delay: .5s;" class="project_item mbscreen scrollBox top-sort">
-                       
+
 
                         <div class="project_image-img">
                             <img loading="lazy" src="./assets/images/project_solution-img.webp" height="180" width="180"
@@ -520,10 +520,10 @@
                         <p>We leverage our professional experience and knowledge to create new or optimize your existing
                             business processes to
                             meet changing market requirements. </p>
-                         <button class="sub-button" data-id="6">View our casestudy</button>
+                        <button class="sub-button" data-id="6">View our casestudy</button>
                     </div>
                     <div style="transition-delay: .75s;" class="project_item mbscreen scrollBox top-sort">
-                       
+
 
                         <div class="project_image-img">
                             <img loading="lazy" src="./assets/images/project_finance-mg.webp" height="180" width="180"
@@ -535,12 +535,12 @@
                         <p>With AI & big data, blockchain & cryptocurrencies, and cybersecurity, our softwares and
                             solutions help untangle the tangled issue of
                             the finance and insurance sector. </p>
-                         <button class="sub-button" data-id="7">View our casestudy</button>
+                        <button class="sub-button" data-id="7">View our casestudy</button>
                     </div>
                 </div>
-                <span class="error" id="emailError"></span>
-                <span class="success" id="emailSuccess"></span>
-                <span class="error" id="emailMiss"></span>
+                <span class="errorMail" id="emailError"></span>
+                <span class="successMail" id="emailSuccess"></span>
+                <span class="errorMail" id="emailMiss"></span>
             </div>
         </section>
         <!-- end project  -->
@@ -591,13 +591,13 @@
                     <div style="transition-delay: .75s;" class="ecosystem_item mbscreen scrollBox top-sort">
                         <div class="ecosystem_item-content">
                             <h3>Enterprise Development Service</h3>
-                            <a href="www.1platform.solutions">www.1platform.solutions</a>
+                            <a href="https://1platform.solutions/">www.1platform.solutions</a>
                         </div>
                     </div>
                     <div style="transition-delay: .95s;" class="ecosystem_item mbscreen scrollBox top-sort">
                         <div class="ecosystem_item-content">
                             <h3>Game Development Service</h3>
-                            <a href="www.ncc.studio">www.ncc.studio</a>
+                            <a href="https://ncc.studio/">www.ncc.studio</a>
                         </div>
                     </div>
                 </div>
@@ -641,7 +641,7 @@
                             <p>Can you tell us what project do you need our support?</p>
                             <div class="ncc_project-list grid-template">
                                 <div class="ncc_project-item">
-                                    <input class="checkbox" type="checkbox" id="web">
+                                    <input class="checkbox" type="checkbox" id="web" name="web">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/ncc_lab-img.webp" height="120"
                                             width="120" alt="">
@@ -649,15 +649,15 @@
                                     <h3>WEB DEVELOPEMENT</h3>
                                 </div>
                                 <div class="ncc_project-item">
-                                    <input class="checkbox" type="checkbox" id="mobile">
+                                    <input class="checkbox" type="checkbox" id="mobile" name="mobile">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/ncc_mobile-img.webp" height="120"
                                             width="120" alt="">
                                     </div>
                                     <h3>MOBILE DEVELOPEMENT</h3>
                                 </div>
-                                <div class="ncc_project-item" id="game">
-                                    <input class="checkbox" type="checkbox">
+                                <div class="ncc_project-item">
+                                    <input class="checkbox" type="checkbox" id="game" name="game">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/ncc_game-img.webp " height="120"
                                             width="120" alt="">
@@ -665,7 +665,7 @@
                                     <h3>GAME DEVELOPEMENT</h3>
                                 </div>
                                 <div class="ncc_project-item">
-                                    <input class="checkbox" type="checkbox" id="other">
+                                    <input class="checkbox" type="checkbox" id="other" name="other">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/ncc_other-img.webp" height="120"
                                             width="120" alt="">
@@ -679,25 +679,55 @@
                         </div>
                         <div class="ncc_project-form_other1">
                             <p>Which technology do you prefer for the project?</p>
-                            <div class="survey_content">
-                                <div class="survey_item">
-                                    <input type="checkbox" class="checkbox" id="reactjs">
-                                    <label class="text" for="reactjs">ReactJs</label>
+                            <div class="survey_content survey_content-list">
+                                <div class="survey_list">
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="reactjs" />
+                                        <label class="text" for="reactjs">ReactJs</label>
+                                    </div>
+
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="angularjs" />
+                                        <label class="text" for="angularjs">AngularJs</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="dotnet" />
+                                        <label class="text" for="dotnet">Dotnet Framework</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="nodejs" />
+                                        <label class="text" for="nodejs">NodeJS Stack</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="K8S" />
+                                        <label class="text" for="K8S">K8S</label>
+                                    </div>
                                 </div>
-                                <div class="survey_item">
-                                    <input type="checkbox" class="checkbox" id="vuejs">
-                                    <label class="text" for="vuejs">VueJs</label>
-                                </div>
-                                <div class="survey_item">
-                                    <input type="checkbox" class="checkbox" id="angularjs">
-                                    <label class="text" for="angularjs">AngularJs</label>
-                                </div>
-                                <div class="survey_item">
-                                    <input type="checkbox" class="checkbox" id="requirement">
-                                    <label class="text" for="requirement">Can be anything that fit project
-                                        requirement</label>
+                                <div class="survey_list">
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="vuejs" />
+                                        <label class="text" for="vuejs">VueJs</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="java" />
+                                        <label class="text" for="java">Java Spring Boot</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="php" />
+                                        <label class="text" for="php">PHP</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="serverless" />
+                                        <label class="text" for="serverless">Serverless</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="requirement" />
+                                        <label class="text" for="requirement">Can be anything that fit project
+                                            requirement</label>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="survey_item-inp">
                                 <input type="text" class="form-item input" placeholder="other" id="technologys">
                             </div>
@@ -713,7 +743,7 @@
                                 <div class="survey_list">
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="authentication">
-                                        <label class="text" for="Authentication">Normal Authentication</label>
+                                        <label class="text" for="authentication">Normal Authentication</label>
                                     </div>
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="dashboard">
@@ -725,7 +755,7 @@
                                     </div>
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="cart">
-                                        <label class="text" for="Cart">Shopping Cart</label>
+                                        <label class="text" for="cart">Shopping Cart</label>
                                     </div>
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="management">
@@ -735,7 +765,7 @@
                                 <div class="survey_list">
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="social">
-                                        <label class="text" for="authentication">Social network Authentication</label>
+                                        <label class="text" for="social">Social network Authentication</label>
                                     </div>
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="locations">
@@ -770,23 +800,23 @@
                             <div class="survey_content">
                                 <div class="survey_item">
                                     <input type="checkbox" class="checkbox" id="idea">
-                                    <label class="text" for="authentication">Idea</label>
+                                    <label class="text" for="idea">Idea</label>
                                 </div>
                                 <div class="survey_item">
                                     <input type="checkbox" class="checkbox" id="sketches">
-                                    <label class="text" for="network">Sketches</label>
+                                    <label class="text" for="sketches">Sketches</label>
                                 </div>
                                 <div class="survey_item">
                                     <input type="checkbox" class="checkbox" id="detailed">
-                                    <label class="text" for="dashboard">Detailed Prototypes</label>
+                                    <label class="text" for="detailed">Detailed Prototypes</label>
                                 </div>
                                 <div class="survey_item">
                                     <input type="checkbox" class="checkbox" id="rebuild">
-                                    <label class="text" for="locations">Rebuild existing product</label>
+                                    <label class="text" for="rebuild">Rebuild existing product</label>
                                 </div>
                                 <div class="survey_item">
                                     <input type="checkbox" class="checkbox" id="maintenance">
-                                    <label class="text" for="camera">Maintenance of product</label>
+                                    <label class="text" for="maintenance">Maintenance of product</label>
                                 </div>
                             </div>
                             <div class="ncc_project-button">
@@ -801,7 +831,7 @@
                                 <div class="survey_list">
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="cms">
-                                        <label class="text" for="CMS">CMS</label>
+                                        <label class="text" for="cms">CMS</label>
                                     </div>
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="education">
@@ -823,11 +853,11 @@
                                     </div>
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="commerce">
-                                        <label class="text" for="E-commerce">E-commerce</label>
+                                        <label class="text" for="commerce">E-commerce</label>
                                     </div>
                                     <div class="survey_item">
-                                        <input type="checkbox" class="checkbox" id="stock">
-                                        <label class="text" for="Stock">Stock/Crypto Currency/Financial Market</label>
+                                        <input type="checkbox" class="checkbox check_Weight" id="stock">
+                                        <label class="text" for="stock">Stock/Crypto Currency/Financial Market</label>
                                     </div>
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="travel">
@@ -865,11 +895,16 @@
                             <p class="p-title">How can we contact and support you?</p>
 
                             <div class="survey_item-inp survey_item-boder-none">
-                                <input type="text" class="form-item input inp-item" placeholder="First name" id="nameSurvey">
-                                <input type="text" class="form-item input inp-item" placeholder="you@company.com" id="mailSurvey">
-                                <input type="text" class="form-item input inp-item" placeholder="+1 (555) 000-0000" id="phoneSurvey">
+                                <input type="text" class="form-item input inp-item" placeholder="First name"
+                                    id="nameSurvey">
+                                <input type="text" class="form-item input inp-item" placeholder="you@company.com"
+                                    id="mailSurvey"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
+                                <input type="text" class="form-item input inp-item" placeholder="+1 (555) 000-0000"
+                                    id="phoneSurvey">
                                 <input type="text" class="form-item-1 input inp-item-1"
-                                    placeholder="Other way to contact (if viable). E.g Zalo/Skype/..." id="contentSurvey">
+                                    placeholder="Other way to contact (if viable). E.g Zalo/Skype/..."
+                                    id="contentSurvey">
                             </div>
                             <div class="ncc_project-button">
                                 <button class="button-primary  button_back" id="button-back_other5">
@@ -895,20 +930,22 @@
                                             <label class="text" for="ue">ue4/5</label>
                                         </div>
                                         <div class="survey_item">
-                                            <input type="checkbox" class="checkbox" id="requirement">
-                                            <label class="text" for="requirement">Can be anything that fit game requirement</label>
+                                            <input type="checkbox" class="checkbox check_Weight" id="requirementGame">
+                                            <label class="text" for="requirementGame">Can be anything that fit game
+                                                requirement</label>
                                         </div>
                                     </div>
                                     <div class="survey_item-inp inp_mg">
-                                        <input type="text" class="form-item input" placeholder="other">
+                                        <input type="text" class="form-item input" placeholder="other"
+                                            id="technologysGame">
                                     </div>
                                 </div>
                                 <div class="survey_item_list">
                                     <p>Which plattform do you want to use?</p>
                                     <div class="survey_content survey_content-item">
                                         <div class="survey_item">
-                                            <input type="checkbox" class="checkbox" id="web">
-                                            <label class="text" for="Web">Web</label>
+                                            <input type="checkbox" class="checkbox" id="webGame">
+                                            <label class="text" for="webGame">Web</label>
                                         </div>
                                         <div class="survey_item">
                                             <input type="checkbox" class="checkbox" id="ios">
@@ -919,19 +956,19 @@
                                             <label class="text" for="android">Android</label>
                                         </div>
                                         <div class="survey_item">
-                                            <input type="checkbox" class="checkbox" id="Desktop">
+                                            <input type="checkbox" class="checkbox" id="desktop">
                                             <label class="text" fqor="Desktop">Desktop</label>
                                         </div>
                                     </div>
                                     <div class="survey_item-inp">
-                                        <input type="text" class="form-item input" placeholder="other">
+                                        <input type="text" class="form-item input" placeholder="other" id="plattforms">
                                     </div>
                                 </div>
                             </div>
                             <div class="ncc_project-button">
-                                <button class="button-primary button_back" id="button-back_other1">
+                                <button class="button-primary button_back" id="button-back_game1">
                                     < BACK</button>
-                                        <button class="button-primary" id="button-submit_other1">NEXT ></button>
+                                        <button class="button-primary" id="button-submit_game1">NEXT ></button>
                             </div>
                         </div>
                         <!--  -->
@@ -967,7 +1004,8 @@
                                     </div>
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="application">
-                                        <label class="text" for="application">Damage/Level/… calculation and application</label>
+                                        <label class="text" for="application">Damage/Level/… calculation and
+                                            application</label>
                                     </div>
                                     <div class="survey_item">
                                         <input type="checkbox" class="checkbox" id="Usage">
@@ -976,17 +1014,17 @@
                                 </div>
                             </div>
                             <div class="ncc_project-button">
-                                <button class="button-primary button_back" id="button-back_other1">
+                                <button class="button-primary button_back" id="button-back_game2">
                                     < BACK</button>
-                                        <button class="button-primary" id="button-submit_other1">NEXT ></button>
+                                        <button class="button-primary" id="button-submit_game2">NEXT ></button>
                             </div>
                         </div>
                         <!--  -->
                         <div class="ncc_project-form_game3">
                             <p>What is the expertise of the game?</p>
-                            <div class="ncc_project-list grid-template">
+                            <div class="ncc_project-list survey_game grid-template">
                                 <div class="ncc_project-item">
-                                    <input class="checkbox" type="checkbox" id="web">
+                                    <input class="checkbox" type="checkbox" id="casualKids">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/education.png" height="120" width="120"
                                             alt="">
@@ -994,15 +1032,15 @@
                                     <h3>EDUCATION/CASUAL/KIDS</h3>
                                 </div>
                                 <div class="ncc_project-item">
-                                    <input class="checkbox" type="checkbox" id="mobile">
+                                    <input class="checkbox" type="checkbox" id="rpgAction">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/rpg.png" height="120" width="120"
                                             alt="">
                                     </div>
                                     <h3>RPG/ACTION/ADVENTURE</h3>
                                 </div>
-                                <div class="ncc_project-item" id="game">
-                                    <input class="checkbox" type="checkbox">
+                                <div class="ncc_project-item">
+                                    <input class="checkbox" type="checkbox" id="autoBattler">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/auto.png " height="120" width="120"
                                             alt="">
@@ -1010,7 +1048,7 @@
                                     <h3>AUTO BATTLER</h3>
                                 </div>
                                 <div class="ncc_project-item">
-                                    <input class="checkbox" type="checkbox" id="other">
+                                    <input class="checkbox" type="checkbox" id="quizzes">
                                     <div class="ncc_project-image">
                                         <img loading="lazy" src="./assets/images/iq.png" height="120" width="120"
                                             alt="">
@@ -1019,9 +1057,9 @@
                                 </div>
                             </div>
                             <div class="ncc_project-button">
-                                <button class="button-primary  button_back" id="button-back_other5">
+                                <button class="button-primary  button_back" id="button-back_game3">
                                     < BACK</button>
-                                        <button class="button-primary" id="button-submit_other5">SEND></button>
+                                        <button class="button-primary" id="button-submit_game3">SEND></button>
                             </div>
                         </div>
                         <!--  -->
@@ -1029,11 +1067,11 @@
                             <p>Can we know about the state of project?</p>
                             <div class="survey_content">
                                 <div class="survey_item">
-                                    <input type="checkbox" class="checkbox" id="idea">
+                                    <input type="checkbox" class="checkbox" id="ideaGame">
                                     <label class="text" for="idea">Idea</label>
                                 </div>
                                 <div class="survey_item">
-                                    <input type="checkbox" class="checkbox" id="sketches">
+                                    <input type="checkbox" class="checkbox" id="sketchesGame">
                                     <label class="text" for="sketches">Sketches</label>
                                 </div>
                                 <div class="survey_item">
@@ -1045,14 +1083,14 @@
                                     <label class="text" for="existing">Rebuild existing product</label>
                                 </div>
                                 <div class="survey_item">
-                                    <input type="checkbox" class="checkbox" id="Maintenance">
+                                    <input type="checkbox" class="checkbox" id="maintenanceProduct">
                                     <label class="text" for="Maintenance">Maintenance of product</label>
                                 </div>
                             </div>
                             <div class="ncc_project-button">
-                                <button class="button-primary button_back" id="button-back_other1">
+                                <button class="button-primary button_back" id="button-back_game4">
                                     < BACK</button>
-                                        <button class="button-primary" id="button-submit_other1">NEXT ></button>
+                                        <button class="button-primary" id="button-submit_game4">NEXT ></button>
                             </div>
                         </div>
                         <!--  -->
@@ -1060,19 +1098,21 @@
                             <p>Can we know more about your game?</p>
                             <div class="survery_group">
                                 <div class="survery_inp">
-                                    <label class="text" for="">Can you give us other short description of your project</label>
-                                    <textarea id="content" name="content" class="form-item input"
-                            placeholder="other"></textarea>
+                                    <label class="text" for="">Can you give us other short description of your
+                                        project</label>
+                                    <textarea id="contentDesGame" name="content" class="form-item input"
+                                        placeholder="other"></textarea>
                                 </div>
                                 <div class="survery_inp">
                                     <label class="text" for="">Is there similar game that you want to base on?</label>
-                                    <textarea id="content" name="content" class="form-item input"
-                            placeholder="other"></textarea>
+                                    <textarea id="contentSimilarGame" name="content" class="form-item input"
+                                        placeholder="other"></textarea>
                                 </div>
                                 <div class="survery_inp">
-                                    <label class="text" for="">What do you like/dislike about the similar game that you want to improve in your game?</label>
-                                    <textarea id="content" name="content" class="form-item input"
-                            placeholder="other"></textarea>
+                                    <label class="text" for="">What do you like/dislike about the similar game that you
+                                        want to improve in your game?</label>
+                                    <textarea id="contentLikeGame" name="content" class="form-item input"
+                                        placeholder="other"></textarea>
                                 </div>
                                 <div class="prosset">
                                     <label class="text" for="">Your expected timeline to finish the project?</label>
@@ -1083,14 +1123,16 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="ncc_project-button">
-                                <button class="button-primary button_back" id="button-back_other1">
+                                <button class="button-primary button_back" id="button-back_game5">
                                     < BACK</button>
-                                        <button class="button-primary" id="button-submit_other1">NEXT ></button>
+                                        <button class="button-primary" id="button-submit_game5">NEXT ></button>
                             </div>
                         </div>
                         <!--  -->
+                        <span class="errorSurvey" id="nameErrorSurvey"></span>
+                        <span class="successSurvey" id="nameSuccessSurvey"></span>
                     </div>
                 </div>
             </div>
@@ -1108,7 +1150,8 @@
                 <div class="contact_form">
                     <div class="contact_form-group mbscreen scrollBox left-long">
                         <input type="text" placeholder="First name" id="fullName" name="fullName" class="form-item">
-                        <input type="text" placeholder="you@company.com" id="email" name="email" class="form-item">
+                        <input type="text" placeholder="you@company.com" id="email" name="email" class="form-item"
+                            pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
                         <input type="text" placeholder="+1 (555) 000-0000" id="phone" name="phone" class="form-item">
                     </div>
                     <div class="contact_form-textarea mbscreen scrollBox right-long">
@@ -1346,7 +1389,8 @@
                 <h3>Leave us your information and we will contact you soon</h3>
             </div>
             <form class="modal_popup_main">
-                <input type="text" placeholder="you@company.com" id="email-project" class="form-item modal-input">
+                <input type="text" placeholder="you@company.com" id="email-project" class="form-item modal-input"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
                 <button type="submit" class="button-primary send-email">SEND ></button>
             </form>
         </div>

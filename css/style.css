@@ -514,10 +514,14 @@
 .ncc_project-form_other5 {
   display: none;
 }
-.ncc_project-form_game1, .ncc_project-form_game2, .ncc_project-form_game4, .ncc_project-form_game5, .ncc_project-form_game6{
-  display: block;
+.ncc_project-form_game1,
+.ncc_project-form_game2,
+.ncc_project-form_game4,
+.ncc_project-form_game5,
+.ncc_project-form_game6 {
+  display: none;
 }
-.ncc_project-form_game3{
+.ncc_project-form_game3 {
   display: none;
 }
 .p-title {
@@ -548,25 +552,26 @@
   border-bottom: 2px solid var(--blue-color-gp);
   padding-bottom: 24px;
 }
-.survey_content-item{
+.survey_content-item {
   display: flex;
   gap: 80px;
 }
-.survery_group{
+.survery_group {
   gap: 28px;
   display: flex;
   flex-direction: column;
 }
-.survey_content-item>.inp_mg {
+.survey_content-item > .inp_mg {
   margin-bottom: 25px;
 }
-.survery_inp, .prosset .text {
+.survery_inp,
+.prosset .text {
   font-weight: 400;
   font-size: 32px;
   line-height: 100%;
   color: var(--blue-color-gp);
 }
-.survery_inp>.input {
+.survery_inp > .input {
   width: 100%;
 }
 /* end ncc_project  */
@@ -908,7 +913,38 @@
   justify-content: center;
 }
 
-.success {
+.errorMail,
+.successMail {
+  display: flex;
+  justify-content: center;
+}
+.errorMail {
+  color: red;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.successMail {
+  color: green;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.errorSurvey,
+.successSurvey {
+  display: flex;
+  justify-content: center;
+}
+.errorSurvey {
+  color: red;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.successSurvey {
   color: green;
   font-size: 16px;
   display: flex;
