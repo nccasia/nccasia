@@ -48,7 +48,7 @@
 .header_link .header_link-button {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 130%;
   border-radius: 8px;
   padding: 10px;
@@ -68,10 +68,12 @@
   color: var(--blue-color);
   border: 1px solid var(--blue-color);
 }
-.header_menu ul li:hover {
+.header_menu ul li a:hover {
   background-color: var(--blue-1);
   animation-timing-function: ease-in;
   border-radius: 5px;
+  cursor: pointer;
+  padding: 20px 10px;
 }
 .header_menu ul li a:hover {
   color: var(--blue-color);
@@ -433,6 +435,7 @@
 }
 
 .ncc_project-content p {
+  font-family: 'Nunito';
   font-weight: 700;
   font-size: 32px;
   line-height: 100%;
