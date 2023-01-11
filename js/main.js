@@ -188,7 +188,7 @@ function handleActiveFormOther2() {
   formOther2.style.display = "none";
   formOther3.style.display = "block";
   elLine3.style.backgroundColor = "var(--blue-color)";
-  let contentOther2 = "- What features do you need on your project?";
+  let contentOther2 = "\n- What features do you need on your project?";
   content = content + contentOther2 + "\n";
   if (elAuthentication.checked) {
     content = content + "Normal Authentication\n";
@@ -222,7 +222,7 @@ function handleActiveFormOther2() {
   }
   const features = document.getElementById("features").value;
   if (features !== "") {
-    content = content + features;
+    content = content + features + "\n";
   }
   setTextHtml(3);
 }
@@ -349,13 +349,13 @@ function handleActiveFormOther5() {
   const email = document.getElementById("mailSurvey").value;
   const phone = document.getElementById("phoneSurvey").value;
   const textMail = document.getElementById("contentSurvey").value;
-  const contentEmail = `Name: ${fullName}, Phone: ${phone}, Content: ${textMail}`;
+  const contentEmail = `\nsend: Name: ${fullName}, Phone: ${phone}, Content: ${textMail}`;
   content = content + contentEmail;
   const data = {
     email: email,
     content: content,
   };
-  fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
+  fetch("http://localhost:8800/ncc-site-api-sendmail", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -434,7 +434,7 @@ function handleActiveFormGame1() {
   if (technologysGame !== "") {
     content = content + technologysGame + "\n";
   }
-  content = content + "Which plattform do you want to use?\n";
+  content = content + "\nWhich plattform do you want to use?\n";
   if (elWebGame.checked) {
     content = content + "Web\n";
   }
@@ -473,7 +473,7 @@ function handleActiveFormGame2() {
   formGame2.style.display = "none";
   formGame3.style.display = "block";
   elLine3.style.backgroundColor = "var(--blue-color)";
-  let contentGame2 = "- What features do you need on your project?";
+  let contentGame2 = "\n- What features do you need on your project?";
   content = content + contentGame2 + "\n";
   if (elPurchase.checked) {
     content = content + "In app purchase\n";
@@ -587,7 +587,7 @@ function handleActiveFormGame5() {
   formGame5.style.display = "none";
   formOther5.style.display = "block";
   elLine5.style.backgroundColor = "var(--blue-color)";
-  let contentGame5 = "- Can we know more about your game?";
+  let contentGame5 = "\n- Can we know more about your game?";
   content = content + contentGame5 + "\n";
   const contentDesGame = document.getElementById("contentDesGame").value;
   if (contentDesGame !== "") {
