@@ -35,7 +35,6 @@ btnPopupMobile.addEventListener("click", function () {
 popup.addEventListener("animationend", function () {
   if (this.classList.contains("hidePopup")) {
     this.style.display = "none";
-    validateEmailCasestudy.style.display = "none";
     this.classList.remove("hidePopup");
   }
 });
@@ -48,23 +47,16 @@ popupMobile.addEventListener("animationend", function () {
 
 const validateEmail = (email) => {
   return email.match(
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
   );
 };
 
 const formSendEmail = document.querySelector(".send-email");
-const validateEmailCasestudy = document.querySelector(
-  ".validate-email-casestudy"
-);
+
 formSendEmail.addEventListener("click", (event) => {
-  validateEmailCasestudy.style.display = "none";
-  event.preventDefault();
   const email = document.getElementById("email-project").value;
-  if (email == "") {
-    return (validateEmailCasestudy.style.display = "block");
-  }
   if (!validateEmail(email)) {
-    return (validateEmailCasestudy.style.display = "block");
+    return;
   }
   fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
     method: "POST",

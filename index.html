@@ -907,13 +907,12 @@
                         </div>
                         <div class="ncc_project-form_other5">
                             <p class="p-title">How can we contact and support you?</p>
-
                             <div class="survey_item-inp survey_item-boder-none">
                                 <input type="text" class="form-item input inp-item" placeholder="First name"
                                     id="nameSurvey">
                                 <input type="text" class="form-item input inp-item" placeholder="you@company.com"
-                                    id="mailSurvey">
-                                <div class="validate-email-survey" style="display: none;">Email invalidate</div>
+                                    id="mailSurvey"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
                                 <input type="text" class="form-item input inp-item" placeholder="+1 (555) 000-0000"
                                     id="phoneSurvey">
                                 <input type="text" class="form-item-1 input inp-item-1"
@@ -923,7 +922,7 @@
                             <div class="ncc_project-button">
                                 <button class="button-primary  button_back" id="button-back_other5">
                                     < BACK</button>
-                                        <button class="button-primary" id="button-submit_other5">SEND></button>
+                                        <button class="button-primary" id="button-submit_other5">SEND ></button>
                             </div>
                         </div>
                         <div class="ncc_project-form_game1">
@@ -1073,7 +1072,7 @@
                             <div class="ncc_project-button">
                                 <button class="button-primary  button_back" id="button-back_game3">
                                     < BACK</button>
-                                        <button class="button-primary" id="button-submit_game3">SEND></button>
+                                        <button class="button-primary" id="button-submit_game3">SEND ></button>
                             </div>
                         </div>
                         <!--  -->
@@ -1405,10 +1404,11 @@
                 <h3>Leave us your information and we will contact you soon</h3>
             </div>
             <form class="modal_popup_main">
-                <input type="text" placeholder="you@company.com" id="email-project" class="form-item modal-input">
+                <input type="text" placeholder="you@company.com"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                    id="email-project" class="form-item modal-input">
                 <button type="submit" class="button-primary send-email">SEND ></button>
             </form>
-            <div class="validate-email-casestudy" style="display: none;">Email invalidate</div>
         </div>
     </div>
     <div class="mobile-modal showPopup">
@@ -1418,7 +1418,9 @@
             </div>
             <form class="mobile_popup_main heading_title">
                 <h3>What Field Are<br> You Interested In?</h3>
-                <input type="text" placeholder="you@company.com" id="email-project" class="form-item modal-input">
+                <input type="text" placeholder="you@company.com"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                    id="email-project" class="form-item modal-input">
                 <div class="survey_item checkbox-Popup">
                     <input type="checkbox" class="checkbox" id="Proptech">
                     <label class="text" for="Proptech">Proptech</label>
