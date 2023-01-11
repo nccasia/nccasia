@@ -122,7 +122,6 @@ function handleActiveFormOther() {
   elLine1.style.backgroundColor = "var(--blue-color)";
 }
 btnSubmit.addEventListener("click", function (e) {
-  console.log(checkboxGame);
   if (checkboxWeb.checked) {
     handleActiveFormOther();
   } else if (checkboxMobile.checked) {
