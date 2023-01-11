@@ -22,7 +22,21 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .ecosystem_list{
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-device-width: 0px) and (max-device-width: 880px){
+  .header_menu ul li a {
+    font-size: 11px
+  }
+  .header_link .header_link-button {
+    font-size: 16px;
+  }
+}
+@media (min-device-width: 0px) and (max-device-width: 440px){
+  .ecosystem_list {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -228,9 +242,7 @@
   .ecosystem{
     padding: 40px 0;
   }
-  .ecosystem_list {
-    grid-template-columns: 1fr;
-  }
+  
   .ecosystem_item {
     display: flex;
     align-items: center;
