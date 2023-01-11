@@ -169,16 +169,15 @@
   .grid-template {
     grid-gap: 40px;
   }
+
+ .sub-button {
+  display: none !important;
+
+  }
   .sub-button-mb {
-    display: block;
+    display: block !important;
     position: unset;
     transform: none;
-  }
- .sub-button {
-  display: block;
-  position: unset;
-  margin: 30px 50% 0;
-  /* opacity: 0.8; */
   }
   /* our team */
   .out-image_map .text {
@@ -349,7 +348,7 @@
     padding: 16px 0;
   }
   /* popUp */
-  .modal_popup {
+  .modal_popup,.mobile_popup {
     width: calc(100% - 30px);
     padding-bottom: 24px;
   }
