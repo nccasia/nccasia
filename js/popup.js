@@ -49,7 +49,11 @@ formSendEmail.addEventListener("click", (event) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify({
+      email: email,
+      type: "case_study",
+      category: `${category}`,
+    }),
   })
     .then((res) => res.json())
     .then((result) => {

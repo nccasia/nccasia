@@ -474,11 +474,11 @@
                         <p>Our well-versed team will tailor a unique social networking and entertainment concept for
                             your specific needs
                             and requirements. </p>
-                            <button class="sub-button" data-id="3">View our casestudy</button>
+                        <button class="sub-button" data-id="3">View our casestudy</button>
 
                     </div>
                     <div class="project_item mbscreen scrollBox top-sort">
-                       
+
 
                         <div class="project_image-img">
                             <img loading="lazy" src="./assets/images/project_game-img.webp" height="180" width="180"
@@ -490,10 +490,10 @@
                         <p>Our dedicated developers, talented designers, creative artists, and brilliant programmers
                             that have a great passion for gaming will help to bring
                             your ideas to life. </p>
-                         <button class="sub-button" data-id="4">View our casestudy</button>
+                        <button class="sub-button" data-id="4">View our casestudy</button>
                     </div>
                     <div style="transition-delay: .25s;" class="project_item mbscreen scrollBox top-sort">
-                       
+
 
                         <div class="project_image-img">
                             <img loading="lazy" src="./assets/images/project_healthcare-img.webp" height="180"
@@ -505,10 +505,10 @@
                         <p>Our healthcare software helps to simplify, digitalize and increase the efficiency of work for
                             healthcare facilities, establish links of e-support for patients
                             and healthcare experts, allow people monitor their health actively. </p>
-                         <button class="sub-button" data-id="5">View our casestudy</button>
+                        <button class="sub-button" data-id="5">View our casestudy</button>
                     </div>
                     <div style="transition-delay: .5s;" class="project_item mbscreen scrollBox top-sort">
-                       
+
 
                         <div class="project_image-img">
                             <img loading="lazy" src="./assets/images/project_solution-img.webp" height="180" width="180"
@@ -520,10 +520,10 @@
                         <p>We leverage our professional experience and knowledge to create new or optimize your existing
                             business processes to
                             meet changing market requirements. </p>
-                         <button class="sub-button" data-id="6">View our casestudy</button>
+                        <button class="sub-button" data-id="6">View our casestudy</button>
                     </div>
                     <div style="transition-delay: .75s;" class="project_item mbscreen scrollBox top-sort">
-                       
+
 
                         <div class="project_image-img">
                             <img loading="lazy" src="./assets/images/project_finance-mg.webp" height="180" width="180"
@@ -535,12 +535,12 @@
                         <p>With AI & big data, blockchain & cryptocurrencies, and cybersecurity, our softwares and
                             solutions help untangle the tangled issue of
                             the finance and insurance sector. </p>
-                         <button class="sub-button" data-id="7">View our casestudy</button>
+                        <button class="sub-button" data-id="7">View our casestudy</button>
                     </div>
                 </div>
-                <span class="error" id="emailError"></span>
-                <span class="success" id="emailSuccess"></span>
-                <span class="error" id="emailMiss"></span>
+                <span class="errorMail" id="emailError"></span>
+                <span class="successMail" id="emailSuccess"></span>
+                <span class="errorMail" id="emailMiss"></span>
             </div>
         </section>
         <!-- end project  -->
@@ -679,25 +679,55 @@
                         </div>
                         <div class="ncc_project-form_other1">
                             <p>Which technology do you prefer for the project?</p>
-                            <div class="survey_content">
-                                <div class="survey_item">
-                                    <input type="checkbox" class="checkbox" id="reactjs">
-                                    <label class="text" for="reactjs">ReactJs</label>
+                            <div class="survey_content survey_content-list">
+                                <div class="survey_list">
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="reactjs" />
+                                        <label class="text" for="reactjs">ReactJs</label>
+                                    </div>
+
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="angularjs" />
+                                        <label class="text" for="angularjs">AngularJs</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="dotnet" />
+                                        <label class="text" for="dotnet">Dotnet Framework</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="nodejs" />
+                                        <label class="text" for="nodejs">NodeJS Stack</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="K8S" />
+                                        <label class="text" for="K8S">K8S</label>
+                                    </div>
                                 </div>
-                                <div class="survey_item">
-                                    <input type="checkbox" class="checkbox" id="vuejs">
-                                    <label class="text" for="vuejs">VueJs</label>
-                                </div>
-                                <div class="survey_item">
-                                    <input type="checkbox" class="checkbox" id="angularjs">
-                                    <label class="text" for="angularjs">AngularJs</label>
-                                </div>
-                                <div class="survey_item">
-                                    <input type="checkbox" class="checkbox check_Weight" id="requirement">
-                                    <label class="text" for="requirement">Can be anything that fit project
-                                        requirement</label>
+                                <div class="survey_list">
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="vuejs" />
+                                        <label class="text" for="vuejs">VueJs</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="java" />
+                                        <label class="text" for="java">Java Spring Boot</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="php" />
+                                        <label class="text" for="php">PHP</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="serverless" />
+                                        <label class="text" for="serverless">Serverless</label>
+                                    </div>
+                                    <div class="survey_item">
+                                        <input type="checkbox" class="checkbox" id="requirement" />
+                                        <label class="text" for="requirement">Can be anything that fit project
+                                            requirement</label>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="survey_item-inp">
                                 <input type="text" class="form-item input" placeholder="other" id="technologys">
                             </div>
@@ -868,7 +898,8 @@
                                 <input type="text" class="form-item input inp-item" placeholder="First name"
                                     id="nameSurvey">
                                 <input type="text" class="form-item input inp-item" placeholder="you@company.com"
-                                    id="mailSurvey">
+                                    id="mailSurvey"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
                                 <input type="text" class="form-item input inp-item" placeholder="+1 (555) 000-0000"
                                     id="phoneSurvey">
                                 <input type="text" class="form-item-1 input inp-item-1"
@@ -1119,7 +1150,8 @@
                 <div class="contact_form">
                     <div class="contact_form-group mbscreen scrollBox left-long">
                         <input type="text" placeholder="First name" id="fullName" name="fullName" class="form-item">
-                        <input type="text" placeholder="you@company.com" id="email" name="email" class="form-item">
+                        <input type="text" placeholder="you@company.com" id="email" name="email" class="form-item"
+                            pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
                         <input type="text" placeholder="+1 (555) 000-0000" id="phone" name="phone" class="form-item">
                     </div>
                     <div class="contact_form-textarea mbscreen scrollBox right-long">
@@ -1357,7 +1389,8 @@
                 <h3>Leave us your information and we will contact you soon</h3>
             </div>
             <form class="modal_popup_main">
-                <input type="text" placeholder="you@company.com" id="email-project" class="form-item modal-input">
+                <input type="text" placeholder="you@company.com" id="email-project" class="form-item modal-input"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
                 <button type="submit" class="button-primary send-email">SEND ></button>
             </form>
         </div>

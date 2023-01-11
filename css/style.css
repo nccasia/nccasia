@@ -895,7 +895,19 @@
   justify-content: center;
 }
 
-.success {
+.errorMail,
+.successMail {
+  display: flex;
+  justify-content: center;
+}
+.errorMail {
+  color: red;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.successMail {
   color: green;
   font-size: 16px;
   display: flex;

@@ -46,10 +46,15 @@ const btnBackGame4 = document.getElementById("button-back_game4");
 const btnBackGame5 = document.getElementById("button-back_game5");
 
 const elReactjs = document.getElementById("reactjs");
-const elVuejs = document.getElementById("vuejs");
 const elAngularjs = document.getElementById("angularjs");
+const elDotnet = document.getElementById("dotnet");
+const elNodejs = document.getElementById("nodejs");
+const elK8S = document.getElementById("K8S");
+const elVuejs = document.getElementById("vuejs");
+const elJava = document.getElementById("java");
+const elPhp = document.getElementById("php");
+const elServerless = document.getElementById("serverless");
 const elRequirement = document.getElementById("requirement");
-const elTechnologys = document.getElementById("technologys");
 
 const elAuthentication = document.getElementById("authentication");
 const elDashboard = document.getElementById("dashboard");
@@ -122,15 +127,33 @@ function handleActiveFormOther() {
   elLine1.style.backgroundColor = "var(--blue-color)";
 }
 btnSubmit.addEventListener("click", function (e) {
-  console.log(checkboxGame);
-  if (checkboxWeb.checked) {
+  if (
+    checkboxWeb.checked &&
+    !checkboxMobile.checked &&
+    !checkboxGame.checked &&
+    !checkboxOther.checked
+  ) {
     handleActiveFormOther();
-  } else if (checkboxMobile.checked) {
+  } else if (
+    checkboxMobile.checked &&
+    !checkboxWeb.checked &&
+    !checkboxGame.checked &&
+    !checkboxOther.checked
+  ) {
     handleActiveFormOther();
-  } else if (checkboxGame.checked) {
-    console.log(1);
+  } else if (
+    checkboxGame.checked &&
+    !checkboxMobile.checked &&
+    !checkboxWeb.checked &&
+    !checkboxOther.checked
+  ) {
     handleActiveFormGame();
-  } else if (checkboxOther.checked) {
+  } else if (
+    checkboxOther.checked &&
+    !checkboxMobile.checked &&
+    !checkboxGame.checked &&
+    !checkboxWeb.checked
+  ) {
     handleActiveFormOther();
   }
 });
@@ -153,14 +176,32 @@ function handleActiveFormOther1() {
   if (elReactjs.checked) {
     content = content + "Reactjs\n";
   }
-  if (elVuejs.checked) {
-    content = content + "VueJs\n";
-  }
   if (elAngularjs.checked) {
     content = content + "AngularJs\n";
   }
+  if (elDotnet.checked) {
+    content = content + "Dotnet Framework\n";
+  }
+  if (elNodejs.checked) {
+    content = content + "NodeJS Stack\n";
+  }
+  if (elK8S.checked) {
+    content = content + "K8S\n";
+  }
+  if (elVuejs.checked) {
+    content = content + "VueJs\n";
+  }
+  if (elJava.checked) {
+    content = content + "Java Spring Boot\n";
+  }
+  if (elPhp.checked) {
+    content = content + "PHP\n";
+  }
+  if (elServerless.checked) {
+    content = content + "Serverlesss\n";
+  }
   if (elRequirement.checked) {
-    content = content + "requirment\n";
+    content = content + "Can be anything that fit project requirement\n";
   }
   const technologys = document.getElementById("technologys").value;
   if (technologys !== "") {
@@ -179,6 +220,7 @@ function handleDeactiveFormOther2() {
   formOther1.style.display = "block";
   formOther2.style.display = "none";
   elLine2.style.backgroundColor = "var(--white-color)";
+  setTextHtml(1);
 }
 btnBackOther2.addEventListener("click", function (e) {
   handleDeactiveFormOther2();
@@ -234,6 +276,7 @@ function handleDeactiveFormOther3() {
   formOther2.style.display = "block";
   formOther3.style.display = "none";
   elLine3.style.backgroundColor = "var(--white-color)";
+  setTextHtml(2);
 }
 btnBackOther3.addEventListener("click", function (e) {
   handleDeactiveFormOther3();
@@ -270,6 +313,7 @@ function handleDeactiveFormOther4() {
   formOther3.style.display = "block";
   formOther4.style.display = "none";
   elLine4.style.backgroundColor = "var(--white-color)";
+  setTextHtml(3);
 }
 btnBackOther4.addEventListener("click", function (e) {
   handleDeactiveFormOther4();
@@ -339,6 +383,7 @@ function handleDeactiveFormOther5() {
   formOther4.style.display = "block";
   formOther5.style.display = "none";
   elLine5.style.backgroundColor = "var(--white-color)";
+  setTextHtml(4);
 }
 btnBackOther5.addEventListener("click", function (e) {
   handleDeactiveFormOther5();
@@ -464,6 +509,7 @@ function handleDeactiveFormGame2() {
   formGame1.style.display = "block";
   formGame2.style.display = "none";
   elLine2.style.backgroundColor = "var(--white-color)";
+  setTextHtml(1);
 }
 btnBackGame2.addEventListener("click", function (e) {
   handleDeactiveFormGame2();
@@ -509,6 +555,7 @@ function handleDeactiveFormGame3() {
   formGame2.style.display = "block";
   formGame3.style.display = "none";
   elLine3.style.backgroundColor = "var(--white-color)";
+  setTextHtml(2);
 }
 btnBackGame3.addEventListener("click", function (e) {
   handleDeactiveFormGame3();
@@ -542,6 +589,7 @@ function handleDeactiveFormGame4() {
   formGame3.style.display = "block";
   formGame4.style.display = "none";
   elLine4.style.backgroundColor = "var(--white-color)";
+  setTextHtml(3);
 }
 btnBackGame4.addEventListener("click", function (e) {
   handleDeactiveFormGame4();
@@ -578,6 +626,7 @@ function handleDeactiveFormGame5() {
   formGame4.style.display = "block";
   formGame5.style.display = "none";
   elLine5.style.backgroundColor = "var(--white-color)";
+  setTextHtml(4);
 }
 btnBackGame5.addEventListener("click", function (e) {
   handleDeactiveFormGame5();
