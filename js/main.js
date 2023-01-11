@@ -763,7 +763,6 @@ const rangeText = document.querySelector(".range-text");
 const rangeTextGame = document.querySelector(".text-game");
 
 function changeRangerText(e, textRanger) {
-  console.log(styleCss);
   newVal = e.target.value;
   textRanger.style.paddingLeft = `${styleCss - newVal + 3}%`;
   if (newVal == 1) {
