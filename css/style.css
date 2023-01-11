@@ -1032,6 +1032,7 @@ input[type="range"]::-webkit-slider-thumb {
   background: #ffffff;
   border: 2px solid #aabff2;
 }
+
 .range-text {
   z-index: 1;
   top: 30px;

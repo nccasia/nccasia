@@ -778,6 +778,7 @@ function changeRangerText(e, textRanger) {
 slider.addEventListener("change", (e) => {
   changeRangerText(e, rangeText);
 });
+
 sliderGame.addEventListener("change", (e) => {
   changeRangerText(e, rangeTextGame);
 });
