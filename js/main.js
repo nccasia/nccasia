@@ -355,7 +355,7 @@ function handleActiveFormOther5() {
     email: email,
     content: content,
   };
-  fetch("http://localhost:8800/ncc-site-api-sendmail", {
+  fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
