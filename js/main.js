@@ -422,7 +422,6 @@ btnSubmitOther4.addEventListener("click", function (e) {
 });
 
 function handleDeactiveFormOther5(id) {
-  validateEmailSurvey.style.display = "none";
   if (checkedForm == 0) {
     el = `elLine${id}`;
     formOther4.style.display = "block";
@@ -444,29 +443,11 @@ btnBackOther5.addEventListener("click", function (e) {
 
 const validateEmailSur = (email) => {
   return email.match(
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
   );
 };
 
-const validateEmailSurvey = document.querySelector(".validate-email-survey");
-function handleActiveFormOther5() {
-  const fullName = document.getElementById("nameSurvey").value;
-  const email = document.getElementById("mailSurvey").value;
-  const phone = document.getElementById("phoneSurvey").value;
-  const textMail = document.getElementById("contentSurvey").value;
-  validateEmailSurvey.style.display = "none";
-  if (email == "") {
-    return (validateEmailSurvey.style.display = "block");
-  }
-  if (!validateEmailSur(email)) {
-    return (validateEmailSurvey.style.display = "block");
-  }
-  const contentEmail = `\nsend: Name: ${fullName}, Phone: ${phone}, Content: ${textMail}`;
-  content = content + contentEmail;
-  const data = {
-    email: email,
-    content: content,
-  };
+function handleActiveFormOther5(data) {
   fetch("http://localhost:8800/ncc-site-api-sendmail", {
     method: "POST",
     headers: {
@@ -505,7 +486,21 @@ function handleActiveFormOther5() {
   checkedForm = 0;
 }
 btnSubmitOther5.addEventListener("click", function (e) {
-  handleActiveFormOther5();
+  const fullName = document.getElementById("nameSurvey").value;
+  const email = document.getElementById("mailSurvey").value;
+  const phone = document.getElementById("phoneSurvey").value;
+  const textMail = document.getElementById("contentSurvey").value;
+  const contentEmail = `\nsend: Name: ${fullName}, Phone: ${phone}, Content: ${textMail}`;
+  content = content + contentEmail;
+  const data = {
+    email: email,
+    content: content,
+  };
+
+  if (!validateEmailSur(email)) {
+    return;
+  }
+  handleActiveFormOther5(data);
 });
 
 //game
