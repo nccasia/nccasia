@@ -245,6 +245,7 @@
 .project_item {
   position: relative;
 }
+.sub-button2,
 .sub-button {
   display: none;
   position: absolute;
@@ -730,7 +731,8 @@
   margin-top: 16px;
 }
 /* modal */
-.modal,.mobile-modal {
+.modal,
+.mobile-modal {
   position: fixed;
   top: 0;
   width: 100vw;
@@ -742,11 +744,12 @@
   transform: scale(1);
 }
 
-.modal_popup,.mobile_popup {
+.modal_popup,
+.mobile_popup {
   position: relative;
-  top: 50%;
+  top: 63%;
   margin: auto;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
   border: 3px solid var(--blue-color);
   border-radius: 24px;
   margin: auto;
@@ -761,23 +764,22 @@
   padding: 16px;
   text-align: center;
 }
-.mobile_popup_header{
+.mobile_popup_header {
   background: var(--blue-1);
   line-height: 31.2px;
   padding: 16px;
   text-align: center;
 }
 
-
 .modal_popup_main {
   display: flex;
   padding: 24px 40px 0;
   justify-content: space-between;
 }
-.mobile_popup_main{
+.mobile_popup_main {
   padding: 16px;
 }
-.mobile_popup_main > h3{
+.mobile_popup_main > h3 {
   text-align: center;
   margin: auto;
   font-size: 32px;
@@ -799,6 +801,26 @@
   animation: show 0.3s;
   animation-fill-mode: forwards;
   display: block !important;
+}
+.checkbox-Popup {
+  margin-bottom: 6px;
+}
+.checkbox-Popup > label {
+  font-size: 16px;
+}
+.checkbox-Popup > .checkbox {
+  width: 25px;
+  height: 25px;
+}
+.mobile_popup_main > button {
+  margin-top: 10px;
+  width: 100%;
+}
+.mobile_popup_main > .btn-cancel
+{
+  border: 1px solid var(--blue-color);
+  background-color: transparent;
+  color: var(--blue-color);
 }
 
 @keyframes show {
