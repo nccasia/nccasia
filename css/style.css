@@ -1034,17 +1034,16 @@ input[type="range"]::-webkit-slider-thumb {
   border: 2px solid #aabff2;
 }
 .range-text {
-  position: absolute;
   z-index: 1;
   top: 30px;
   font-family: "Nunito";
   font-weight: 500;
   font-size: 12px;
   line-height: 130%;
-  text-align: center;
   text-transform: lowercase;
   white-space: nowrap;
   color: #6572b7;
+  padding-top: 4px;
 }
 .errorSurvey,
 .successSurvey {
