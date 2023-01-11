@@ -630,6 +630,8 @@
                                     </div>
                                     <div class="line" id="line4">
                                     </div>
+                                    <div class="line" id="lineGame" style="display: none;">
+                                    </div>
                                     <div class="line" id="line5" style="border-radius: 0 4px 4px 0">
                                     </div>
                                 </div>
@@ -881,8 +883,15 @@
                                     <label class="text">What do you expect to improve from those website?</label>
                                     <input type="text" class="form-item input" placeholder="other" id="improve">
                                 </div>
-                                <div class="progress_bar">
-
+                                <div class="survey_inp-item progres-slider">
+                                    <label class="text">Your expected timeline to finish the project?</label>
+                                    <div class="survey-slider">
+                                        <div class="progress_bar">
+                                            <input id="myinput" class="slider" type="range" min="1" value="1"
+                                                max="10" />
+                                            <div class="range-text">1 Month</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="ncc_project-button">
@@ -1114,11 +1123,13 @@
                                     <textarea id="contentLikeGame" name="content" class="form-item input"
                                         placeholder="other"></textarea>
                                 </div>
-                                <div class="prosset">
-                                    <label class="text" for="">Your expected timeline to finish the project?</label>
-                                    <div class="ncc_project-border">
-                                        <div class="progress-bar"
-                                            style="height:6px;width:20%; background-color: var(--blue-color); border-radius: 4px 0 0 4px">
+                                <div class="survey_inp-item progres-slider">
+                                    <label class="text">Your expected timeline to finish the project?</label>
+                                    <div class="survey-slider">
+                                        <div class="progress_bar">
+                                            <input id="myinputGame" class="slider" type="range" min="1" value="1"
+                                                max="10" />
+                                            <div class="range-text text-game">1 Month</div>
                                         </div>
                                     </div>
                                 </div>

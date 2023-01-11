@@ -8,6 +8,7 @@ const elLine2 = document.getElementById("line2");
 const elLine3 = document.getElementById("line3");
 const elLine4 = document.getElementById("line4");
 const elLine5 = document.getElementById("line5");
+const elLineGame = document.getElementById("lineGame");
 
 const timeline = document.querySelector(".timeline");
 const headingTitle = document.getElementById("text_progress");
@@ -113,9 +114,16 @@ const elExisting = document.getElementById("existing");
 const elMaintenanceProduct = document.getElementById("maintenanceProduct");
 
 let content = "";
-function setTextHtml(id) {
+let newVal = 1;
+let checkedForm = 0;
+function setTextHtml(id, sum) {
   headingTitle.innerHTML = "";
-  const textH3 = document.createTextNode(`Progress (${id}/5)`);
+  let textH3;
+  if (sum) {
+    textH3 = document.createTextNode(`Progress (${id}/${sum})`);
+  } else {
+    textH3 = document.createTextNode(`Progress (${id}/5)`);
+  }
   headingTitle.appendChild(textH3);
 }
 
@@ -133,6 +141,8 @@ btnSubmit.addEventListener("click", function (e) {
     !checkboxGame.checked &&
     !checkboxOther.checked
   ) {
+    elLineGame.style.display = "none";
+    checkedForm = 0;
     handleActiveFormOther();
   } else if (
     checkboxMobile.checked &&
@@ -140,6 +150,8 @@ btnSubmit.addEventListener("click", function (e) {
     !checkboxGame.checked &&
     !checkboxOther.checked
   ) {
+    elLineGame.style.display = "none";
+    checkedForm = 0;
     handleActiveFormOther();
   } else if (
     checkboxGame.checked &&
@@ -147,6 +159,8 @@ btnSubmit.addEventListener("click", function (e) {
     !checkboxWeb.checked &&
     !checkboxOther.checked
   ) {
+    elLineGame.style.display = "block";
+    checkedForm = 1;
     handleActiveFormGame();
   } else if (
     checkboxOther.checked &&
@@ -154,6 +168,8 @@ btnSubmit.addEventListener("click", function (e) {
     !checkboxGame.checked &&
     !checkboxWeb.checked
   ) {
+    elLineGame.style.display = "none";
+    checkedForm = 0;
     handleActiveFormOther();
   }
 });
@@ -319,10 +335,35 @@ btnBackOther4.addEventListener("click", function (e) {
   handleDeactiveFormOther4();
 });
 
-function handleActiveFormOther4() {
+function setTextSlider() {
+  if (newVal == 1) {
+    content =
+      content +
+      "\n- Your expected timeline to finish the project?\n" +
+      `0${newVal} Month` +
+      "\n";
+  } else if (newVal == 10) {
+    content =
+      content +
+      "\n- Your expected timeline to finish the project?\n" +
+      `0${newVal} Months` +
+      "\n";
+  } else {
+    content =
+      content +
+      "\n- Your expected timeline to finish the project?\n" +
+      `${newVal} Months` +
+      "\n";
+  }
+}
+
+function handleActiveFormOther4(id) {
+  el = `elLine${id}`;
   formOther4.style.display = "none";
   formOther5.style.display = "block";
-  elLine5.style.backgroundColor = "var(--blue-color)";
+  if (el == "elLine5") {
+    elLine5.style.backgroundColor = "var(--blue-color)";
+  }
   let contentOther4 = "\n- What features do you need on your project?";
   content = content + contentOther4 + "\n";
   if (elCms.checked) {
@@ -373,20 +414,31 @@ function handleActiveFormOther4() {
       improve +
       "\n";
   }
+  setTextSlider();
   setTextHtml(5);
 }
 btnSubmitOther4.addEventListener("click", function (e) {
-  handleActiveFormOther4();
+  handleActiveFormOther4(5);
 });
 
-function handleDeactiveFormOther5() {
-  formOther4.style.display = "block";
-  formOther5.style.display = "none";
-  elLine5.style.backgroundColor = "var(--white-color)";
-  setTextHtml(4);
+function handleDeactiveFormOther5(id) {
+  if (checkedForm == 0) {
+    el = `elLine${id}`;
+    formOther4.style.display = "block";
+    formOther5.style.display = "none";
+    if (el == "elLine5") {
+      elLine5.style.backgroundColor = "var(--white-color)";
+    }
+    setTextHtml(4);
+  } else {
+    formGame5.style.display = "block";
+    formOther5.style.display = "none";
+    elLine5.style.backgroundColor = "var(--white-color)";
+    setTextHtml(5, 6);
+  }
 }
 btnBackOther5.addEventListener("click", function (e) {
-  handleDeactiveFormOther5();
+  handleDeactiveFormOther5(5);
 });
 
 function handleActiveFormOther5() {
@@ -400,7 +452,7 @@ function handleActiveFormOther5() {
     email: email,
     content: content,
   };
-  fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
+  fetch("http://localhost:8800/ncc-site-api-sendmail", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -428,12 +480,14 @@ function handleActiveFormOther5() {
   formOther5.style.display = "none";
   timeline.style.display = "none";
   form.style.display = "block";
+  elLineGame.style.backgroundColor = "var(--white-color)";
   elLine5.style.backgroundColor = "var(--white-color)";
   elLine4.style.backgroundColor = "var(--white-color)";
   elLine3.style.backgroundColor = "var(--white-color)";
   elLine2.style.backgroundColor = "var(--white-color)";
   elLine1.style.backgroundColor = "var(--white-color)";
   content = "";
+  checkedForm = 0;
 }
 btnSubmitOther5.addEventListener("click", function (e) {
   handleActiveFormOther5();
@@ -444,7 +498,7 @@ function handleActiveFormGame() {
   form.style.display = "none";
   timeline.style.display = "block";
   formGame1.style.display = "block";
-  setTextHtml(1);
+  setTextHtml(1, 6);
   elLine1.style.backgroundColor = "var(--blue-color)";
 }
 
@@ -499,7 +553,7 @@ function handleActiveFormGame1() {
   if (content !== "") {
     content = contentGame1 + content + "\n";
   }
-  setTextHtml(2);
+  setTextHtml(2, 6);
 }
 btnSubmitGame1.addEventListener("click", function (e) {
   handleActiveFormGame1();
@@ -509,7 +563,7 @@ function handleDeactiveFormGame2() {
   formGame1.style.display = "block";
   formGame2.style.display = "none";
   elLine2.style.backgroundColor = "var(--white-color)";
-  setTextHtml(1);
+  setTextHtml(1, 6);
 }
 btnBackGame2.addEventListener("click", function (e) {
   handleDeactiveFormGame2();
@@ -545,7 +599,7 @@ function handleActiveFormGame2() {
   if (elUsage.checked) {
     content = content + "Offline Usage\n";
   }
-  setTextHtml(3);
+  setTextHtml(3, 6);
 }
 btnSubmitGame2.addEventListener("click", function (e) {
   handleActiveFormGame2();
@@ -555,7 +609,7 @@ function handleDeactiveFormGame3() {
   formGame2.style.display = "block";
   formGame3.style.display = "none";
   elLine3.style.backgroundColor = "var(--white-color)";
-  setTextHtml(2);
+  setTextHtml(2, 6);
 }
 btnBackGame3.addEventListener("click", function (e) {
   handleDeactiveFormGame3();
@@ -579,7 +633,7 @@ function handleActiveFormGame3() {
   if (elQuizzes.checked) {
     content = content + "IQ/QUIZZES\n";
   }
-  setTextHtml(4);
+  setTextHtml(4, 6);
 }
 btnSubmitGame3.addEventListener("click", function (e) {
   handleActiveFormGame3();
@@ -589,7 +643,7 @@ function handleDeactiveFormGame4() {
   formGame3.style.display = "block";
   formGame4.style.display = "none";
   elLine4.style.backgroundColor = "var(--white-color)";
-  setTextHtml(3);
+  setTextHtml(3, 6);
 }
 btnBackGame4.addEventListener("click", function (e) {
   handleDeactiveFormGame4();
@@ -598,7 +652,6 @@ btnBackGame4.addEventListener("click", function (e) {
 function handleActiveFormGame4() {
   formGame4.style.display = "none";
   formGame5.style.display = "block";
-  elLine5.style.backgroundColor = "var(--blue-color)";
   let contentGame4 = "\n- Can we know about the state of project?";
   content = content + contentGame4 + "\n";
   if (elIdeaGame.checked) {
@@ -616,7 +669,9 @@ function handleActiveFormGame4() {
   if (elMaintenanceProduct.checked) {
     content = content + "Maintenance of product\n";
   }
-  setTextHtml(5);
+  elLineGame.style.display = "block";
+  elLineGame.style.backgroundColor = "var(--blue-color)";
+  setTextHtml(5, 6);
 }
 btnSubmitGame4.addEventListener("click", function (e) {
   handleActiveFormGame4();
@@ -625,8 +680,8 @@ btnSubmitGame4.addEventListener("click", function (e) {
 function handleDeactiveFormGame5() {
   formGame4.style.display = "block";
   formGame5.style.display = "none";
-  elLine5.style.backgroundColor = "var(--white-color)";
-  setTextHtml(4);
+  elLineGame.style.backgroundColor = "var(--white-color)";
+  setTextHtml(4, 6);
 }
 btnBackGame5.addEventListener("click", function (e) {
   handleDeactiveFormGame5();
@@ -663,9 +718,73 @@ function handleActiveFormGame5() {
       contentLikeGame +
       "\n";
   }
-  setTextHtml(6);
+  setTextSlider();
+  setTextHtml(6, 6);
 }
 
 btnSubmitGame5.addEventListener("click", function (e) {
   handleActiveFormGame5();
+});
+
+const slider = document.getElementById("myinput");
+const min = slider.min;
+const max = slider.max;
+const value = slider.value;
+
+slider.style.background = `linear-gradient(to right, #3E50AF 0%, #3E50AF ${
+  ((value - min) / (max - min)) * 100
+}%, #ffffff ${((value - min) / (max - min)) * 100}%, #ffffff 100%)`;
+
+slider.oninput = function () {
+  this.style.background = `linear-gradient(to right, #3E50AF 0%, #3E50AF ${
+    ((this.value - this.min) / (this.max - this.min)) * 100
+  }%, #ffffff ${
+    ((this.value - this.min) / (this.max - this.min)) * 100
+  }%, #ffffff 100%)`;
+};
+
+const sliderGame = document.getElementById("myinputGame");
+sliderGame.style.background = `linear-gradient(to right, #3E50AF 0%, #3E50AF ${
+  ((value - min) / (max - min)) * 100
+}%, #ffffff ${((value - min) / (max - min)) * 100}%, #ffffff 100%)`;
+
+sliderGame.oninput = function () {
+  this.style.background = `linear-gradient(to right, #3E50AF 0%, #3E50AF ${
+    ((this.value - this.min) / (this.max - this.min)) * 100
+  }%, #ffffff ${
+    ((this.value - this.min) / (this.max - this.min)) * 100
+  }%, #ffffff 100%)`;
+};
+
+const rangeText = document.querySelector(".range-text");
+const rangeTextGame = document.querySelector(".text-game");
+
+function changeRangerText(e, textRanger) {
+  newVal = e.target.value;
+  let text = newVal;
+  let leftText;
+  if (newVal <= 1) {
+    leftText = +(newVal * 10 - 10) + +text - 4;
+  } else if (newVal <= 7) {
+    leftText = +(newVal * 10 - 10) + +text - 4;
+  } else {
+    leftText = +(newVal * 10 - 10) + +text - 9;
+  }
+  if (newVal == 1) {
+    textRanger.style.left = "0%";
+    textRanger.innerHTML = `0${newVal} month`;
+  } else if (newVal == 10) {
+    textRanger.innerHTML = `${newVal} months`;
+    textRanger.style.left = leftText + "%";
+  } else {
+    textRanger.style.left = leftText + "%";
+    textRanger.innerHTML = `0${newVal} months`;
+  }
+}
+
+slider.addEventListener("change", (e) => {
+  changeRangerText(e, rangeText);
+});
+sliderGame.addEventListener("change", (e) => {
+  changeRangerText(e, rangeTextGame);
 });
