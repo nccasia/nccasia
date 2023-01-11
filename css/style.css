@@ -23,6 +23,7 @@
   display: none;
 }
 .header_menu {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -32,7 +33,7 @@
 }
 .header_menu ul li {
   display: flex;
-  padding: 8px 20px;
+  padding: 30px 20px;
   align-items: center;
   justify-content: center;
 }
@@ -67,7 +68,7 @@
   color: var(--blue-color);
   border: 1px solid var(--blue-color);
 }
-.header_menu ul :hover {
+.header_menu ul li:hover {
   background-color: var(--blue-1);
   animation-timing-function: ease-in;
   border-radius: 5px;
@@ -306,8 +307,12 @@
   border-radius: 12px;
   padding: 0 20px;
 }
-.ecosystem_item .ecosystem_item-content {
-  background-image: url(../assets/images/ecosystem-img.png);
+.ecosystem_item .ecosystem_item-content,
+.ecosystem_item .ecosystem_item-content1,
+.ecosystem_item .ecosystem_item-content2,
+.ecosystem_item .ecosystem_item-content3,
+.ecosystem_item .ecosystem_item-content4 {
+  position: relative;
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -319,7 +324,48 @@
   justify-content: center;
   gap: 10px;
 }
-.ecosystem_item-content > h3 {
+.ecosystem_item .ecosystem_item-content1::before,
+.ecosystem_item .ecosystem_item-content2::before,
+.ecosystem_item .ecosystem_item-content3::before,
+.ecosystem_item .ecosystem_item-content4::before{
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: 95%;
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+
+}
+.ecosystem_item-content {
+  background-image: url(../assets/images/ecosystem_nearshore-img.png);
+}
+.ecosystem_item .ecosystem_item-content1::before {
+  background-image: url(../assets/images/ecosystem_dedica-img.png);
+}
+.ecosystem_item .ecosystem_item-content2::before {
+  background-image: url(../assets/images/ecosystem_ai-img.png);
+}
+.ecosystem_item .ecosystem_item-content3::before {
+  background-image: url(../assets/images/ecosystem_enterprise.png);
+}
+.ecosystem_item .ecosystem_item-content4::before {
+  background-image: url(../assets/images/ecosystem_game-img.png);
+}
+
+
+/* .ecosystem_item-content2 {
+  background-image: url(../assets/images/ecosystem_ai-img.png);
+} */
+.ecosystem_item-content  h3,
+ .ecosystem_item-content1 h3,
+ .ecosystem_item-content2 h3,
+ .ecosystem_item-content3 h3,
+ .ecosystem_item-content4 h3 {
   font-family: "Nunito";
   font-weight: 700;
   font-size: 20px;
@@ -327,7 +373,11 @@
   color: var(--blue-color);
   text-align: center;
 }
-.ecosystem_item-content > a {
+.ecosystem_item-content a,
+.ecosystem_item-content1 a,
+.ecosystem_item-content2 a,
+.ecosystem_item-content3 a,
+.ecosystem_item-content4 a {
   font-weight: 300;
   font-size: 28px;
   line-height: 100%;

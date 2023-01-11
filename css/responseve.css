@@ -1,6 +1,6 @@
 @media (min-device-width: 0px) and (max-device-width: 1300px){
   .ecosystem_list{
-    grid-template-columns: repeat(4, 1fr);
+    overflow-x: scroll;
   }
 }
 @media (min-device-width: 0px) and (max-device-width: 1024px) {
@@ -22,7 +22,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .ecosystem_list{
-    grid-template-columns: repeat(2, 1fr);
+    overflow-x: scroll;
   }
 }
 
@@ -36,7 +36,7 @@
 }
 @media (min-device-width: 0px) and (max-device-width: 440px){
   .ecosystem_list {
-    grid-template-columns: 1fr;
+    overflow-x: scroll;
   }
 }
 
@@ -241,7 +241,9 @@
   .ecosystem{
     padding: 40px 0;
   }
-  
+  .ecosystem_list {
+    overflow-x: scroll;
+  }
   .ecosystem_item {
     display: flex;
     align-items: center;
