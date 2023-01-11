@@ -730,6 +730,7 @@ const slider = document.getElementById("myinput");
 const min = slider.min;
 const max = slider.max;
 const value = slider.value;
+let styleCss = 0;
 
 slider.style.background = `linear-gradient(to right, #3E50AF 0%, #3E50AF ${
   ((value - min) / (max - min)) * 100
@@ -741,6 +742,7 @@ slider.oninput = function () {
   }%, #ffffff ${
     ((this.value - this.min) / (this.max - this.min)) * 100
   }%, #ffffff 100%)`;
+  styleCss = ((this.value - this.min) / (this.max - this.min)) * 100;
 };
 
 const sliderGame = document.getElementById("myinputGame");
@@ -754,30 +756,21 @@ sliderGame.oninput = function () {
   }%, #ffffff ${
     ((this.value - this.min) / (this.max - this.min)) * 100
   }%, #ffffff 100%)`;
+  styleCss = ((this.value - this.min) / (this.max - this.min)) * 100;
 };
 
 const rangeText = document.querySelector(".range-text");
 const rangeTextGame = document.querySelector(".text-game");
 
 function changeRangerText(e, textRanger) {
+  console.log(styleCss);
   newVal = e.target.value;
-  let text = newVal;
-  let leftText;
-  if (newVal <= 1) {
-    leftText = +(newVal * 10 - 10) + +text - 4;
-  } else if (newVal <= 7) {
-    leftText = +(newVal * 10 - 10) + +text - 4;
-  } else {
-    leftText = +(newVal * 10 - 10) + +text - 9;
-  }
+  textRanger.style.paddingLeft = `${styleCss - newVal + 3}%`;
   if (newVal == 1) {
-    textRanger.style.left = "0%";
     textRanger.innerHTML = `0${newVal} month`;
   } else if (newVal == 10) {
     textRanger.innerHTML = `${newVal} months`;
-    textRanger.style.left = leftText + "%";
   } else {
-    textRanger.style.left = leftText + "%";
     textRanger.innerHTML = `0${newVal} months`;
   }
 }
@@ -785,6 +778,7 @@ function changeRangerText(e, textRanger) {
 slider.addEventListener("change", (e) => {
   changeRangerText(e, rangeText);
 });
+
 sliderGame.addEventListener("change", (e) => {
   changeRangerText(e, rangeTextGame);
 });
