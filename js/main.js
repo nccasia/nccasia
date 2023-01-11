@@ -352,7 +352,6 @@ function handleActiveFormOther5() {
   const contentEmail = `Name: ${fullName}, Phone: ${phone}, Content: ${textMail}`;
   content = content + contentEmail;
   const data = {
-    type: "survey",
     email: email,
     content: content,
   };
