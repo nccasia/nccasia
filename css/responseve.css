@@ -1,6 +1,6 @@
 @media (min-device-width: 0px) and (max-device-width: 1300px){
   .ecosystem_list{
-    grid-template-columns: repeat(4, 1fr);
+    overflow-x: scroll;
   }
 }
 @media (min-device-width: 0px) and (max-device-width: 1024px) {
@@ -22,7 +22,21 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .ecosystem_list{
-    grid-template-columns: repeat(3, 1fr);
+    overflow-x: scroll;
+  }
+}
+
+@media (min-device-width: 0px) and (max-device-width: 880px){
+  .header_menu ul li a {
+    font-size: 11px
+  }
+  .header_link .header_link-button {
+    font-size: 16px;
+  }
+}
+@media (min-device-width: 0px) and (max-device-width: 440px){
+  .ecosystem_list {
+    overflow-x: scroll;
   }
 }
 
@@ -155,16 +169,15 @@
   .grid-template {
     grid-gap: 40px;
   }
+
+ .sub-button {
+  display: none !important;
+
+  }
   .sub-button-mb {
-    display: block;
+    display: block !important;
     position: unset;
     transform: none;
-  }
- .sub-button {
-  display: block;
-  position: unset;
-  margin: 30px 50% 0;
-  /* opacity: 0.8; */
   }
   /* our team */
   .out-image_map .text {
@@ -229,12 +242,18 @@
     padding: 40px 0;
   }
   .ecosystem_list {
-    grid-template-columns: 1fr;
+    overflow-x: scroll;
+  }
+  .ecosystem_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .ncc_project-progress {
     padding: 28px 24px;
   }
-  .ncc_project-list {
+  .survey_game {
+    grid-template-columns: 1fr;
     grid-gap: 16px;
   }
   .ncc_project-content {
@@ -279,6 +298,9 @@
   }
   .survey_content-item {
     display: block;
+  }
+  .survey_item .check_Weight{
+    width: 40px;
   }
   /* end .ncc_project */
 
@@ -326,7 +348,7 @@
     padding: 16px 0;
   }
   /* popUp */
-  .modal_popup {
+  .modal_popup,.mobile_popup {
     width: calc(100% - 30px);
     padding-bottom: 24px;
   }

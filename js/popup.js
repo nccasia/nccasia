@@ -1,13 +1,18 @@
 const btnPopup = document.getElementsByClassName("sub-button");
+const btnPopupMobile = document.querySelector(".sub-button2");
 const btnSendProject = document.getElementsByClassName("button-primary");
+const btnCancelPopupMobile = document.querySelector(".btn-cancel");
 const popup = document.querySelector(".modal");
+const popupMobile = document.querySelector(".mobile-modal");
 const btnSendPopup = document.querySelector(".modal_popup_main button");
 const inputPopup = document.querySelector(".modal-input");
 // Click Send btn
 btnSendPopup.addEventListener("click", function () {
   popup.classList.add("hidePopup");
 });
-
+btnCancelPopupMobile.addEventListener("click", function () {
+  popupMobile.classList.add("hidePopup");
+});
 // Click outside Popup
 let category = 0;
 popup.addEventListener("click", function (e) {
@@ -27,7 +32,10 @@ for (var i = 0; i < btnPopup.length; i++) {
     category = e.target.dataset.id;
   });
 }
+btnPopupMobile.addEventListener("click", function () {
+  popupMobile.style.display = "block";
 
+});
 //event add animation when close
 popup.addEventListener("animationend", function () {
   if (this.classList.contains("hidePopup")) {
@@ -35,7 +43,12 @@ popup.addEventListener("animationend", function () {
     this.classList.remove("hidePopup");
   }
 });
-
+popupMobile.addEventListener("animationend", function () {
+  if (this.classList.contains("hidePopup")) {
+    this.style.display = "none";
+    this.classList.remove("hidePopup");
+  }
+});
 const formSendEmail = document.querySelector(".send-email");
 formSendEmail.addEventListener("click", (event) => {
   event.preventDefault();
@@ -44,7 +57,7 @@ formSendEmail.addEventListener("click", (event) => {
     return printMess("emailError", "Please fill out all required fields.");
   }
 
-  fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
+  fetch("http://localhost:8800/ncc-site-api-sendmail", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -52,7 +65,7 @@ formSendEmail.addEventListener("click", (event) => {
     body: JSON.stringify({
       email: email,
       type: "case_study",
-      category: `${category}`,
+      category:category,
     }),
   })
     .then((res) => res.json())
