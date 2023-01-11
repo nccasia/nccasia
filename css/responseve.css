@@ -160,8 +160,11 @@
     position: unset;
     transform: none;
   }
-  .project_item:hover > .sub-button {
-    display: none;
+ .sub-button {
+  display: block;
+  position: unset;
+  margin: 30px 50% 0;
+  /* opacity: 0.8; */
   }
   /* our team */
   .out-image_map .text {
@@ -257,6 +260,10 @@
   .project_list,
   .ncc_project-box {
     margin-top: 36px;
+  }
+  .project_list{
+    grid-template-columns: repeat(1, 1fr);
+
   }
 
   .ncc_project-item .checkbox {

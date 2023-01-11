@@ -51,15 +51,16 @@ formSendEmail.addEventListener("click", (event) => {
     },
     body: JSON.stringify(data),
   })
+    .then((res) => res.json())
     .then((result) => {
-      if (result.data.success) {
+      if (result.success) {
         printMess(
           "nameSuccess",
           "Thank you, your submission has been received."
         );
         formEl.reset();
       } else {
-        printMess("nameError", `${result.data.message}`);
+        printMess("nameError", `${result.message}`);
       }
     })
     .catch((err) => {
