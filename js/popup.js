@@ -32,6 +32,11 @@ const resetPopUpMobile = () => {
   category = [];
   inputPopupMobile.value = "";
 };
+const validateEmail = (email) => {
+  return email.match(
+    /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
+  );
+};
 // Function end
 
 // Click Send btn
@@ -85,8 +90,8 @@ const formSendEmail = document.querySelector(".send-email");
 formSendEmail.addEventListener("click", (event) => {
   event.preventDefault();
   const email = document.getElementById("email-project").value;
-  if (email === "") {
-    return printMess("emailError", "Please fill out all required fields.");
+  if (!validateEmail(email)) {
+    return;
   } else {
     handleClosePopUp();
     sendApi(email);
@@ -96,8 +101,8 @@ formSendEmail.addEventListener("click", (event) => {
 const formSendEmailMobile = document.querySelector(".send-email-mb");
 formSendEmailMobile.addEventListener("click", (event) => {
   const emailMobile = document.getElementById("email-project-mb").value;
-  if (emailMobile === "") {
-    return printMess("emailError", "Please fill out all required fields.");
+  if (!validateEmail(emailMobile)) {
+    return;
   } else {
     for (var i = 0; btnCheck[i]; ++i) {
       if (btnCheck[i].checked) {
@@ -109,7 +114,7 @@ formSendEmailMobile.addEventListener("click", (event) => {
   }
 });
 function sendApi(email) {
-  fetch("http://localhost:8800/ncc-site-api-sendmail", {
+  fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

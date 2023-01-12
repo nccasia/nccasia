@@ -1,6 +1,6 @@
 @media (min-device-width: 0px) and (max-device-width: 1300px){
   .ecosystem_list{
-    grid-template-columns: repeat(4, 1fr);
+    overflow-x: scroll;
   }
 }
 @media (min-device-width: 0px) and (max-device-width: 1024px) {
@@ -22,7 +22,21 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .ecosystem_list{
-    grid-template-columns: repeat(3, 1fr);
+    overflow-x: scroll;
+  }
+}
+
+@media (min-device-width: 0px) and (max-device-width: 880px){
+  .header_menu ul li a {
+    font-size: 11px
+  }
+  .header_link .header_link-button {
+    font-size: 16px;
+  }
+}
+@media (min-device-width: 0px) and (max-device-width: 440px){
+  .ecosystem_list {
+    overflow-x: scroll;
   }
 }
 
@@ -228,7 +242,7 @@
     padding: 40px 0;
   }
   .ecosystem_list {
-    grid-template-columns: 1fr;
+    overflow-x: scroll;
   }
   .ecosystem_item {
     display: flex;
@@ -266,11 +280,21 @@
 
   }
 
+  .ncc_project-content p {
+    font-size: 20px;
+  }
+  .survey_item > .text{
+    font-size: 24px;
+  }
+
   .ncc_project-item .checkbox {
     width: 16px;
     height: 16px;
   }
-
+  .survey_item > .checkbox {
+    width: 20px;
+    height: 20px;
+  }
   .ncc_project-item {
     padding: 32px 0 16px;
   }
@@ -284,9 +308,6 @@
   }
   .survey_content-item {
     display: block;
-  }
-  .survey_item .check_Weight{
-    width: 40px;
   }
   /* end .ncc_project */
 
@@ -370,7 +391,7 @@
     content: " ";
     display: block;
     position: absolute;
-    background-image: url(../assets/images/logo.webp);
+    background-image: url(../assets/images/logo.png);
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
