@@ -128,7 +128,7 @@
 .link_dowmload-profile {
   display: flex;
   background-color: var(--blue-color);
-  max-width: 383px;
+  max-width: 415px;
   max-height: 55px;
   justify-content: center;
   align-items: center;
@@ -140,6 +140,7 @@
   opacity: 0.5;
 }
 .link_dowmload-profile .text_download {
+  font-family: 'Nunito';
   font-weight: 700;
   font-size: 24px;
   line-height: 130%;
@@ -225,6 +226,12 @@
 /* end our  */
 .service_list {
   padding: 80px 0 0 0;
+}
+.service_item, .project_item  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 .service_item,
 .project_item p {
