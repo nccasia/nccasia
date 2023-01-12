@@ -253,7 +253,6 @@
     padding: 28px 24px;
   }
   .survey_game {
-    grid-template-columns: repeat(2 , 1fr) ;
     grid-gap: 16px;
   }
   .ncc_project-content {
@@ -262,7 +261,9 @@
   .ncc_project-item {
     height: auto;
   }
-
+  .ncc_project-item > h3 {
+    font-size: 24px;
+  }
   .ncc_project-button {
     padding: 36px 0;
   }
