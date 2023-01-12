@@ -33,28 +33,38 @@
 }
 .header_menu ul li {
   display: flex;
-  padding: 30px 20px;
   align-items: center;
   justify-content: center;
 }
-
 .header_menu ul li a {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito';
   font-weight: 700;
   font-size: 16px;
   line-height: 100%;
   color: var(--white-color);
+  padding: 30px 20px;
+}
+.header_menu ul li a:hover {
+  background-color: var(--blue-1);
+  animation-timing-function: ease-in;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--blue-color);
 }
 .header_link .header_link-button {
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 130%;
   border-radius: 8px;
-  padding: 10px;
+  padding: 16px;
+}
+.header_link .header_link-button a {
+  font-family: 'Nunito';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+ 
 }
 .header_link {
-  gap: 30px;
+  display: flex;
+  gap: 12px;
 }
 .header_link .header_link-career {
   background-color: var(--blue-color);
@@ -65,17 +75,9 @@
   color: var(--white-color);
 }
 .header_link .header_link-contact {
-  color: var(--blue-color);
   border: 1px solid var(--blue-color);
 }
-.header_menu ul li a:hover {
-  background-color: var(--blue-1);
-  animation-timing-function: ease-in;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 20px 10px;
-}
-.header_menu ul li a:hover {
+.header_link .header_link-contact a{
   color: var(--blue-color);
 }
 .menu-icon {
@@ -315,6 +317,7 @@
   border: 1px solid var(--blue-color);
   border-radius: 12px;
   padding: 0 20px;
+  background-color: #F2F5FF;
 }
 .ecosystem_item .ecosystem_item-content,
 .ecosystem_item .ecosystem_item-content1,
@@ -444,7 +447,7 @@
 .ncc_project-content p {
   font-family: "Nunito";
   font-weight: 700;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 100%;
   text-align: center;
   color: var(--blue-color-gp);
@@ -466,10 +469,10 @@
 }
 .ncc_project-item .checkbox {
   position: absolute;
-  right: 20px;
-  top: 18px;
-  width: 32px;
-  height: 32px;
+  right: 12px;
+  top: 12px;
+  width: 16px;
+  height: 16px;
 }
 
 .ncc_project-image {
@@ -505,6 +508,21 @@
   width: 160px;
   height: 55px;
   border: none;
+}
+.survey_game-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.game_img {
+  max-width: 120px;
+  max-height: 120px;
+}
+.game_img>img  {
+  width: 100%;
+  height: 100%;
 }
 /*  */
 .button_back {
@@ -756,10 +774,11 @@
 .link-footer p {
   font-size: 24px;
   line-height: 100%;
-  color: var(--white-color);
+  color: #aabff2;
 }
 .text-footer {
   font-weight: 700;
+  color: var(--white-color);
 }
 .nav_footer {
   display: none;
@@ -813,7 +832,7 @@
   border-radius: 24px;
   margin: auto;
   padding-bottom: 40px;
-  max-width: max-content;
+  max-width: 800px;
   background: #f2f6fd;
   overflow: hidden;
 }
@@ -829,7 +848,9 @@
   padding: 16px;
   text-align: center;
 }
-
+.mobile_popup_header>h3 {
+  font-size: 20px;
+}
 .modal_popup_main {
   display: flex;
   padding: 24px 40px 0;
@@ -841,8 +862,7 @@
 .mobile_popup_main > h3 {
   text-align: center;
   margin: auto;
-  font-size: 32px;
-  line-height: 100%;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
@@ -1296,3 +1316,29 @@
   transform: translateX(0);
   opacity: 1;
 }
+/* .ncc_project-item input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: 12px;
+  right: 12px;
+  position: relative;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid var(--blue-1);
+}
+
+.ncc_project-item input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: 12px;
+  right: 12px;
+  position: relative;
+  background-color: var(--blue-color);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid var(--blue-1);
+} */
