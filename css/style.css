@@ -368,6 +368,7 @@
  .ecosystem_item-content3 h3,
  .ecosystem_item-content4 h3 {
   font-family: "Nunito";
+  z-index: 1;
   font-weight: 700;
   font-size: 20px;
   line-height: 130%;
@@ -379,6 +380,7 @@
 .ecosystem_item-content2 a,
 .ecosystem_item-content3 a,
 .ecosystem_item-content4 a {
+  z-index: 1;
   font-weight: 300;
   font-size: 28px;
   line-height: 100%;
