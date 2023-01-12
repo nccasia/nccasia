@@ -24,6 +24,9 @@
   .ecosystem_list{
     overflow-x: scroll;
   }
+  .survey_item > .text{
+    font-size: 28px;
+  }
 }
 
 @media (min-device-width: 0px) and (max-device-width: 880px){
