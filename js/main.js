@@ -752,9 +752,12 @@ function onlyOne(checkbox) {
   });
 }
 
-const slider = document.getElementById("myinput"),
-  tickMarkContainer = document.querySelector(".ticks"),
-  tickMarks = Array.prototype.slice.call(document.querySelectorAll(".tick"));
+const sliderGame = document.getElementById("myinputGame");
+const slider = document.getElementById("myinput");
+const tickMarkContainer = document.querySelector(".ticks");
+const tickMarks = Array.prototype.slice.call(
+  document.querySelectorAll(".tick")
+);
 
 function setActive() {
   tickMarks.map(function (tick) {
@@ -786,23 +789,13 @@ function updateSlider() {
   const textFace = document.querySelector(".rage_face");
   const textMonth = document.querySelector(".rage_value");
 
-  (min = this.getAttribute("min")),
-    (perc = (100 / 12) * this.value - 5),
-    (currentRange = Math.floor(this.value));
+  const perc = (this.value - 1) * 9.09090909091;
+  const currentRange = Math.floor(this.value);
 
-  this.style.backgroundImage =
-    "-webkit-gradient(linear, left top, right top, " +
-    "color-stop(" +
-    perc +
-    "%, #b8b8b8), " +
-    "color-stop(" +
-    perc +
-    "%, #3b3a3b" +
-    ")";
   this.style.backgroundImage =
     "linear-gradient(to right, #3E50AF " + perc + "%, #FFFFFF " + perc + "%)";
 
-  textFace.style.left = `${perc - 2}%`;
+  textFace.style.left = `${perc}%`;
   if (this.value == 1) {
     textMonth.innerHTML = `0${this.value} Month`;
   } else if (this.value >= 10) {
@@ -819,7 +812,7 @@ function updateSlider() {
 
   if (currentRange == 2) {
     twoMonthTick.textContent = "2";
-  } else {
+} else {
     twoMonthTick.textContent = "";
   }
 
@@ -871,19 +864,20 @@ function updateSlider() {
     tenMonthTick.textContent = "";
   }
 
-  if (currentRange == 12) {
-    decemberMonthTick.textContent = "12";
-  } else {
-    decemberMonthTick.textContent = "";
-  }
-
   if (currentRange == 11) {
     novemberMonthTick.textContent = "11";
   } else {
     novemberMonthTick.textContent = "";
   }
 
+  if (currentRange == 12) {
+    decemberMonthTick.textContent = "12";
+  } else {
+    decemberMonthTick.textContent = "";
+  }
+
   setActive();
 }
 
 slider.addEventListener("change", updateSlider);
+// sliderGame.addEventListener("change", updateSlider);
