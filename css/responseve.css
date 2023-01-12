@@ -253,7 +253,7 @@
     padding: 28px 24px;
   }
   .survey_game {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2 , 1fr) ;
     grid-gap: 16px;
   }
   .ncc_project-content {
