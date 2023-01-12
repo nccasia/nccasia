@@ -57,7 +57,7 @@ popup.addEventListener("click", function (e) {
 });
 
 //Event Click  show popup
-for (var i = 0; i < btnPopup.length; i++) {
+for (let i = 0; i < btnPopup.length; i++) {
   btnPopup[i].addEventListener("click", function (e) {
     handleOpenPopUp();
     resetPopUp();
@@ -68,7 +68,7 @@ for (var i = 0; i < btnPopup.length; i++) {
 btnPopupMobile.addEventListener("click", function () {
   handleOpenPopUpMobile();
   resetPopUpMobile();
-  for (var i = 0; btnCheck[i]; ++i) {
+  for (let i = 0; btnCheck[i]; ++i) {
     btnCheck[i].checked = false;
   }
 });
@@ -104,7 +104,7 @@ formSendEmailMobile.addEventListener("click", (event) => {
   if (!validateEmail(emailMobile)) {
     return;
   } else {
-    for (var i = 0; btnCheck[i]; ++i) {
+    for (let i = 0; btnCheck[i]; ++i) {
       if (btnCheck[i].checked) {
         category.push(Number(btnCheck[i].value));
       }
