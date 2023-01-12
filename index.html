@@ -880,15 +880,18 @@
                             <div class="survey_inp-group">
                                 <div class="survey_inp-item">
                                     <label class="text">Can you give us other short description of your project</label>
-                                    <input type="text" class="form-item input" placeholder="Other" id="description">
+                                    <textarea id="description" name="content" class="form-item input_text"
+                                        placeholder="Other"></textarea>
                                 </div>
                                 <div class="survey_inp-item">
                                     <label class="text">Are there websites that you want us to based on?</label>
-                                    <input type="text" class="form-item input" placeholder="Other" id="websites">
+                                    <textarea id="websites" name="content" class="form-item input_text"
+                                        placeholder="Other"></textarea>
                                 </div>
                                 <div class="survey_inp-item">
                                     <label class="text">What do you expect to improve from those website?</label>
-                                    <input type="text" class="form-item input" placeholder="Other" id="improve">
+                                    <textarea id="improve" name="content" class="form-item input_text"
+                                        placeholder="Other"></textarea>
                                 </div>
                                 <div class="survey_inp-item progres-slider">
                                     <label class="text">Your expected timeline to finish the project?</label>
@@ -935,9 +938,8 @@
                                     pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
                                 <input type="text" name="phoneSurvey" class="form-item input inp-item" placeholder="+1 (555) 000-0000"
                                 pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" id="phoneSurvey">
-                                <input type="text" class="form-item-1 input inp-item-1"
-                                    placeholder="Other way to contact (if viable). E.g Zalo/Skype/..."
-                                    id="contentSurvey">
+                                    <textarea id="contentSurvey" name="content" class="form-item form-textarea-inp"
+                            placeholder="Other way to contact (if viable). E.g Zalo/Skype/..."></textarea>
                             </div>
                             <div class="ncc_project-button">
                                 <button onclick="goToByScroll('survey_0')" class="button-primary  button_back" id="button-back_other5">
@@ -1134,18 +1136,18 @@
                                 <div class="survery_inp">
                                     <label class="text" for="">Can you give us other short description of your
                                         project</label>
-                                    <textarea id="contentDesGame" name="content" class="form-item input"
+                                    <textarea id="contentDesGame" name="content" class="form-item input_text"
                                         placeholder="Other"></textarea>
                                 </div>
                                 <div class="survery_inp">
                                     <label class="text" for="">Is there similar game that you want to base on?</label>
-                                    <textarea id="contentSimilarGame" name="content" class="form-item input"
+                                    <textarea id="contentSimilarGame" name="content" class="form-item input_text"
                                         placeholder="Other"></textarea>
                                 </div>
                                 <div class="survery_inp">
                                     <label class="text" for="">What do you like/dislike about the similar game that you
                                         want to improve in your game?</label>
-                                    <textarea id="contentLikeGame" name="content" class="form-item input"
+                                    <textarea id="contentLikeGame" name="content" class="form-item input_text"
                                         placeholder="Other"></textarea>
                                 </div>
                                 <div class="survey_inp-item progres-slider">
