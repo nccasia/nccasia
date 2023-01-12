@@ -198,3 +198,10 @@ window.addEventListener("resize", () => {
   setCoordIntoAreaElement();
 });
 setCoordIntoAreaElement();
+
+
+function goToByScroll(id){
+  const scrollTo = document.getElementById(id);
+  const topPos = scrollTo.offsetTop;
+  window.scroll(0, topPos);
+}
