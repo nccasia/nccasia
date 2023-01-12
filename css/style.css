@@ -329,7 +329,7 @@
 .ecosystem_item .ecosystem_item-content1::before,
 .ecosystem_item .ecosystem_item-content2::before,
 .ecosystem_item .ecosystem_item-content3::before {
-  content: ' ';
+  content: " ";
   display: block;
   position: absolute;
   left: 0;
@@ -340,7 +340,6 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
-
 }
 .ecosystem_item-content {
   background-image: url(../assets/images/ecosystem_nearshore-img.png);
@@ -358,15 +357,14 @@
   background-image: url(../assets/images/ecosystem_game-img.png);
 }
 
-
 /* .ecosystem_item-content2 {
   background-image: url(../assets/images/ecosystem_ai-img.png);
 } */
-.ecosystem_item-content  h3,
- .ecosystem_item-content1 h3,
- .ecosystem_item-content2 h3,
- .ecosystem_item-content3 h3,
- .ecosystem_item-content4 h3 {
+.ecosystem_item-content h3,
+.ecosystem_item-content1 h3,
+.ecosystem_item-content2 h3,
+.ecosystem_item-content3 h3,
+.ecosystem_item-content4 h3 {
   font-family: "Nunito";
   z-index: 1;
   font-weight: 700;
@@ -437,7 +435,7 @@
 }
 
 .ncc_project-content p {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-weight: 700;
   font-size: 32px;
   line-height: 100%;
@@ -841,13 +839,19 @@
   margin-bottom: 10px;
 }
 
-.modal-input-mb,
-.modal-input {
+.modal-input-mb {
   padding: 0 16px;
   min-width: 296px;
   width: 100%;
   margin-right: 24px;
   margin-bottom: 16px;
+}
+
+.modal-input {
+  padding: 0 16px;
+  min-width: 296px;
+  width: 100%;
+  margin-right: 24px;
 }
 
 .showPopup {
@@ -874,8 +878,7 @@
   margin-top: 10px;
   width: 100%;
 }
-.mobile_popup_main > .btn-cancel
-{
+.mobile_popup_main > .btn-cancel {
   border: 1px solid var(--blue-color);
   background-color: transparent;
   color: var(--blue-color);
@@ -1041,14 +1044,14 @@ input[type="range"]::-webkit-slider-thumb {
   background: #ffffff;
   border: 2px solid #aabff2;
 }
-.validate-email-casestudy{
+.validate-email-casestudy {
   color: red;
   text-align: center;
   font-size: 16px;
   line-height: 130%;
   padding-top: 10px;
 }
-.validate-email-survey{
+.validate-email-survey {
   color: red;
   text-align: center;
   font-size: 16px;
