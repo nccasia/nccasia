@@ -37,12 +37,6 @@ const validateEmail = (email) => {
     /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
   );
 };
-const validatePhone = (phone) => {
-  console.log("hhhh")
-  return phone.match(
-    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
-  );
-};
 
 // Function end
 
@@ -115,16 +109,13 @@ formSendEmailMobile.addEventListener("click", (event) => {
         category.push(Number(btnCheck[i].value));
       }
     }
-    if(category.length===0){
+    if (category.length === 0) {
       return;
-      
-    }
-    else{
+    } else {
       handleClosePopUpMobile();
       sendApi(emailMobile);
     }
   }
- 
 });
 
 function sendApi(email) {
