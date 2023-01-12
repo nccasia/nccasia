@@ -447,6 +447,13 @@ const validateEmailSur = (email) => {
   );
 };
 
+const validatePhoneSurvey = (phoneSurvey) => {
+  console.log("hhhh")
+  return phoneSurvey.match(
+    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+  );
+};
+
 function handleActiveFormOther5(data) {
   fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
     method: "POST",
