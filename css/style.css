@@ -588,7 +588,7 @@
   display: none;
 }
 .ncc_project-form_other4 {
-  display: block;
+  display: none;
 }
 .ncc_project-form_other5 {
   display: none;
@@ -826,9 +826,9 @@
 .modal_popup,
 .mobile_popup {
   position: relative;
-  top: 63%;
+  top: 50%;
   margin: auto;
-  transform: translateY(-60%);
+  transform: translateY(-50%);
   border: 3px solid var(--blue-color);
   border-radius: 24px;
   margin: auto;
