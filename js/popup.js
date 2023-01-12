@@ -108,9 +108,16 @@ formSendEmailMobile.addEventListener("click", (event) => {
         category.push(Number(btnCheck[i].value));
       }
     }
-    handleClosePopUpMobile();
-    sendApi(emailMobile);
+    if(category.length===0){
+      return;
+      
+    }
+    else{
+      handleClosePopUpMobile();
+      sendApi(emailMobile);
+    }
   }
+ 
 });
 
 function sendApi(email) {
