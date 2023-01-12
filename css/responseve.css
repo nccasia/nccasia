@@ -24,8 +24,12 @@
   .ecosystem_list{
     overflow-x: scroll;
   }
-  .survey_item > .text{
-    font-size: 28px;
+  .survey_content-item {
+    gap: 40px;
+  }
+
+  .survey_item > .text {
+    font-size: 30px;
   }
 }
 
@@ -39,6 +43,9 @@
   .survey_content-list {
     display: flex;
     gap: 40px;
+  }
+  .check_Weight {
+    width: 55px;
   }
 }
 @media (min-device-width: 0px) and (max-device-width: 440px){
@@ -185,6 +192,12 @@
     display: block !important;
     position: unset;
     transform: none;
+  }
+  .link_dowmload-profile .text_download {
+    font-size: 20px;
+  }
+  .icon>img {
+    margin-top: 9px;
   }
   /* our team */
   .out-image_map .text {
@@ -381,11 +394,19 @@
 
 @media (max-width: 680px) {
   .heading .heading_text {
-    width: 120px;
+    width: 225px ;
   }
   .heading .heading-content {
-    width: 150px;
+    width: 240px;
   }
+ .heading .heading_text-survey {
+    width: 322px !important; 
+ }
+ .heading .heading-content-text {
+  width: 265px;
+}
+
+
   .heading .text-conten {
     font-size: 21px;
   }
