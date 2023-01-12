@@ -922,7 +922,7 @@
                             <div class="ncc_project-button">
                                 <button class="button-primary  button_back" id="button-back_other5">
                                     < BACK</button>
-                                        <button class="button-primary" id="button-submit_other5">SEND ></button>
+                                        <button type="submit" class="button-primary" id="button-submit_other5">SEND ></button>
                             </div>
                         </div>
                         <div class="ncc_project-form_game1">
@@ -1418,42 +1418,42 @@
             </div>
             <form class="mobile_popup_main heading_title">
                 <h3>What field are<br> you interested in?</h3>
-                <input type="text" placeholder="you@company.com"
-                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
-                    id="email-project" class="form-item modal-input">
+                <input type="text" placeholder="you@company.com" id="email-project-mb" 
+                 pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                 class="form-item modal-input-mb">
                 <div class="survey_item checkbox-Popup">
-                    <input type="checkbox" class="checkbox" id="Proptech">
+                    <input type="checkbox" value="0" class="checkbox cbPopup" id="Proptech">
                     <label class="text" for="Proptech">Proptech</label>
                 </div>
                 <div class="survey_item checkbox-Popup">
-                    <input type="checkbox" class="checkbox" id="Education">
+                    <input type="checkbox" value="1" class="checkbox cbPopup" id="Education">
                     <label class="text" for="Education">Education</label>
                 </div>
                 <div class="survey_item checkbox-Popup">
-                    <input type="checkbox" class="checkbox" id="Game&eSport">
+                    <input type="checkbox" value="2" class="checkbox cbPopup" id="Game&eSport">
                     <label class="text" for="Game&eSport">Game & eSport</label>
                 </div>
                 <div class="survey_item checkbox-Popup">
-                    <input type="checkbox" class="checkbox" id="Healthcare">
+                    <input type="checkbox" value="3" class="checkbox cbPopup" id="Healthcare">
                     <label class="text" for="Healthcare">Healthcare</label>
                 </div>
                 <div class="survey_item checkbox-Popup">
-                    <input type="checkbox" class="checkbox" id="Retails&Ecommerce">
+                    <input type="checkbox" value="4" class="checkbox cbPopup" id="Retails&Ecommerce">
                     <label class="text" for="Retails&Ecommerce">Retails & Ecommerce</label>
                 </div>
                 <div class="survey_item checkbox-Popup">
-                    <input type="checkbox" class="checkbox" id="Socialnetwork&Entertainment">
+                    <input type="checkbox" value="5" class="checkbox cbPopup" id="Socialnetwork&Entertainment">
                     <label class="text" for="Socialnetwork&Entertainment">Social network & Entertainment</label>
                 </div>
                 <div class="survey_item checkbox-Popup">
-                    <input type="checkbox" class="checkbox" id="EnterpriseSolution">
+                    <input type="checkbox" value="6" class="checkbox cbPopup" id="EnterpriseSolution">
                     <label class="text" for="EnterpriseSolution">Enterprise solution</label>
                 </div>
                 <div class="survey_item checkbox-Popup">
-                    <input type="checkbox" class="checkbox" id="Finance&Insurance">
+                    <input type="checkbox" value="7" class="checkbox cbPopup" id="Finance&Insurance">
                     <label class="text" for="Finance&Insurance">Finance & Insurance</label>
                 </div>
-                <button type="submit" class="button-primary send-email">Send </button>
+                <button type="submit" class="button-primary send-email-mb">Send </button>
                 <button type="button" class="button-primary btn-cancel">Cancel </button>
 
             </form>

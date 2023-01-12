@@ -6,58 +6,114 @@ const popup = document.querySelector(".modal");
 const popupMobile = document.querySelector(".mobile-modal");
 const btnSendPopup = document.querySelector(".modal_popup_main button");
 const inputPopup = document.querySelector(".modal-input");
-btnCancelPopupMobile.addEventListener("click", function () {
-  popupMobile.classList.add("hidePopup");
-});
-// Click outside Popup
-let category = 0;
-popup.addEventListener("click", function (e) {
-  if (e.target === e.currentTarget) {
-    popup.classList.add("hidePopup");
-    inputPopup.value = "";
-  }
-});
+const inputPopupMobile = document.querySelector(".modal-input-mb");
 
-//Event Click  show popup
-function handleTogglePopup() {
+const btnCheck = document.getElementsByClassName("cbPopup");
+//Function
+const handleClosePopUp = () => {
+  popup.style.display = "none";
+  popup.classList.remove("hidePopup");
+};
+const handleClosePopUpMobile = () => {
+  popupMobile.style.display = "none";
+  popupMobile.classList.remove("hidePopup");
+};
+const handleOpenPopUp = () => {
   popup.style.display = "block";
-}
-for (var i = 0; i < btnPopup.length; i++) {
-  btnPopup[i].addEventListener("click", function (e) {
-    handleTogglePopup();
-    category = e.target.dataset.id;
-  });
-}
-btnPopupMobile.addEventListener("click", function () {
+};
+const handleOpenPopUpMobile = () => {
   popupMobile.style.display = "block";
-});
-//event add animation when close
-popup.addEventListener("animationend", function () {
-  if (this.classList.contains("hidePopup")) {
-    this.style.display = "none";
-    this.classList.remove("hidePopup");
-  }
-});
-popupMobile.addEventListener("animationend", function () {
-  if (this.classList.contains("hidePopup")) {
-    this.style.display = "none";
-    this.classList.remove("hidePopup");
-  }
-});
-
+};
+const resetPopUp = () => {
+  category = [];
+  inputPopup.value = "";
+};
+const resetPopUpMobile = () => {
+  category = [];
+  inputPopupMobile.value = "";
+};
 const validateEmail = (email) => {
   return email.match(
     /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
   );
 };
+// Function end
 
+// Click Send btn
+// btnSendPopup.addEventListener("click", function () {
+//   popup.classList.add("hidePopup");
+// });
+btnCancelPopupMobile.addEventListener("click", function () {
+  popupMobile.classList.add("hidePopup");
+});
+// Click outside Popup
+let category = [];
+popup.addEventListener("click", function (e) {
+  if (e.target === e.currentTarget) {
+    popup.classList.add("hidePopup");
+    resetPopUp();
+  }
+});
+
+//Event Click  show popup
+for (var i = 0; i < btnPopup.length; i++) {
+  btnPopup[i].addEventListener("click", function (e) {
+    handleOpenPopUp();
+    resetPopUp();
+    category.push(Number(e.target.dataset.id));
+  });
+}
+//Event Click  show popup mobile
+btnPopupMobile.addEventListener("click", function () {
+  handleOpenPopUpMobile();
+  resetPopUpMobile();
+  for (var i = 0; btnCheck[i]; ++i) {
+    btnCheck[i].checked = false;
+  }
+});
+//event add animation when close
+popup.addEventListener("animationend", function () {
+  if (this.classList.contains("hidePopup")) {
+    handleClosePopUp();
+    resetPopUp();
+  }
+});
+//event add animation when close Popup mobile
+popupMobile.addEventListener("animationend", function () {
+  if (this.classList.contains("hidePopup")) {
+    handleClosePopUpMobile();
+    resetPopUpMobile();
+  }
+});
+// sendApi for PC screen
 const formSendEmail = document.querySelector(".send-email");
-
 formSendEmail.addEventListener("click", (event) => {
   const email = document.getElementById("email-project").value;
   if (!validateEmail(email)) {
     return;
+  } else {
+    handleClosePopUp();
+    sendApi(email);
   }
+});
+// sendApi for Mobile screen
+const formSendEmailMobile = document.querySelector(".send-email-mb");
+formSendEmailMobile.addEventListener("click", (event) => {
+  const emailMobile = document.getElementById("email-project-mb").value;
+  if (!validateEmail(emailMobile)) {
+    return;
+  } else {
+    for (var i = 0; btnCheck[i]; ++i) {
+      if (btnCheck[i].checked) {
+        category.push(Number(btnCheck[i].value));
+      }
+    }
+    handleClosePopUpMobile();
+    sendApi(emailMobile);
+  }
+});
+
+function sendApi(email) {
   fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
     method: "POST",
     headers: {
@@ -87,5 +143,4 @@ formSendEmail.addEventListener("click", (event) => {
         "Oops, something went wrong. Please try again later."
       );
     });
-  popup.classList.add("hidePopup");
-});
+}
