@@ -142,7 +142,7 @@
   opacity: 0.5;
 }
 .link_dowmload-profile .text_download {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-weight: 700;
   font-size: 24px;
   line-height: 130%;
@@ -229,7 +229,8 @@
 .service_list {
   padding: 80px 0 0 0;
 }
-.service_item, .project_item  {
+.service_item,
+.project_item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -825,9 +826,9 @@
 .modal_popup,
 .mobile_popup {
   position: relative;
-  top: 63%;
+  top: 50%;
   margin: auto;
-  transform: translateY(-60%);
+  transform: translateY(-50%);
   border: 3px solid var(--blue-color);
   border-radius: 24px;
   margin: auto;
@@ -1060,12 +1061,12 @@
 
 .tick {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   box-sizing: border-box;
   z-index: 2;
   height: 14px;
-  width: 8.3%;
+  width: calc(8.3% + 40px);
   transition: 0.4s ease-out;
   cursor: pointer;
   pointer-events: none;
@@ -1075,9 +1076,11 @@
   line-height: 130%;
   text-transform: capitalize;
   color: #3e50af;
-  /* border-right: 1px solid #aabff2; */
+  border-right: 1px solid #aabff2;
 }
-
+.tick:first-child {
+  width: 40px;
+}
 .tick:nth-child(12) {
   border-right: none;
 }
@@ -1145,7 +1148,7 @@
   color: #3e50af;
 }
 
-.passed .active {
+.active {
   color: #3e50af;
 }
 
@@ -1167,8 +1170,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 37px;
-  height: 37px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #ffffff;
   border: 2px solid #aabff2;
@@ -1182,8 +1185,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 10%;
-  height: 10%;
+  width: 8.3%;
+  height: 14px;
   background: #ffffff;
   border: 2px solid #aabff2;
 }
@@ -1196,8 +1199,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 10%;
-  height: 10%;
+  width: 8.3%;
+  height: 14px;
   background: #ffffff;
   border: 2px solid #aabff2;
 }
