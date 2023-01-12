@@ -40,9 +40,9 @@ const validateEmail = (email) => {
 // Function end
 
 // Click Send btn
-btnSendPopup.addEventListener("click", function () {
-  popup.classList.add("hidePopup");
-});
+// btnSendPopup.addEventListener("click", function () {
+//   popup.classList.add("hidePopup");
+// });
 btnCancelPopupMobile.addEventListener("click", function () {
   popupMobile.classList.add("hidePopup");
 });
@@ -88,7 +88,6 @@ popupMobile.addEventListener("animationend", function () {
 // sendApi for PC screen
 const formSendEmail = document.querySelector(".send-email");
 formSendEmail.addEventListener("click", (event) => {
-  event.preventDefault();
   const email = document.getElementById("email-project").value;
   if (!validateEmail(email)) {
     return;
@@ -113,6 +112,7 @@ formSendEmailMobile.addEventListener("click", (event) => {
     sendApi(emailMobile);
   }
 });
+
 function sendApi(email) {
   fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
     method: "POST",
