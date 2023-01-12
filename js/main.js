@@ -736,66 +736,145 @@ btnSubmitGame5.addEventListener("click", function (e) {
   handleActiveFormGame5();
 });
 
-const slider = document.getElementById("myinput");
-const min = slider.min;
-const max = slider.max;
-const value = slider.value;
-let styleCss = 0;
-
-slider.style.background = `linear-gradient(to right, #3E50AF 0%, #3E50AF ${
-  ((value - min) / (max - min)) * 100
-}%, #ffffff ${((value - min) / (max - min)) * 100}%, #ffffff 100%)`;
-
-slider.oninput = function () {
-  this.style.background = `linear-gradient(to right, #3E50AF 0%, #3E50AF ${
-    ((this.value - this.min) / (this.max - this.min)) * 100
-  }%, #ffffff ${
-    ((this.value - this.min) / (this.max - this.min)) * 100
-  }%, #ffffff 100%)`;
-  styleCss = ((this.value - this.min) / (this.max - this.min)) * 100;
-};
-
-const sliderGame = document.getElementById("myinputGame");
-sliderGame.style.background = `linear-gradient(to right, #3E50AF 0%, #3E50AF ${
-  ((value - min) / (max - min)) * 100
-}%, #ffffff ${((value - min) / (max - min)) * 100}%, #ffffff 100%)`;
-
-sliderGame.oninput = function () {
-  this.style.background = `linear-gradient(to right, #3E50AF 0%, #3E50AF ${
-    ((this.value - this.min) / (this.max - this.min)) * 100
-  }%, #ffffff ${
-    ((this.value - this.min) / (this.max - this.min)) * 100
-  }%, #ffffff 100%)`;
-  styleCss = ((this.value - this.min) / (this.max - this.min)) * 100;
-};
-
-const rangeText = document.querySelector(".range-text");
-const rangeTextGame = document.querySelector(".text-game");
-
-function changeRangerText(e, textRanger) {
-  newVal = e.target.value;
-  textRanger.style.paddingLeft = `${styleCss - newVal + 3}%`;
-  if (newVal == 1) {
-    textRanger.innerHTML = `0${newVal} month`;
-  } else if (newVal == 10) {
-    textRanger.innerHTML = `${newVal} months`;
-  } else {
-    textRanger.innerHTML = `0${newVal} months`;
-  }
-}
-
-slider.addEventListener("change", (e) => {
-  changeRangerText(e, rangeText);
-});
-
-sliderGame.addEventListener("change", (e) => {
-  changeRangerText(e, rangeTextGame);
-});
-
-
 function onlyOne(checkbox) {
-  var checkboxes = document.getElementsByName('check')
+  var checkboxes = document.getElementsByName("check");
   checkboxes.forEach((item) => {
-      if (item !== checkbox) item.checked = false
-  })
+    if (item !== checkbox) item.checked = false;
+  });
 }
+
+const slider = document.getElementById("myinput"),
+  tickMarkContainer = document.querySelector(".ticks"),
+  tickMarks = Array.prototype.slice.call(document.querySelectorAll(".tick"));
+
+function setActive() {
+  tickMarks.map(function (tick) {
+    var tickIndex = parseInt(tick.getAttribute("data-range"));
+    tick.classList.remove("active");
+    tick.classList.remove("passed");
+    if (tickIndex <= Math.floor(slider.value)) {
+      tick.classList.add("passed");
+      if (tickIndex === Math.round(slider.value)) {
+        tick.classList.add("active");
+      }
+    }
+  });
+}
+
+function updateSlider() {
+  const oneMonthTick = document.querySelector(".tick:nth-child(1)");
+  const twoMonthTick = document.querySelector(".tick:nth-child(2)");
+  const threeMonthTick = document.querySelector(".tick:nth-child(3)");
+  const fourMonthTick = document.querySelector(".tick:nth-child(4)");
+  const fiveMonthTick = document.querySelector(".tick:nth-child(5)");
+  const sixMonthTick = document.querySelector(".tick:nth-child(6)");
+  const sevenMonthTick = document.querySelector(".tick:nth-child(7)");
+  const eightMonthTick = document.querySelector(".tick:nth-child(8)");
+  const nineMonthTick = document.querySelector(".tick:nth-child(9)");
+  const tenMonthTick = document.querySelector(".tick:nth-child(10)");
+  const novemberMonthTick = document.querySelector(".tick:nth-child(11)");
+  const decemberMonthTick = document.querySelector(".tick:nth-child(12)");
+  const textFace = document.querySelector(".rage_face");
+  const textMonth = document.querySelector(".rage_value");
+
+  (min = this.getAttribute("min")),
+    (perc = (100 / 12) * this.value - 5),
+    (currentRange = Math.floor(this.value));
+
+  this.style.backgroundImage =
+    "-webkit-gradient(linear, left top, right top, " +
+    "color-stop(" +
+    perc +
+    "%, #b8b8b8), " +
+    "color-stop(" +
+    perc +
+    "%, #3b3a3b" +
+    ")";
+  this.style.backgroundImage =
+    "linear-gradient(to right, #3E50AF " + perc + "%, #FFFFFF " + perc + "%)";
+
+  textFace.style.left = `${perc - 2}%`;
+  if (this.value == 1) {
+    textMonth.innerHTML = `0${this.value} Month`;
+  } else if (this.value >= 10) {
+    textMonth.innerHTML = `${this.value} Months`;
+  } else {
+    textMonth.innerHTML = `0${this.value} Months`;
+  }
+
+  if (currentRange == 1) {
+    oneMonthTick.textContent = "1";
+  } else {
+    oneMonthTick.textContent = "";
+  }
+
+  if (currentRange == 2) {
+    twoMonthTick.textContent = "2";
+  } else {
+    twoMonthTick.textContent = "";
+  }
+
+  if (currentRange == 3) {
+    threeMonthTick.textContent = "3";
+  } else {
+    threeMonthTick.textContent = "";
+  }
+
+  if (currentRange == 4) {
+    fourMonthTick.textContent = "4";
+  } else {
+    fourMonthTick.textContent = "";
+  }
+
+  if (currentRange == 5) {
+    fiveMonthTick.textContent = "5";
+  } else {
+    fiveMonthTick.textContent = "";
+  }
+
+  if (currentRange == 6) {
+    sixMonthTick.textContent = "6";
+  } else {
+    sixMonthTick.textContent = "";
+  }
+
+  if (currentRange == 7) {
+    sevenMonthTick.textContent = "7";
+  } else {
+    sevenMonthTick.textContent = "";
+  }
+
+  if (currentRange == 8) {
+    eightMonthTick.textContent = "8";
+  } else {
+    eightMonthTick.textContent = "";
+  }
+
+  if (currentRange == 9) {
+    nineMonthTick.textContent = "9";
+  } else {
+    nineMonthTick.textContent = "";
+  }
+
+  if (currentRange == 10) {
+    tenMonthTick.textContent = "10";
+  } else {
+    tenMonthTick.textContent = "";
+  }
+
+  if (currentRange == 12) {
+    decemberMonthTick.textContent = "12";
+  } else {
+    decemberMonthTick.textContent = "";
+  }
+
+  if (currentRange == 11) {
+    novemberMonthTick.textContent = "11";
+  } else {
+    novemberMonthTick.textContent = "";
+  }
+
+  setActive();
+}
+
+slider.addEventListener("change", updateSlider);
