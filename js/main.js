@@ -10,6 +10,9 @@ const elLine4 = document.getElementById("line4");
 const elLine5 = document.getElementById("line5");
 const elLineGame = document.getElementById("lineGame");
 
+const bar2 = document.querySelector(".bar2");
+const bar3 = document.querySelector(".bar3");
+
 const timeline = document.querySelector(".timeline");
 const headingTitle = document.getElementById("text_progress");
 const form = document.querySelector(".ncc_project-form");
@@ -323,7 +326,27 @@ function handleActiveFormOther3() {
 }
 btnSubmitOther3.addEventListener("click", function (e) {
   handleActiveFormOther3();
+  if (bar3) bar3.style.display = "none";
+  if (bar2) bar2.style.display = "block";
+  runRangerOther();
 });
+
+var runRangerOther = function () {
+  const parent = document.getElementById("slider2-container").parentNode;
+  document.getElementById("slider2-container").remove();
+  parent.innerHTML = ` <div class="slider-container"  id="slider2-container">
+  <input type="text" id="slider2" class="slider" style="display:block"/>
+</div>`;
+  new rSlider({
+    target: "#slider2",
+    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    range: false,
+    set: [1],
+    onChange: function (vals) {
+      newVal = vals
+    },
+  });
+};
 
 function handleDeactiveFormOther4() {
   formOther3.style.display = "block";
@@ -692,8 +715,28 @@ function handleActiveFormGame4() {
   elLineGame.style.backgroundColor = "var(--blue-color)";
   setTextHtml(5, 6);
 }
+
+var runRangerGame = function () {
+  const parent = document.getElementById("slider3-container").parentNode;
+  document.getElementById("slider3-container").remove();
+  parent.innerHTML = ` <div class="slider-container"  id="slider3-container">
+  <input type="text" id="slider3" class="slider" style="display:block"/>
+</div>`;
+  new rSlider({
+    target: "#slider3",
+    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    range: false,
+    set: [1],
+    onChange: function (vals) {
+      newVal = vals
+    },
+  });
+};
 btnSubmitGame4.addEventListener("click", function (e) {
   handleActiveFormGame4();
+  if (bar2) bar2.style.display = "none";
+  if (bar3) bar3.style.display = "block";
+  runRangerGame();
 });
 
 function handleDeactiveFormGame5() {
@@ -752,165 +795,7 @@ function onlyOne(checkbox) {
   });
 }
 
-const sliderGame = document.getElementById("myinputGame");
-const slider = document.getElementById("myinput");
-const tickMarkContainer = document.querySelector(".ticks");
-const tickMarks = Array.prototype.slice.call(
-  document.querySelectorAll(".tick")
-);
-
-function setActive() {
-  tickMarks.map(function (tick) {
-    var tickIndex = parseInt(tick.getAttribute("data-range"));
-    tick.classList.remove("active");
-    tick.classList.remove("passed");
-    if (tickIndex <= Math.floor(slider.value)) {
-      tick.classList.add("passed");
-      if (tickIndex === Math.round(slider.value)) {
-        tick.classList.add("active");
-      }
-    }
-  });
-}
-
-function updateSlider(input, name, range) {
-  const oneMonthTick = document.querySelector(`.${name}:nth-child(1)`);
-  const twoMonthTick = document.querySelector(`.${name}:nth-child(2)`);
-  const threeMonthTick = document.querySelector(`.${name}:nth-child(3)`);
-  const fourMonthTick = document.querySelector(`.${name}:nth-child(4)`);
-  const fiveMonthTick = document.querySelector(`.${name}:nth-child(5)`);
-  const sixMonthTick = document.querySelector(`.${name}:nth-child(6)`);
-  const sevenMonthTick = document.querySelector(`.${name}:nth-child(7)`);
-  const eightMonthTick = document.querySelector(`.${name}:nth-child(8)`);
-  const nineMonthTick = document.querySelector(`.${name}:nth-child(9)`);
-  const tenMonthTick = document.querySelector(`.${name}:nth-child(10)`);
-  const novemberMonthTick = document.querySelector(`.${name}:nth-child(11)`);
-  const decemberMonthTick = document.querySelector(`.${name}:nth-child(12)`);
-  let textFace;
-  let textMonth;
-  if (range == "Game") {
-    textFace = document.querySelector(".rage_faceGame");
-    textMonth = document.querySelector(".rage_valueGame");
-  } else {
-    textFace = document.querySelector(".rage_face");
-    textMonth = document.querySelector(".rage_value");
-  }
-
-  const perc = (input.value - 1) * 9.09090909091;
-  const currentRange = Math.floor(input.value);
-
-  input.style.backgroundImage =
-    "linear-gradient(to right, #3E50AF " + perc + "%, #FFFFFF " + perc + "%)";
-
-  textFace.style.left = `${perc - (input.value / 2 + 1)}%`;
-  if (input.value == 1) {
-    textMonth.innerHTML = `0${input.value} Month`;
-  } else if (input.value >= 10) {
-    textMonth.innerHTML = `${input.value} Months`;
-  } else {
-    textMonth.innerHTML = `0${input.value} Months`;
-  }
-
-  if (currentRange == 1) {
-    oneMonthTick.textContent = "1";
-    oneMonthTick.style.borderRight = "none";
-  } else {
-    oneMonthTick.textContent = "";
-    oneMonthTick.style.borderRight = "1px solid #aabff2";
-  }
-
-  if (currentRange == 2) {
-    twoMonthTick.textContent = "2";
-    twoMonthTick.style.borderRight = "none";
-  } else {
-    twoMonthTick.style.borderRight = "1px solid #aabff2";
-    twoMonthTick.textContent = "";
-  }
-
-  if (currentRange == 3) {
-    threeMonthTick.textContent = "3";
-    threeMonthTick.style.borderRight = "none";
-  } else {
-    threeMonthTick.style.borderRight = "1px solid #aabff2";
-    threeMonthTick.textContent = "";
-  }
-
-  if (currentRange == 4) {
-    fourMonthTick.textContent = "4";
-    fourMonthTick.style.borderRight = "none";
-  } else {
-    fourMonthTick.style.borderRight = "1px solid #aabff2";
-    fourMonthTick.textContent = "";
-  }
-
-  if (currentRange == 5) {
-    fiveMonthTick.textContent = "5";
-    fiveMonthTick.style.borderRight = "none";
-  } else {
-    fiveMonthTick.style.borderRight = "1px solid #aabff2";
-    fiveMonthTick.textContent = "";
-  }
-
-  if (currentRange == 6) {
-    sixMonthTick.textContent = "6";
-    sixMonthTick.style.borderRight = "none";
-  } else {
-    sixMonthTick.style.borderRight = "1px solid #aabff2";
-    sixMonthTick.textContent = "";
-  }
-
-  if (currentRange == 7) {
-    sevenMonthTick.textContent = "7";
-    sevenMonthTick.style.borderRight = "none";
-  } else {
-    sevenMonthTick.style.borderRight = "1px solid #aabff2";
-    sevenMonthTick.textContent = "";
-  }
-
-  if (currentRange == 8) {
-    eightMonthTick.textContent = "8";
-    eightMonthTick.style.borderRight = "none";
-  } else {
-    eightMonthTick.style.borderRight = "1px solid #aabff2";
-    eightMonthTick.textContent = "";
-  }
-
-  if (currentRange == 9) {
-    nineMonthTick.textContent = "9";
-    nineMonthTick.style.borderRight = "none";
-  } else {
-    nineMonthTick.style.borderRight = "1px solid #aabff2";
-    nineMonthTick.textContent = "";
-  }
-
-  if (currentRange == 10) {
-    tenMonthTick.textContent = "10";
-    tenMonthTick.style.borderRight = "none";
-  } else {
-    tenMonthTick.style.borderRight = "1px solid #aabff2";
-    tenMonthTick.textContent = "";
-  }
-
-  if (currentRange == 11) {
-    novemberMonthTick.textContent = "11";
-    novemberMonthTick.style.borderRight = "none";
-  } else {
-    novemberMonthTick.style.borderRight = "1px solid #aabff2";
-    novemberMonthTick.textContent = "";
-  }
-
-  if (currentRange == 12) {
-    decemberMonthTick.textContent = "12";
-  } else {
-    decemberMonthTick.textContent = "";
-  }
-
-  setActive();
-}
-
-slider.addEventListener("change", function (e) {
-  updateSlider(slider, "tick", null);
-});
-sliderGame.addEventListener("change", function (e) {
-  updateSlider(sliderGame, "tickGame", "Game");
+window.addEventListener("resize", () => {
+  runRangerOther();
+  runRangerGame();
 });

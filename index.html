@@ -903,27 +903,9 @@
                                 <div class="survey_inp-item progres-slider">
                                     <label class="text">Your expected timeline to finish the project?</label>
                                     <div class="survey-slider">
-                                        <div class="progress_bar">
-                                            <input id="myinput" class="slider" type="range" min="1" max="12" value="1"
-                                                aria-label="Check your loyalty discount">
-                                            <div class="ticks">
-                                                <span class="tick active" data-range="1"></span>
-                                                <span class="tick" data-range="2"></span>
-                                                <span class="tick" data-range="3"></span>
-                                                <span class="tick" data-range="4"></span>
-                                                <span class="tick" data-range="5"></span>
-                                                <span class="tick" data-range="6"></span>
-                                                <span class="tick" data-range="7"></span>
-                                                <span class="tick" data-range="8"></span>
-                                                <span class="tick" data-range="9"></span>
-                                                <span class="tick" data-range="10"></span>
-                                                <span class="tick" data-range="11"></span>
-                                                <span class="tick" data-range="12"></span>
-                                            </div>
-                                            <div class="rage_face">
-                                                <div class="rage_value">
-                                                    1 Month
-                                                </div>
+                                        <div class="progress_bar bar2">
+                                            <div class="slider-container"  id="slider2-container">
+                                                <input type="text" id="slider2" class="slider" />
                                             </div>
                                         </div>
                                     </div>
@@ -934,7 +916,8 @@
                                     id="button-back_other4">
                                     < BACK</button>
                                         <button onclick="goToByScroll('survey')" button-submit_other4
-                                            class="button-primary active-button" id="button-submit_other4">NEXT ></button>
+                                            class="button-primary active-button" id="button-submit_other4">NEXT
+                                            ></button>
                             </div>
                         </div>
                         <form onsubmit=" return false" class="ncc_project-form_other5">
@@ -945,10 +928,12 @@
                                 <input type="text" class="form-item input inp-item" placeholder="you@company.com"
                                     id="mailSurvey"
                                     pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
-                                <input type="text" name="phoneSurvey" class="form-item input inp-item" placeholder="+1 (555) 000-0000"
-                                pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" id="phoneSurvey">
-                                    <textarea id="contentSurvey" name="content" class="form-item form-textarea-inp"
-                            placeholder="Other way to contact (if viable). E.g Zalo/Skype/..."></textarea>
+                                <input type="text" name="phoneSurvey" class="form-item input inp-item"
+                                    placeholder="+1 (555) 000-0000"
+                                    pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+                                    id="phoneSurvey">
+                                <textarea id="contentSurvey" name="content" class="form-item form-textarea-inp"
+                                    placeholder="Other way to contact (if viable). E.g Zalo/Skype/..."></textarea>
                             </div>
                             <div class="ncc_project-button">
                                 <button onclick="goToByScroll('survey')" class="button-primary  button_back"
@@ -1172,25 +1157,9 @@
                                     <label class="text">Your expected timeline to finish the project?</label>
                                     <div class="survey-slider">
                                         <div class="progress_bar">
-                                            <input id="myinput" class="slider" type="range" min="1" max="12" value="1"
-                                                aria-label="Check your loyalty discount">
-                                            <div class="ticks">
-                                                <span class="tick active" data-range="1"></span>
-                                                <span class="tick" data-range="2"></span>
-                                                <span class="tick" data-range="3"></span>
-                                                <span class="tick" data-range="4"></span>
-                                                <span class="tick" data-range="5"></span>
-                                                <span class="tick" data-range="6"></span>
-                                                <span class="tick" data-range="7"></span>
-                                                <span class="tick" data-range="8"></span>
-                                                <span class="tick" data-range="9"></span>
-                                                <span class="tick" data-range="10"></span>
-                                                <span class="tick" data-range="11"></span>
-                                                <span class="tick" data-range="12"></span>
-                                            </div>
-                                            <div class="rage_face">
-                                                <div class="rage_value">
-                                                    1 Month
+                                            <div class="progress_bar bar3">
+                                                <div class="slider-container" id="slider3-container">
+                                                    <input type="text" id="slider3" class="slider" />
                                                 </div>
                                             </div>
                                         </div>
@@ -1616,6 +1585,7 @@
     <script src="./js/header.js"></script>
     <script src="./js/sendMail.js"></script>
     <script src="./js/scrollView.js"></script>
+    <script src="./js/range.js"></script>
     <script src="./js/main.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" defer></script>
 </body>
