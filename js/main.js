@@ -802,7 +802,7 @@ function updateSlider(input, name, range) {
   input.style.backgroundImage =
     "linear-gradient(to right, #3E50AF " + perc + "%, #FFFFFF " + perc + "%)";
 
-  textFace.style.left = `calc(${perc}% - ${input.value / 2}%)`;
+  textFace.style.left = `${perc - (input.value / 2 + 1)}%`;
   if (input.value == 1) {
     textMonth.innerHTML = `0${input.value} Month`;
   } else if (input.value >= 10) {
