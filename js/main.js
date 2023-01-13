@@ -773,100 +773,129 @@ function setActive() {
   });
 }
 
-function updateSlider() {
-  const oneMonthTick = document.querySelector(".tick:nth-child(1)");
-  const twoMonthTick = document.querySelector(".tick:nth-child(2)");
-  const threeMonthTick = document.querySelector(".tick:nth-child(3)");
-  const fourMonthTick = document.querySelector(".tick:nth-child(4)");
-  const fiveMonthTick = document.querySelector(".tick:nth-child(5)");
-  const sixMonthTick = document.querySelector(".tick:nth-child(6)");
-  const sevenMonthTick = document.querySelector(".tick:nth-child(7)");
-  const eightMonthTick = document.querySelector(".tick:nth-child(8)");
-  const nineMonthTick = document.querySelector(".tick:nth-child(9)");
-  const tenMonthTick = document.querySelector(".tick:nth-child(10)");
-  const novemberMonthTick = document.querySelector(".tick:nth-child(11)");
-  const decemberMonthTick = document.querySelector(".tick:nth-child(12)");
-  const textFace = document.querySelector(".rage_face");
-  const textMonth = document.querySelector(".rage_value");
+function updateSlider(input, name, range) {
+  const oneMonthTick = document.querySelector(`.${name}:nth-child(1)`);
+  const twoMonthTick = document.querySelector(`.${name}:nth-child(2)`);
+  const threeMonthTick = document.querySelector(`.${name}:nth-child(3)`);
+  const fourMonthTick = document.querySelector(`.${name}:nth-child(4)`);
+  const fiveMonthTick = document.querySelector(`.${name}:nth-child(5)`);
+  const sixMonthTick = document.querySelector(`.${name}:nth-child(6)`);
+  const sevenMonthTick = document.querySelector(`.${name}:nth-child(7)`);
+  const eightMonthTick = document.querySelector(`.${name}:nth-child(8)`);
+  const nineMonthTick = document.querySelector(`.${name}:nth-child(9)`);
+  const tenMonthTick = document.querySelector(`.${name}:nth-child(10)`);
+  const novemberMonthTick = document.querySelector(`.${name}:nth-child(11)`);
+  const decemberMonthTick = document.querySelector(`.${name}:nth-child(12)`);
+  let textFace;
+  let textMonth;
+  if (range == "Game") {
+    textFace = document.querySelector(".rage_faceGame");
+    textMonth = document.querySelector(".rage_valueGame");
+  } else {
+    textFace = document.querySelector(".rage_face");
+    textMonth = document.querySelector(".rage_value");
+  }
 
-  const perc = (this.value - 1) * 9.09090909091;
-  const currentRange = Math.floor(this.value);
+  const perc = (input.value - 1) * 9.09090909091;
+  const currentRange = Math.floor(input.value);
 
-  this.style.backgroundImage =
+  input.style.backgroundImage =
     "linear-gradient(to right, #3E50AF " + perc + "%, #FFFFFF " + perc + "%)";
 
-  textFace.style.left = `${perc}%`;
-  if (this.value == 1) {
-    textMonth.innerHTML = `0${this.value} Month`;
-  } else if (this.value >= 10) {
-    textMonth.innerHTML = `${this.value} Months`;
+  textFace.style.left = `${perc - (input.value / 2 + 1)}%`;
+  if (input.value == 1) {
+    textMonth.innerHTML = `0${input.value} Month`;
+  } else if (input.value >= 10) {
+    textMonth.innerHTML = `${input.value} Months`;
   } else {
-    textMonth.innerHTML = `0${this.value} Months`;
+    textMonth.innerHTML = `0${input.value} Months`;
   }
 
   if (currentRange == 1) {
     oneMonthTick.textContent = "1";
+    oneMonthTick.style.borderRight = "none";
   } else {
     oneMonthTick.textContent = "";
+    oneMonthTick.style.borderRight = "1px solid #aabff2";
   }
 
   if (currentRange == 2) {
     twoMonthTick.textContent = "2";
-} else {
+    twoMonthTick.style.borderRight = "none";
+  } else {
+    twoMonthTick.style.borderRight = "1px solid #aabff2";
     twoMonthTick.textContent = "";
   }
 
   if (currentRange == 3) {
     threeMonthTick.textContent = "3";
+    threeMonthTick.style.borderRight = "none";
   } else {
+    threeMonthTick.style.borderRight = "1px solid #aabff2";
     threeMonthTick.textContent = "";
   }
 
   if (currentRange == 4) {
     fourMonthTick.textContent = "4";
+    fourMonthTick.style.borderRight = "none";
   } else {
+    fourMonthTick.style.borderRight = "1px solid #aabff2";
     fourMonthTick.textContent = "";
   }
 
   if (currentRange == 5) {
     fiveMonthTick.textContent = "5";
+    fiveMonthTick.style.borderRight = "none";
   } else {
+    fiveMonthTick.style.borderRight = "1px solid #aabff2";
     fiveMonthTick.textContent = "";
   }
 
   if (currentRange == 6) {
     sixMonthTick.textContent = "6";
+    sixMonthTick.style.borderRight = "none";
   } else {
+    sixMonthTick.style.borderRight = "1px solid #aabff2";
     sixMonthTick.textContent = "";
   }
 
   if (currentRange == 7) {
     sevenMonthTick.textContent = "7";
+    sevenMonthTick.style.borderRight = "none";
   } else {
+    sevenMonthTick.style.borderRight = "1px solid #aabff2";
     sevenMonthTick.textContent = "";
   }
 
   if (currentRange == 8) {
     eightMonthTick.textContent = "8";
+    eightMonthTick.style.borderRight = "none";
   } else {
+    eightMonthTick.style.borderRight = "1px solid #aabff2";
     eightMonthTick.textContent = "";
   }
 
   if (currentRange == 9) {
     nineMonthTick.textContent = "9";
+    nineMonthTick.style.borderRight = "none";
   } else {
+    nineMonthTick.style.borderRight = "1px solid #aabff2";
     nineMonthTick.textContent = "";
   }
 
   if (currentRange == 10) {
     tenMonthTick.textContent = "10";
+    tenMonthTick.style.borderRight = "none";
   } else {
+    tenMonthTick.style.borderRight = "1px solid #aabff2";
     tenMonthTick.textContent = "";
   }
 
   if (currentRange == 11) {
     novemberMonthTick.textContent = "11";
+    novemberMonthTick.style.borderRight = "none";
   } else {
+    novemberMonthTick.style.borderRight = "1px solid #aabff2";
     novemberMonthTick.textContent = "";
   }
 
@@ -879,5 +908,9 @@ function updateSlider() {
   setActive();
 }
 
-slider.addEventListener("change", updateSlider);
-// sliderGame.addEventListener("change", updateSlider);
+slider.addEventListener("change", function (e) {
+  updateSlider(slider, "tick", null);
+});
+sliderGame.addEventListener("change", function (e) {
+  updateSlider(sliderGame, "tickGame", "Game");
+});
