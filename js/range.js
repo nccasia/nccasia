@@ -170,6 +170,15 @@
     }),
     (t.prototype.setValues = function (t, i) {
       var e = this.conf.range ? "start" : "end";
+      let month;
+      if (
+        this.conf.values[this.values.end] == 1 ||
+        this.conf.values[this.values.end] == 0
+      ) {
+        month = "Month";
+      } else {
+        month = "Months";
+      }
       return (
         t &&
           this.conf.values.indexOf(t) > -1 &&
@@ -183,7 +192,7 @@
         (this.pointerL.style.left =
           this.values[e] * this.step - this.pointerWidth / 2 - 1 + "px"),
         (this.conf.tooltip &&
-          (this.tipL.innerHTML = `${this.conf.values[this.values.end]} Month`),
+          (this.tipL.innerHTML = `${this.conf.values[this.values.end]} ${month}`),
         (this.input.value = this.conf.values[this.values.end])),
         this.values.end > this.conf.values.length - 1 &&
           (this.values.end = this.conf.values.length - 1),
@@ -236,7 +245,7 @@
   var i = function (t, i, e) {
       var s = document.createElement(t);
       return (
-        s.id = "slider",
+        (s.id = "slider"),
         i && (s.className = i),
         e && 2 === e.length && s.setAttribute("data-" + e[0], e[1]),
         s
