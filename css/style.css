@@ -471,6 +471,9 @@
   padding: 52px 0;
   position: relative;
 }
+.ncc_project-item:hover {
+  background-color: var(--blue-1);
+}
 .ncc_project-item .checkbox {
   position: absolute;
   right: 12px;
@@ -512,6 +515,12 @@
   width: 160px;
   height: 55px;
   border: none;
+}
+.button-primary:hover {
+  background-color: var(--blue-1);
+}
+.button_back:hover {
+  background: rgba(170, 191, 242, 0.15);;
 }
 .survey_game-item {
   display: flex;
