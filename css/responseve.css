@@ -311,6 +311,9 @@
     width: 16px;
     height: 16px;
   }
+  .survey_check label {
+    padding-left: 35px;
+  }
   .survey_check label:before {
     width: 24px;
     height: 24px;
@@ -318,6 +321,7 @@
   .survey_check input[type="checkbox"]:checked ~ label:after {
     width: 24px;
     height: 24px;
+    background-image: url(../assets/images/checkMobile.svg);
   }
   .ncc_project-item {
     padding: 32px 0 16px;
