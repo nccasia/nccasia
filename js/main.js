@@ -2,6 +2,7 @@ const checkboxWeb = document.getElementById("web");
 const checkboxMobile = document.getElementById("mobile");
 const checkboxGame = document.getElementById("game");
 const checkboxOther = document.getElementById("other");
+const checkboxes = document.getElementsByName("check");
 
 const elLine1 = document.getElementById("line1");
 const elLine2 = document.getElementById("line2");
@@ -112,6 +113,7 @@ const elSketchesGame = document.getElementById("sketchesGame");
 const elPrototypes = document.getElementById("prototypes");
 const elExisting = document.getElementById("existing");
 const elMaintenanceProduct = document.getElementById("maintenanceProduct");
+const aleartsurvey = document.querySelector("#aleart-survey");
 
 let content = "";
 let newVal = 1;
@@ -162,6 +164,7 @@ btnSubmit.addEventListener("click", function (e) {
     elLineGame.style.display = "block";
     checkedForm = 1;
     handleActiveFormGame();
+
   } else if (
     checkboxOther.checked &&
     !checkboxMobile.checked &&
@@ -171,6 +174,15 @@ btnSubmit.addEventListener("click", function (e) {
     elLineGame.style.display = "none";
     checkedForm = 0;
     handleActiveFormOther();
+  }
+  else{
+
+    checkboxes.forEach((item) => {
+      
+      item.parentElement.style.borderColor = '#FF7B87';
+      aleartsurvey.style.display = 'block';
+    }
+    )
   }
 });
 
@@ -746,9 +758,12 @@ btnSubmitGame5.addEventListener("click", function (e) {
 });
 
 function onlyOne(checkbox) {
-  var checkboxes = document.getElementsByName("check");
   checkboxes.forEach((item) => {
-    if (item !== checkbox) item.checked = false;
+    if (item !== checkbox) {item.checked = false
+    };
+    item.parentElement.style.borderColor = '#aabff2'
+    aleartsurvey.style.display = 'none';
+    
   });
 }
 
