@@ -554,8 +554,8 @@
   margin-bottom: 16px;
 }
 .survey_item > .checkbox {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border: 2px solid var(--blue-1);
   border-radius: 6px;
 }
@@ -579,10 +579,7 @@
 .inp-item {
   margin-bottom: 16px;
 }
-.survey_inp-item > .input_text {
-  width: 100%;
-  height: 140px;
-}
+
 .survey_inp-group {
   display: flex;
   flex-direction: column;
@@ -667,9 +664,7 @@
   line-height: 100%;
   color: var(--blue-color-gp);
 }
-.survery_inp > .input {
-  width: 100%;
-}
+
 /* end ncc_project  */
 
 .contact_container {
@@ -1335,6 +1330,51 @@
 .scrollBox2.active {
   transform: translateX(0);
   opacity: 1;
+}
+
+.survey_inp-item > .input_text {
+  width: 100%;
+  height: 140px;
+}
+.survery_inp > .input_text {
+  width: 100%;
+  height: 140px;
+}
+.survey_check input[type="checkbox"] { 
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+.survey_check label {
+  padding-left: 40px;   
+  position: relative;
+  margin: 0;
+  line-height: 20px;
+}
+.survey_check label:before {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  content: '';
+  background: #fff;
+  border: 1px solid var(--blue-1);
+}
+.survey_check input[type="checkbox"]:checked ~ label:after {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  content: '';
+    background-image: url(../assets/images/checkbox.svg);
 }
 /* .ncc_project-item input[type='radio']:after {
   width: 15px;
