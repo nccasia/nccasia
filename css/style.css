@@ -519,6 +519,7 @@
 .button-primary:hover {
   background-color: var(--blue-1);
 }
+
 .button_back:hover {
   background: rgba(170, 191, 242, 0.15);;
 }
@@ -1405,6 +1406,10 @@
   left: 0px;
   content: '';
     background-image: url(../assets/images/checkbox.svg);
+}
+.survey_item-inp .form-textarea-inp {
+  width: 100%;
+  height: 101px;
 }
 /* .ncc_project-item input[type='radio']:after {
   width: 15px;
