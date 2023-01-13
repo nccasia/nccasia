@@ -33,9 +33,10 @@
   }
 }
 
-@media (min-device-width: 0px) and (max-device-width: 880px){
+@media (min-device-width: 0px) and (max-device-width: 886px){
   .header_menu ul li a {
-    font-size: 11px
+    font-size: 11px;
+    padding: 30px 15px;
   }
   .header_link .header_link-button a{
     font-size: 14px;

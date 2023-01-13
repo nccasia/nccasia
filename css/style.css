@@ -481,7 +481,9 @@
   width: 32px;
   height: 32px;
 }
-
+.ncc_project-item input[type="radio"]:checked {
+  background-color: red;
+}
 .ncc_project-image {
   width: 100%;
 }
