@@ -471,9 +471,6 @@
   padding: 52px 0;
   position: relative;
 }
-.ncc_project-item:hover, input[type='radio']:hover {
-  background: rgba(170, 191, 242, 0.15);
-}
 .ncc_project-item .checkbox {
   position: absolute;
   right: 12px;
@@ -516,9 +513,6 @@
   height: 55px;
   border: none;
 }
-.button-primary:hover {
-  background: #AABFF2
-}
 .survey_game-item {
   display: flex;
   flex-direction: column;
@@ -539,9 +533,6 @@
   background-color: var(--white-color);
   color: var(--blue-color);
   border: 1px solid var(--blue-color);
-}
-.button_back:hover {
-  background: rgba(170, 191, 242, 0.15);
 }
 .survey_content-list {
   display: flex;
@@ -567,21 +558,16 @@
 }
 .survey_item-inp > .input {
   width: 100%;
-  height: 52px;
-}
-.form-textarea-inp {
-  width: 100%;
-  height: 101px;
 }
 .survey_item-boder {
   border-bottom: 2px solid var(--blue-1);
 }
 .inp-item {
-  margin-bottom: 16px;
+  margin-bottom: 28px;
 }
-.survey_inp-item > .input_text {
+.survey_inp-item > .input {
   width: 100%;
-  height: 140px;
+  height: 100px;
 }
 .survey_inp-group {
   display: flex;
@@ -1094,11 +1080,41 @@
   text-transform: capitalize;
   color: #3e50af;
   border-right: 1px solid #aabff2;
+  padding-right: 10px;
 }
 .tick:first-child {
   width: 40px;
+  border-right: none;
 }
 .tick:nth-child(12) {
+  border-right: none;
+}
+
+.tickGame {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 2;
+  height: 14px;
+  width: calc(8.3% + 40px);
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  pointer-events: none;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  text-transform: capitalize;
+  color: #3e50af;
+  border-right: 1px solid #aabff2;
+  padding-right: 10px;
+}
+.tickGame:first-child {
+  width: 40px;
+  border-right: none;
+}
+.tickGame:nth-child(12) {
   border-right: none;
 }
 
@@ -1130,11 +1146,16 @@
 .rage_face,
 .rage_face:before,
 .rage_face:after,
-.rage_value {
+.rage_value,
+.rage_faceGame,
+.rage_faceGame:before,
+.rage_faceGame:after,
+.rage_valueGame {
   position: absolute;
 }
 
-.rage_face {
+.rage_face,
+.rage_faceGame {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -1144,7 +1165,8 @@
   top: 30px;
 }
 
-.rage_value {
+.rage_value,
+.rage_valueGame {
   font-family: "Nunito";
   font-style: normal;
   font-weight: 500;
@@ -1187,8 +1209,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: #ffffff;
   border: 2px solid #aabff2;
