@@ -308,10 +308,18 @@
     font-size: 24px;
   }
 
-  .ncc_project-item .checkbox {
+  .ncc_project-item input[type='radio']:after {
     width: 16px;
     height: 16px;
+    right: 12px;
   }
+  .ncc_project-item input[type='radio']:checked:after {
+    width: 16px;
+    height: 16px;
+    right: 12px;
+    background-image: url(../assets/images/radio_button-nav.svg);
+  }
+
   .survey_check label {
     padding-left: 35px;
   }

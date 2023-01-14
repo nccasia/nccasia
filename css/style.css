@@ -472,7 +472,7 @@
   position: relative;
 }
 .ncc_project-item:hover {
-  background-color: var(--blue-1);
+  background: rgba(170, 191, 242, 0.15);
 }
 .ncc_project-item .checkbox {
   position: absolute;
@@ -1329,12 +1329,20 @@
   width: 100%;
   height: 101px;
 }
-/* .ncc_project-item input[type='radio']:after {
-  width: 15px;
-  height: 15px;
+
+.ncc_project-item input[type="radio"] { 
+  position: absolute;
+  /* opacity: 0; */
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+.ncc_project-item input[type='radio']:after {
+  width: 32px;
+  height: 32px;
   border-radius: 15px;
-  top: 12px;
-  right: 12px;
+  top: 0;
+  right: 35px;
   position: relative;
   content: '';
   display: inline-block;
@@ -1343,15 +1351,15 @@
 }
 
 .ncc_project-item input[type='radio']:checked:after {
-  width: 15px;
-  height: 15px;
+  width: 32px;
+  height: 32px;
   border-radius: 15px;
-  top: 12px;
-  right: 12px;
+  top: 0;
+  right: 32px;
   position: relative;
-  background-color: var(--blue-color);
+  background-image: url(../assets/images/radio_button.svg);
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 2px solid var(--blue-1);
-} */
+  border: none;
+}
