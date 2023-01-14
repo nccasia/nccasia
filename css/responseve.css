@@ -308,18 +308,33 @@
     font-size: 24px;
   }
 
-  .ncc_project-item input[type='radio']:after {
+  .ncc_project-item input[type='radio']:after, .ncc_project-item input[type='radio']:checked:after {
     width: 16px;
     height: 16px;
     right: 12px;
   }
   .ncc_project-item input[type='radio']:checked:after {
-    width: 16px;
-    height: 16px;
-    right: 12px;
     background-image: url(../assets/images/radio_button-nav.svg);
   }
 
+   .ncc_project-list input[type='checkbox']:after, .ncc_project-list input[type='checkbox']:checked:after {
+    width: 16px;
+    height: 16px;
+    top: 0;
+    right: 12px;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+  }
+  .ncc_project-list input[type='checkbox']:after {
+    border: 2px solid var(--blue-1);
+    border-radius: 50%;
+  }
+  .ncc_project-list input[type='checkbox']:checked:after {
+    background-image: url(../assets/images/radio_button-nav.svg);
+    border: none;
+  }
   .survey_check label {
     padding-left: 35px;
   }
