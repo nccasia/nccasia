@@ -387,6 +387,7 @@
   line-height: 130%;
   color: var(--blue-color);
   text-align: center;
+  min-height: 78px;
 }
 .ecosystem_item-content a,
 .ecosystem_item-content1 a,
