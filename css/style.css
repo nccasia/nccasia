@@ -64,9 +64,13 @@
   border-radius: 8px;
   padding: 13px 16px;
 }
+.header_link .header_link-button {
+  display: flex;
+}
 .header_link {
   display: flex;
   gap: 12px;
+  align-items: center;
 }
 .header_link .header_link-career a{
   background-color: var(--blue-color);
