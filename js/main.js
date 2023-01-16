@@ -119,6 +119,13 @@ const elMaintenanceProduct = document.getElementById("maintenanceProduct");
 const aleartsurvey = document.querySelector("#aleart-survey");
 
 let content = "";
+let contentFormOther1 = "";
+let contentFormOther2 = "";
+let contentFormOther3 = "";
+let contentFormGame1 = "";
+let contentFormGame2 = "";
+let contentFormGame3 = "";
+let contentFormGame4 = "";
 let newVal = 1;
 let checkedForm = 0;
 function setTextHtml(id, sum) {
@@ -167,7 +174,6 @@ btnSubmit.addEventListener("click", function (e) {
     elLineGame.style.display = "block";
     checkedForm = 1;
     handleActiveFormGame();
-
   } else if (
     checkboxOther.checked &&
     !checkboxMobile.checked &&
@@ -177,15 +183,11 @@ btnSubmit.addEventListener("click", function (e) {
     elLineGame.style.display = "none";
     checkedForm = 0;
     handleActiveFormOther();
-  }
-  else{
-
+  } else {
     checkboxes.forEach((item) => {
-      
-      item.parentElement.style.borderColor = '#FF7B87';
-      aleartsurvey.style.display = 'block';
-    }
-    )
+      item.parentElement.style.borderColor = "#FF7B87";
+      aleartsurvey.style.display = "block";
+    });
   }
 });
 
@@ -197,6 +199,7 @@ function handleDeactiveFormOther1() {
 }
 btnBackOther1.addEventListener("click", function (e) {
   handleDeactiveFormOther1();
+  content = "";
 });
 
 function handleActiveFormOther1() {
@@ -241,6 +244,7 @@ function handleActiveFormOther1() {
   if (content !== "") {
     content = contentOther1 + content + "\n";
   }
+  contentFormOther1 = content;
   setTextHtml(2);
 }
 btnSubmitOther1.addEventListener("click", function (e) {
@@ -255,6 +259,7 @@ function handleDeactiveFormOther2() {
 }
 btnBackOther2.addEventListener("click", function (e) {
   handleDeactiveFormOther2();
+  content = "";
 });
 
 function handleActiveFormOther2() {
@@ -297,6 +302,7 @@ function handleActiveFormOther2() {
   if (features !== "") {
     content = content + features + "\n";
   }
+  contentFormOther2 = content;
   setTextHtml(3);
 }
 btnSubmitOther2.addEventListener("click", function (e) {
@@ -311,6 +317,7 @@ function handleDeactiveFormOther3() {
 }
 btnBackOther3.addEventListener("click", function (e) {
   handleDeactiveFormOther3();
+  content = contentFormOther1;
 });
 
 function handleActiveFormOther3() {
@@ -334,6 +341,7 @@ function handleActiveFormOther3() {
   if (elMaintenance.checked) {
     content = content + "Maintenance of product\n";
   }
+  contentFormOther3 = content;
   setTextHtml(4);
 }
 btnSubmitOther3.addEventListener("click", function (e) {
@@ -355,7 +363,7 @@ var runRangerOther = function () {
     range: false,
     set: [1],
     onChange: function (vals) {
-      newVal = vals
+      newVal = vals;
     },
   });
 };
@@ -368,6 +376,7 @@ function handleDeactiveFormOther4() {
 }
 btnBackOther4.addEventListener("click", function (e) {
   handleDeactiveFormOther4();
+  content = contentFormOther2;
 });
 
 function setTextSlider() {
@@ -465,11 +474,13 @@ function handleDeactiveFormOther5(id) {
       elLine5.style.backgroundColor = "var(--white-color)";
     }
     setTextHtml(4);
+    content = contentFormOther3;
   } else {
     formGame5.style.display = "block";
     formOther5.style.display = "none";
     elLine5.style.backgroundColor = "var(--white-color)";
     setTextHtml(5, 6);
+    content = contentFormGame4;
   }
 }
 btnBackOther5.addEventListener("click", function (e) {
@@ -564,6 +575,7 @@ function handleDeactiveFormGame1() {
 }
 btnBackGame1.addEventListener("click", function (e) {
   handleDeactiveFormGame1();
+  content = "";
 });
 
 function handleActiveFormGame1() {
@@ -608,6 +620,7 @@ function handleActiveFormGame1() {
     content = contentGame1 + content + "\n";
   }
   setTextHtml(2, 6);
+  contentFormGame1 = content;
 }
 btnSubmitGame1.addEventListener("click", function (e) {
   handleActiveFormGame1();
@@ -621,6 +634,8 @@ function handleDeactiveFormGame2() {
 }
 btnBackGame2.addEventListener("click", function (e) {
   handleDeactiveFormGame2();
+  setTextHtml(1, 6);
+  content = "";
 });
 
 function handleActiveFormGame2() {
@@ -654,6 +669,7 @@ function handleActiveFormGame2() {
     content = content + "Offline Usage\n";
   }
   setTextHtml(3, 6);
+  contentFormGame2 = content;
 }
 btnSubmitGame2.addEventListener("click", function (e) {
   handleActiveFormGame2();
@@ -667,6 +683,7 @@ function handleDeactiveFormGame3() {
 }
 btnBackGame3.addEventListener("click", function (e) {
   handleDeactiveFormGame3();
+  content = contentFormGame1;
 });
 
 function handleActiveFormGame3() {
@@ -688,6 +705,7 @@ function handleActiveFormGame3() {
     content = content + "IQ/QUIZZES\n";
   }
   setTextHtml(4, 6);
+  contentFormGame3 = content;
 }
 btnSubmitGame3.addEventListener("click", function (e) {
   handleActiveFormGame3();
@@ -701,6 +719,7 @@ function handleDeactiveFormGame4() {
 }
 btnBackGame4.addEventListener("click", function (e) {
   handleDeactiveFormGame4();
+  content = contentFormGame2;
 });
 
 function handleActiveFormGame4() {
@@ -726,6 +745,7 @@ function handleActiveFormGame4() {
   elLineGame.style.display = "block";
   elLineGame.style.backgroundColor = "var(--blue-color)";
   setTextHtml(5, 6);
+  contentFormGame4 = content;
 }
 
 var runRangerGame = function () {
@@ -740,7 +760,7 @@ var runRangerGame = function () {
     range: false,
     set: [1],
     onChange: function (vals) {
-      newVal = vals
+      newVal = vals;
     },
   });
 };
@@ -759,6 +779,7 @@ function handleDeactiveFormGame5() {
 }
 btnBackGame5.addEventListener("click", function (e) {
   handleDeactiveFormGame5();
+  content = contentFormGame3;
 });
 
 function handleActiveFormGame5() {
@@ -802,11 +823,11 @@ btnSubmitGame5.addEventListener("click", function (e) {
 
 function onlyOne(checkbox) {
   checkboxes.forEach((item) => {
-    if (item !== checkbox) {item.checked = false
-    };
-    item.parentElement.style.borderColor = '#aabff2'
-    aleartsurvey.style.display = 'none';
-    
+    if (item !== checkbox) {
+      item.checked = false;
+    }
+    item.parentElement.style.borderColor = "#aabff2";
+    aleartsurvey.style.display = "none";
   });
 }
 
