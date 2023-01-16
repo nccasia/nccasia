@@ -83,7 +83,7 @@
 }
 .header_link .header_link-contact a {
   color: var(--blue-color);
-  background-color: var(--white-color);
+  background-color: var(--white-colorg);
 }
 .menu-icon {
   display: none;

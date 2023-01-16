@@ -1,23 +1,30 @@
-@media (min-width: 0px) and (max-width: 1400px){
-  .ecosystem_list{
+@media (min-width: 0px) and (max-width: 1400px) {
+  .ecosystem_list {
     overflow-x: scroll;
+    padding-bottom: 20px;
   }
   #scrollbar::-webkit-scrollbar {
     height: 5px;
-    width: 14px;   
-  } 
+    width: 14px;
+  }
+
+  #scrollbar::-webkit-scrollbar-track {
+    background-color: #ccc;
+    width: 15px;
+    border-radius: 5px;
+  }
+
   body::-webkit-scrollbar-track {
-    background: #ccc;        
+    background: #ccc; /* Màu nền ngoài của thanh scrollbar */
   }
   #scrollbar::-webkit-scrollbar-thumb {
-    background-color: var(--blue-1);    /* Màu của thanh cuộn (scroll thumb) */
-    border-radius: 5px;       /* Bo góc scroll thumb */
-    border: 2px solid #ccc;  /* Không hỗ trợ padding, margin, transition nên dùng viền cùng màu nên để padding scroll thumb */
+    border-radius: 5px; /* Bo góc scroll thumb */
+    height: 1px;
+    background-color: var(--blue-color);
   }
   #scrollbar::-webkit-scrollbar-thumb:hover {
     background-color: var(--blue-color); /* Hiệu ứng di chuột đổi màu*/
   }
-
 }
 @media (min-width: 0px) and (max-width: 1024px) {
   .mbscreen {
@@ -37,7 +44,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .ecosystem_list{
+  .ecosystem_list {
     overflow-x: scroll;
   }
   .survey_content-item {
@@ -49,12 +56,12 @@
   }
 }
 
-@media (min-width: 0px) and (max-width: 886px){
+@media (min-width: 0px) and (max-width: 886px) {
   .header_menu ul li a {
     font-size: 11px;
     padding: 30px 15px;
   }
-  .header_link .header_link-button a{
+  .header_link .header_link-button a {
     font-size: 14px;
   }
   .survey_content-list {
@@ -65,12 +72,11 @@
     width: 55px;
   }
 }
-@media (min-width: 0px) and (max-width: 440px){
+@media (min-width: 0px) and (max-width: 440px) {
   .ecosystem_list {
     overflow-x: scroll;
   }
 }
-
 
 @media (max-width: 768px) {
   .header {
@@ -143,26 +149,25 @@
   .navbar-collapse-active {
     display: block;
   }
-  .nav-button ul{
+  .nav-button ul {
     padding: 0 16px;
   }
-  .navbar-collapse ul .nav-item{
+  .navbar-collapse ul .nav-item {
     border: 1px solid var(--white-color);
     padding: 16px;
     border-radius: 8px;
   }
-  .navbar-collapse ul .nav-item_us{
+  .navbar-collapse ul .nav-item_us {
     background-color: var(--white-color);
     border: 1px solid var(--blue-color);
     padding: 16px;
     border-radius: 8px;
   }
-  .nav-button ul li{
+  .nav-button ul li {
     margin-bottom: 16px;
   }
-  .nav-button ul .nav-item_us a{
+  .nav-button ul .nav-item_us a {
     color: var(--blue-color);
-
   }
   /* end  header  */
   .our_image-img,
@@ -200,9 +205,8 @@
     grid-gap: 40px;
   }
 
- .sub-button {
-  display: none !important;
-
+  .sub-button {
+    display: none !important;
   }
   .sub-button-mb {
     display: block !important;
@@ -212,7 +216,7 @@
   .link_dowmload-profile .text_download {
     font-size: 16px;
   }
-  .icon>img {
+  .icon > img {
     margin-top: 9px;
   }
   /* our team */
@@ -274,7 +278,7 @@
     padding-top: 36px;
   }
   /* end .family */
-  .ecosystem{
+  .ecosystem {
     padding: 40px 0;
   }
   .ecosystem_list {
@@ -312,42 +316,43 @@
   .ncc_project-box {
     margin-top: 36px;
   }
-  .project_list{
+  .project_list {
     grid-template-columns: repeat(1, 1fr);
-
   }
 
   .ncc_project-content p {
     font-size: 20px;
   }
-  .survey_item > .text{
+  .survey_item > .text {
     font-size: 24px;
   }
 
-  .ncc_project-item input[type='radio']:after, .ncc_project-item input[type='radio']:checked:after {
+  .ncc_project-item input[type="radio"]:after,
+  .ncc_project-item input[type="radio"]:checked:after {
     width: 16px;
     height: 16px;
     right: 12px;
   }
-  .ncc_project-item input[type='radio']:checked:after {
+  .ncc_project-item input[type="radio"]:checked:after {
     background-image: url(../assets/images/radio_button-nav.svg);
   }
 
-   .ncc_project-list input[type='checkbox']:after, .ncc_project-list input[type='checkbox']:checked:after {
+  .ncc_project-list input[type="checkbox"]:after,
+  .ncc_project-list input[type="checkbox"]:checked:after {
     width: 16px;
     height: 16px;
     top: 0;
     right: 12px;
     position: relative;
-    content: '';
+    content: "";
     display: inline-block;
     visibility: visible;
   }
-  .ncc_project-list input[type='checkbox']:after {
+  .ncc_project-list input[type="checkbox"]:after {
     border: 2px solid var(--blue-1);
     border-radius: 50%;
   }
-  .ncc_project-list input[type='checkbox']:checked:after {
+  .ncc_project-list input[type="checkbox"]:checked:after {
     background-image: url(../assets/images/radio_button-nav.svg);
     border: none;
   }
@@ -371,7 +376,7 @@
     width: 68px;
     height: 68px;
   }
-  .survey_content-list{
+  .survey_content-list {
     display: block;
   }
   .survey_content-item {
@@ -423,7 +428,8 @@
     padding: 16px 0;
   }
   /* popUp */
-  .modal_popup,.mobile_popup {
+  .modal_popup,
+  .mobile_popup {
     width: calc(100% - 30px);
     padding-bottom: 24px;
   }
@@ -441,18 +447,17 @@
 
 @media (max-width: 680px) {
   .heading .heading_text {
-    width: 225px ;
+    width: 225px;
   }
   .heading .heading-content {
     width: 240px;
   }
- .heading .heading_text-survey {
-    width: 322px !important; 
- }
- .heading .heading-content-text {
-  width: 265px;
-}
-
+  .heading .heading_text-survey {
+    width: 322px !important;
+  }
+  .heading .heading-content-text {
+    width: 265px;
+  }
 
   .heading .text-conten {
     font-size: 21px;
@@ -477,7 +482,7 @@
     height: 330px;
     opacity: 0.1;
   }
-  
+
   /* our team  */
   .out-image_map .text {
     max-width: 150px;
