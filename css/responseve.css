@@ -5,10 +5,9 @@
   #scrollbar::-webkit-scrollbar {
     height: 5px;
     width: 14px;   
-    display: none;
   } 
   body::-webkit-scrollbar-track {
-    background: #ccc;        /* Màu nền ngoài của thanh scrollbar */
+    background: #ccc;        
   }
   #scrollbar::-webkit-scrollbar-thumb {
     background-color: var(--blue-1);    /* Màu của thanh cuộn (scroll thumb) */
