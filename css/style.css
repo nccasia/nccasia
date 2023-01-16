@@ -55,10 +55,10 @@
   cursor: pointer;
   color: var(--blue-color);
 }
-.header_link .header_link-button {
+.header_link .header_link-button a{
   border-radius: 8px;
-  height: 53px;
-  padding: 16px;
+  height: 48px;
+  padding: 16px ;
 }
 .header_link .header_link-button a {
   font-family: "Nunito";
@@ -70,7 +70,7 @@
   display: flex;
   gap: 12px;
 }
-.header_link .header_link-career {
+.header_link .header_link-career a{
   background-color: var(--blue-color);
   border: 1px solid var(--white-color);
 }
@@ -78,11 +78,12 @@
 .header_link .header_link-career a {
   color: var(--white-color);
 }
-.header_link .header_link-contact {
+.header_link .header_link-contact a{
   border: 1px solid var(--blue-color);
 }
 .header_link .header_link-contact a {
   color: var(--blue-color);
+  background-color: var(--white-colorg);
 }
 .menu-icon {
   display: none;
