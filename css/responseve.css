@@ -37,6 +37,9 @@
   .header_menu ul li a {
     font-size: 14px;
   }
+  .header_link .header_link-button a {
+    font-size: 14px;
+  }
   .service_list,
   .project_list,
   .our_list,
