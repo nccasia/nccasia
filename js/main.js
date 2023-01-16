@@ -484,7 +484,7 @@ const validateEmailSur = (email) => {
 
 const validatePhoneSurvey = (phoneSurvey) => {
   return phoneSurvey.match(
-    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+    /(^((\+\d{1,2}|1)[\s.-]?)?\(?[2-9](?!11)\d{2}\)?[\s.-]?\d{3}[\s.-]?\d{4}$|^$)/
   );
 };
 
