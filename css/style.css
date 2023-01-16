@@ -57,6 +57,7 @@
 }
 .header_link .header_link-button {
   border-radius: 8px;
+  height: 53px;
   padding: 16px;
 }
 .header_link .header_link-button a {
