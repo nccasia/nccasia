@@ -155,22 +155,23 @@
   .nav-button ul {
     padding: 0 16px;
   }
-  .navbar-collapse ul .nav-item {
+
+  .nav-button ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .navbar-collapse ul .nav-item a {
     border: 1px solid var(--white-color);
-    padding: 16px;
+    padding: 11px 140px;
     border-radius: 8px;
   }
-  .navbar-collapse ul .nav-item_us {
+  .navbar-collapse ul .nav-item_us a {
     background-color: var(--white-color);
     border: 1px solid var(--blue-color);
-    padding: 16px;
-    border-radius: 8px;
-  }
-  .nav-button ul li {
-    margin-bottom: 16px;
-  }
-  .nav-button ul .nav-item_us a {
     color: var(--blue-color);
+    padding: 13px 125px;
+    border-radius: 8px;
   }
   /* end  header  */
   .our_image-img,
@@ -187,6 +188,9 @@
   }
   img {
     display: inline-block;
+  }
+  .heading_title > h3 {
+    font-size: 20px;
   }
   .our_item > p {
     font-size: 24px;
@@ -242,6 +246,7 @@
 
   .about_item > p {
     margin-top: 0;
+    font-size: 20px;
   }
 
   .about_image > img {
@@ -258,10 +263,10 @@
   }
 
   .heading h2 {
-    font-size: 28px;
+    font-size: 30px;
   }
   .heading p {
-    font-size: 22px;
+    font-size: 24px;
   }
   .our-image img {
     width: 100% !important;
@@ -456,15 +461,15 @@
     width: 240px;
   }
   .heading .heading_text-survey {
-    width: 322px !important;
+    width: 333px !important;
   }
   .heading .heading-content-text {
     width: 265px;
   }
 
-  .heading .text-conten {
+  /* .heading .text-conten {
     font-size: 21px;
-  }
+  } */
   .nav_footer-head {
     padding: 35px 0 20px 0;
   }
