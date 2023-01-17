@@ -1377,3 +1377,7 @@
   background-image: url(../assets/images/checkbox.svg);
   border-radius: 6px;
 }
+.rs-container .rs-scale span ins  {
+  font-size: 20px;
+  color: var(--blue-color);
+}
