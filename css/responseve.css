@@ -209,7 +209,7 @@
   }
 
   .grid-template {
-    grid-gap: 40px;
+    grid-gap: 16px;
   }
 
   .sub-button {
