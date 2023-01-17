@@ -454,6 +454,10 @@
   .rs-container .rs-scale span ins {
     font-size: 15px;
   }
+  
+  .service_item  p, .project_item p {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 680px) {

@@ -240,7 +240,7 @@
   align-items: center;
   gap: 10px;
 }
-.service_item,
+.service_item p,
 .project_item p {
   font-weight: 400;
   font-size: 24px;
