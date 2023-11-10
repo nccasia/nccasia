@@ -6,39 +6,42 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://career.ncc.asia/</loc>
-  <lastmod>2023-10-31</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.8</priority>
-  <title>NCC Jobs</title>
+  <loc>https://ncc.asia/</loc>
+  <lastmod>2023-11-06T09:38:42+00:00</lastmod>
 </url>
 <url>
-  <loc>https://ant.ncc.asia/</loc>
-  <lastmod>2023-10-31</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.7</priority>
-  <title>ANT</title>
+<loc>https://career.ncc.asia/</loc>
+<lastmod>2023-10-31</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
+<title>NCC Jobs</title>
 </url>
 <url>
-  <loc>https://career.ncc.asia/frontend-internship/</loc>
-  <lastmod>2023-10-31</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.7</priority>
-  <title>Loren</title>
+<loc>https://ant.ncc.asia/</loc>
+<lastmod>2023-10-31</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+<title>ANT</title>
 </url>
 <url>
-  <loc>https://1platform.solutions/</loc>
-  <lastmod>2023-10-31</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.7</priority>
-  <title>1platform</title>
+<loc>https://loren.edu.vn/</loc>
+<lastmod>2023-10-31</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+<title>Loren</title>
 </url>
 <url>
-  <loc>https://metasign.com.vn/</loc>
-  <lastmod>2023-10-31</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.7</priority>
-  <title>Metasign</title>
+<loc>https://1platform.solutions/</loc>
+<lastmod>2023-10-31</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+<title>1platform</title>
 </url>
-
+<url>
+<loc>https://metasign.com.vn/</loc>
+<lastmod>2023-10-31</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.7</priority>
+<title>Metasign</title>
+</url>
 </urlset>
