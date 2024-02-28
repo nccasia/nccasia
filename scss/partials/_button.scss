@@ -1,0 +1,109 @@
+.primary-button {
+  border: none;
+  padding: 8px 20px;
+  font-size: 26px;
+  font-weight: 600;
+  border-radius: 8px;
+  line-height: 24px;
+  background-color: $primary-text;
+  color: $white;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  z-index: 1;
+
+  &.large {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $subtitle-text;
+  }
+}
+
+.back-to-top:hover {
+  background: $primary-text;
+  color: $white;
+  border: 1px solid $primary-text;
+  opacity: 0.8;
+}
+
+.back-to-top {
+  right: 15px;
+  bottom: 50px;
+  position: fixed;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  padding: 0;
+  line-height: 36px;
+  font-size: 18px;
+  background: #f2f2f2;
+  color: #323232;
+  border-radius: 0;
+  transition: all 300ms ease;
+  border: 1px solid #ebebeb;
+  cursor: pointer;
+  .btt-icon {
+    padding-top: 8px;
+  }
+}
+
+#back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hype-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  a {
+    margin: 0 0 7px;
+    padding-right: 13px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: $primary-text;
+    position: relative;
+    text-decoration: none;
+    font-family: "Nunito";
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: url("/assets/images/arrow\ up.png");
+      top: 66%;
+      right: -15%;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      bottom: -7px;
+      width: 130px;
+      left: -8px;
+      height: 2px;
+      background-color: $primary-text;
+    }
+
+    &:hover {
+      &::after {
+        left: 6px;
+        width: 108px;
+      }
+    }
+  }
+}

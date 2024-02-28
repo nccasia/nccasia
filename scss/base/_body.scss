@@ -1,0 +1,100 @@
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  width: 100%;
+}
+
+select,
+option {
+  font-size: 14px;
+  background-color: $white;
+  color: $primary-text;
+}
+
+#page {
+  overflow: hidden;
+}
+
+#primary {
+  width: 100%;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 104px;
+}
+
+.ba-color {
+  background-color: $ba-label;
+}
+
+.hr-color {
+  background-color: $hr-label;
+}
+
+.sale-color {
+  background-color: $sale-label;
+}
+
+.pm-color {
+  background-color: $pm-label;
+}
+
+.developer-color {
+  background-color: $developer-label;
+}
+
+.default-color {
+  background-color: $default-label;
+}
+
+.pagination {
+  display: none;
+}
+
+.wpcf7-response-output {
+  display: none;
+}
+
+//
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
