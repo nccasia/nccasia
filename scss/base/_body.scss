@@ -1,0 +1,182 @@
+a {
+  text-decoration: none !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+  scroll-behavior: smooth;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+div {
+  display: block;
+}
+
+section {
+  width: 100%;
+}
+
+select,
+option {
+  font-size: 20px;
+  background-color: $white;
+  color: $primary-text;
+}
+
+#page {
+  overflow: hidden;
+}
+
+#primary {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.ba-color {
+  background-color: $ba-label;
+}
+
+.hr-color {
+  background-color: $hr-label;
+}
+
+.sale-color {
+  background-color: $sale-label;
+}
+
+.pm-color {
+  background-color: $pm-label;
+}
+
+.developer-color {
+  background-color: $developer-label;
+}
+
+.default-color {
+  background-color: $default-label;
+}
+
+.pagination {
+  display: none;
+}
+
+.wpcf7-response-output {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #masthead {
+    .header-top {
+      .main-menu {
+        display: none;
+      }
+      .menu-action {
+        display: none;
+      }
+    }
+  }
+}
+
+.site-header {
+  position: relative;
+  z-index: 30;
+  background-color: #ffffff;
+  height: auto;
+}
+
+#nav-holder {
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  background-color: #fff;
+  display: none;
+  width: 100%;
+  top: 68px;
+}
+
+#m-menu,
+#m-menu-fix {
+  background-color: #ffffff;
+}
+
+#m-menu,
+#m-menu-fix {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: none;
+}
+
+#masthead .header-top,
+#masthead-fix .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 84px;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+}
+
+#masthead .insider,
+#masthead-fix .insider {
+  height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ncctheme-m-menu {
+  padding: 30px 0;
+  li {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    text-align: center;
+    width: auto;
+    padding-bottom: 30px;
+    list-style: none;
+    a {
+      width: auto;
+      position: relative;
+      font-size: 28px;
+      color: $primary-text;
+      display: inline;
+      padding: 0 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .search-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .search-page {
+    display: none;
+  }
+}

@@ -1,0 +1,46 @@
+.box-head {
+  text-align: center;
+  width: 100%;
+  .title-content {
+    position: relative;
+
+    h2 {
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 120px;
+      width: 100%;
+      margin: 20px 0;
+      border-bottom: 3px solid;
+      display: inline;
+      text-transform: uppercase;
+      font-family: "Nunito", sans-serif;
+      color: $primary-text;
+    }
+
+    .title {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 800;
+      font-family: "Nunito", sans-serif;
+      font-size: 54px;
+      color: $second-text;
+      z-index: 2;
+    }
+  }
+
+  .description {
+    display: contents;
+    max-width: 842px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 32px;
+    color: $second-text;
+  }
+}

@@ -1,0 +1,74 @@
+#benefit {
+  position: relative;
+  margin-top: $section-margin-big;
+
+  &::before {
+    content: "";
+    background-image: url("../image/background-left.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -15%;
+    left: 0;
+    width: 20%;
+    height: 50%;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    background-image: url("../image/background-right.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 20%;
+    height: 45%;
+    z-index: -1;
+    bottom: -17%;
+    right: 0;
+  }
+
+  .benefit-icon {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-row-gap: 40px;
+    text-align: center;
+    width: 100%;
+
+    .icon-one,
+    .icon-two,
+    .icon-three {
+      grid-column: span 2;
+    }
+
+    .icon-four {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+
+    .icon-five {
+      grid-column-start: 4;
+      grid-column-end: 6;
+    }
+
+    .benefit-item {
+      p {
+        margin-top: 16px;
+        font-size: 32px;
+        line-height: 100%;
+        font-weight: 400;
+        color: $second-text;
+      }
+
+      img {
+        width: 150px;
+        height: 120px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .see-more-button {
+    margin-top: 32px;
+  }
+}
