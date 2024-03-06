@@ -1,17 +1,14 @@
-@media screen and (max-width: 1440px) {
-  //footer responsive
-  #colophon {
-    &::before {
-      content: "";
-      position: absolute;
-      top: -92px;
-      width: 100%;
-      height: 92px;
-      background-image: url("../image/bg-footer.png");
-      background-size: cover;
-      background-position: center;
+@media screen and (min-width: 1440px) {
+  //search
+  #page {
+    .search-page {
+      margin-top: 30%;
     }
   }
+}
+
+@media screen and (max-width: 1440px) {
+  //footer responsive
 }
 
 @media screen and (max-width: 1240px) {
@@ -35,7 +32,7 @@
   .box-head {
     .title-content {
       h2 {
-        font-size: 100px;
+        font-size: 35px;
         line-height: 100px;
       }
 
@@ -46,7 +43,7 @@
     }
 
     .description {
-      font-size: 20px;
+      font-size: 32px;
       line-height: 38px;
     }
   }
@@ -105,6 +102,10 @@
       }
     }
 
+    .insider {
+      padding: 0px 40px;
+    }
+
     .main-slider {
       .text-head {
         font-size: 68px;
@@ -123,40 +124,23 @@
       }
     }
   }
-
-  #colophon {
+  .search {
     .container {
-      .row {
-        .connect-box {
-          .title {
-            font-size: 26px;
-            line-height: 24px;
-          }
-        }
-
-        .address-box {
-          .title {
-            font-size: 26px;
-            line-height: 24px;
-          }
-
-          .address-content {
-            grid-template-columns: auto auto;
-          }
-        }
+      .search-box {
+        margin-top: 28%;
       }
     }
   }
 }
 
 @media screen and (max-width: 991px) {
-  .active .ncctheme-m-menu > li:nth-child(1) a {
+  .ncctheme-m-menu > li:nth-child(1) a {
     &::after {
       right: calc(50% - 50px);
     }
 
     &:hover {
-      padding-right: 40px;
+      // padding-right: 40px;
       left: 0;
 
       &::after {
@@ -165,7 +149,7 @@
     }
   }
 
-  .active .ncctheme-m-menu > li:last-child a {
+  .ncctheme-m-menu > li:last-child a {
     &::after {
       right: calc(50% - 55px);
     }
@@ -175,13 +159,13 @@
     }
   }
 
-  .active .ncctheme-m-menu > li a {
+  .ncctheme-m-menu > li a {
     &:hover {
-      background-color: $hover-button-bg;
+      background-color: $subtitle-text;
     }
   }
 
-  .active .menu-action {
+  .menu-action {
     flex-direction: column;
     justify-content: center;
     gap: 32px;
@@ -216,8 +200,8 @@
   .home #content {
     z-index: 0;
   }
-  #mhead.active,
-  #mhead-fix.active {
+
+  .site-header {
     height: 100vh;
     width: 100%;
     clip-path: unset;
@@ -226,6 +210,10 @@
     left: 0;
     background-color: $white;
     z-index: 999;
+
+    .header-top {
+      height: 72px !important;
+    }
 
     #menu-main-menu-1 {
       height: 100%;
@@ -236,25 +224,7 @@
       border-bottom: 1px solid $border-color;
       transition-delay: 100ms, 100ms;
 
-      .menu-toggler.simple:before,
-      .menu-toggler-fix.simple:before {
-        content: "\f129";
-        color: $second-text;
-        font-size: 30px;
-      }
-
       .menu-toggler.simple {
-        &::after {
-          content: "";
-          position: absolute;
-          top: 19px;
-          left: 16px;
-          z-index: 1;
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-        }
-
         &:hover::after {
           background-color: rgb(240, 240, 240);
         }
@@ -267,7 +237,21 @@
   }
   .header-fix,
   .header-fix.scrolled {
-    display: none;
+    // display: none;
+    justify-content: space-between;
+    height: 72px;
+    .main-menu,
+    .menu-action {
+      display: none;
+    }
+    .menu-toggler-fix {
+      display: flex;
+      .hydrated {
+        font-size: 30px;
+        color: #3e50af;
+        font-weight: bold;
+      }
+    }
   }
   .search-toggler:before {
     display: none;
@@ -286,77 +270,62 @@
       font-size: 20px;
       line-height: 30px;
     }
-
-    .search-box {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-
-      .search-content {
-        width: 85%;
-
-        .search-icon {
-          margin-left: 0px;
-        }
-      }
-
-      .search-filter {
-        width: 85%;
-        padding: 0 7.5%;
-      }
-    }
   }
   .primary-button {
     &.large {
-      font-size: 19px;
-      padding: 5px 8px;
+      font-size: 29px;
+      padding: 3px 12px 1px;
     }
   }
   //footer_responsive
-  #colophon {
-    .container {
-      .row {
-        .connect-box {
-          .title {
-            font-size: 18px;
-            line-height: 24px;
-          }
-        }
-
-        .address-box {
-          .title {
-            font-size: 18px;
-            line-height: 24px;
-          }
-
-          .address-content {
-            grid-template-columns: auto;
-
-            .address-item p {
-              font-size: 14px;
-              line-height: 20px;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .site-content{
+  .site-content {
     margin: $section-margin-small auto 20px;
   }
   //title responsive
   .box-head {
     .title-content {
       h2 {
-        font-size: 70px;
+        font-size: 35px;
         line-height: 70px;
       }
+    }
+    .description {
+      font-size: 30px;
+    }
+  }
+  .site-header {
+    .header-background {
+      height: 250%;
+    }
+    .header-top {
+      .menu-toggler {
+        display: flex;
+        .hydrated {
+          font-size: 30px;
+          color: $primary-text;
+          font-weight: bold;
+        }
+      }
+    }
+    .insider {
+      .menu-toggler {
+        display: flex;
+        .hydrated {
+          font-size: 30px;
+          color: #3e50af;
+          font-weight: bold;
+        }
+      }
+    }
+  }
 
-      .title {
-        font-size: 40px;
+  .search-mobile {
+    .container {
+      .search-box {
+        margin-top: 35%;
       }
     }
   }
@@ -385,18 +354,57 @@
     width: 25%;
   }
   //footer responsive
-  #colophon {
-    margin-top: $footer-margin-small;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -69px;
-      width: 100%;
-      height: 69px;
-      background-image: url("../image/bg-footer.png");
-      background-size: cover;
-      background-position: center;
+  .footer {
+    .footer_head {
+      .footer_head-category {
+        display: none;
+      }
+      .nav_footer {
+        display: block;
+        position: relative;
+        .nav_footer-head {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 3px solid #aabff2;
+          .footer_head-item-phone-text {
+            padding-left: 22px;
+            margin: 0;
+          }
+          .footer_head-item-email-text {
+            padding-left: 22px;
+            margin: 0;
+          }
+        }
+        .nav_footer-adreess {
+          padding: 20px 0 36px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom-wrapper {
+    padding: 16px 0;
+    .container {
+      .footer_bottom {
+        .footer_bottom-container {
+          padding: 16px 0;
+          .footer_social {
+            .footer_social-image {
+              padding: 0 40px;
+            }
+          }
+          .footer_copyright {
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -406,7 +414,7 @@
   .box-head {
     .title-content {
       h2 {
-        font-size: 44px;
+        font-size: 20px;
         line-height: 44px;
       }
 
@@ -417,14 +425,21 @@
     }
 
     .description {
-      font-size: 16px;
+      font-size: 24px;
       line-height: 24px;
     }
   }
+  .header-fix {
+    padding: 0px 16px;
+  }
   .site-header {
-    clip-path: ellipse(97% 80% at 47% 17%);
-
+    .header-background {
+      height: 200%;
+    }
     .header-top {
+      padding: 0 16px;
+    }
+    .insider {
       padding: 0 16px;
     }
 
@@ -433,7 +448,7 @@
     }
 
     .main-slider {
-      padding: 3% 0px 12%;
+      padding: 3% 0px 0%;
       display: block;
       background-size: cover;
 
@@ -447,20 +462,18 @@
         line-height: 20px;
         padding-bottom: 32px;
       }
+    }
+  }
 
+  .search-mobile {
+    .container {
       .search-box {
+        margin-top: 42%;
         .search-content {
           width: 100%;
-
+          padding: 0 8px;
           .search-input {
-            padding: 8px;
-          }
-
-          .search-button {
-            &.large {
-              font-size: 16px;
-              line-height: 24px;
-            }
+            padding: 6px;
           }
         }
 
@@ -472,106 +485,28 @@
     }
   }
   //footer css
-  #colophon {
+  .footer-bottom-wrapper {
     .container {
-      .row {
-
-        .connect-box {
-          flex-direction: column;
-          align-items: unset;
-          text-align: unset;
-
-          .title {
-            font-size: 20px;
-            line-height: 30px;
+      .footer_bottom {
+        .footer_bottom-container {
+          .footer_social {
+            .footer_social-image {
+              padding: 0 28px;
+            }
           }
-
-          .connect-content {
-            display: flex;
-            flex-direction: row;
-            gap: 12px;
-            align-items: center;
-
-            .logo {
-              width: 52px;
-              height: 52px;
+          .footer_copyright {
+            p {
               margin: 0;
             }
-
-            .info-connect {
-              flex-direction: row;
-              gap: 12px;
-
-              p {
-                font-size: 14px;
-                margin: 0;
-                gap: 4px;
-              }
-            }
-          }
-        }
-
-        .address-box {
-          margin-top: 12px;
-          .title {
-            font-size: 20px;
-            line-height: 30px;
-          }
-
-          .address-content {
-            grid-template-columns: auto;
-
-            .address-item p {
-              font-size: 14px;
-              line-height: 20px;
-            }
           }
         }
       }
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -38px;
-      width: 100%;
-      height: 39px;
-      background-image: url("../image/bg-footer-mobile.png");
-      background-size: cover;
-      background-position: center;
-    }
-  }
-  .footer-bottom-wrapper {
-    background-color: $footer-bg-color;
-    padding: 24px 0px;
-
-    .social-icon {
-      display: flex;
-      justify-content: center;
-      align-self: center;
-      gap: 40px;
-
-      a {
-        img {
-          width: 32px;
-          height: 32px;
-        }
-      }
-    }
-
-    .copy-right {
-      margin-top: 20px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
     }
   }
 }
 
 @media screen and (max-width: 375px) {
   .site-header {
-    clip-path: ellipse(100% 80% at 47% 17%);
-
     .main-slider {
       display: block;
       background-size: cover;
@@ -586,18 +521,17 @@
         line-height: 20px;
         padding-bottom: 32px;
       }
-
+    }
+  }
+  .search-mobile {
+    .container {
       .search-box {
+        margin-top: 48%;
         .search-content {
           width: 100%;
-
-          // .search-input {
-          //   padding: 8px;
-          // }
-
           .search-button {
             &.large {
-              font-size: 16px;
+              font-size: 24px;
               line-height: 24px;
             }
           }
@@ -605,8 +539,10 @@
 
         .search-filter {
           width: 100%;
-          .filter-input select {
-            padding: 8px 0px 8px 8px;
+          .filter-input {
+            select {
+              padding: 6px 16px 2px 6px;
+            }
           }
         }
       }
@@ -616,12 +552,14 @@
 
 @media screen and (max-width: 320px) {
   .site-header {
-    clip-path: ellipse(97% 80% at 47% 17%);
-
     .main-slider {
-      padding: 3% 0 18%;
-
+      padding: 3% 0 0%;
+    }
+  }
+  .search-mobile {
+    .container {
       .search-box {
+        margin-top: 52%;
         .search-content {
           width: 100%;
 
@@ -648,28 +586,14 @@
     }
   }
   //title responsive
-  .box-head .title-content .title {
-    font-size: 20px;
-  }
-  //footer responsive
-  #colophon {
-    .container {
-      .row {
-        .connect-box {
-          .connect-content {
-            .info-connect {
-              flex-direction: column;
-              gap: 4px;
-
-              p {
-                line-height: 18px;
-              }
-            }
-          }
-        }
+  .box-head {
+    .title-content {
+      h2 {
+        font-size: 18px;
       }
     }
   }
+  //footer responsive
 }
 
 @media screen and (min-width: 1440px) {

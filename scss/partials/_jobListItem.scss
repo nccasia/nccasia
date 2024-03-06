@@ -128,11 +128,11 @@
         padding: 8px 20px;
         text-align: center;
         cursor: pointer;
-        border: 1px solid $primary-text;
         border-radius: 8px;
+        // background: $primary-text;
 
         a {
-          color: $primary-text;
+          color: $white;
           font-weight: 700;
           font-size: 28px;
           line-height: 24px;

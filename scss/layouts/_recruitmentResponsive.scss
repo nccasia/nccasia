@@ -65,7 +65,7 @@
                     text-overflow: ellipsis;
 
                     a {
-                      font-size: 24px;
+                      font-size: 44px;
                       line-height: 32px;
                       font-weight: 700;
                       color: $primary-text;
@@ -73,7 +73,7 @@
                   }
 
                   .description {
-                    font-size: 18px;
+                    font-size: 28px;
                     font-weight: 400;
                     line-height: 28px;
                     color: $second-text;
@@ -100,9 +100,9 @@
                 border-top: 1px solid $border-color;
 
                 a {
-                  color: $primary-color;
+                  color: $primary-text;
                   font-weight: 700;
-                  font-size: 16px;
+                  font-size: 26px;
                   line-height: 24px;
                 }
               }

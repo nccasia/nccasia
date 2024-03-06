@@ -98,8 +98,8 @@
           }
 
           p {
-            font-size: 22px;
-            line-height: 30px;
+            font-size: 36px;
+            line-height: 40px;
           }
         }
       }
@@ -151,7 +151,8 @@
       .view-all {
         .primary-button {
           &.large {
-            font-size: 16px;
+            font-size: 26px;
+            padding: 8px 16px 6px 16px;
           }
         }
       }
@@ -217,7 +218,7 @@
         }
 
         p {
-          font-size: 18px;
+          font-size: 28px;
         }
       }
     }
@@ -311,7 +312,7 @@
           }
 
           p {
-            font-size: 18px;
+            font-size: 28px;
             line-height: 26px;
           }
         }
@@ -359,48 +360,50 @@
   }
 
   #benefit {
-    &::before {
-      content: "";
-      width: 26%;
-    }
-
-    &::after {
-      content: "";
-      width: 38%;
-      height: 29%;
-      bottom: -3%;
-    }
-
-    .benefit-icon {
-      grid-row-gap: 20px;
-      grid-column-gap: 15px;
-
-      .benefit-item {
-        img {
-          width: 58px;
-          height: 58px;
-        }
-
-        p {
-          margin-top: 4px;
-          font-size: 12px;
-          line-height: 24px;
-          font-weight: 400;
-          font-family: "Nunito", sans-serif;
-        }
-      }
-    }
-
-    .see-more {
-      p {
-        margin-bottom: 8px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
+    .container {
+      &::before {
+        content: "";
+        width: 26%;
       }
 
       &::after {
-        width: 100px;
+        content: "";
+        width: 38%;
+        height: 29%;
+        bottom: -3%;
+      }
+
+      .benefit-icon {
+        grid-row-gap: 20px;
+        grid-column-gap: 15px;
+
+        .benefit-item {
+          img {
+            width: 58px;
+            height: 58px;
+          }
+
+          p {
+            margin-top: 4px;
+            font-size: 12px;
+            line-height: 24px;
+            font-weight: 400;
+            font-family: "Nunito", sans-serif;
+          }
+        }
+      }
+
+      .see-more {
+        p {
+          margin-bottom: 8px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        &::after {
+          width: 100px;
+        }
       }
     }
   }
@@ -523,7 +526,7 @@
           }
 
           p {
-            font-size: 14px;
+            font-size: 20px;
             line-height: 20px;
           }
         }

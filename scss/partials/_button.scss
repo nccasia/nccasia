@@ -1,6 +1,6 @@
 .primary-button {
   border: none;
-  padding: 8px 20px;
+  padding: 9px 21px 7px 21px;
   font-size: 26px;
   font-weight: 600;
   border-radius: 8px;
@@ -14,8 +14,8 @@
   z-index: 1;
 
   &.large {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 32px;
+    line-height: 36px;
   }
 
   &:hover {
@@ -73,20 +73,11 @@
     padding-right: 13px;
     font-size: 20px;
     line-height: 30px;
-    font-weight: 600;
+    font-weight: 700;
     color: $primary-text;
     position: relative;
     text-decoration: none;
     font-family: "Nunito";
-
-    &::before {
-      position: absolute;
-      display: block;
-      content: url("/assets/images/arrow\ up.png");
-      top: 66%;
-      right: -15%;
-      transform: translateY(-50%);
-    }
 
     &::after {
       position: absolute;
@@ -105,5 +96,15 @@
         width: 108px;
       }
     }
+  }
+  .fa-arrow-up:before {
+    content: "\f062";
+    position: absolute;
+    top: 50%;
+    color: #6572b7;
+    font-size: 14px;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+    top: 16px;
   }
 }

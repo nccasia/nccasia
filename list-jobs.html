@@ -107,66 +107,88 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.1.2/css/ionicons.min.css"
+      integrity="sha512-JtBlPgg5jzjGJRxSTwDEQTgq5y6Oviw0JxgFTX0VQ7md6+asM0IbFwT/fg5qN7uhHEBXX2ToO+GQ7ujq23JlRg=="
+      crossorigin="anonymous"
+    />
     <!-- icon btt -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/career.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.6.1/css/ionicons.min.css"
     />
-    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+    <script src="/js/test.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
-    <div class="header-fix scrolled">
-      <h1 class="site-title">
-        <a href="http://career2024.local/" rel="home">
-          <img src="/assets/images/logo.png" width="56" />
-        </a>
-      </h1>
-      <ul id="menu-main-menu" class="main-menu">
-        <li
-          id="menu-item-18"
-          class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-18"
-        >
-          <a href="/" aria-current="page">Career</a>
-        </li>
-        <li
-          id="menu-item-19"
-          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"
-        >
-          <a href="/ncc-process">Recruitment Process</a>
-        </li>
-        <li
-          id="menu-item-20"
-          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"
-        >
-          <a href="/ncc-benefit">Benefits</a>
-        </li>
-        <li
-          id="menu-item-438"
-          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-438"
-        >
-          <a href="/ncc-culture">Culture</a>
-        </li>
-        <li
-          id="menu-item-439"
-          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-439"
-        >
-          <a href="https://ncc.asia/">About Us</a>
-          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-        </li>
-      </ul>
-      <div class="menu-action">
-        <a title="Join Us" class="primary-button apply-button">Join Us</a>
-      </div>
-    </div>
     <!-- opportunities -->
     <div id="page" class="site">
-      <div id="masthead" class="site-header">
+      <div class="header-fix scrolled">
+        <h1 class="site-title">
+          <a href="http://career2024.local/" rel="home">
+            <img src="/assets/images/logo.png" width="56" />
+          </a>
+        </h1>
+        <ul id="menu-main-menu" class="main-menu">
+          <li
+            id="menu-item-18"
+            class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-18"
+          >
+            <a href="/" aria-current="page">Career</a>
+          </li>
+          <li
+            id="menu-item-19"
+            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"
+          >
+            <a href="/ncc-process">Recruitment Process</a>
+          </li>
+          <li
+            id="menu-item-20"
+            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"
+          >
+            <a href="/ncc-benefit">Benefits</a>
+          </li>
+          <li
+            id="menu-item-438"
+            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-438"
+          >
+            <a href="/ncc-culture">Culture</a>
+          </li>
+          <li
+            id="menu-item-439"
+            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-439"
+          >
+            <a href="https://ncc.asia/">About Us</a>
+            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+          </li>
+        </ul>
+        <div class="menu-action">
+          <a title="Join Us" class="primary-button apply-button">Join Us</a>
+        </div>
+        <div class="menu-toggler-fix simple">
+          <ion-icon name="menu" role="img" class="md hydrated"></ion-icon>
+        </div>
+      </div>
+      <header id="masthead" class="site-header">
         <img
           class="header-background"
           src="/assets/images/logoHiring.png"
@@ -206,15 +228,79 @@
               <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
             </li>
           </ul>
+          <div class="menu-toggler simple">
+            <ion-icon name="menu"></ion-icon>
+          </div>
           <div class="menu-action">
             <a title="Join Us" class="primary-button apply-button">Join Us</a>
           </div>
+        </div>
+        <div class="header-top-mb">
+          <div class="insider">
+            <div class="site-title">
+              <a href="http://career2024.local/" rel="home">
+                <img src="/assets/images/logo.png" width="56" />
+              </a>
+            </div>
+            <div class="menu-toggler simple menu-toggler-mb">
+              <!-- <ion-icon name="close-circle-outline"></ion-icon> -->
+              <ion-icon name="menu" role="img" class="md hydrated"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div id="nav-holder">
+          <nav
+            id="m-menu"
+            class="mobile-menu"
+            role="navigation"
+            aria-label="Mobile Menu"
+            style="display: block"
+          >
+            <div class="container">
+              <ul id="menu-main-menu-2" class="ncctheme-m-menu">
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"
+                >
+                  <a href="/">Career</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"
+                >
+                  <a href="/ncc-process">Recruitment Process</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"
+                >
+                  <a href="/ncc-benefit">Benefits</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-438"
+                >
+                  <a href="/ncc-culture">Culture</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-439"
+                >
+                  <a href="https://ncc.asia/">About Us</a>
+                </li>
+              </ul>
+              <div class="menu-action">
+                <a title="Join Us" class="primary-button apply-button"
+                  >Join Us</a
+                >
+              </div>
+            </div>
+            <!-- /.container -->
+          </nav>
+          <!-- /#m-menu.mobile-menu -->
         </div>
         <div class="main-slider">
           <div class="container">
             <p class="text-description"></p>
           </div>
         </div>
+      </header>
+      <div class="search-page">
         <div class="container">
           <form
             class="search-box"
@@ -289,7 +375,82 @@
           </form>
         </div>
       </div>
-      <div class="page-list-jobs">
+      <div class="search-mobile">
+        <div class="container">
+          <form
+            class="search-box"
+            method="get"
+            id="advanced-searchform"
+            role="search"
+            action="http://career2024.local/"
+          >
+            <input type="hidden" name="search" value="advanced" />
+            <div class="search-content">
+              <i
+                class="fa-solid fa-magnifying-glass search-icon"
+                aria-hidden="true"
+              ></i>
+              <input
+                type="text"
+                class="search-input"
+                value=""
+                placeholder="Job title or skill..."
+                name="s"
+                id="name"
+              />
+              <input
+                class="search-button primary-button large"
+                type="submit"
+                id="searchsubmit"
+                value="Search"
+              />
+            </div>
+            <div class="search-filter">
+              <div class="filter-input">
+                <select name="address" id="address">
+                  <option value="">Office</option>
+                  <option value="hanoi">Ha Noi</option>
+                  <option value="hanoi1">Ha Noi 1</option>
+                  <option value="hanoi2">Ha Noi 2</option>
+                  <option value="hanoi3">Ha Noi 3</option>
+                  <option value="danang">Da Nang</option>
+                  <option value="saigon1">Sai Gon</option>
+                  <option value="vinh">Vinh</option>
+                  <option value="quynhon">Quy Nhon</option>
+                  <option value="all">All Offices</option>
+                </select>
+              </div>
+              <div class="filter-input">
+                <select name="category" id="category">
+                  <option value="">Job type</option>
+                  <option value="developer">Developer</option>
+                  <option value="ba">Ba</option>
+                  <option value="pm">Pm</option>
+                  <option value="tester">Tester</option>
+                  <option value="hr">Hr</option>
+                  <option value="sale">Sale</option>
+                  <option value="designer">Designer</option>
+                  <option value="gamedesign">Game designer</option>
+                  <option value="accountant">Accountant</option>
+                  <option value="itsupport">IT Support</option>
+                  <option value="marketing">Marketing</option>
+                </select>
+              </div>
+              <div class="filter-input">
+                <select name="level" id="level">
+                  <option value="">level</option>
+                  <option value="intern">Intern</option>
+                  <option value="fresher">Fresher</option>
+                  <option value="junior">Junior</option>
+                  <option value="middle">Middle</option>
+                  <option value="senior">Senior</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="page-list-jobs" id="list-jobs">
         <section id="list-jobs">
           <div class="container">
             <div class="box-head">
@@ -310,7 +471,10 @@
                     class="job-icon"
                     href="http://career2024.local/ux-ui-designer-fre-jun/"
                   >
-                    <img src="" alt="UX/UI Designer (Fre/Jun)" />
+                    <img
+                      src="/assets/images/listjob/designer.png"
+                      alt="UX/UI Designer (Fre/Jun)"
+                    />
                   </a>
                   <div class="job-content">
                     <div class="job-info">
@@ -357,7 +521,10 @@
                     class="job-icon"
                     href="http://career2024.local/ux-ui-designer-mid-sen/"
                   >
-                    <img src="" alt="UX/UI Designer (Mid/Sen)" />
+                    <img
+                      src="/assets/images/listjob/designer.png"
+                      alt="UX/UI Designer (Mid/Sen)"
+                    />
                   </a>
                   <div class="job-content">
                     <div class="job-info">
@@ -405,7 +572,7 @@
                     href="http://career2024.local/frontend-developer-middle-senior/"
                   >
                     <img
-                      src="http://career2024.local/wp-content/uploads/2024/01/post-img.png"
+                      src="/assets/images/listjob/dev.png"
                       alt="FrontEnd Developer (Mid/Sen)"
                     />
                   </a>
@@ -455,7 +622,7 @@
                     href="http://career2024.local/nodejs-developer-middle-senior/"
                   >
                     <img
-                      src="http://career2024.local/wp-content/uploads/2024/01/post-img.png"
+                      src="/assets/images/listjob/dev.png"
                       alt="NodeJS Developer (Mid/Sen)"
                     />
                   </a>
@@ -505,7 +672,7 @@
                     href="http://career2024.local/react-native-developer/"
                   >
                     <img
-                      src="http://career2024.local/wp-content/uploads/2024/01/post-img.png"
+                      src="/assets/images/listjob/dev.png"
                       alt="React Native Developer"
                     />
                   </a>
@@ -555,7 +722,7 @@
                     href="http://career2024.local/it-support/"
                   >
                     <img
-                      src="http://career2024.local/wp-content/uploads/2024/01/post-img.png"
+                      src="/assets/images/listjob/backoffice.png"
                       alt="IT Support"
                     />
                   </a>
@@ -607,7 +774,7 @@
                     href="http://career2024.local/sale-it-us-uk-japan-market/"
                   >
                     <img
-                      src="http://career2024.local/wp-content/uploads/2024/01/post-img.png"
+                      src="/assets/images/listjob/ba.png"
                       alt="Sale IT (US/UK/Japan Market)"
                     />
                   </a>
@@ -655,171 +822,327 @@
         </section>
       </div>
       <!-- site-footer -->
-      <div class="footer_head">
-        <div class="grid footer_head-category">
-          <div class="footer_head-collection">
-            <div class="footer_head-item--infomation">
-              <div class="logo_image">
-                <img
-                  loading="lazy"
-                  src="./assets/images/logo.png"
-                  width="120"
-                  height="120"
-                  alt=""
-                />
+      <div class="footer">
+        <div class="footer_head">
+          <div class="container">
+            <div class="grid footer_head-category">
+              <div class="footer_head-collection">
+                <div class="footer_head-item--infomation">
+                  <div class="logo_image">
+                    <img
+                      loading="lazy"
+                      src="./assets/images/logo.png"
+                      width="120"
+                      height="120"
+                      alt=""
+                    />
+                  </div>
+                  <div class="footer_head_item_bottom">
+                    <p class="footer_head-item-phone-text">(+84) 2466874606</p>
+                    <p class="footer_head-item-email-text">info@ncc.asia</p>
+                  </div>
+                </div>
               </div>
-              <div class="footer_head_item_bottom">
+              <div
+                class="footer_head-collection footer_head-collection-address"
+              >
+                <div class="footer_head-list-first">
+                  <a
+                    href="https://maps.app.goo.gl/4b1yWzyB8E2AQVpVA"
+                    target="_blank"
+                  >
+                    <div class="header_footer">
+                      <i
+                        class="fa-sharp fa-solid fa-location-dot fa-locations"
+                      ></i>
+                      <div class="link-footer">
+                        <p>
+                          <span class="text-footer">HA NOI 1 |</span>2nd Floor,
+                          CT3 The Pride, To Huu st, Ha Dong Dist
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="https://goo.gl/maps/tjkFGN3iDCEpG4fU7"
+                    target="_blank"
+                  >
+                    <div class="header_footer">
+                      <i
+                        class="fa-sharp fa-solid fa-location-dot fa-locations"
+                      ></i>
+                      <div class="link-footer">
+                        <p>
+                          <span class="text-footer">VINH |</span>4th Floor, 138
+                          Ha Huy Tap St., Vinh City
+                        </p>
+                      </div>
+                    </div> </a
+                  ><a
+                    href="https://goo.gl/maps/6uGkwv6dpVg66CNt7"
+                    target="_blank"
+                  >
+                    <div class="header_footer">
+                      <i
+                        class="fa-sharp fa-solid fa-location-dot fa-locations"
+                      ></i>
+                      <div class="link-footer">
+                        <p>
+                          <span class="text-footer">SAI GON |</span>4th Floor,
+                          120 Kha Van Can Str, Hiep Binh Chanh Ward, Thu Duc
+                          City
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="footer_head-collection footer_head-collection-address"
+              >
+                <div class="footer_head-list-main">
+                  <a
+                    href="https://goo.gl/maps/4qtJTTHFhKQ7bcmN9"
+                    target="_blank"
+                  >
+                    <div class="header_footer">
+                      <i
+                        class="fa-sharp fa-solid fa-location-dot fa-locations"
+                      ></i>
+                      <div class="link-footer">
+                        <p>
+                          <span class="text-footer">HA NOI 2 |</span>7th Floor,
+                          Vinfast My Dinh Building, 8 Pham Hung St., Cau Giay
+                          Dist.
+                        </p>
+                      </div>
+                    </div> </a
+                  ><a
+                    href="https://goo.gl/maps/NGYZFbZ1kAG2mF2B7"
+                    target="_blank"
+                  >
+                    <div class="header_footer">
+                      <i
+                        class="fa-sharp fa-solid fa-location-dot fa-locations"
+                      ></i>
+                      <div class="link-footer">
+                        <p>
+                          <span class="text-footer">QUY NHON |</span>3rd Floor,
+                          Hibecco Building, 307 Nguyen Thi Minh Khai St. Quy
+                          Nhon City
+                        </p>
+                      </div>
+                    </div> </a
+                  ><a href="https://www.nccsoft.jp/">
+                    <div class="header_footer">
+                      <i
+                        class="fa-sharp fa-solid fa-location-dot fa-locations"
+                      ></i>
+                      <div class="link-footer">
+                        <p>
+                          <span class="text-footer">NCC Japan |</span>2-35-5
+                          Higashiyukigaya, Ota City, Tokyo, Japan 145-0065
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="footer_head-collection footer_head-collection-address"
+              >
+                <div class="footer_head-list-main">
+                  <a
+                    href="https://goo.gl/maps/VykV996Pra8XCUYo8"
+                    target="_blank"
+                  >
+                    <div class="header_footer">
+                      <i
+                        class="fa-sharp fa-solid fa-location-dot fa-locations"
+                      ></i>
+                      <div class="link-footer">
+                        <p>
+                          <span class="text-footer">HA NOI 3 |</span>5th Floor,
+                          Hong Ha Tower, 89 Thinh Liet St., Hoang Mai Dist.
+                        </p>
+                      </div>
+                    </div> </a
+                  ><a
+                    href="https://goo.gl/maps/euZRpDDAFZsXb4tX6"
+                    target="_blank"
+                  >
+                    <div class="header_footer">
+                      <i
+                        class="fa-sharp fa-solid fa-location-dot fa-locations"
+                      ></i>
+                      <div class="link-footer">
+                        <p>
+                          <span class="text-footer">DA NANG |</span>3rd Floor,
+                          TP Building, 268 30/4 St., Hoa Cuong Bac Ward, Hai
+                          Chau Dist.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="grid nav_footer">
+              <div class="nav_footer-head">
                 <p class="footer_head-item-phone-text">(+84) 2466874606</p>
                 <p class="footer_head-item-email-text">info@ncc.asia</p>
               </div>
-            </div>
-          </div>
-          <div class="footer_head-collection footer_head-collection-address">
-            <div class="footer_head-list-first">
-              <a
-                href="https://maps.app.goo.gl/4b1yWzyB8E2AQVpVA"
-                target="_blank"
-              >
-                <div class="header_footer">
-                  <i class="fa-sharp fa-solid fa-location-dot fa-locations"></i>
-                  <div class="link-footer">
-                    <p>
-                      <span class="text-footer">HA NOI 1 |</span>2nd Floor, CT3
-                      The Pride, To Huu st, Ha Dong Dist
-                    </p>
+              <div class="nav_footer-adreess">
+                <a href="https://maps.app.goo.gl/4b1yWzyB8E2AQVpVA">
+                  <div class="header_footer">
+                    <i
+                      class="fa-sharp fa-solid fa-location-dot fa-locations"
+                    ></i>
+                    <div class="link-footer">
+                      <p>
+                        <span class="text-footer">HA NOI 1 |</span>2nd Floor,
+                        CT3 The Pride, To Huu st, Ha Dong Dist
+                      </p>
+                    </div>
+                  </div> </a
+                ><a href="https://goo.gl/maps/4qtJTTHFhKQ7bcmN9">
+                  <div class="header_footer">
+                    <i
+                      class="fa-sharp fa-solid fa-location-dot fa-locations"
+                    ></i>
+                    <div class="link-footer">
+                      <p>
+                        <span class="text-footer">HA NOI 2 |</span>7th Floor,
+                        Vinfast My Dinh Building, 8 Pham Hung St., Cau Giay
+                        Dist.
+                      </p>
+                    </div>
+                  </div> </a
+                ><a href="https://goo.gl/maps/VykV996Pra8XCUYo8">
+                  <div class="header_footer">
+                    <i
+                      class="fa-sharp fa-solid fa-location-dot fa-locations"
+                    ></i>
+                    <div class="link-footer">
+                      <p>
+                        <span class="text-footer">HA NOI 3 |</span>5th Floor,
+                        Hong Ha Tower, 89 Thinh Liet St., Hoang Mai Dist.
+                      </p>
+                    </div>
+                  </div> </a
+                ><a href="https://goo.gl/maps/tjkFGN3iDCEpG4fU7">
+                  <div class="header_footer">
+                    <i
+                      class="fa-sharp fa-solid fa-location-dot fa-locations"
+                    ></i>
+                    <div class="link-footer">
+                      <p>
+                        <span class="text-footer">VINH |</span>4th Floor, 138 Ha
+                        Huy Tap St., Vinh City
+                      </p>
+                    </div>
+                  </div> </a
+                ><a href="https://goo.gl/maps/euZRpDDAFZsXb4tX6">
+                  <div class="header_footer">
+                    <i
+                      class="fa-sharp fa-solid fa-location-dot fa-locations"
+                    ></i>
+                    <div class="link-footer">
+                      <p>
+                        <span class="text-footer">DA NANG |</span>3rd Floor, TP
+                        Building, 268 30/4 St., Hoa Cuong Bac Ward, Hai Chau
+                        Dist.
+                      </p>
+                    </div>
+                  </div> </a
+                ><a href="https://goo.gl/maps/NGYZFbZ1kAG2mF2B7">
+                  <div class="header_footer">
+                    <i
+                      class="fa-sharp fa-solid fa-location-dot fa-locations"
+                    ></i>
+                    <div class="link-footer">
+                      <p>
+                        <span class="text-footer">QUY NHON |</span>3rd Floor,
+                        Hibecco Building, 307 Nguyen Thi Minh Khai St. Quy Nhon
+                        City
+                      </p>
+                    </div>
+                  </div> </a
+                ><a href="https://goo.gl/maps/6uGkwv6dpVg66CNt7">
+                  <div class="header_footer">
+                    <i
+                      class="fa-sharp fa-solid fa-location-dot fa-locations"
+                    ></i>
+                    <div class="link-footer">
+                      <p>
+                        <span class="text-footer">SAI GON |</span>4th Floor, 120
+                        Kha Van Can Str, Hiep Binh Chanh Ward, Thu Duc City
+                      </p>
+                    </div>
+                  </div> </a
+                ><a href="https://www.nccsoft.jp/">
+                  <div class="header_footer">
+                    <i
+                      class="fa-sharp fa-solid fa-location-dot fa-locations"
+                    ></i>
+                    <div class="link-footer">
+                      <p>
+                        <span class="text-footer">NCC Japan |</span>2-35-5
+                        Higashiyukigaya, Ota City, Tokyo, Japan 145-0065
+                      </p>
+                    </div>
                   </div>
-                </div> </a
-              ><a href="https://goo.gl/maps/tjkFGN3iDCEpG4fU7" target="_blank">
-                <div class="header_footer">
-                  <i class="fa-sharp fa-solid fa-location-dot fa-locations"></i>
-                  <div class="link-footer">
-                    <p>
-                      <span class="text-footer">VINH |</span>4th Floor, 138 Ha
-                      Huy Tap St., Vinh City
-                    </p>
-                  </div>
-                </div> </a
-              ><a href="https://goo.gl/maps/6uGkwv6dpVg66CNt7" target="_blank">
-                <div class="header_footer">
-                  <i class="fa-sharp fa-solid fa-location-dot fa-locations"></i>
-                  <div class="link-footer">
-                    <p>
-                      <span class="text-footer">SAI GON |</span>4th Floor, 120
-                      Kha Van Can Str, Hiep Binh Chanh Ward, Thu Duc City
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="footer_head-collection footer_head-collection-address">
-            <div class="footer_head-list-main">
-              <a href="https://goo.gl/maps/4qtJTTHFhKQ7bcmN9" target="_blank">
-                <div class="header_footer">
-                  <i class="fa-sharp fa-solid fa-location-dot fa-locations"></i>
-                  <div class="link-footer">
-                    <p>
-                      <span class="text-footer">HA NOI 2 |</span>7th Floor,
-                      Vinfast My Dinh Building, 8 Pham Hung St., Cau Giay Dist.
-                    </p>
-                  </div>
-                </div> </a
-              ><a href="https://goo.gl/maps/NGYZFbZ1kAG2mF2B7" target="_blank">
-                <div class="header_footer">
-                  <i class="fa-sharp fa-solid fa-location-dot fa-locations"></i>
-                  <div class="link-footer">
-                    <p>
-                      <span class="text-footer">QUY NHON |</span>3rd Floor,
-                      Hibecco Building, 307 Nguyen Thi Minh Khai St. Quy Nhon
-                      City
-                    </p>
-                  </div>
-                </div> </a
-              ><a href="https://www.nccsoft.jp/">
-                <div class="header_footer">
-                  <i class="fa-sharp fa-solid fa-location-dot fa-locations"></i>
-                  <div class="link-footer">
-                    <p>
-                      <span class="text-footer">NCC Japan |</span>2-35-5
-                      Higashiyukigaya, Ota City, Tokyo, Japan 145-0065
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="footer_head-collection footer_head-collection-address">
-            <div class="footer_head-list-main">
-              <a href="https://goo.gl/maps/VykV996Pra8XCUYo8" target="_blank">
-                <div class="header_footer">
-                  <i class="fa-sharp fa-solid fa-location-dot fa-locations"></i>
-                  <div class="link-footer">
-                    <p>
-                      <span class="text-footer">HA NOI 3 |</span>5th Floor, Hong
-                      Ha Tower, 89 Thinh Liet St., Hoang Mai Dist.
-                    </p>
-                  </div>
-                </div> </a
-              ><a href="https://goo.gl/maps/euZRpDDAFZsXb4tX6" target="_blank">
-                <div class="header_footer">
-                  <i class="fa-sharp fa-solid fa-location-dot fa-locations"></i>
-                  <div class="link-footer">
-                    <p>
-                      <span class="text-footer">DA NANG |</span>3rd Floor, TP
-                      Building, 268 30/4 St., Hoa Cuong Bac Ward, Hai Chau Dist.
-                    </p>
-                  </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- footer-bottom-wrapper -->
-      <div class="footer-bottom-wrapper">
-        <div class="container">
-          <div class="footer_bottom">
-            <div class="grid footer_bottom-container">
-              <div class="footer_social">
-                <div class="footer_social-image">
-                  <a
-                    href="https://twitter.com/nccsoft"
-                    aria-label="twitter"
-                    target="_blank"
-                    ><img
-                      loading="lazy"
-                      src="./assets/images/tweet.svg"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></a>
+        <!-- footer-bottom-wrapper -->
+        <div class="footer-bottom-wrapper">
+          <div class="container">
+            <div class="footer_bottom">
+              <div class="grid footer_bottom-container">
+                <div class="footer_social">
+                  <div class="footer_social-image">
+                    <a
+                      href="https://twitter.com/nccsoft"
+                      aria-label="twitter"
+                      target="_blank"
+                      ><img
+                        loading="lazy"
+                        src="./assets/images/tweet.svg"
+                        width="40"
+                        height="40"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="footer_social-image">
+                    <a
+                      href="https://www.facebook.com/nccsoft.com.vn"
+                      aria-label="facebook"
+                      target="_blank"
+                      ><img
+                        loading="lazy"
+                        src="./assets/images/facebook.svg"
+                        width="40"
+                        height="40"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="footer_social-image">
+                    <a href="/" aria-label="google"
+                      ><img
+                        loading="lazy"
+                        src="./assets/images/google.svg"
+                        width="40"
+                        height="40"
+                        alt=""
+                    /></a>
+                  </div>
                 </div>
-                <div class="footer_social-image">
-                  <a
-                    href="https://www.facebook.com/nccsoft.com.vn"
-                    aria-label="facebook"
-                    target="_blank"
-                    ><img
-                      loading="lazy"
-                      src="./assets/images/facebook.svg"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></a>
+                <div class="footer_copyright">
+                  <p>2023 © NCC Vietnam. All rights reserved.</p>
                 </div>
-                <div class="footer_social-image">
-                  <a href="/" aria-label="google"
-                    ><img
-                      loading="lazy"
-                      src="./assets/images/google.svg"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></a>
-                </div>
-              </div>
-              <div class="footer_copyright">
-                <p>2023 © NCC Vietnam. All rights reserved.</p>
               </div>
             </div>
           </div>
@@ -832,43 +1155,5 @@
     >
       <ion-icon class="btt-icon" name="chevron-up-outline"></ion-icon>
     </button>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var backToTopButton = document.getElementById("back-to-top");
-
-        window.addEventListener("scroll", function () {
-          if (window.pageYOffset > 100) {
-            backToTopButton.classList.add("is-visible");
-          } else {
-            backToTopButton.classList.remove("is-visible");
-          }
-        });
-
-        if (window.pageYOffset <= 100) {
-          backToTopButton.classList.remove("is-visible");
-        }
-
-        backToTopButton.addEventListener("click", function () {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        });
-      });
-
-      //
-      window.addEventListener("scroll", function () {
-        const scrollPosition = window.scrollY;
-        const headerTop = document.querySelector(".header-top");
-        const headerFix = document.querySelector(".header-fix");
-        const mheadInsider = document.querySelector("#mhead .insider");
-        const mheadFixInsider = document.querySelector("#mhead-fix .insider");
-
-        headerTop.classList.toggle("scrolled", scrollPosition > 0);
-        headerFix.classList.toggle("scrolled", scrollPosition > 0);
-        mheadInsider.classList.toggle("scrolled", scrollPosition > 0);
-        mheadFixInsider.classList.toggle("scrolled", scrollPosition > 0);
-      });
-    </script>
   </body>
 </html>
