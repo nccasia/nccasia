@@ -1,0 +1,267 @@
+@media screen and (max-width: 1024px) {
+  .main-single-post {
+    #single-box {
+      .entry-content {
+        .entry-header {
+          .entry-title {
+            height: 100%;
+            margin: 26px 0 0 0;
+
+            h1 {
+              margin: 0;
+            }
+
+            .entry-meta {
+              .views {
+                width: 230px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #job-list {
+      .container {
+        padding-right: 0;
+        padding-left: 47px;
+        max-width: 100%;
+
+        .job-box {
+          padding-right: 47px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-single-post {
+    #single-box {
+      .entry-header {
+        .entry-title {
+          h2 {
+            font-size: 30px;
+          }
+        }
+      }
+      .entry-content {
+        display: block;
+        .entry-left-content {
+          .entry-header {
+            padding: 0;
+          }
+          .entry-icon {
+            width: 110px;
+            height: 110px;
+            border-radius: 7.5px;
+
+            img {
+              width: 87.5px;
+              height: 87.5px;
+            }
+          }
+
+          .entry-title {
+            display: block;
+            height: 100%;
+            margin: 24px 0;
+
+            h2 {
+              margin: 0;
+              padding: 0;
+            }
+
+            .entry-meta {
+              padding: 8px;
+            }
+          }
+
+          .left-content {
+            h4 {
+              font-size: 30px;
+              font-weight: 700;
+              line-height: 30px;
+              color: $primary-text;
+            }
+
+            ul {
+              li {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 20px;
+                color: $primary-text;
+              }
+            }
+
+            p span {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 24px;
+              color: $primary-text;
+            }
+          }
+        }
+
+        .entry-right-content {
+          display: block;
+          margin-top: 64px;
+          .job-box {
+            .related-title {
+              p {
+                margin-bottom: 8px;
+              }
+            }
+            .short-description {
+              .title {
+                a {
+                  font-size: 30px;
+                }
+              }
+              &::after {
+                width: 92%;
+              }
+            }
+          }
+        }
+      }
+    }
+    // apply-form-details
+    #apply-form-details {
+      margin-top: 64px;
+      .box-head {
+        h2 {
+          font-size: 35px;
+        }
+        .description {
+          font-size: 30px;
+        }
+      }
+    }
+
+    #job-list {
+      .container {
+        padding-right: 0;
+        padding-left: 39px;
+        max-width: 100%;
+
+        .job-box {
+          padding-right: 39px;
+
+          .swiper-control-button {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-single-post {
+    #single-box {
+      .entry-header {
+        a {
+          img {
+            width: 88px;
+          }
+        }
+        .entry-title {
+          font-size: 22px;
+          height: 36px;
+          margin-bottom: 0;
+          .ncctheme-title {
+            font-size: 22px;
+          }
+          .entry-meta {
+            font-size: 18px;
+          }
+        }
+      }
+      .entry-content {
+        .entry-left-content {
+          width: 100%;
+          .left-content {
+            p {
+              font-size: 20px;
+            }
+            h4 {
+              font-size: 26px;
+            }
+            ul li {
+              font-size: 20px;
+            }
+          }
+        }
+        .entry-right-content {
+          .job-box {
+            .related-title {
+              font-size: 30px;
+            }
+            .short-description {
+              .title {
+                a {
+                  font-size: 26px;
+                }
+              }
+              .description {
+                font-size: 22px;
+                margin-bottom: 0;
+              }
+              a {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // apply-form-details
+    #apply-form-details {
+      .box-head {
+        h2 {
+          font-size: 30px;
+          line-height: 50px;
+        }
+        .description {
+          font-size: 24px;
+          line-height: 100%;
+        }
+      }
+    }
+
+    #job-list {
+      .container {
+        padding-right: 0;
+        padding-left: 24px;
+        max-width: 100%;
+
+        .job-box {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main-single-post {
+    #single-box {
+      .entry-header {
+        .entry-title {
+          font-size: 20px;
+          height: 36px;
+          margin-bottom: 0;
+          .ncctheme-title {
+            font-size: 20px;
+            max-width: 88%;
+          }
+          .entry-meta {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

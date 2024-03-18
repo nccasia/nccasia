@@ -1,0 +1,219 @@
+#apply-form {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #242424e6;
+  display: none;
+
+  &.active {
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn ease 1s;
+  }
+
+  .container {
+    .apply-box {
+      position: relative;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      background-color: $white;
+      border-radius: 18px;
+      overflow: auto;
+
+      &.success-active {
+        display: none;
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .box-head {
+        text-align: center;
+        display: flex;
+        padding: 0 56px;
+
+        .close-button {
+          cursor: pointer;
+          position: absolute;
+          font-size: 24px;
+          top: 40px;
+          right: 40px;
+          color: $subtitle-text;
+        }
+
+        img {
+          width: 72px;
+          height: 60px;
+          object-fit: cover;
+        }
+
+        .title {
+          margin-top: 16px;
+          font-family: $font-family-second;
+          font-size: 36px;
+          font-weight: 800;
+          line-height: 44px;
+          letter-spacing: -0.02em;
+          color: $primary-text;
+        }
+      }
+
+      #recruitment-contact-form {
+        margin-top: 8px;
+      }
+
+      input {
+        margin-top: 16px;
+        border-radius: 8px;
+        border: 1px solid $border-color;
+        color: $primary-text;
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 16px;
+        height: 44px;
+
+        &::placeholder {
+          color: $second-text;
+        }
+      }
+
+      select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-overflow: ellipsis;
+        background: url("../image/dropdown.svg") no-repeat right center;
+        display: flex;
+        gap: 16px;
+        height: 44px;
+        cursor: pointer;
+        border: 1px solid $border-color;
+        padding: 10px 16px;
+        font-size: 16px;
+        width: 100%;
+        margin-top: 16px;
+        border-radius: 8px;
+        background-position: calc(100% - 20px) center;
+        color: $second-text;
+        background-size: 22px;
+      }
+
+      .contact-form__file-upload {
+        display: none;
+      }
+
+      .contact-form__file-name {
+        display: none;
+        margin-top: 16px;
+        padding: 10px 0 10px 16px;
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        color: $second-text;
+
+        &.active {
+          display: none;
+        }
+      }
+
+      input[type="submit"] {
+        height: 52px;
+        margin-top: 24px;
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        color: $white;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input[type="file"] {
+        padding-top: 10px;
+        color: $second-text;
+
+        &::file-selector-button {
+          font-weight: 500;
+          // font-size: 14px;
+          line-height: 20px;
+          color: $primary-text;
+          border: none;
+          border-radius: 7px;
+          background-color: $job-label;
+        }
+      }
+
+      .ajax-loader {
+        display: none;
+      }
+    }
+
+    .success-box {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: $white;
+      border-radius: 13px;
+      height: 80vh;
+      max-height: 650px;
+      display: none;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      .close-button {
+        cursor: pointer;
+        position: absolute;
+        font-size: 24px;
+        top: 40px;
+        right: 40px;
+        color: $subtitle-text;
+      }
+
+      .icon-success {
+        padding-bottom: 32px;
+        font-size: 93.77px;
+        color: #3fc027;
+      }
+
+      .main-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        font-family: $font-family-second;
+        color: $primary-text;
+      }
+
+      .sub-title {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: $second-text;
+        padding-top: 8px;
+      }
+
+      &.success-active {
+        display: flex;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
