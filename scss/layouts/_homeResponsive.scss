@@ -145,8 +145,7 @@
 
 @media screen and (max-width: 768px) {
   #job-list {
-    margin-top: $section-margin-small;
-
+    padding: 40px 0;
     .container {
       .view-all {
         .primary-button {
@@ -193,8 +192,7 @@
   }
   //benefit responsive
   #benefit {
-    margin-top: $section-margin-small;
-
+    padding: 40px 0;
     .benefit-icon {
       margin-top: 40px;
       grid-row-gap: 30px;
@@ -223,8 +221,6 @@
   }
   // vision
   #vision {
-    margin-top: $section-margin-small;
-
     .vision-box {
       .vision-description {
         .vision-background-top {
@@ -291,8 +287,7 @@
     }
   }
   #mail-box {
-    margin-top: $section-margin-small;
-
+    padding: 40px 0;
     .container {
       gap: 32px;
 
@@ -530,7 +525,7 @@
       .apply-button {
         .primary-button {
           padding: 8px 20px;
-          font-size: 16px;
+          font-size: 26px;
           line-height: 24px;
         }
       }

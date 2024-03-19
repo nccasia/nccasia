@@ -87,6 +87,16 @@ document.addEventListener("DOMContentLoaded", function () {
         applyForm.classList.add("active");
       });
   });
-
-  // add display: block
 });
+
+function addActivate(event) {
+  event.preventDefault();
+  document.getElementById("apply-form").classList.add("active");
+}
+
+function removeActive(event) {
+  var applyForm = document.getElementById("apply-form");
+  if (applyForm.classList.contains("active")) {
+    applyForm.classList.remove("active");
+  }
+}

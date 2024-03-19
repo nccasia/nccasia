@@ -143,13 +143,15 @@
 
   <div id="page" class="site">
     <!-- apply form -->
-    <section id="apply-form" class="active">
+    <section id="apply-form" class="">
       <div class="container">
         <div class="apply-box">
           <div class="box-head">
-            <i class="fa-solid fa-xmark close-button" aria-hidden="true"></i>
+            <i class="fa-solid fa-xmark close-button"
+            onclick="removeActive(event)"
+            aria-hidden="true"></i>
             <img
-              src="/wp-content/uploads/2024/01/mail-box.png"
+              src="/assets/images/Mail.png"
               alt="mail icon"
             />
             <p class="title">Apply now</p>
@@ -344,20 +346,20 @@
             </a>
           </div>
           <ul>
-            <li><a href="#job-list" class="home">Explore</a></li>
+            <li><a href="/career.html#job-list" class="home">Explore</a></li>
             <li class="list-menu">
-              <a href="#benefit" class="about">Benefits</a>
+              <a href="/career.html#benefit" class="about">Benefits</a>
             </li>
             <li class="list-menu">
-              <a href="#process" class="team">Recruitment Process</a>
+              <a href="/career.html#process" class="team">Recruitment Process</a>
             </li>
             <li class="list-menu">
               <a href="https://ncc.asia/" class="services">About Us</a>
             </li>
           </ul>
-          <div class="header_link">
+          <div class="header_link" onclick="addActivate(event)">
             <div class="header_link-button header_link-career">
-              <a href="./career.html" target="_blank">Join Us</a>
+              <a href="#" target="_blank">Join Us</a>
             </div>
           </div>
         </div>
@@ -600,46 +602,36 @@
                           Proficiency in design tools such as Adobe Creative
                             Suite, Sketch, Figma, or similar.
                         </div>
-                        <a href="">Read More</a>
+                        <a href="/jobDetails.html">Read More</a>
                       </div>
                       <div class="short-description">
                         <h5 class="title">
-                          <a href="">UX/UI Designer (Fre/Jun)</a>
+                          <a href="/jobDetails.html">UX/UI Designer (Fre/Jun)</a>
                         </h5>
                         <div class="description">
                           Proficiency in design tools such as Adobe Creative
                             Suite, Sketch, Figma, or similar.
                         </div>
-                        <a href="">Read More</a>
+                        <a href="/jobDetails.html">Read More</a>
                       </div><div class="short-description">
                         <h5 class="title">
-                          <a href="">UX/UI Designer (Fre/Jun)</a>
+                          <a href="/jobDetails.html">UX/UI Designer (Fre/Jun)</a>
                         </h5>
                         <div class="description">
                           Proficiency in design tools such as Adobe Creative
                             Suite, Sketch, Figma, or similar.
                         </div>
-                        <a href="">Read More</a>
+                        <a href="/jobDetails.html">Read More</a>
                       </div><div class="short-description">
                         <h5 class="title">
-                          <a href="">UX/UI Designer (Fre/Jun)</a>
+                          <a href="/jobDetails.html">UX/UI Designer (Fre/Jun)</a>
                         </h5>
                         <div class="description">
                           Proficiency in design tools such as Adobe Creative
                             Suite, Sketch, Figma, or similar.
                         </div>
-                        <a href="">Read More</a>
+                        <a href="/jobDetails.html">Read More</a>
                       </div>
-                      
-                      <!-- <div class="job-apply-button">
-                        <a
-                          class="recruitment-apply-btn primary-button apply-button"
-                          data-title-attribute="UX/UI Designer (Fre/Jun)"
-                          data-location-attribute="All Offices"
-                        >
-                          Apply now
-                        </a>
-                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -719,7 +711,10 @@
                      aria-invalid="false">
                   </span>
                 </span>
-              <div class="contact-form__file-upload">Attach CV</div>
+              <div class="contact-form__file-upload">
+                <ion-icon name="attach-outline"></ion-icon>
+                Attach CV
+              </div>
               <div class="contact-form__file-uploaded">
               <div class="contact-form__file-name"></div>
               </div>

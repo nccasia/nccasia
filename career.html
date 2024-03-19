@@ -143,15 +143,16 @@
     <!-- opportunities -->
     <div id="page" class="site">
       <!-- apply form -->
-      <section id="apply-form" class="active">
+      <section id="apply-form" class="">
         <div class="container">
           <div class="apply-box">
             <div class="box-head">
-              <i class="fa-solid fa-xmark close-button" aria-hidden="true"></i>
-              <img
-                src="/wp-content/uploads/2024/01/mail-box.png"
-                alt="mail icon"
-              />
+              <i
+                class="fa-solid fa-xmark close-button"
+                onclick="removeActive(this)"
+                aria-hidden="true"
+              ></i>
+              <img src="/assets/images/Mail.png" alt="mail icon" />
               <p class="title">Apply now</p>
             </div>
             <div id="recruitment-contact-form">
@@ -362,8 +363,11 @@
               </li>
             </ul>
             <div class="header_link">
-              <div class="header_link-button header_link-career">
-                <a href="./career.html" target="_blank">Join Us</a>
+              <div
+                class="header_link-button header_link-career"
+                onclick="addActivate(event)"
+              >
+                <a href="#" target="_blank">Join Us</a>
               </div>
             </div>
           </div>
@@ -376,14 +380,20 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-l">
                 <span class="nav-link hover title-t active"
-                  ><a class="sub_menu-link" onclick="hide(this);" href="#"
+                  ><a
+                    class="sub_menu-link"
+                    onclick="hide(this);"
+                    href="#job-list"
                     >Explore</a
                   ></span
                 >
               </li>
               <li class="nav-l">
                 <span class="nav-link hover title-t"
-                  ><a class="sub_menu-link" onclick="hide(this);" href="#about"
+                  ><a
+                    class="sub_menu-link"
+                    onclick="hide(this);"
+                    href="#benefit"
                     >Benefits</a
                   ><span class="iconDrop"></span
                 ></span>
@@ -393,7 +403,7 @@
                   ><a
                     class="sub_menu-link"
                     onclick="hide(this);"
-                    href="#services"
+                    href="#process"
                     >Recruitment Process</a
                   ></span
                 >
@@ -416,8 +426,8 @@
                   <div class="nav-link nav-link_width hover title-t">
                     <a
                       class="sub_menu-link"
-                      onclick="hide(this);"
-                      href=" https://career.ncc.asia/"
+                      onclick="addActivate(event)"
+                      href="#"
                       >Join Us</a
                     >
                   </div>
@@ -628,7 +638,10 @@
                             <p class="job-level">Fresher/ Junior</p>
                           </div>
                         </div>
-                        <div class="job-apply-button">
+                        <div
+                          class="job-apply-button"
+                          onclick="addActivate(event)"
+                        >
                           <a
                             class="recruitment-apply-btn apply-button"
                             data-title-attribute="UX/UI Designer (Fre/Jun)"
@@ -656,11 +669,7 @@
                           </a>
                           <div class="short-description">
                             <h5 class="title">
-                              <a
-                                href="http://career2024.local/ux-ui-designer-mid-sen/"
-                              >
-                                IT Support
-                              </a>
+                              <a href="/jobDetails.html"> IT Support </a>
                             </h5>
                             <div class="description">
                               Graduated from College/University in IT field.
@@ -671,7 +680,10 @@
                             <p class="job-level">Middle/ Senior</p>
                           </div>
                         </div>
-                        <div class="job-apply-button">
+                        <div
+                          class="job-apply-button"
+                          onclick="addActivate(event)"
+                        >
                           <a
                             class="recruitment-apply-btn apply-button"
                             data-title-attribute="UX/UI Designer (Mid/Sen)"
@@ -699,9 +711,7 @@
                           </a>
                           <div class="short-description">
                             <h5 class="title">
-                              <a
-                                href="http://career2024.local/frontend-developer-middle-senior/"
-                              >
+                              <a href="/jobDetails.html">
                                 FrontEnd Developer (Mid/Sen)
                               </a>
                             </h5>
@@ -716,7 +726,10 @@
                             <p class="job-level">Middle/ Senior</p>
                           </div>
                         </div>
-                        <div class="job-apply-button">
+                        <div
+                          class="job-apply-button"
+                          onclick="addActivate(event)"
+                        >
                           <a
                             class="recruitment-apply-btn apply-button"
                             data-title-attribute="FrontEnd Developer (Mid/Sen)"
@@ -744,9 +757,7 @@
                           </a>
                           <div class="short-description">
                             <h5 class="title">
-                              <a
-                                href="http://career2024.local/nodejs-developer-middle-senior/"
-                              >
+                              <a href="/jobDetails.html">
                                 Sale IT (US/UK/Japan Market)
                               </a>
                             </h5>
@@ -759,7 +770,10 @@
                             <p class="job-level">Middle/ Senior</p>
                           </div>
                         </div>
-                        <div class="job-apply-button">
+                        <div
+                          class="job-apply-button"
+                          onclick="addActivate(event)"
+                        >
                           <a
                             class="recruitment-apply-btn apply-button"
                             data-title-attribute="NodeJS Developer (Mid/Sen)"
@@ -1308,7 +1322,11 @@
                     <img src="/assets/images/Mail.png" alt="mailbox" />
                   </div>
                   <div class="apply-button">
-                    <a title="apply button" class="primary-button">
+                    <a
+                      title="apply button"
+                      onclick="addActivate(event)"
+                      class="primary-button"
+                    >
                       Apply now
                     </a>
                   </div>

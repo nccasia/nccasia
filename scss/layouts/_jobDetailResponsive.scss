@@ -105,7 +105,6 @@
 
         .entry-right-content {
           display: block;
-          margin-top: 64px;
           .job-box {
             .related-title {
               p {
@@ -128,7 +127,7 @@
     }
     // apply-form-details
     #apply-form-details {
-      margin-top: 64px;
+      padding-bottom: 40px;
       .box-head {
         h2 {
           font-size: 35px;
@@ -140,6 +139,7 @@
     }
 
     #job-list {
+      padding-top: 40px 0;
       .container {
         padding-right: 0;
         padding-left: 39px;

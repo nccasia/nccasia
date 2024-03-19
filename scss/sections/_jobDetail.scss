@@ -45,7 +45,7 @@
 
         .views {
           display: flex;
-          align-items: center;
+          // align-items: center;
           color: $second-text;
           gap: 8px;
 
@@ -160,7 +160,7 @@
             font-size: 28px;
             font-weight: 400;
             line-height: 22px;
-            color: #6572b7;
+            color: $primary-text;
             margin-bottom: 0.5rem;
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -180,6 +180,7 @@
             width: 28%;
             right: 6%;
             height: 30px;
+            z-index: -9999;
           }
         }
       }
@@ -225,18 +226,23 @@
       }
 
       .contact-form__file {
+        .hydrated {
+          transform: rotate(45deg);
+          font-size: 28px;
+        }
         .contact-form__file-upload {
           height: 44px;
           line-height: 44px;
-          padding: 0 35px;
-          border: 1px solid $second-text;
-          color: $primary-text;
+          padding: 0px 18px;
+          border: 1px solid #6572b7;
+          color: #3e50af;
           border-radius: 8px;
           display: flex;
           align-items: center;
           position: relative;
-          cursor: pointer;
           font-size: 22px;
+          background: $job-label;
+          gap: 5px;
         }
         input {
           position: absolute;
