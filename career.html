@@ -206,7 +206,11 @@
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Full Name"
-                    /></span>
+                      />
+                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                        >The field is required.
+                      </span>
+                    </span>
                   </div>
                   <div class="job-input">
                     <span class="wpcf7-form-control-wrap tel-577"
@@ -219,7 +223,11 @@
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Phone number"
-                    /></span>
+                      />
+                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                        >The field is required.
+                      </span>
+                    </span>
                   </div>
                   <div class="job-input">
                     <span class="wpcf7-form-control-wrap your-email"
@@ -232,7 +240,16 @@
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Email"
-                    /></span>
+                      />
+                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                        >The field is required.
+                      </span>
+                      <span
+                        class="wpcf7-not-valid-tip email-error"
+                        aria-hidden="true"
+                        >The e-mail address entered is invalid.
+                      </span>
+                    </span>
                   </div>
                   <div class="job-input">
                     <span class="wpcf7-form-control-wrap text-111"
@@ -245,7 +262,11 @@
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Job Title"
-                    /></span>
+                      />
+                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                        >The field is required.
+                      </span>
+                    </span>
                   </div>
                   <div class="job-input">
                     <span class="wpcf7-form-control-wrap menu-618"
@@ -277,7 +298,11 @@
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="what do you know about this job"
-                    /></span>
+                      />
+                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                        >The field is required.
+                      </span>
+                    </span>
                   </div>
                   <div class="job-input">
                     <div class="contact-form__file">
@@ -313,7 +338,11 @@
             </div>
           </div>
           <div class="success-box">
-            <i class="fa-solid fa-xmark close-button" aria-hidden="true"></i>
+            <i
+              class="fa-solid fa-xmark close-button"
+              onclick="removeActive(this)"
+              aria-hidden="true"
+            ></i>
             <i
               class="fa-solid fa-circle-check icon-success"
               aria-hidden="true"
@@ -333,7 +362,7 @@
       <div class="header-image-mobile">
         <img src="/assets/images/logoHiring.png" alt="" />
       </div>
-      <div class="header">
+      <div class="header" id="myHeader">
         <div class="header_nav">
           <div class="header_logo">
             <img
@@ -351,12 +380,12 @@
               </a>
             </div>
             <ul>
-              <li><a href="#job-list" class="home">Explore</a></li>
+              <li><a href="#job-list" class="explore">Explore</a></li>
               <li class="list-menu">
                 <a href="#benefit" class="about">Benefits</a>
               </li>
               <li class="list-menu">
-                <a href="#process" class="team">Recruitment Process</a>
+                <a href="#process" class="process">Recruitment Process</a>
               </li>
               <li class="list-menu">
                 <a href="https://ncc.asia/" class="services">About Us</a>
@@ -588,6 +617,21 @@
           </form>
         </div>
       </div>
+      <!-- breadcrumbs -->
+      <div id="breadcrumbs">
+        <div class="container">
+          <div class="insider">
+            <span
+              ><span
+                ><a href="/index.html">Home</a> &gt;
+                <span class="breadcrumb_last" aria-current="page"
+                  >Career</span
+                ></span
+              ></span
+            >
+          </div>
+        </div>
+      </div>
       <div id="content" class="site-content">
         <div class="row">
           <div id="primary" class="content-area">
@@ -616,7 +660,7 @@
                             ></i>
                             <a> All Offices </a>
                           </div>
-                          <a href="" class="job-icon">
+                          <a href="/jobDetails.html" class="job-icon">
                             <img
                               src="/assets/images/listjob/designer.png"
                               alt="UX/UI Designer (Fre/Jun)"
@@ -661,7 +705,7 @@
                             ></i>
                             <a> All Offices </a>
                           </div>
-                          <a href="" class="job-icon">
+                          <a href="/jobDetails.html" class="job-icon">
                             <img
                               src="/assets/images/listjob/backoffice.png"
                               alt="IT Support"
@@ -703,7 +747,7 @@
                             ></i>
                             <a> All Offices </a>
                           </div>
-                          <a href="" class="job-icon">
+                          <a href="/jobDetails.html" class="job-icon">
                             <img
                               src="/assets/images/listjob/dev.png"
                               alt="FrontEnd Developer (Mid/Sen)"
@@ -749,7 +793,7 @@
                             ></i>
                             <a> All Offices </a>
                           </div>
-                          <a href="" class="job-icon">
+                          <a href="/jobDetails.html" class="job-icon">
                             <img
                               src="/assets/images/listjob/ba.png"
                               alt="Sale IT (US/UK/Japan Market)"
@@ -791,7 +835,7 @@
                   <div class="view-all">
                     <a
                       title="View all"
-                      href="/list-jobs.html#list-jobs"
+                      href="/list-jobs.html#searchFilter"
                       class="primary-button large"
                     >
                       View all jobs
@@ -1671,5 +1715,6 @@
     >
       <ion-icon class="btt-icon" name="chevron-up-outline"></ion-icon>
     </button>
+    <script></script>
   </body>
 </html>

@@ -206,7 +206,11 @@
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Full Name"
-                    /></span>
+                      />
+                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                        >The field is required.
+                      </span>
+                    </span>
                   </div>
                   <div class="job-input">
                     <span class="wpcf7-form-control-wrap tel-577"
@@ -219,7 +223,11 @@
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Phone number"
-                    /></span>
+                      />
+                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                        >The field is required.
+                      </span>
+                    </span>
                   </div>
                   <div class="job-input">
                     <span class="wpcf7-form-control-wrap your-email"
@@ -232,7 +240,16 @@
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Email"
-                    /></span>
+                      />
+                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                        >The field is required.
+                      </span>
+                      <span
+                        class="wpcf7-not-valid-tip email-error"
+                        aria-hidden="true"
+                        >The e-mail address entered is invalid.
+                      </span>
+                    </span>
                   </div>
                   <div class="job-input">
                     <span class="wpcf7-form-control-wrap text-111"
@@ -245,7 +262,11 @@
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Job Title"
-                    /></span>
+                      />
+                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                        >The field is required.
+                      </span>
+                    </span>
                   </div>
                   <div class="job-input">
                     <span class="wpcf7-form-control-wrap menu-618"
@@ -277,7 +298,11 @@
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="what do you know about this job"
-                    /></span>
+                      />
+                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                        >The field is required.
+                      </span>
+                    </span>
                   </div>
                   <div class="job-input">
                     <div class="contact-form__file">
@@ -313,7 +338,11 @@
             </div>
           </div>
           <div class="success-box">
-            <i class="fa-solid fa-xmark close-button" aria-hidden="true"></i>
+            <i
+              class="fa-solid fa-xmark close-button"
+              onclick="removeActive(this)"
+              aria-hidden="true"
+            ></i>
             <i
               class="fa-solid fa-circle-check icon-success"
               aria-hidden="true"
@@ -332,7 +361,8 @@
       <div class="header-image-mobile">
         <img src="/assets/images/logoHiring.png" alt="" />
       </div>
-      <div class="header">
+
+      <div class="header" id="myHeader">
         <div class="header_nav">
           <div class="header_logo">
             <img
@@ -381,14 +411,20 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-l">
                 <span class="nav-link hover title-t active"
-                  ><a class="sub_menu-link" onclick="hide(this);" href="#"
+                  ><a
+                    class="sub_menu-link"
+                    onclick="hide(this);"
+                    href="/career.html#job-list"
                     >Explore</a
                   ></span
                 >
               </li>
               <li class="nav-l">
                 <span class="nav-link hover title-t"
-                  ><a class="sub_menu-link" onclick="hide(this);" href="#about"
+                  ><a
+                    class="sub_menu-link"
+                    onclick="hide(this);"
+                    href="/career.html#benefit"
                     >Benefits</a
                   ><span class="iconDrop"></span
                 ></span>
@@ -398,7 +434,7 @@
                   ><a
                     class="sub_menu-link"
                     onclick="hide(this);"
-                    href="#services"
+                    href="/career.html#process"
                     >Recruitment Process</a
                   ></span
                 >
@@ -462,7 +498,7 @@
                 value="Search"
               />
             </div>
-            <div class="search-filter">
+            <div id="searchFilter" class="search-filter">
               <div class="filter-input">
                 <select name="address" id="address">
                   <option value="">Office</option>
@@ -582,6 +618,20 @@
           </form>
         </div>
       </div>
+      <div id="breadcrumbs">
+        <div class="container">
+          <div class="insider">
+            <span
+              ><span
+                ><a href="/career.html">Career</a> &gt;
+                <span class="breadcrumb_last" aria-current="page"
+                  >Open Vacancies</span
+                ></span
+              ></span
+            >
+          </div>
+        </div>
+      </div>
       <section id="list-jobs">
         <div class="container">
           <div class="box-head">
@@ -598,10 +648,7 @@
           <div class="jobs-content">
             <div class="job-lists-item">
               <div class="job-box">
-                <a
-                  class="job-icon"
-                  href="http://career2024.local/ux-ui-designer-fre-jun/"
-                >
+                <a class="job-icon" href="/jobDetails.html">
                   <img
                     src="/assets/images/listjob/designer.png"
                     alt="UX/UI Designer (Fre/Jun)"
@@ -645,10 +692,7 @@
             </div>
             <div class="job-lists-item">
               <div class="job-box">
-                <a
-                  class="job-icon"
-                  href="http://career2024.local/ux-ui-designer-mid-sen/"
-                >
+                <a class="job-icon" href="/jobDetails.html">
                   <img
                     src="/assets/images/listjob/designer.png"
                     alt="UX/UI Designer (Mid/Sen)"
@@ -692,10 +736,7 @@
             </div>
             <div class="job-lists-item">
               <div class="job-box">
-                <a
-                  class="job-icon"
-                  href="http://career2024.local/frontend-developer-middle-senior/"
-                >
+                <a class="job-icon" href="/jobDetails.html">
                   <img
                     src="/assets/images/listjob/dev.png"
                     alt="FrontEnd Developer (Mid/Sen)"
@@ -741,10 +782,7 @@
             </div>
             <div class="job-lists-item">
               <div class="job-box">
-                <a
-                  class="job-icon"
-                  href="http://career2024.local/nodejs-developer-middle-senior/"
-                >
+                <a class="job-icon" href="/jobDetails.html">
                   <img
                     src="/assets/images/listjob/dev.png"
                     alt="NodeJS Developer (Mid/Sen)"
@@ -790,10 +828,7 @@
             </div>
             <div class="job-lists-item">
               <div class="job-box">
-                <a
-                  class="job-icon"
-                  href="http://career2024.local/react-native-developer/"
-                >
+                <a class="job-icon" href="/jobDetails.html">
                   <img
                     src="/assets/images/listjob/dev.png"
                     alt="React Native Developer"
@@ -837,7 +872,7 @@
             </div>
             <div class="job-lists-item">
               <div class="job-box">
-                <a class="job-icon" href="http://career2024.local/it-support/">
+                <a class="job-icon" href="/jobDetails.html">
                   <img
                     src="/assets/images/listjob/backoffice.png"
                     alt="IT Support"
@@ -884,10 +919,7 @@
             </div>
             <div class="job-lists-item">
               <div class="job-box">
-                <a
-                  class="job-icon"
-                  href="http://career2024.local/sale-it-us-uk-japan-market/"
-                >
+                <a class="job-icon" href="/jobDetails.html">
                   <img
                     src="/assets/images/listjob/ba.png"
                     alt="Sale IT (US/UK/Japan Market)"

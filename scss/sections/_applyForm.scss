@@ -82,12 +82,16 @@
         }
       }
 
+      .wpcf7-not-valid-tip {
+        display: none;
+      }
+
       select {
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
         text-overflow: ellipsis;
-        background: url("../image/dropdown.svg") no-repeat right center;
+        background: url("/assets/images/dropdown.svg") no-repeat right center;
         display: flex;
         gap: 16px;
         height: 44px;
@@ -196,7 +200,7 @@
 
       .sub-title {
         font-weight: 400;
-        font-size: 20px;
+        font-size: 30px;
         line-height: 30px;
         color: $second-text;
         padding-top: 8px;

@@ -89,14 +89,127 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// add active apply form
 function addActivate(event) {
   event.preventDefault();
   document.getElementById("apply-form").classList.add("active");
 }
 
+// remove active apply form
 function removeActive(event) {
   var applyForm = document.getElementById("apply-form");
   if (applyForm.classList.contains("active")) {
     applyForm.classList.remove("active");
   }
 }
+
+// header
+window.addEventListener("DOMContentLoaded", function () {
+  var header = document.getElementById("myHeader");
+  var headerOffset;
+
+  function updateHeaderOffset() {
+    headerOffset = header.offsetTop;
+  }
+
+  function stickyHeaderOnScroll() {
+    var windowTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (windowTop >= headerOffset) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+
+  window.addEventListener("scroll", stickyHeaderOnScroll);
+  window.addEventListener("resize", updateHeaderOffset);
+  updateHeaderOffset();
+});
+
+// xóa toggled trong menu
+function hide(element) {
+  var targetId = element.getAttribute("href");
+  var targetElement = document.querySelector(targetId);
+
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  }
+
+  var navbarCollapse = document.querySelector(".navbar-collapse");
+  var menuIcon = document.querySelector(".menu-icon-btn");
+
+  navbarCollapse.style.display = "none";
+  menuIcon.classList.remove("toggled");
+}
+
+// header color
+document.addEventListener("DOMContentLoaded", function () {
+  var links = document.querySelectorAll("ul li a");
+
+  links.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      links.forEach(function (otherLink) {
+        otherLink.classList.remove("active-menu");
+      });
+      this.classList.add("active-menu");
+    });
+  });
+});
+
+// check error email
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".wpcf7-form");
+  const textInputs = form.querySelectorAll(
+    'input[type="text"], input[type="tel"], input[type="email"]'
+  );
+
+  // Function to validate inputs
+  function validateInputs() {
+    let isValid = true;
+
+    textInputs.forEach((input) => {
+      // Check if input is required and empty
+      if (
+        input.value.trim().length <= 0 &&
+        input.classList.contains("wpcf7-validates-as-required")
+      ) {
+        input.parentNode.querySelector(".wpcf7-not-valid-tip").style.display =
+          "block";
+        isValid = false;
+      } else {
+        input.parentNode.querySelector(".wpcf7-not-valid-tip").style.display =
+          "none";
+      }
+
+      // Check email format
+      if (input.type === "email" && input.value.trim().length > 0) {
+        const emailRegex =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!emailRegex.test(input.value.trim())) {
+          input.parentNode.querySelector(".email-error").style.display =
+            "block";
+          isValid = false;
+        } else {
+          input.parentNode.querySelector(".email-error").style.display = "none";
+        }
+      }
+    });
+
+    return isValid;
+  }
+
+  // Handle form submission
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const inputsAreValid = validateInputs();
+
+    if (inputsAreValid) {
+      const applyForm = document.querySelector(".apply-box");
+      applyForm.style.display = "none";
+
+      const successBox = document.querySelector(".success-box");
+      successBox.style.display = "block";
+    }
+  });
+});

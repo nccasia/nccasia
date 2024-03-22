@@ -82,92 +82,28 @@ html {
   display: none;
 }
 
+@media screen and (max-width: 1024px) {
+  #breadcrumbs.breadcrumbs {
+    margin-top: 8%;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  #masthead {
-    .header-top {
-      .main-menu {
-        display: none;
-      }
-      .menu-action {
-        display: none;
-      }
-    }
+  #breadcrumbs.breadcrumbs {
+    margin-top: 9%;
   }
 }
 
-.site-header {
-  position: relative;
-  z-index: 30;
-  background-color: $white;
-  height: auto;
-}
-
-#nav-holder {
-  position: fixed;
-  z-index: 1;
-  height: 100vh;
-  background-color: $white;
-  display: none;
-  width: 100%;
-  top: 68px;
-  #m-menu {
-    .container {
-      #menu-main-menu-2 {
-        .menu-item {
-          .fa-solid {
-            &::before {
-              content: "\f062";
-              position: absolute;
-              bottom: 79px;
-              right: 42%;
-              color: $primary-text;
-              font-size: 15px;
-              -webkit-transform: translateY(-50%) rotate(45deg);
-              transform: translateY(-50%) rotate(45deg);
-            }
-          }
-        }
-      }
-    }
+@media screen and (max-width: 480px) {
+  #breadcrumbs.breadcrumbs {
+    margin-top: 16%;
   }
 }
 
-#m-menu,
-#m-menu-fix {
-  background-color: $white;
-}
-
-#m-menu,
-#m-menu-fix {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  display: none;
-}
-
-#masthead .header-top,
-#masthead-fix .header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 84px;
-  -webkit-box-align: center;
-  -webkit-box-pack: justify;
-}
-
-#masthead .insider,
-#masthead-fix .insider {
-  height: 72px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+@media screen and (max-width: 375px) {
+  #breadcrumbs.breadcrumbs {
+    margin-top: 20%;
+  }
 }
 
 .ncctheme-m-menu {
@@ -202,4 +138,27 @@ html {
   .search-page {
     display: none;
   }
+}
+
+.showPopup {
+  animation: opac 0.3s;
+  display: none;
+}
+
+@keyframes opac {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// apply form
+.wpcf7-not-valid-tip {
+  color: #dc3232;
+  font-size: 1em;
+  font-weight: normal;
+  display: block;
+  font-family: "inherit", sans-serif;
 }

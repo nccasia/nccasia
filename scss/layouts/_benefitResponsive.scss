@@ -42,6 +42,7 @@
 @media screen and (max-width: 768px) {
   .benefits {
     padding: 0;
+    animation: opac 0.5s;
     #benefit-lists {
       padding-top: 40px;
       .container {

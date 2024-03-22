@@ -1,113 +1,3 @@
-.header-fix {
-  display: none;
-  width: 100%;
-  height: 84px;
-  padding: 0px 80px;
-  align-items: center;
-  background-color: $white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  border-bottom: 1px solid $border-color;
-  .site-title {
-    margin-bottom: 0;
-    a {
-      align-items: center;
-      display: flex;
-    }
-  }
-
-  .menu-toggler-fix {
-    display: none;
-  }
-}
-
-.site-header {
-  display: block;
-  position: relative;
-  .container {
-    margin-top: 3%;
-  }
-
-  &.single-content {
-    clip-path: unset;
-
-    .header-top {
-      background-color: $white;
-      border: 1px solid $border-color;
-      box-shadow: rgba(138, 138, 138, 0.12) 0px 2px 4px 0px,
-        rgba(170, 172, 172, 0.32) 0px 2px 16px 0px;
-    }
-
-    .main-slider,
-    .header-background {
-      display: none;
-    }
-  }
-
-  .header-background {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    top: 0%;
-    z-index: -1;
-  }
-
-  .header-top {
-    width: 100%;
-    height: 84px;
-    padding: 0px 80px;
-    display: flex;
-    align-items: center;
-
-    &:hover {
-      background-color: $white;
-    }
-
-    .site-title {
-      a {
-        display: flex;
-        align-items: center;
-      }
-    }
-
-    .menu-toggler {
-      display: none;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    // background-color: $header-bg-color;
-    z-index: -1;
-  }
-
-  &.scrolled {
-    width: 100%;
-    height: 84px;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    clip-path: unset;
-
-    .header-background {
-      display: none;
-    }
-
-    .main-slider {
-      display: none;
-    }
-  }
-}
-
 // Menu
 .menu-toggler.simple:before {
   color: $primary-color;
@@ -201,7 +91,7 @@
   flex-direction: column;
   gap: 8px;
   width: 100%;
-  margin-top: 2%;
+  margin-top: 8%;
 
   .search-content {
     width: 80%;
@@ -291,69 +181,6 @@
   }
 }
 
-#masthead {
-  &.single-content {
-    .insider {
-      background-color: $white;
-      border: 1px solid $border-color;
-      box-shadow: rgba(138, 138, 138, 0.12) 0px 2px 4px 0px,
-        rgba(170, 172, 172, 0.32) 0px 2px 16px 0px;
-    }
-  }
-}
-
-#masthead {
-  .header-top-mb {
-    display: none;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 9999;
-    background-color: rgb(255, 255, 255);
-    .insider {
-      &.scrolled {
-        display: flex;
-        position: fixed;
-        width: 100vh;
-        top: 0;
-        left: 0;
-        background-color: $white;
-        border-bottom: 1px solid $border-color;
-      }
-    }
-  }
-}
-
-#masthead.active .insider {
-  display: flex;
-}
-
-#mhead,
-#mhead-fix {
-  position: relative;
-  z-index: 30;
-  background-color: $white;
-  height: auto;
-  padding: 0 40px;
-  top: 0;
-  .insider.scrolled {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 72px;
-    -webkit-box-align: center;
-    -webkit-box-pack: justify;
-    .menu-toggler-fix {
-      .hydrated {
-        font-size: 30px;
-        color: $primary-text;
-        font-weight: bold;
-      }
-    }
-  }
-}
-
 // header
 .header-image {
   display: flex;
@@ -371,11 +198,19 @@
   display: none;
 }
 
-.header {
-  position: sticky;
-  position: -webkit-sticky;
+.header.sticky {
+  position: fixed;
   top: 0;
-  z-index: 999;
+  position: -webkit-sticky;
+  z-index: 1000;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  transition: top 0.3s;
+  box-shadow: rgba(138, 138, 138, 0.12) 0px 2px 4px 0px,
+    rgba(170, 172, 172, 0.32) 0px 2px 16px 0;
   .header_nav {
     height: 77px;
     background-color: $primary-text;
@@ -390,6 +225,7 @@
       }
     }
     .menu-icon {
+      display: none;
       .menu-icon-btn {
         display: block;
         position: relative;
@@ -412,6 +248,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       ul {
         display: flex;
         margin: 0;
@@ -427,6 +264,16 @@
           line-height: 100%;
           color: $white;
           padding: 30px 20px;
+          transition: color 0.3s;
+          &.active-menu {
+            background: #89a3e3;
+          }
+        }
+        &:hover {
+          background-color: #89a3e3;
+          animation-timing-function: ease-in;
+          cursor: pointer;
+          color: $primary-text;
         }
       }
       .header_link {
@@ -445,6 +292,9 @@
             line-height: 130%;
             border-radius: 8px;
             padding: 13px 16px;
+            &:hover {
+              background-color: $job-label;
+            }
           }
         }
       }
