@@ -1,0 +1,19 @@
+{
+  "name": "nccasia",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "sass": "^1.71.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass scss/ncc_style.scss css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}

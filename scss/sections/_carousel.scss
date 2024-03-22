@@ -1,0 +1,70 @@
+#carousel {
+  margin-top: $section-margin-big;
+
+  .container {
+    display: block;
+
+    .carousel-box {
+      margin-top: 32px;
+      overflow: hidden;
+
+      .swiper-container {
+        width: 100%;
+        position: relative;
+
+        .swiper-wrapper {
+          gap: 0px;
+
+          .swiper-slide {
+            height: 464px;
+            width: 616px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 8px;
+              object-fit: cover;
+            }
+
+            &.swiper-slide-prev,
+            &.swiper-slide-next {
+              opacity: 0.5;
+            }
+          }
+        }
+
+        .swiper-pagination {
+          bottom: -55px;
+
+          .swiper-pagination-bullet-active {
+            background: $primary-text;
+          }
+        }
+
+        .swiper-control-button {
+          display: none;
+        }
+      }
+
+      .see-more-button {
+        margin-top: 85px;
+      }
+    }
+
+    &:hover {
+      .carousel-box {
+        .swiper-container {
+          .swiper-control-button {
+            display: block;
+
+            &.swiper-button-prev,
+            &.swiper-button-next {
+              color: $white;
+              font-weight: 700px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

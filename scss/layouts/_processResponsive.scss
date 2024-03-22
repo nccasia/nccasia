@@ -1,0 +1,48 @@
+@media screen and (max-width: 1240px) {
+  #process {
+    .process-content {
+      grid-template-columns: 1fr;
+
+      .process-img {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #process {
+
+    .process-content {
+      margin-top: 0;
+
+      .process-tab {
+        gap: 16px;
+
+        .tab-title {
+          .icon {
+            width: 104px;
+
+            img {
+              height: 54px;
+            }
+          }
+
+          .title {
+            padding-left: 16px;
+
+            .main-title {
+              font-size: 16px;
+              line-height: 24px;
+            }
+
+            .sub-title {
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

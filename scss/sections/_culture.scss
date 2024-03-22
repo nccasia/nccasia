@@ -1,0 +1,127 @@
+#culture {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  .culture-content {
+    display: grid;
+    grid-template-columns: 10fr 17fr;
+    justify-items: center;
+    margin: 32px 0;
+    width: 100%;
+
+    .culture-tab {
+      padding: 45px 40px 45px 0px;
+      display: flex;
+      flex-direction: column;
+
+      .tab-item {
+        position: relative;
+        padding: 28px 0px;
+        border-top: 1px solid $border-color;
+        width: 100%;
+        min-width: 410px;
+        cursor: pointer;
+
+        .describe {
+          display: none;
+        }
+
+        .tab-content {
+          p {
+            margin: 0;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 32px;
+            color: $second-text;
+          }
+
+          .dropdown-icon {
+            display: none;
+          }
+        }
+
+        .dropdown {
+          display: none;
+        }
+
+        &:last-child {
+          border-bottom: 1px solid $border-color;
+        }
+
+        &.active::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 10%;
+          left: -16px;
+          width: 6px;
+          height: 80%;
+          background-color: $primary-color;
+          border-radius: 5px;
+        }
+
+        &.active p {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .culture-img {
+      display: flex;
+      align-items: center;
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+
+      .tab-img {
+        display: none;
+
+        &.active {
+          display: block;
+          max-width: 100%;
+          width: 806px;
+          height: 530px;
+          object-fit: cover;
+          border-radius: 24px;
+        }
+      }
+
+      .describe {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        &.active {
+          display: block;
+          color: $white;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 30px;
+          padding: 16px;
+          z-index: 2;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(14, 17, 18, 0.7) 38.59%,
+          #181d1e 75.91%,
+          #181d1e 76.98%
+        );
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+        z-index: 1;
+      }
+    }
+  }
+}

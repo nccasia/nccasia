@@ -1,0 +1,145 @@
+#best-picture {
+  margin-top: $section-margin-big;
+
+  .container {
+    .picture-content {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      margin-top: 32px;
+      padding-left: 15px;
+
+      .picture-tab {
+        width: calc(100% - 64px);
+
+        .tab-item {
+          position: relative;
+          width: 240px;
+          cursor: pointer;
+
+          .tab-content {
+            border-top: 1px solid $border-color;
+
+            p {
+              margin: 0;
+              padding: 28px 0 28px;
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 32px;
+              color: $second-text;
+            }
+
+            .dropdown-icon {
+              display: none;
+            }
+          }
+
+          .carousel-box {
+            width: 930px;
+            margin: 16px 0;
+            display: none;
+
+            .swiper-container {
+              width: 100%;
+              position: relative;
+
+              .swiper-wrapper {
+                gap: 0px;
+
+                .swiper-slide {
+                  height: 364px;
+                  width: 516px;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 8px;
+                    object-fit: cover;
+                  }
+
+                  &.swiper-slide-prev,
+                  &.swiper-slide-next {
+                    opacity: 0.5;
+                  }
+                }
+              }
+            }
+          }
+
+          &:last-child {
+            .tab-content {
+              border-bottom: 1px solid $border-color;
+            }
+          }
+
+          &.active {
+            p {
+              font-weight: 700;
+            }
+
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 13px;
+              left: -16px;
+              width: 6px;
+              height: 60px;
+              background-color: $primary-color;
+              border-radius: 5px;
+            }
+
+            &:last-child {
+              .carousel-box::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1px;
+                border-bottom: 1px solid $border-color;
+                position: absolute;
+                bottom: -18px;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .picture-img {
+        .tab-img {
+          display: none;
+
+          &.active {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            height: 100%;
+
+            .img-one {
+              grid-column: span 2;
+              width: 100%;
+              height: 373px;
+              object-fit: cover;
+              border-radius: 8px;
+            }
+
+            .img-two {
+              grid-column: span 1;
+              width: 100%;
+              height: 223px;
+              object-fit: cover;
+              border-radius: 8px;
+            }
+
+            .img-three {
+              grid-column: span 1;
+              width: 100%;
+              height: 223px;
+              object-fit: cover;
+              border-radius: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

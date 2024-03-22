@@ -1,0 +1,123 @@
+@media screen and (max-width: 768px) {
+  #apply-form {
+    .container {
+      .apply-box {
+        max-width: 345px;
+        padding: 24px;
+        border-radius: 12px;
+
+        .box-head {
+          padding: 0;
+
+          .close-button {
+            right: 24px;
+            top: 24px;
+          }
+
+          img {
+            height: 56px;
+          }
+
+          .title {
+            font-size: 36px;
+            line-height: 44px;
+            margin-top: 16px;
+            margin-bottom: 8px;
+          }
+        }
+
+        input {
+          margin-top: 8px;
+          font-size: 16px;
+          line-height: 23px;
+        }
+
+        input[type="submit"] {
+          margin-top: 16px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .job-input {
+          &:nth-child(1) {
+            order: 1;
+          }
+
+          &:nth-child(2) {
+            order: 5;
+          }
+
+          &:nth-child(3) {
+            order: 4;
+          }
+
+          &:nth-child(4) {
+            order: 2;
+          }
+
+          &:nth-child(5) {
+            order: 3;
+          }
+
+          &:nth-child(6) {
+            display: none;
+          }
+
+          &:nth-child(7) {
+            order: 6;
+          }
+
+          &:nth-child(8) {
+            order: 7;
+          }
+        }
+      }
+
+      .success-box {
+        max-width: 345px;
+        max-height: 500px;
+        padding: 26px;
+
+        .icon-success {
+          font-size: 86.03px;
+        }
+
+        .sub-title {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .close-button {
+          right: 24px;
+          top: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #apply-form {
+    .container {
+      .apply-box {
+        width: 100%;
+
+        input {
+          max-width: 297px;
+        }
+
+        .contact-form__file-name {
+          width: 95%;
+        }
+
+        .box-head {
+          .title {
+            font-size: 34px;
+            font-weight: 800;
+            line-height: 44px;
+          }
+        }
+      }
+    }
+  }
+}

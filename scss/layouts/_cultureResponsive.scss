@@ -1,0 +1,412 @@
+@media screen and (max-width: 1440px) {
+  #best-picture {
+    .container {
+      .picture-content {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  #culture {
+    .culture-content {
+      grid-template-columns: 1fr;
+
+      .culture-tab {
+        width: 100%;
+        padding: unset;
+
+        .tab-item {
+          border-top: none;
+          padding: unset;
+          width: 100%;
+
+          &.active {
+            position: relative;
+
+            .tab-content {
+              .dropdown-icon {
+                display: block;
+
+                .fa-angle-down {
+                  display: block;
+                  color: $primary-text;
+                }
+
+                .fa-angle-up {
+                  display: none;
+                }
+              }
+            }
+
+            .dropdown {
+              display: block;
+              width: 100%;
+              height: 600px;
+              object-fit: cover;
+              margin: 20px 0;
+              border-radius: 24px;
+            }
+
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              bottom: 20px;
+              left: 0;
+              width: 100%;
+              height: 50%;
+              background: linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(14, 17, 18, 0.7) 38.59%,
+                #181d1e 75.91%,
+                #181d1e 76.98%
+              );
+              border-bottom-left-radius: 24px;
+              border-bottom-right-radius: 24px;
+              z-index: 1;
+            }
+
+            .describe {
+              display: block;
+              position: absolute;
+              bottom: 22px;
+              left: 0;
+              padding: 16px;
+              color: $white;
+              z-index: 2;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 30px;
+            }
+          }
+
+          &:last-child {
+            border-bottom: none;
+
+            .tab-content {
+              .tab-row {
+                border-bottom: 1px solid $border-color;
+              }
+            }
+
+            &.active {
+              position: relative;
+
+              .tab-content {
+                .tab-row {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+
+          .tab-content {
+            .tab-row {
+              display: flex;
+              justify-content: space-between;
+              border-top: 1px solid $border-color;
+              margin: 0 20px;
+              padding: 28px 0;
+            }
+
+            .dropdown-icon {
+              display: block;
+
+              .fa-angle-down {
+                display: none;
+              }
+
+              .fa-angle-up {
+                color: $primary-text;
+              }
+            }
+          }
+
+          &.active::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 18px;
+            left: 0px;
+            width: 6px;
+            height: 50px;
+            background-color: $primary-color;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      .culture-img {
+        display: none;
+      }
+    }
+  }
+  #best-picture {
+    .container {
+      .picture-content {
+        grid-template-columns: 1fr;
+
+        .picture-tab {
+          width: 100%;
+
+          .tab-item {
+            width: 100%;
+
+            .carousel-box {
+              display: none;
+            }
+
+            .tab-content {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin: 0 20px;
+
+              .dropdown-icon {
+                display: block;
+
+                .fa-angle-down {
+                  display: none;
+                }
+
+                .fa-angle-up {
+                  color: $primary-text;
+                }
+              }
+            }
+
+            &:last-child {
+              &.active {
+                .tab-content {
+                  border-bottom: none;
+                }
+              }
+            }
+
+            &.active {
+              .carousel-box {
+                display: block;
+                margin: 20px 0;
+                width: 930px;
+              }
+
+              .tab-content {
+                .dropdown-icon {
+                  .fa-angle-up {
+                    display: none;
+                    font-size: 16px;
+                  }
+
+                  .fa-angle-down {
+                    display: block;
+                    color: $primary-text;
+                    font-size: 16px;
+                  }
+                }
+              }
+
+              &::before {
+                top: 18px;
+                left: 0;
+                width: 6px;
+                height: 50px;
+                background-color: $primary-color;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+
+        .picture-img {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #culture {
+    .culture-content {
+      .culture-tab {
+        .tab-item {
+          .tab-content {
+            margin: 0 20px;
+
+            .tab-row {
+              display: flex;
+              justify-content: space-between;
+              border-top: 1px solid $border-color;
+              margin: 0;
+              padding: 26px 0;
+              width: 100%;
+            }
+          }
+
+          .dropdown {
+            height: 500px;
+          }
+        }
+      }
+    }
+  }
+  #best-picture {
+    .container {
+      .picture-content {
+        .picture-tab {
+          .tab-item {
+            .tab-content {
+              p {
+                padding: 26px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #best-picture {
+    .container {
+      .picture-content {
+        .picture-tab {
+          .tab-item {
+            &.active {
+              .carousel-box {
+                width: 690px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #best-picture {
+    display: none;
+  }
+  #culture {
+    .culture-content {
+      .culture-tab {
+        .tab-item {
+          &.active {
+            .describe {
+              font-size: 15px;
+              line-height: 24px;
+            }
+
+            .dropdown {
+              height: 460px;
+            }
+
+            &.active::before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 4%;
+              left: 0;
+              width: 6px;
+              height: 8%;
+              background-color: $primary-color;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #culture {
+    .culture-content {
+      .culture-tab {
+        .tab-item {
+          min-width: unset;
+
+          &.active::before {
+            top: 12px;
+            width: 4px;
+            height: 32px;
+          }
+
+          .tab-content {
+            margin: 0 8px 0 10px;
+
+            .tab-row {
+              padding: 16px 0;
+            }
+
+            p {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 20px;
+            }
+          }
+
+          &.active {
+            p {
+              font-weight: 700;
+              color: $primary-text;
+            }
+
+            .dropdown {
+              margin: 16px 0;
+              height: 286px;
+              max-width: 100%;
+              border-radius: 24px;
+            }
+
+            .describe {
+              font-size: 12px;
+              line-height: 18px;
+              padding: 12px;
+            }
+
+            &::after {
+              bottom: 16px;
+              height: 50%;
+              border-radius: 24px;
+            }
+
+            &.active::before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 12px;
+              left: 0;
+              width: 4px;
+              height: 8%;
+              background-color: $primary-color;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #culture {
+    .culture-content {
+      .culture-tab {
+        .tab-item {
+          &.active {
+            .describe {
+              font-size: 10px;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
