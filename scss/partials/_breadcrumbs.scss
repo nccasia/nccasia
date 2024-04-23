@@ -1,0 +1,27 @@
+#breadcrumbs {
+  margin-top: 3%;
+  .container {
+    .insider {
+      padding: 10px 0;
+      font-size: 12px;
+      span {
+        span {
+          font-size: 26px;
+          font-weight: 400px;
+          line-height: 24px;
+          color: $second-text;
+          a {
+            color: $second-text;
+          }
+          .breadcrumb_last {
+            color: $primary-text;
+          }
+        }
+      }
+    }
+  }
+}
+
+#breadcrumbs.breadcrumbs {
+  margin-top: 6%;
+}

@@ -1,0 +1,157 @@
+@media screen and (max-width: 1240px) {
+  #list-jobs {
+    .container {
+      .jobs-content {
+        width: 86%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #list-jobs {
+    .container {
+      .jobs-content {
+        overflow-x: scroll;
+        flex-direction: row;
+        width: 100%;
+        padding: 0;
+        margin-top: $section-margin-small;
+
+        &::-webkit-scrollbar {
+          width: 12px;
+          height: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $white;
+          border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $white;
+          border-radius: 6px;
+        }
+
+        .job-lists-item {
+          overflow: unset;
+
+          .job-box {
+            min-width: 300px;
+            padding: 0;
+            grid-template-columns: 1fr;
+
+            .job-icon {
+              display: none;
+            }
+
+            .job-content {
+              padding: 0;
+              flex-direction: column;
+              border-top-right-radius: 16px;
+              border-top-left-radius: 16px;
+              display: flex;
+              gap: 0;
+
+              .job-info {
+                padding: 20px;
+
+                .short-description {
+                  .title {
+                    height: 64px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    text-overflow: ellipsis;
+
+                    a {
+                      font-size: 44px;
+                      line-height: 32px;
+                      font-weight: 700;
+                      color: $primary-text;
+                    }
+                  }
+
+                  .description {
+                    font-size: 28px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    color: $second-text;
+                    margin: 0px;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    -webkit-line-clamp: 2;
+                    text-overflow: ellipsis;
+                  }
+                }
+              }
+
+              .job-apply-button {
+                border-radius: 0;
+                border: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 24px;
+                width: 100%;
+                text-align: center;
+                cursor: pointer;
+                border-top: 1px solid $border-color;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                a {
+                  color: $white;
+                  font-weight: 700;
+                  font-size: 26px;
+                  line-height: 24px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .jobs-description {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #list-jobs {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #list-jobs {
+    .container {
+      width: 100vw;
+
+      .jobs-content {
+        overflow-x: scroll;
+        flex-direction: row;
+        width: 100%;
+        padding: 0;
+        margin-top: 32px;
+
+        .job-lists-item {
+          overflow: unset;
+
+          .job-box {
+            min-width: 300px;
+            padding: 0;
+            grid-template-columns: 1fr;
+
+            .job-icon {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
