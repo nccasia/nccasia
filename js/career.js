@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Chèn thẻ style vào phần head của trang
+  // TODO: fix this error
   document.head.appendChild(style);
 
   // add class active
