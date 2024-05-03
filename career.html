@@ -113,6 +113,12 @@
       integrity="sha512-JtBlPgg5jzjGJRxSTwDEQTgq5y6Oviw0JxgFTX0VQ7md6+asM0IbFwT/fg5qN7uhHEBXX2ToO+GQ7ujq23JlRg=="
       crossorigin="anonymous"
     />
+
+
+<!-- firebase -->
+    <script type="module" src="./js/firebaseConfig.js" ></script>
+
+
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
@@ -168,12 +174,7 @@
                   <ul></ul>
                 </div>
                 <form
-                  action="/#wpcf7-f36-o1"
-                  method="post"
                   class="wpcf7-form init"
-                  enctype="multipart/form-data"
-                  novalidate="novalidate"
-                  data-status="init"
                 >
                   <div style="display: none">
                     <input type="hidden" name="_wpcf7" value="36" />
@@ -202,7 +203,7 @@
                         name="your-name"
                         value=""
                         size="40"
-                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ncc-input"
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ncc-input full-name-control"
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Full Name"
@@ -219,7 +220,7 @@
                         name="tel-577"
                         value=""
                         size="40"
-                        class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel ncc-input"
+                        class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel ncc-input tel-control"
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Phone number"
@@ -236,7 +237,7 @@
                         name="your-email"
                         value=""
                         size="40"
-                        class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email ncc-input"
+                        class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email ncc-input email-control"
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Email"
@@ -258,7 +259,7 @@
                         name="text-111"
                         value=""
                         size="40"
-                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ncc-input ncc-title"
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ncc-input ncc-title title-control"
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="Job Title"
@@ -272,7 +273,7 @@
                     <span class="wpcf7-form-control-wrap menu-618"
                       ><select
                         name="menu-618"
-                        class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required ncc-input ncc-location"
+                        class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required ncc-input ncc-location location-control"
                         aria-required="true"
                         aria-invalid="false"
                       >
@@ -294,7 +295,7 @@
                         name="text-628"
                         value=""
                         size="40"
-                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ncc-input"
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ncc-input question-control"
                         aria-required="true"
                         aria-invalid="false"
                         placeholder="what do you know about this job"
@@ -312,7 +313,7 @@
                             type="file"
                             name="file-297"
                             size="40"
-                            class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required"
+                            class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required file-control"
                             accept=".pdf"
                             aria-required="true"
                             aria-invalid="false" /></span
@@ -786,6 +787,7 @@
                       </div>
                       <div class="job-item swiper-slide">
                         <div class="job-content">
+                          
                           <div class="job-location">
                             <i
                               class="fa-solid fa-location-dot"
@@ -1715,6 +1717,8 @@
     >
       <ion-icon class="btt-icon" name="chevron-up-outline"></ion-icon>
     </button>
-    <script></script>
+    
+
+   
   </body>
 </html>

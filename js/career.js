@@ -1,3 +1,6 @@
+const { Modal } = require("bootstrap");
+const { db } = require("./configFirebase");
+
 // back-to-top
 document.addEventListener("DOMContentLoaded", function () {
   var backToTopButton = document.getElementById("back-to-top");
@@ -101,7 +104,15 @@ function removeActive(event) {
   if (applyForm.classList.contains("active")) {
     applyForm.classList.remove("active");
   }
+ const successBox = document.querySelector(".success-box");
+ successBox.style.display = "none";
+ const applyFormBox = document.querySelector(".apply-box");
+  applyFormBox.style.display = "block";
+
+  const formCareer = document.querySelector(".wpcf7-form");
+  formCareer.reset()
 }
+
 
 // header
 window.addEventListener("DOMContentLoaded", function () {
@@ -157,59 +168,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// check error email
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".wpcf7-form");
-  const textInputs = form.querySelectorAll(
-    'input[type="text"], input[type="tel"], input[type="email"]'
-  );
 
-  // Function to validate inputs
-  function validateInputs() {
-    let isValid = true;
+// search 
+document.getElementById('advanced-searchform').addEventListener('submit', (event) => {
+  event.preventDefault();
 
-    textInputs.forEach((input) => {
-      // Check if input is required and empty
-      if (
-        input.value.trim().length <= 0 &&
-        input.classList.contains("wpcf7-validates-as-required")
-      ) {
-        input.parentNode.querySelector(".wpcf7-not-valid-tip").style.display =
-          "block";
-        isValid = false;
-      } else {
-        input.parentNode.querySelector(".wpcf7-not-valid-tip").style.display =
-          "none";
-      }
+  // Construct the search URL
+  var searchParams = new URLSearchParams();
+  searchParams.append('search', 'advanced');
+  searchParams.append('s', document.getElementById('name').value);
 
-      // Check email format
-      if (input.type === "email" && input.value.trim().length > 0) {
-        const emailRegex =
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if (!emailRegex.test(input.value.trim())) {
-          input.parentNode.querySelector(".email-error").style.display =
-            "block";
-          isValid = false;
-        } else {
-          input.parentNode.querySelector(".email-error").style.display = "none";
-        }
-      }
-    });
-
-    return isValid;
-  }
-
-  // Handle form submission
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    const inputsAreValid = validateInputs();
-
-    if (inputsAreValid) {
-      const applyForm = document.querySelector(".apply-box");
-      applyForm.style.display = "none";
-
-      const successBox = document.querySelector(".success-box");
-      successBox.style.display = "block";
-    }
-  });
+  window.location.href = 'listjobs.html?' + searchParams.toString();
 });
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
