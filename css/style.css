@@ -1301,7 +1301,7 @@
 #apply-form .container .success-box .icon-success {
   padding-bottom: 32px;
   font-size: 93.77px;
-  color: #3fc027;
+  color: #3e50af;
 }
 #apply-form .container .success-box .main-title {
   font-weight: 700;
@@ -1518,6 +1518,7 @@
   border: none;
   padding: 6px 16px 3px 16px;
   font-size: 26px;
+  color: #3e50af;
 }
 .search-box .search-content .search-input:focus {
   outline: none;
