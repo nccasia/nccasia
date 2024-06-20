@@ -4,13 +4,13 @@ import { getFirestore, addDoc, collection } from "https://www.gstatic.com/fireba
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-storage.js";
 
   const firebaseConfig = {
-    apiKey: "AIzaSyDKkOAKpbh5q9nqFA6nvuT9suOU-ty0FGU",
-    authDomain: "optimize-web-ede86.firebaseapp.com",
-    projectId: "optimize-web-ede86",
-    storageBucket: "optimize-web-ede86.appspot.com",
-    messagingSenderId: "386782170379",
-    appId: "1:386782170379:web:f5c7d72ff966c126f9660e",
-    databaseURL: "https://optimize-web-ede86-default-rtdb.firebaseio.com",
+    apiKey: "AIzaSyDK9mFMiiI7c3wB_BPzYW8Qs1F7PAn5gwU",
+    authDomain: "nccfirebase-73262.firebaseapp.com",
+    databaseURL: "https://nccfirebase-73262-default-rtdb.firebaseio.com",
+    projectId: "nccfirebase-73262",
+    storageBucket: "nccfirebase-73262.appspot.com",
+    messagingSenderId: "526479590712",
+    appId: "1:526479590712:web:c2ea75cf757d2d9ea66dcd"
   };
 
   const app = initializeApp(firebaseConfig);
