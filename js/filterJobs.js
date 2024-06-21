@@ -1,6 +1,6 @@
 // filter job listings based on search parameters
 function filterJobs(searchParams) {
-    const title = searchParams.get('s').toLowerCase();
+    const title = (searchParams.get('s') || '').toLowerCase();
 
     const jobItems = document.querySelectorAll('.job-lists-item');
 

@@ -1,6 +1,3 @@
-const { Modal } = require("bootstrap");
-const { db } = require("./configFirebase");
-
 // back-to-top
 document.addEventListener("DOMContentLoaded", function () {
   var backToTopButton = document.getElementById("back-to-top");
@@ -38,23 +35,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  document
-    .querySelector(".see-more-button")
-    .addEventListener("click", function () {
-      var benefits = document.querySelector(".benefits");
-      var benefitIcon = document.querySelector(".benefit-icon");
-      var seeMore = document.querySelector(".see-more-button");
-
-      event.preventDefault();
-      if (benefits.style.display === "none" || benefits.style.display === "") {
-        benefits.style.display = "block";
-        benefitIcon.style.display = "none";
-        seeMore.style.display = "none";
-      } else {
-        benefits.style.display = "none";
-        benefitIcon.style.display = "grid";
-      }
-    });
+  document.addEventListener("DOMContentLoaded", function () {
+    document
+      .querySelector(".see-more-button")
+      .addEventListener("click", function () {
+        var benefits = document.querySelector(".benefits");
+        var benefitIcon = document.querySelector(".benefit-icon");
+        var seeMore = document.querySelector(".see-more-button");
+  
+        event.preventDefault();
+        if (benefits.style.display === "none" || benefits.style.display === "") {
+          benefits.style.display = "block";
+          benefitIcon.style.display = "none";
+          seeMore.style.display = "none";
+        } else {
+          benefits.style.display = "none";
+          benefitIcon.style.display = "grid";
+        }
+      });
+  });
 
   //scroll header
   window.addEventListener("scroll", function () {
@@ -75,9 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-
-  // TODO: fix this error
-  document.head.appendChild(style);
 
   // add class active
   document.addEventListener("DOMContentLoaded", function () {
@@ -166,20 +162,22 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.add("active-menu");
     });
   });
+
+  // search 
+  document.getElementById('advanced-searchform').addEventListener('submit', (event) => {
+      event.preventDefault();
+    
+      // Construct the search URL
+      var searchParams = new URLSearchParams();
+      searchParams.append('search', 'advanced');
+      searchParams.append('s', document.getElementById('name').value);
+    
+      window.location.href = 'listjobs.html?' + searchParams.toString();
+  });
+  
 });
 
 
-// search 
-document.getElementById('advanced-searchform').addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  // Construct the search URL
-  var searchParams = new URLSearchParams();
-  searchParams.append('search', 'advanced');
-  searchParams.append('s', document.getElementById('name').value);
-
-  window.location.href = 'listjobs.html?' + searchParams.toString();
-});
 
 
 
