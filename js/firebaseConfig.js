@@ -20,7 +20,7 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
 
   const formCareer = document.querySelector(".wpcf7-form");
   const textInputs = formCareer.querySelectorAll(
-    'input[type="text"], input[type="tel"], input[type="email"]'
+    'input[type="text"], input[type="tel"], input[type="email"], input[type="file"]'
   );
 
   formCareer.addEventListener("submit", function (event) {
@@ -88,6 +88,12 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
       return;
     }
 
+    // Disable submit button and show loading spinner
+    const submitButton = formCareer.querySelector('input[type="submit"]');
+    submitButton.disabled = true;
+    const loadingSpinner = document.querySelector('.svg-spinners--bars-rotate-fade');
+    loadingSpinner.style.display = 'block';
+
     try {
       // Upload file to Firebase Storage
       const fileRef = storageRef(storage, `files/${fileToUpload.name}`);
@@ -115,14 +121,18 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
         fileURL: downloadURL,
       });
 
-    const applyForm = document.querySelector(".apply-box");
-    applyForm.style.display = "none";
-
-    const successBox = document.querySelector(".success-box");
-    successBox.style.display = "block";
+      const applyForm = document.querySelector(".apply-box");
+      applyForm.style.display = "none";
+  
+      const successBox = document.querySelector(".success-box");
+      successBox.style.display = "block";
         
     } catch (error) {
       console.error("Error handling form submission:", error);
+    } finally{
+      // Enable submit button and hide loading spinner
+      submitButton.disabled = false;
+      loadingSpinner.style.display = 'none';
     }
   }
 

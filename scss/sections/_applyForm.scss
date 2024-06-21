@@ -138,6 +138,9 @@
         &:focus {
           outline: none;
         }
+        &:disabled {
+          background-color: #aabff2;
+        }
       }
 
       input[type="file"] {
