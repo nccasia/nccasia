@@ -507,7 +507,6 @@
 }
 #benefit::before {
   content: "";
-  background-image: url("../image/background-left.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -519,7 +518,6 @@
 }
 #benefit::after {
   content: "";
-  background-image: url("../image/background-right.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
@@ -583,7 +581,6 @@
 }
 #mail-box::before {
   content: "";
-  background-image: url("../image/mail-box-background-top.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -595,7 +592,6 @@
 }
 #mail-box::after {
   content: "";
-  background-image: url("../image/mail-box-background-bottom.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
