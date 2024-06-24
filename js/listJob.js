@@ -22,7 +22,7 @@ export const LIST_JOB = [
       "title": "FrontEnd Developer (Mid/Sen)",
       "location": "All",
       "description": "Proficient in at least one and has experience with different frontend frameworks: Angular, React, Vue.",
-      "type": "developer",
+      "type": "dev",
       "level": "Middle/ Senior",
       "highlight": 8
     },
@@ -31,7 +31,7 @@ export const LIST_JOB = [
       "title": "NodeJS Developer (Mid/Sen)",
       "location": "All",
       "description": "Proficient in building enterprise applications using JavaScript stacks and SQL/NoSQL databases.",
-      "type": "developer",
+      "type": "dev",
       "level": "Middle/ Senior",
       "highlight": 3
     },
@@ -40,7 +40,7 @@ export const LIST_JOB = [
       "title": "React Native Developer",
       "location": "All",
       "description": "Have experienced with at least one of the following Redux, Rudux Saga, Redux Thunk",
-      "type": "developer",
+      "type": "dev",
       "level": "Junior/ Middle",
       "highlight": 5
     },
@@ -49,7 +49,7 @@ export const LIST_JOB = [
       "title": "IT Support",
       "location": "hanoi1",
       "description": "Graduated from College/University in IT field.",
-      "type": "developer",
+      "type": "dev",
       "level": "Junior",
       "highlight": 2
     },
