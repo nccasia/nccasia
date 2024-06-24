@@ -133,11 +133,11 @@
 
       .jobs-content {
         overflow-x: scroll;
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
         padding: 0;
         margin-top: 32px;
-
+        gap: 16px;
         .job-lists-item {
           overflow: unset;
 

@@ -307,8 +307,10 @@
                             class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required file-control"
                             accept=".pdf"
                             aria-required="true"
-                            aria-invalid="false" /></span
-                      ></span>
+                            aria-invalid="false" />
+                          <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                            >The field is required.
+                          </span>
                       <p></p>
                       <div class="contact-form__file-upload">Attach CV</div>
                       <div class="contact-form__file-uploaded">
@@ -316,13 +318,13 @@
                       </div>
                     </div>
                   </div>
-                  <div class="job-input">
+                  <div class="job-input position-relative">
                     <input
                       type="submit"
                       value="Submit"
                       class="wpcf7-form-control wpcf7-submit primary-button large button-submit"
                       aria-invalid="false"
-                    /><span class="ajax-loader"></span>
+                    /><div class="svg-spinners--bars-rotate-fade position-absolute"></div>
                   </div>
                   <div class="wpcf7-response-output" aria-hidden="true"></div>
                 </form>
@@ -670,7 +672,7 @@
                             </div>
                           </div>
                           <div class="job-label">
-                            <p class="job-type default-color">Full time</p>
+                            <p class="job-type">Full time</p>
                             <p class="job-level">Fresher/ Junior</p>
                           </div>
                         </div>
@@ -712,7 +714,7 @@
                             </div>
                           </div>
                           <div class="job-label">
-                            <p class="job-type default-color">Full time</p>
+                            <p class="job-type">Full time</p>
                             <p class="job-level">Middle/ Senior</p>
                           </div>
                         </div>
@@ -758,7 +760,7 @@
                             </div>
                           </div>
                           <div class="job-label">
-                            <p class="job-type default-color">Full time</p>
+                            <p class="job-type">Full time</p>
                             <p class="job-level">Middle/ Senior</p>
                           </div>
                         </div>
@@ -803,7 +805,7 @@
                             </div>
                           </div>
                           <div class="job-label">
-                            <p class="job-type default-color">Full time</p>
+                            <p class="job-type">Full time</p>
                             <p class="job-level">Middle/ Senior</p>
                           </div>
                         </div>
@@ -828,7 +830,7 @@
                   <div class="view-all">
                     <a
                       title="View all"
-                      href="/listjobs.html#searchFilter"
+                      href="/listjobs.html#searchfilter"
                       class="primary-button large"
                     >
                       View all jobs

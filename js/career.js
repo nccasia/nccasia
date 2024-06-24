@@ -171,7 +171,9 @@ document.addEventListener("DOMContentLoaded", function () {
       var searchParams = new URLSearchParams();
       searchParams.append('search', 'advanced');
       searchParams.append('s', document.getElementById('name').value);
-    
+      searchParams.append('address', document.getElementById('address').value);
+      searchParams.append('category', document.getElementById('category').value);
+      searchParams.append('level', document.getElementById('level').value);
       window.location.href = 'listjobs.html?' + searchParams.toString();
   });
   

@@ -328,7 +328,8 @@
     .container {
       .job-box {
         .swiper-wrapper {
-          gap: 0;
+          flex-direction: column;
+          gap: 8px;
           .job-item {
             min-width: 100%;
             box-shadow: unset;
