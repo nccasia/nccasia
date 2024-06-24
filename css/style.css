@@ -104,7 +104,6 @@
 }
 
 .svg-spinners--bars-rotate-fade {
-  z-index: 10;
   display: none;
   width: 30px;
   height: 30px;
@@ -2598,9 +2597,6 @@
   #job-list .container .job-box .swiper-control-button {
     display: none;
     color: #6572b7;
-  }
-  #job-list:hover .job-box .swiper-control-button {
-    display: block;
   }
   #job-list:hover .job-box .swiper-control-button:after {
     font-size: 32px;
