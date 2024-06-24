@@ -374,15 +374,16 @@
               </a>
             </div>
             <ul>
-              <li><a href="#job-list" class="explore">Explore</a></li>
+              <li><a href="/" class="explore">Home</a></li>
+              <li><a href="#joblist" class="explore">Explore</a></li>
               <li class="list-menu">
                 <a href="#benefit" class="about">Benefits</a>
               </li>
               <li class="list-menu">
-                <a href="#process" class="process">Recruitment Process</a>
+                <a href="#process" class="process">Process</a>
               </li>
               <li class="list-menu">
-                <a href="https://ncc.asia/" class="services">About Us</a>
+                <a href="/#about" class="services">About Us</a>
               </li>
             </ul>
             <div class="header_link">
@@ -406,7 +407,15 @@
                   ><a
                     class="sub_menu-link"
                     onclick="hide(this);"
-                    href="#job-list"
+                    href="/"
+                    >Home</a
+                  ></span
+                >
+                <span class="nav-link hover title-t active"
+                  ><a
+                    class="sub_menu-link"
+                    onclick="hide(this);"
+                    href="#joblist"
                     >Explore</a
                   ></span
                 >
@@ -427,7 +436,7 @@
                     class="sub_menu-link"
                     onclick="hide(this);"
                     href="#process"
-                    >Recruitment Process</a
+                    >Process</a
                   ></span
                 >
               </li>
@@ -436,7 +445,7 @@
                   ><a
                     class="sub_menu-link"
                     onclick="hide(this);"
-                    href="#portfolio"
+                    href="/#about"
                     >About Us</a
                   ></span
                 >
@@ -509,7 +518,7 @@
               <div class="filter-input">
                 <select name="category" id="category">
                   <option value="">Job type</option>
-                  <option value="developer">Developer</option>
+                  <option value="dev">Developer</option>
                   <option value="ba">Ba</option>
                   <option value="pm">Pm</option>
                   <option value="tester">Tester</option>
@@ -524,82 +533,7 @@
               </div>
               <div class="filter-input">
                 <select name="level" id="level">
-                  <option value="">Experience level</option>
-                  <option value="intern">Intern</option>
-                  <option value="fresher">Fresher</option>
-                  <option value="junior">Junior</option>
-                  <option value="middle">Middle</option>
-                  <option value="senior">Senior</option>
-                </select>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="search-mobile">
-        <div class="container">
-          <form
-            class="search-box"
-            method="get"
-            id="advanced-searchform"
-            role="search"
-            action="/listjobs.html"
-          >
-            <input type="hidden" name="search" value="advanced" />
-            <div class="search-content">
-              <i
-                class="fa-solid fa-magnifying-glass search-icon"
-                aria-hidden="true"
-              ></i>
-              <input
-                type="text"
-                class="search-input"
-                value=""
-                placeholder="Job title or skill..."
-                name="s"
-                id="name"
-              />
-              <input
-                class="search-button primary-button large"
-                type="submit"
-                id="searchsubmit"
-                value="Search"
-              />
-            </div>
-            <div class="search-filter">
-              <div class="filter-input">
-                <select name="address" id="address">
-                  <option value="">Office</option>
-                  <option value="hanoi">Ha Noi</option>
-                  <option value="hanoi1">Ha Noi 1</option>
-                  <option value="hanoi2">Ha Noi 2</option>
-                  <option value="hanoi3">Ha Noi 3</option>
-                  <option value="danang">Da Nang</option>
-                  <option value="saigon1">Sai Gon</option>
-                  <option value="vinh">Vinh</option>
-                  <option value="quynhon">Quy Nhon</option>
-                  <option value="all">All Offices</option>
-                </select>
-              </div>
-              <div class="filter-input">
-                <select name="category" id="category">
-                  <option value="">Job type</option>
-                  <option value="developer">Developer</option>
-                  <option value="ba">Ba</option>
-                  <option value="pm">Pm</option>
-                  <option value="tester">Tester</option>
-                  <option value="hr">Hr</option>
-                  <option value="sale">Sale</option>
-                  <option value="designer">Designer</option>
-                  <option value="gamedesign">Game designer</option>
-                  <option value="accountant">Accountant</option>
-                  <option value="itsupport">IT Support</option>
-                  <option value="marketing">Marketing</option>
-                </select>
-              </div>
-              <div class="filter-input">
-                <select name="level" id="level">
-                  <option value="">level</option>
+                  <option value="">Level</option>
                   <option value="intern">Intern</option>
                   <option value="fresher">Fresher</option>
                   <option value="junior">Junior</option>
@@ -654,7 +588,7 @@
                             ></i>
                             <a> All Offices </a>
                           </div>
-                          <a href="/jobDetails.html" class="job-icon">
+                          <a href="/jobdetails.html" class="job-icon">
                             <img
                               src="/assets/images/listjob/designer.png"
                               alt="UX/UI Designer (Fre/Jun)"
@@ -662,7 +596,7 @@
                           </a>
                           <div class="short-description">
                             <h5 class="title">
-                              <a href="/jobDetails.html">
+                              <a href="/jobdetails.html">
                                 UX/UI Designer (Fre/Jun)
                               </a>
                             </h5>
@@ -699,7 +633,7 @@
                             ></i>
                             <a> All Offices </a>
                           </div>
-                          <a href="/jobDetails.html" class="job-icon">
+                          <a href="/jobdetails.html" class="job-icon">
                             <img
                               src="/assets/images/listjob/backoffice.png"
                               alt="IT Support"
@@ -707,7 +641,7 @@
                           </a>
                           <div class="short-description">
                             <h5 class="title">
-                              <a href="/jobDetails.html"> IT Support </a>
+                              <a href="/jobdetails.html"> IT Support </a>
                             </h5>
                             <div class="description">
                               Graduated from College/University in IT field.
@@ -741,7 +675,7 @@
                             ></i>
                             <a> All Offices </a>
                           </div>
-                          <a href="/jobDetails.html" class="job-icon">
+                          <a href="/jobdetails.html" class="job-icon">
                             <img
                               src="/assets/images/listjob/dev.png"
                               alt="FrontEnd Developer (Mid/Sen)"
@@ -749,7 +683,7 @@
                           </a>
                           <div class="short-description">
                             <h5 class="title">
-                              <a href="/jobDetails.html">
+                              <a href="/jobdetails.html">
                                 FrontEnd Developer (Mid/Sen)
                               </a>
                             </h5>
@@ -788,7 +722,7 @@
                             ></i>
                             <a> All Offices </a>
                           </div>
-                          <a href="/jobDetails.html" class="job-icon">
+                          <a href="/jobdetails.html" class="job-icon">
                             <img
                               src="/assets/images/listjob/ba.png"
                               alt="Sale IT (US/UK/Japan Market)"
@@ -796,7 +730,7 @@
                           </a>
                           <div class="short-description">
                             <h5 class="title">
-                              <a href="/jobDetails.html">
+                              <a href="/jobdetails.html">
                                 Sale IT (US/UK/Japan Market)
                               </a>
                             </h5>

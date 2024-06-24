@@ -165,16 +165,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // search 
   document.getElementById('advanced-searchform').addEventListener('submit', (event) => {
-      event.preventDefault();
+    event.preventDefault();
+  
+    // Get form input values
+    const name = document.getElementById('name').value;
+    const address = document.getElementById('address').value;
+    const category = document.getElementById('category').value;
+    const level = document.getElementById('level').value;
+  
+    // Construct the search URL
+    const searchParams = new URLSearchParams();
+    searchParams.append('search', 'advanced');
     
-      // Construct the search URL
-      var searchParams = new URLSearchParams();
-      searchParams.append('search', 'advanced');
-      searchParams.append('s', document.getElementById('name').value);
-      searchParams.append('address', document.getElementById('address').value);
-      searchParams.append('category', document.getElementById('category').value);
-      searchParams.append('level', document.getElementById('level').value);
-      window.location.href = 'listjobs.html?' + searchParams.toString();
+    if (name) searchParams.append('s', name);
+    if (address) searchParams.append('address', address);
+    if (category) searchParams.append('category', category);
+    if (level) searchParams.append('level', level);
+  
+    window.location.href = 'listjobs.html?' + searchParams.toString();
   });
   
 });

@@ -108,6 +108,8 @@
       rel="stylesheet"
     />
     
+    <!-- firebase -->
+    <script type="module" src="./js/jobDetail.js" ></script>
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
@@ -120,7 +122,6 @@
     <!-- icon eye-->
 
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="/js/career.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -135,202 +136,9 @@
       <!-- apply form -->
       <section id="apply-form" class="">
         <div class="container">
-          <div class="apply-box">
-            <div class="box-head">
-              <i
-                class="fa-solid fa-xmark close-button"
-                onclick="removeActive(this)"
-                aria-hidden="true"
-              ></i>
-              <img src="/assets/images/Mail.png" alt="mail icon" />
-              <p class="title">Apply now</p>
-            </div>
-            <div id="recruitment-contact-form">
-              <div
-                role="form"
-                class="wpcf7"
-                id="wpcf7-f36-o1"
-                lang="en-US"
-                dir="ltr"
-              >
-                <div class="screen-reader-response">
-                  <p role="status" aria-live="polite" aria-atomic="true"></p>
-                  <ul></ul>
-                </div>
-                <form
-                  action="/#wpcf7-f36-o1"
-                  method="post"
-                  class="wpcf7-form init"
-                  enctype="multipart/form-data"
-                  novalidate="novalidate"
-                  data-status="init"
-                >
-                  <div style="display: none">
-                    <input type="hidden" name="_wpcf7" value="36" />
-                    <input type="hidden" name="_wpcf7_version" value="5.4" />
-                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                    <input
-                      type="hidden"
-                      name="_wpcf7_unit_tag"
-                      value="wpcf7-f36-o1"
-                    />
-                    <input
-                      type="hidden"
-                      name="_wpcf7_container_post"
-                      value="0"
-                    />
-                    <input
-                      type="hidden"
-                      name="_wpcf7_posted_data_hash"
-                      value=""
-                    />
-                  </div>
-                  <div class="job-input">
-                    <span class="wpcf7-form-control-wrap your-name"
-                      ><input
-                        type="text"
-                        name="your-name"
-                        value=""
-                        size="40"
-                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ncc-input"
-                        aria-required="true"
-                        aria-invalid="false"
-                        placeholder="Full Name"
-                      />
-                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
-                        >The field is required.
-                      </span>
-                    </span>
-                  </div>
-                  <div class="job-input">
-                    <span class="wpcf7-form-control-wrap tel-577"
-                      ><input
-                        type="tel"
-                        name="tel-577"
-                        value=""
-                        size="40"
-                        class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel ncc-input"
-                        aria-required="true"
-                        aria-invalid="false"
-                        placeholder="Phone number"
-                      />
-                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
-                        >The field is required.
-                      </span>
-                    </span>
-                  </div>
-                  <div class="job-input">
-                    <span class="wpcf7-form-control-wrap your-email"
-                      ><input
-                        type="email"
-                        name="your-email"
-                        value=""
-                        size="40"
-                        class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email ncc-input"
-                        aria-required="true"
-                        aria-invalid="false"
-                        placeholder="Email"
-                      />
-                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
-                        >The field is required.
-                      </span>
-                      <span
-                        class="wpcf7-not-valid-tip email-error"
-                        aria-hidden="true"
-                        >The e-mail address entered is invalid.
-                      </span>
-                    </span>
-                  </div>
-                  <div class="job-input">
-                    <span class="wpcf7-form-control-wrap text-111"
-                      ><input
-                        type="text"
-                        name="text-111"
-                        value=""
-                        size="40"
-                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ncc-input ncc-title"
-                        aria-required="true"
-                        aria-invalid="false"
-                        placeholder="Job Title"
-                      />
-                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
-                        >The field is required.
-                      </span>
-                    </span>
-                  </div>
-                  <div class="job-input">
-                    <span class="wpcf7-form-control-wrap menu-618"
-                      ><select
-                        name="menu-618"
-                        class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required ncc-input ncc-location"
-                        aria-required="true"
-                        aria-invalid="false"
-                      >
-                        <option value="Select Office">Select Office</option>
-                        <option value="Ha Noi1">Ha Noi1</option>
-                        <option value="Ha Noi2">Ha Noi2</option>
-                        <option value="Ha Noi3">Ha Noi3</option>
-                        <option value="Vinh">Vinh</option>
-                        <option value="Da Nang">Da Nang</option>
-                        <option value="Quy Nhon">Quy Nhon</option>
-                        <option value="Ho Chi Minh">Ho Chi Minh</option>
-                      </select>
-                    </span>
-                  </div>
-                  <div class="job-input">
-                    <span class="wpcf7-form-control-wrap text-628"
-                      ><input
-                        type="text"
-                        name="text-628"
-                        value=""
-                        size="40"
-                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ncc-input"
-                        aria-required="true"
-                        aria-invalid="false"
-                        placeholder="what do you know about this job"
-                      />
-                      <span class="wpcf7-not-valid-tip" aria-hidden="true"
-                        >The field is required.
-                      </span>
-                    </span>
-                  </div>
-                  <div class="job-input">
-                    <div class="contact-form__file">
-                      <span class="wpcf7-form-control-wrap file"
-                        ><span class="wpcf7-form-control-wrap file-297"
-                          ><input
-                            type="file"
-                            name="file-297"
-                            size="40"
-                            class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required"
-                            accept=".pdf"
-                            aria-required="true"
-                            aria-invalid="false" /></span
-                      ></span>
-                      <p></p>
-                      <div class="contact-form__file-upload">Attach CV</div>
-                      <div class="contact-form__file-uploaded">
-                        <div class="contact-form__file-name"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="job-input">
-                    <input
-                      type="submit"
-                      value="Submit"
-                      class="wpcf7-form-control wpcf7-submit primary-button large button-submit"
-                      aria-invalid="false"
-                    /><span class="ajax-loader"></span>
-                  </div>
-                  <div class="wpcf7-response-output" aria-hidden="true"></div>
-                </form>
-              </div>
-            </div>
-          </div>
           <div class="success-box">
             <i
               class="fa-solid fa-xmark close-button"
-              onclick="removeActive(this)"
               aria-hidden="true"
             ></i>
             <i
@@ -364,13 +172,14 @@
               </a>
             </div>
             <ul>
-              <li><a href="/career.html#job-list" class="home">Explore</a></li>
+              <li><a href="/" class="home">Home</a></li>
+              <li><a href="/career.html#joblist" class="home">Explore</a></li>
               <li class="list-menu">
                 <a href="/career.html#benefit" class="about">Benefits</a>
               </li>
               <li class="list-menu">
                 <a href="/career.html#process" class="team"
-                  >Recruitment Process</a
+                  >Process</a
                 >
               </li>
               <li class="list-menu">
@@ -395,7 +204,17 @@
                   ><a
                     class="sub_menu-link"
                     onclick="hide(this);"
-                    href="/career.html#job-list"
+                    href="/"
+                    >Home</a
+                  ></span
+                >
+              </li>
+              <li class="nav-l">
+                <span class="nav-link hover title-t active"
+                  ><a
+                    class="sub_menu-link"
+                    onclick="hide(this);"
+                    href="/career.html#joblist"
                     >Explore</a
                   ></span
                 >
@@ -416,7 +235,7 @@
                     class="sub_menu-link"
                     onclick="hide(this);"
                     href="/career.html#process"
-                    >Recruitment Process</a
+                    >Process</a
                   ></span
                 >
               </li>
@@ -650,11 +469,11 @@
                             Proficiency in design tools such as Adobe Creative
                             Suite, Sketch, Figma, or similar.
                           </div>
-                          <a href="/jobdetail.html">Read More</a>
+                          <a href="/jobdetails.html">Read More</a>
                         </div>
                         <div class="short-description">
                           <h5 class="title">
-                            <a href="/jobdetail.html"
+                            <a href="/jobdetails.html"
                               >UX/UI Designer (Fre/Jun)</a
                             >
                           </h5>
@@ -662,11 +481,11 @@
                             Proficiency in design tools such as Adobe Creative
                             Suite, Sketch, Figma, or similar.
                           </div>
-                          <a href="/jobdetail.html">Read More</a>
+                          <a href="/jobdetails.html">Read More</a>
                         </div>
                         <div class="short-description">
                           <h5 class="title">
-                            <a href="/jobdetail.html"
+                            <a href="/jobdetails.html"
                               >UX/UI Designer (Fre/Jun)</a
                             >
                           </h5>
@@ -674,11 +493,11 @@
                             Proficiency in design tools such as Adobe Creative
                             Suite, Sketch, Figma, or similar.
                           </div>
-                          <a href="/jobdetail.html">Read More</a>
+                          <a href="/jobdetails.html">Read More</a>
                         </div>
                         <div class="short-description">
                           <h5 class="title">
-                            <a href="/jobdetail.html"
+                            <a href="/jobdetails.html"
                               >UX/UI Designer (Fre/Jun)</a
                             >
                           </h5>
@@ -686,7 +505,7 @@
                             Proficiency in design tools such as Adobe Creative
                             Suite, Sketch, Figma, or similar.
                           </div>
-                          <a href="/jobdetail.html">Read More</a>
+                          <a href="/jobdetails.html">Read More</a>
                         </div>
                       </div>
                     </div>
@@ -721,12 +540,7 @@
                               <ul></ul>
                             </div>
                             <form
-                              action="/#wpcf7-f36-o1"
-                              method="post"
                               class="wpcf7-form init"
-                              enctype="multipart/form-data"
-                              novalidate="novalidate"
-                              data-status="init"
                             >
                               <div style="display: none">
                                 <input type="hidden" name="_wpcf7" value="36" />
@@ -768,10 +582,13 @@
                                       name="your-name"
                                       value=""
                                       size="40"
-                                      class="wpcf7-form-control wpcf7-text ncc-input"
+                                      class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ncc-input full-name-control"
                                       aria-invalid="false"
                                       placeholder="Full Name"
                                     />
+                                    <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                                      >The field is required.
+                                    </span>
                                   </span>
                                 </div>
                                 <div
@@ -789,7 +606,14 @@
                                       aria-required="true"
                                       aria-invalid="false"
                                       placeholder="Email"
-                                    />
+                                    /><span class="wpcf7-not-valid-tip" aria-hidden="true"
+                                    >The field is required.
+                                  </span>
+                                  <span
+                                  class="wpcf7-not-valid-tip email-error"
+                                  aria-hidden="true"
+                                  >The e-mail address entered is invalid.
+                                </span>
                                   </span>
                                 </div>
                               </div>
@@ -805,21 +629,24 @@
                                       name="text-111"
                                       value=""
                                       size="40"
-                                      class="wpcf7-form-control wpcf7-text ncc-input"
+                                      class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ncc-input ncc-title title-control"
                                       aria-invalid="false"
                                       placeholder="Job Title"
                                     />
+                                    <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                                      >The field is required.
+                                    </span>
                                   </span>
                                 </div>
                                 <div
                                   class="col-lg-6 col-md-6 col-sm-6 col-xs-12"
                                 >
                                   <span
-                                    class="wpcf7-form-control-wrap menu-106"
+                                    class="wpcf7-form-control-wrap menu-618"
                                   >
                                     <select
-                                      name="menu-106"
-                                      class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required ncc-input"
+                                      name="menu-618"
+                                      class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required ncc-input ncc-location location-control"
                                       aria-required="true"
                                       aria-invalid="false"
                                     >
@@ -848,11 +675,15 @@
                                           type="file"
                                           name="file-297"
                                           size="40"
-                                          class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required"
+                                          class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required file-control"
                                           accept=".pdf"
                                           aria-required="true"
                                           aria-invalid="false"
                                         />
+                                        <span class="wpcf7-not-valid-tip position-absolute" aria-hidden="true"
+                                        style="bottom: -30px;"
+                                          >The field is required.
+                                        </span>
                                       </span>
                                     </span>
                                     <div class="contact-form__file-upload">
@@ -868,12 +699,12 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-6 position-relative">
                                   <input
                                     type="submit"
                                     value="Submit"
                                     class="wpcf7-form-control wpcf7-submit primary-button large button-submit"
-                                  />
+                                  /><div class="svg-spinners--bars-rotate-fade position-absolute" style="left: 18%"></div>
                                   <span class="ajax-loader"> </span>
                                 </div>
                               </div>
@@ -1231,6 +1062,5 @@
     >
       <ion-icon class="btt-icon" name="chevron-up-outline"></ion-icon>
     </button>
-    <script src="./js/filterJobs.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
   padding: 96px 0;
   &::before {
     content: "";
-    background-image: url("../image/mail-box-background-top.png");
+    // background-image: url("../image/mail-box-background-top.png");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -16,7 +16,7 @@
 
   &::after {
     content: "";
-    background-image: url("../image/mail-box-background-bottom.png");
+    // background-image: url("../image/mail-box-background-bottom.png");
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
