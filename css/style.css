@@ -2148,7 +2148,7 @@
     font-size: 24px;
     line-height: 100%;
   }
-  .search-mobile .container .search-box {
+  .search-page .container .search-box {
     margin-top: 7%;
   }
   .main-slider .text-head {
@@ -2250,14 +2250,14 @@
   .header-fix {
     padding: 0px 16px;
   }
-  .search-mobile .container .search-box .search-content {
+  .search-page .container .search-box .search-content {
     width: 100%;
     padding: 0 8px;
   }
-  .search-mobile .container .search-box .search-content .search-input {
+  .search-page .container .search-box .search-content .search-input {
     padding: 6px;
   }
-  .search-mobile .container .search-box .search-filter {
+  .search-page .container .search-box .search-filter {
     width: 100%;
     padding: 0px 0%;
   }
@@ -2293,17 +2293,17 @@
   }
 }
 @media screen and (max-width: 375px) {
-  .search-mobile .container .search-box .search-content {
+  .search-page .container .search-box .search-content {
     width: 100%;
   }
-  .search-mobile .container .search-box .search-content .search-button.large {
+  .search-page .container .search-box .search-content .search-button.large {
     font-size: 24px;
     line-height: 24px;
   }
-  .search-mobile .container .search-box .search-filter {
+  .search-page .container .search-box .search-filter {
     width: 100%;
   }
-  .search-mobile .container .search-box .search-filter .filter-input select {
+  .search-page .container .search-box .search-filter .filter-input select {
     padding: 6px 16px 2px 6px;
   }
   #process .process-content .process-tab .tab-title .process-icon .process-item img {
@@ -2332,17 +2332,17 @@
   }
 }
 @media screen and (max-width: 320px) {
-  .search-mobile .container .search-box .search-content {
+  .search-page .container .search-box .search-content {
     width: 100%;
   }
-  .search-mobile .container .search-box .search-content .search-input {
+  .search-page .container .search-box .search-content .search-input {
     width: 60px;
   }
-  .search-mobile .container .search-box .search-content .search-button.large {
+  .search-page .container .search-box .search-content .search-button.large {
     padding: 4px;
     width: auto;
   }
-  .search-mobile .container .search-box .search-filter .filter-input select {
+  .search-page .container .search-box .search-filter .filter-input select {
     width: 80px;
   }
   .box-head .title-content h2 {
@@ -3415,11 +3415,6 @@ html {
 
 @media screen and (min-width: 992px) {
   .search-mobile {
-    display: none;
-  }
-}
-@media screen and (max-width: 991px) {
-  .search-page {
     display: none;
   }
 }
