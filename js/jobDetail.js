@@ -140,3 +140,18 @@ function removeActive() {
     const formCareer = document.querySelector(".wpcf7-form");
     formCareer.reset()
 }
+
+// click icon menu
+var menuBtn = document.querySelector(".menu-icon-btn");
+menuBtn.addEventListener("click", function () {
+  var menuIcon = document.querySelector(".menu-icon-btn");
+  var navbarCollapse = document.querySelector(".navbar-collapse");
+
+  if (!menuIcon.classList.contains("toggled")) {
+    menuIcon.classList.add("toggled");
+    navbarCollapse.style.display = "block";
+  } else {
+    menuIcon.classList.remove("toggled");
+    navbarCollapse.style.display = "none";
+  }
+});
