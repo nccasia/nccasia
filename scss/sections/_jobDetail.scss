@@ -267,6 +267,11 @@
         input {
           width: 100%;
         }
+        input[type="submit"] {
+          &:disabled {
+            background-color: #aabff2;
+          }
+        }
       }
     }
   }

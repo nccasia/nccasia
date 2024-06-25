@@ -1032,6 +1032,9 @@
 .main-single-post #apply-form-details .row .col-lg-4.col-md-4.col-sm-6.col-6 input {
   width: 100%;
 }
+.main-single-post #apply-form-details .row .col-lg-4.col-md-4.col-sm-6.col-6 input[type=submit]:disabled {
+  background-color: #aabff2;
+}
 
 #process .container {
   padding-top: 96px;
