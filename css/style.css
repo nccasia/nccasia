@@ -375,6 +375,19 @@
   color: #fff;
 }
 
+.container-no-job-found {
+  text-align: center;
+  font-size: 32px;
+  line-height: 38px;
+  color: #6572b7;
+}
+
+.no-job-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .box-head {
   text-align: center;
   width: 100%;
@@ -2205,6 +2218,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 3px solid #aabff2;
+    padding-right: 50px;
   }
   .footer .footer_head .nav_footer .nav_footer-head .footer_head-item-phone-text {
     padding-left: 22px;
@@ -2291,6 +2305,10 @@
   }
   .footer-bottom-wrapper .container .footer_bottom .footer_bottom-container .footer_copyright p {
     margin: 0;
+  }
+  .container-no-job-found {
+    font-size: 24px;
+    line-height: 24px;
   }
 }
 @media screen and (max-width: 375px) {
