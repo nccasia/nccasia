@@ -155,3 +155,13 @@ menuBtn.addEventListener("click", function () {
     navbarCollapse.style.display = "none";
   }
 });
+
+// close popup
+window.addEventListener('click', function (event) {
+    var applyForm = document.getElementById('apply-form');
+    var container = document.querySelector('.container-apply-form');
+  
+    if (event.target.contains(applyForm) || event.target.contains(container)) {
+      removeActive();
+    }
+  });
