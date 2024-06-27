@@ -1035,6 +1035,13 @@
 .main-single-post #apply-form-details .row .col-lg-4.col-md-4.col-sm-6.col-6 input[type=submit]:disabled {
   background-color: #aabff2;
 }
+.main-single-post #apply-form-details .contact-form__file-uploaded {
+  margin-left: 10px;
+}
+.main-single-post #apply-form-details .contact-form__file-uploaded .contact-form__file-name {
+  font-size: 26px;
+  line-height: 100%;
+}
 
 #process .container {
   padding-top: 96px;
@@ -3122,6 +3129,11 @@
   }
   .main-single-post #apply-form-details .box-head .description {
     font-size: 30px;
+  }
+  .main-single-post #apply-form-details .contact-form__file-uploaded {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
   }
   .main-single-post #job-list {
     padding-top: 40px 0;
