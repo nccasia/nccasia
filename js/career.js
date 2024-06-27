@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var benefits = document.querySelector(".benefits");
         var benefitIcon = document.querySelector(".benefit-icon");
         var seeMore = document.querySelector(".see-more-button");
-  
+
         event.preventDefault();
         if (benefits.style.display === "none" || benefits.style.display === "") {
           benefits.style.display = "block";
@@ -100,9 +100,9 @@ function removeActive(event) {
   if (applyForm.classList.contains("active")) {
     applyForm.classList.remove("active");
   }
- const successBox = document.querySelector(".success-box");
- successBox.style.display = "none";
- const applyFormBox = document.querySelector(".apply-box");
+  const successBox = document.querySelector(".success-box");
+  successBox.style.display = "none";
+  const applyFormBox = document.querySelector(".apply-box");
   applyFormBox.style.display = "block";
 
   const formCareer = document.querySelector(".wpcf7-form");
@@ -166,25 +166,35 @@ document.addEventListener("DOMContentLoaded", function () {
   // search 
   document.getElementById('advanced-searchform').addEventListener('submit', (event) => {
     event.preventDefault();
-  
+
     // Get form input values
     const name = document.getElementById('name').value;
     const address = document.getElementById('address').value;
     const category = document.getElementById('category').value;
     const level = document.getElementById('level').value;
-  
+
     // Construct the search URL
     const searchParams = new URLSearchParams();
     searchParams.append('search', 'advanced');
-    
+
     if (name) searchParams.append('s', name);
     if (address) searchParams.append('address', address);
     if (category) searchParams.append('category', category);
     if (level) searchParams.append('level', level);
-  
+
     window.location.href = 'listjobs.html?' + searchParams.toString();
   });
-  
+
+});
+
+
+window.addEventListener('click', function (event) {
+  var applyForm = document.getElementById('apply-form');
+  var container = document.querySelector('.container-apply-form');
+
+  if (event.target.contains(applyForm) || event.target.contains(container)) {
+    removeActive();
+  }
 });
 
 
@@ -193,7 +203,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
- 
 
 
 

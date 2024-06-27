@@ -267,6 +267,18 @@
         input {
           width: 100%;
         }
+        input[type="submit"] {
+          &:disabled {
+            background-color: #aabff2;
+          }
+        }
+      }
+    }
+    .contact-form__file-uploaded{
+      margin-left: 10px;
+      .contact-form__file-name {
+        font-size: 26px;
+        line-height: 100%;
       }
     }
   }

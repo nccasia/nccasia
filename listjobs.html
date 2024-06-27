@@ -140,7 +140,7 @@
     <div id="page" class="site">
       <!-- apply form -->
       <section id="apply-form" class="">
-        <div class="container">
+        <div class="container container-apply-form">
           <div class="apply-box">
             <div class="box-head">
               <i
@@ -307,8 +307,10 @@
                             class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required"
                             accept=".pdf"
                             aria-required="true"
-                            aria-invalid="false" /></span
-                      ></span>
+                            aria-invalid="false" />
+                            <span class="wpcf7-not-valid-tip" aria-hidden="true"
+                            >The field is required.
+                          </span>
                       <p></p>
                       <div class="contact-form__file-upload">Attach CV</div>
                       <div class="contact-form__file-uploaded">
@@ -316,13 +318,13 @@
                       </div>
                     </div>
                   </div>
-                  <div class="job-input">
+                  <div class="job-input position-relative">
                     <input
                       type="submit"
                       value="Submit"
                       class="wpcf7-form-control wpcf7-submit primary-button large button-submit"
                       aria-invalid="false"
-                    /><span class="ajax-loader"></span>
+                    /><div class="svg-spinners--bars-rotate-fade position-absolute"></div>
                   </div>
                   <div class="wpcf7-response-output" aria-hidden="true"></div>
                 </form>
@@ -383,7 +385,7 @@
                 >
               </li>
               <li class="list-menu">
-                <a href="https://ncc.asia/" class="services">About Us</a>
+                <a href="/#about" class="services">About Us</a>
               </li>
             </ul>
             <div class="header_link">
@@ -447,7 +449,7 @@
                   ><a
                     class="sub_menu-link"
                     onclick="hide(this);"
-                    href="#portfolio"
+                    href="/#about"
                     >About Us</a
                   ></span
                 >
@@ -576,8 +578,14 @@
           <div class="jobs-content">
             
       <!-- render list item -->
-
+    </div>
+        <div class="container-no-job-found">
+          <div class="no-job-found">
+            <ion-icon name="search"></ion-icon> 
+            <span>No matching search results.</span>
           </div>
+          <span>Try searching again.</span>
+        </div>
           <p class="jobs-description">You have viewed all the jobs</p>
         </div>
       </section>

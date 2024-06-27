@@ -14,7 +14,7 @@
 
 @media screen and (max-width: 1240px) {
   //list job session
-  #job-list {
+  #joblist {
     .container {
       .job-box {
         overflow-x: scroll;
@@ -144,7 +144,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  #job-list {
+  #joblist {
     padding: 40px 0;
     .container {
       .view-all {
@@ -324,7 +324,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  #job-list {
+  #joblist {
     .container {
       .job-box {
         .swiper-wrapper {

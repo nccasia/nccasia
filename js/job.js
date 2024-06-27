@@ -20,16 +20,24 @@ function renderJobItems() {
   const params = getQueryParams();
   const { s, address, category, level } = params;
   const jobsContent = document.querySelector('.jobs-content');
+  const noJobFound = document.querySelector('.container-no-job-found');
   const sortedJobs = LIST_JOB.slice().sort((a, b) => b.highlight - a.highlight);
 
   // Filter jobs based on params
   const filteredJobs = filterJobs(sortedJobs, { s, address, category, level });
 
-  let jobHTML = '';
-  filteredJobs.forEach(job => {
-    jobHTML += jobItem(job);
-  });
-  jobsContent.innerHTML = jobHTML;
+  if(filterJobs.length > 0) {
+    let jobHTML = '';
+    filteredJobs.forEach(job => {
+      jobHTML += jobItem(job);
+    });
+    jobsContent.innerHTML = jobHTML;
+    noJobFound.style.display = 'none';
+  } 
+  if(filteredJobs.length === 0) {
+    jobsContent.innerHTML = '';
+    noJobFound.style.display = 'block';
+  }
 }
 
 renderJobItems();

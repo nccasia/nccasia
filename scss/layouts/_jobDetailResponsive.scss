@@ -21,7 +21,7 @@
       }
     }
 
-    #job-list {
+    #joblist {
       .container {
         padding-right: 0;
         padding-left: 47px;
@@ -137,9 +137,14 @@
           font-size: 30px;
         }
       }
+      .contact-form__file-uploaded{
+        position:absolute;
+        bottom: -40px;
+        left: 0;
+      }
     }
 
-    #job-list {
+    #joblist {
       padding-top: 40px 0;
       .container {
         padding-right: 0;
@@ -232,7 +237,7 @@
       }
     }
 
-    #job-list {
+    #joblist {
       .container {
         padding-right: 0;
         padding-left: 24px;

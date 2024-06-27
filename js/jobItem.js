@@ -3,7 +3,7 @@ export function jobItem(job) {
     return `
         <div class="job-lists-item" id="${id}">
           <div class="job-box">
-            <a class="job-icon" href="/jobDetails.html" data-file="jobdetails.html">
+            <a class="job-icon" href="/jobdetails.html" data-file="jobdetails.html">
               <img src="/assets/images/listjob/${type}.png" alt="${title}" />
             </a>
             <div class="job-content">
@@ -14,7 +14,7 @@ export function jobItem(job) {
                 </div>
                 <div class="short-description">
                   <h5 class="title">
-                    <a href="/jobDetails.html">${title}</a>
+                    <a href="/jobdetails.html">${title}</a>
                   </h5>
                   <div class="description">${description}</div>
                 </div>

@@ -144,14 +144,29 @@ function removeActive() {
 // click icon menu
 var menuBtn = document.querySelector(".menu-icon-btn");
 menuBtn.addEventListener("click", function () {
-  var menuIcon = document.querySelector(".menu-icon-btn");
-  var navbarCollapse = document.querySelector(".navbar-collapse");
+    var menuIcon = document.querySelector(".menu-icon-btn");
+    var navbarCollapse = document.querySelector(".navbar-collapse");
 
-  if (!menuIcon.classList.contains("toggled")) {
-    menuIcon.classList.add("toggled");
-    navbarCollapse.style.display = "block";
-  } else {
-    menuIcon.classList.remove("toggled");
-    navbarCollapse.style.display = "none";
-  }
+    if (!menuIcon.classList.contains("toggled")) {
+        menuIcon.classList.add("toggled");
+        navbarCollapse.style.display = "block";
+    } else {
+        menuIcon.classList.remove("toggled");
+        navbarCollapse.style.display = "none";
+    }
+});
+
+// close popup
+window.addEventListener('click', function (event) {
+    var applyForm = document.getElementById('apply-form');
+    var container = document.querySelector('.container-apply-form');
+
+    if (event.target.contains(applyForm) || event.target.contains(container)) {
+        removeActive();
+    }
+});
+
+document.querySelector('input[type="file"]').addEventListener('change', function (event) {
+    var fileName = event.target.files[0].name;
+    document.querySelector('.contact-form__file-name').innerText = fileName;
 });

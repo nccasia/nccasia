@@ -490,6 +490,7 @@
           display: flex;
           justify-content: space-between;
           border-bottom: 3px solid $subtitle-text;
+          padding-right: 50px;
           .footer_head-item-phone-text {
             padding-left: 22px;
             margin: 0;
@@ -638,6 +639,11 @@
         }
       }
     }
+  }
+
+  .container-no-job-found {
+    font-size: 24px;
+    line-height: 24px;
   }
 }
 
