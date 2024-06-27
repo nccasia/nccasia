@@ -457,20 +457,20 @@
 }
 
 /**********Sections**********/
-#job-list {
+#joblist {
   padding-top: 96px;
 }
-#job-list .container {
+#joblist .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
 }
-#job-list .container .related-title {
+#joblist .container .related-title {
   width: 100%;
 }
-#job-list .container .related-title p {
+#joblist .container .related-title p {
   font-family: "Nunito", sans-serif;
   font-size: 36px;
   font-weight: 700;
@@ -479,14 +479,14 @@
   text-align: left;
   color: #3e50af;
 }
-#job-list .container .job-box {
+#joblist .container .job-box {
   display: flex;
   padding: 32px 0px;
   gap: 16px;
   max-width: 100%;
   overflow-y: auto;
 }
-#job-list .container .job-box .swiper-wrapper {
+#joblist .container .job-box .swiper-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -496,20 +496,20 @@
   transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
   gap: 18px;
 }
-#job-list .container .job-box .swiper-control-button {
+#joblist .container .job-box .swiper-control-button {
   display: none;
 }
-#job-list .container .view-all {
+#joblist .container .view-all {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
 }
-#job-list .container .view-all .primary-button {
+#joblist .container .view-all .primary-button {
   font-size: 30px;
   line-height: 100%;
 }
-#job-list .container .view-all .primary-button i {
+#joblist .container .view-all .primary-button i {
   transform: rotate(45deg);
   font-size: 16px;
 }
@@ -2414,18 +2414,18 @@
   }
 }
 @media screen and (max-width: 1240px) {
-  #job-list .container .job-box {
+  #joblist .container .job-box {
     overflow-x: scroll;
   }
-  #job-list .container .job-box::-webkit-scrollbar {
+  #joblist .container .job-box::-webkit-scrollbar {
     width: 12px;
     height: 3px;
   }
-  #job-list .container .job-box::-webkit-scrollbar-thumb {
+  #joblist .container .job-box::-webkit-scrollbar-thumb {
     background-color: #fff;
     border-radius: 4px;
   }
-  #job-list .container .job-box::-webkit-scrollbar-thumb {
+  #joblist .container .job-box::-webkit-scrollbar-thumb {
     background-color: #fff;
     border-radius: 6px;
   }
@@ -2489,10 +2489,10 @@
   }
 }
 @media screen and (max-width: 768px) {
-  #job-list {
+  #joblist {
     padding: 40px 0;
   }
-  #job-list .container .view-all .primary-button.large {
+  #joblist .container .view-all .primary-button.large {
     font-size: 26px;
     padding: 8px 16px 6px 16px;
   }
@@ -2615,19 +2615,19 @@
   }
 }
 @media screen and (max-width: 480px) {
-  #job-list .container .job-box .swiper-wrapper {
+  #joblist .container .job-box .swiper-wrapper {
     flex-direction: column;
     gap: 8px;
   }
-  #job-list .container .job-box .swiper-wrapper .job-item {
+  #joblist .container .job-box .swiper-wrapper .job-item {
     min-width: 100%;
     box-shadow: unset;
   }
-  #job-list .container .job-box .swiper-control-button {
+  #joblist .container .job-box .swiper-control-button {
     display: none;
     color: #6572b7;
   }
-  #job-list:hover .job-box .swiper-control-button:after {
+  #joblist:hover .job-box .swiper-control-button:after {
     font-size: 32px;
   }
   #benefit .container::before {
@@ -3048,12 +3048,12 @@
   .main-single-post #single-box .entry-content .entry-header .entry-title .entry-meta .views {
     width: 230px;
   }
-  .main-single-post #job-list .container {
+  .main-single-post #joblist .container {
     padding-right: 0;
     padding-left: 47px;
     max-width: 100%;
   }
-  .main-single-post #job-list .container .job-box {
+  .main-single-post #joblist .container .job-box {
     padding-right: 47px;
   }
 }
@@ -3135,18 +3135,18 @@
     bottom: -40px;
     left: 0;
   }
-  .main-single-post #job-list {
+  .main-single-post #joblist {
     padding-top: 40px 0;
   }
-  .main-single-post #job-list .container {
+  .main-single-post #joblist .container {
     padding-right: 0;
     padding-left: 39px;
     max-width: 100%;
   }
-  .main-single-post #job-list .container .job-box {
+  .main-single-post #joblist .container .job-box {
     padding-right: 39px;
   }
-  .main-single-post #job-list .container .job-box .swiper-control-button {
+  .main-single-post #joblist .container .job-box .swiper-control-button {
     display: block;
   }
 }
@@ -3198,12 +3198,12 @@
     font-size: 24px;
     line-height: 100%;
   }
-  .main-single-post #job-list .container {
+  .main-single-post #joblist .container {
     padding-right: 0;
     padding-left: 24px;
     max-width: 100%;
   }
-  .main-single-post #job-list .container .job-box {
+  .main-single-post #joblist .container .job-box {
     padding-right: 15px;
   }
 }
