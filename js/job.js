@@ -1,8 +1,19 @@
 import { getQueryParams } from './queryParams.js';
-import { LIST_JOB } from './listJob.js';
-import { jobItem } from './jobItem.js';
+import { jobItem } from './templates/jobItem.js';
 
-
+let listjobs = [];
+function fetchDataAndRender() {
+  fetch('./js/data/jobData.json')
+    .then((response) => response.json())
+    .then((data) => {
+      listjobs = data.LIST_JOB;
+      renderJobItems();
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+    });
+}
+fetchDataAndRender();
 
 function filterJobs(jobs, params) {
   return jobs.filter(job => {
@@ -17,26 +28,28 @@ function filterJobs(jobs, params) {
 }
 
 function renderJobItems() {
-  const params = getQueryParams();
-  const { s, address, category, level } = params;
-  const jobsContent = document.querySelector('.jobs-content');
-  const noJobFound = document.querySelector('.container-no-job-found');
-  const sortedJobs = LIST_JOB.slice().sort((a, b) => b.highlight - a.highlight);
+  if (listjobs && listjobs.length > 0) {
+    const params = getQueryParams();
+    const { s, address, category, level } = params;
+    const jobsContent = document.querySelector('.jobs-content');
+    const noJobFound = document.querySelector('.container-no-job-found');
+    const sortedJobs = listjobs.slice().sort((a, b) => b.highlight - a.highlight);
 
-  // Filter jobs based on params
-  const filteredJobs = filterJobs(sortedJobs, { s, address, category, level });
+    // Filter jobs based on params
+    const filteredJobs = filterJobs(sortedJobs, { s, address, category, level });
 
-  if(filterJobs.length > 0) {
-    let jobHTML = '';
-    filteredJobs.forEach(job => {
-      jobHTML += jobItem(job);
-    });
-    jobsContent.innerHTML = jobHTML;
-    noJobFound.style.display = 'none';
-  } 
-  if(filteredJobs.length === 0) {
-    jobsContent.innerHTML = '';
-    noJobFound.style.display = 'block';
+    if (filterJobs.length > 0) {
+      let jobHTML = '';
+      filteredJobs.forEach(job => {
+        jobHTML += jobItem(job);
+      });
+      jobsContent.innerHTML = jobHTML;
+      noJobFound.style.display = 'none';
+    }
+    if (filteredJobs.length === 0) {
+      jobsContent.innerHTML = '';
+      noJobFound.style.display = 'block';
+    }
   }
 }
 

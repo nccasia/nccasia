@@ -27,7 +27,82 @@ formCareer.addEventListener("submit", function (event) {
     handleSaveFormCareer();
 });
 
+function fetchDataAndRender() {
+    fetch('./js/data/jobData.json')
+        .then((response) => response.json())
+        .then((data) => {
+            renderJobDetails(data);
+            renderSimilarJobs(data);
+        })
+        .catch((error) => {
+            console.error('Error fetching data:', error);
+        });
+}
+fetchDataAndRender();
 
+function renderJobDetails(data) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const jobId = parseInt(urlParams.get('id'));
+    const job = data.LIST_JOB.find(job => job.id === jobId);
+
+    if (job) {
+        // breadcrumb_last
+        const breadcrumbLast = document.querySelector('.breadcrumb_last');
+        breadcrumbLast.textContent = job.title;
+        const nccthemeTitle = document.querySelector('.ncctheme-title');
+        nccthemeTitle.textContent = job.title;
+
+        // job description
+        const jobDescriptionList = document.querySelector('.job-description');
+        jobDescriptionList.innerHTML = '';
+        job.jobDescription.forEach(description => {
+            const li = document.createElement('li');
+            li.textContent = description;
+            jobDescriptionList.appendChild(li);
+        });
+
+        // job skill
+        const jobSkill = document.querySelector('.job-skill');
+        jobSkill.innerHTML = '';
+
+        job.skills.forEach(description => {
+            const li = document.createElement('li');
+            li.textContent = description;
+            jobSkill.appendChild(li);
+        });
+    } else {
+        console.error(`Job with id ${jobId} not found.`);
+    }
+}
+
+function renderSimilarJobs(data) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const jobId = parseInt(urlParams.get('id'));
+    const currentJob = data.LIST_JOB.find(job => job.id === jobId);
+    const similarJobsContainer = document.querySelector('.similar-jobs');
+    similarJobsContainer.innerHTML = '';
+
+    const similarJobs = data.LIST_JOB
+        .filter(job => job.id !== jobId && job.type === currentJob.type);
+
+    similarJobs.forEach(job => {
+        const jobElement = document.createElement('div');
+        jobElement.classList.add('short-description');
+
+        jobElement.innerHTML = `
+              <h5 class="title">
+                <a href="/jobdetails.html?id=${job.id}">${job.title}</a>
+              </h5>
+              <div class="description">
+                ${job.description}
+              </div>
+              <a href="/jobdetails.html?id=${job.id}">Read More</a>
+            `;
+
+        similarJobsContainer.appendChild(jobElement);
+    });
+
+}
 function validateInputs() {
     let isValid = true;
 
