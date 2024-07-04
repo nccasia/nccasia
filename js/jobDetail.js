@@ -28,7 +28,7 @@ formCareer.addEventListener("submit", function (event) {
 });
 
 function fetchDataAndRender() {
-    fetch('./js/data/jobData.json')
+    fetch('./js/data/jobdata.json')
         .then((response) => response.json())
         .then((data) => {
             renderJobDetails(data);

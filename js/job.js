@@ -1,9 +1,9 @@
-import { getQueryParams } from './queryParams.js';
+import { getQueryParams } from './queryparams.js';
 import { jobItem } from './templates/jobItem.js';
 
 let listjobs = [];
 function fetchDataAndRender() {
-  fetch('./js/data/jobData.json')
+  fetch('./js/data/jobdata.json')
     .then((response) => response.json())
     .then((data) => {
       listjobs = data.LIST_JOB;
@@ -15,7 +15,7 @@ function fetchDataAndRender() {
 }
 fetchDataAndRender();
 
-function filterJobs(jobs, params) {
+function filterjobs(jobs, params) {
   return jobs.filter(job => {
     // Check if each parameter matches the job
     const matchesName = !params.s || job.title.toLowerCase().includes(params.s.toLowerCase());
@@ -36,9 +36,9 @@ function renderJobItems() {
     const sortedJobs = listjobs.slice().sort((a, b) => b.highlight - a.highlight);
 
     // Filter jobs based on params
-    const filteredJobs = filterJobs(sortedJobs, { s, address, category, level });
+    const filteredJobs = filterjobs(sortedJobs, { s, address, category, level });
 
-    if (filterJobs.length > 0) {
+    if (filterjobs.length > 0) {
       let jobHTML = '';
       filteredJobs.forEach(job => {
         jobHTML += jobItem(job);
