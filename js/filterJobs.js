@@ -1,4 +1,4 @@
-import { getQueryParams } from './queryParams.js';
+import { getQueryParams } from './queryparams.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const params = getQueryParams();
