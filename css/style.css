@@ -481,7 +481,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
 }
 #joblist .container .related-title {
   width: 100%;
@@ -1878,6 +1877,9 @@
     font-size: 22px;
     line-height: 30px;
   }
+  .search-box {
+    margin-top: 10%;
+  }
 }
 @media screen and (max-width: 1024px) {
   #page .search-page {
@@ -2295,6 +2297,7 @@
   }
   .search-page .container .search-box .search-content .search-input {
     padding: 6px;
+    width: 200px;
   }
   .search-page .container .search-box .search-filter {
     width: 100%;
@@ -2666,7 +2669,7 @@
   }
   #benefit .container .benefit-icon .benefit-item p {
     margin-top: 4px;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 24px;
     font-weight: 600;
     font-family: "Nunito", sans-serif;
