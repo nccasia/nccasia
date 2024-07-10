@@ -1,3 +1,19 @@
+/* CSS for Whatsapp */
+.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root .Header__Name-sc-g402ia-2,
+.ButtonBase__Ellipsis-sc-p43e7i-5 
+{
+  font-size: 25px;
+}
+.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root .Header__AnswerTime-sc-g402ia-3,
+.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root .ChatLayout__TimeBottom-sc-9frz4x-9 {
+  font-size: 20px;
+}
+.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root  .ChatLayout__Text-sc-9frz4x-8 {
+  font-size: 20px;
+  line-height: 15px;
+  padding-top: 10px;
+}
+
 /**********partials**********/
 .primary-button {
   border: none;
@@ -553,13 +569,10 @@
 #benefit .benefit-icon .icon-three {
   grid-column: span 2;
 }
-#benefit .benefit-icon .icon-four {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-#benefit .benefit-icon .icon-five {
-  grid-column-start: 4;
-  grid-column-end: 6;
+#benefit .benefit-icon .icon-four,
+#benefit .benefit-icon .icon-five,
+#benefit .benefit-icon .icon-six {
+  grid-column: span 2;
 }
 #benefit .benefit-icon .benefit-item p {
   margin-top: 16px;
@@ -2530,12 +2543,15 @@
     margin-top: 40px;
     grid-row-gap: 30px;
   }
-  #benefit .benefit-icon .benefit-item.icon-one, #benefit .benefit-icon .benefit-item.icon-two, #benefit .benefit-icon .benefit-item.icon-three, #benefit .benefit-icon .benefit-item.icon-four {
+  #benefit .benefit-icon .benefit-item.icon-one, 
+  #benefit .benefit-icon .benefit-item.icon-two, 
+  #benefit .benefit-icon .benefit-item.icon-three, 
+  #benefit .benefit-icon .benefit-item.icon-four,  
+  #benefit .benefit-icon .benefit-item.icon-five,
+  #benefit .benefit-icon .benefit-item.icon-six {
     grid-column: span 3;
   }
-  #benefit .benefit-icon .benefit-item.icon-five {
-    grid-column: span 6;
-  }
+
   #benefit .benefit-icon .benefit-item img {
     height: 110px;
   }
@@ -2650,9 +2666,9 @@
   }
   #benefit .container .benefit-icon .benefit-item p {
     margin-top: 4px;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 24px;
-    font-weight: 400;
+    font-weight: 600;
     font-family: "Nunito", sans-serif;
   }
   #benefit .container .see-more p {

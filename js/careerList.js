@@ -1,5 +1,5 @@
 function fetchDataAndRender() {
-  fetch('./js/data/jobdata.json')
+  fetch('./js/data/jobData.json')
     .then((response) => response.json())
     .then((data) => {
       renderJobItems(data);
@@ -13,7 +13,7 @@ fetchDataAndRender();
 function renderJobItems(data) {
   if (data && data.LIST_JOB.length > 0) {
     const container = document.querySelector('.swiper-wrapper');
-    container.innerHTML = ''; // Clear existing content
+    container.innerHTML = ''; 
 
     data.LIST_JOB.forEach((job) => {
       const jobItem = document.createElement('div');
@@ -49,7 +49,6 @@ function renderJobItems(data) {
         </a>
       </div>
     `;
-
       container.appendChild(jobItem);
     });
   }

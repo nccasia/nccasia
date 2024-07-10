@@ -2060,3 +2060,19 @@ img {
     min-height: 40px;
   }
 }
+
+/* CSS for Whatsapp */
+.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root .Header__Name-sc-g402ia-2,
+.ButtonBase__Ellipsis-sc-p43e7i-5 
+{
+  font-size: 25px;
+}
+.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root .Header__AnswerTime-sc-g402ia-3,
+.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root .ChatLayout__TimeBottom-sc-9frz4x-9 {
+  font-size: 20px;
+}
+.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root  .ChatLayout__Text-sc-9frz4x-8 {
+  font-size: 20px;
+  line-height: 15px;
+  padding-top: 10px;
+}
