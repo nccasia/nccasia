@@ -2,70 +2,123 @@
   "LIST_JOB": [
     {
       "id": 1,
-      "title": "UX/UI Designer (Fre/Jun)",
-      "location": "All",
-      "description": "Proficiency in design tools such as Adobe Creative Suite, Sketch, Figma, or similar.",
-      "type": "designer",
-      "level": "Fresher/ Junior",
+      "title": "Project Manager (Mid/Sen)",
+      "location": "Ha Noi 1, Ha Noi 2, Ha Noi 3",
+      "description": "At least 3 years experience in Project Manager.",
+      "type": "dev",
+      "level": "Middle/ Senior",
       "highlight": 1,
       "jobDescription": [
-        "Create wireframes, user flows, and prototypes to visualize and communicate design ideas.",
-        "Iterate on designs based on feedback and user testing results.",
-        "Develop visually appealing and user-friendly interfaces for web and mobile applications.",
-        "Collaborate with the development team to ensure design feasibility and consistency.",
-        "Create and maintain design system for products.",
-        "Work closely with developers, product managers, and other stakeholders, participate in design reviews and iterate based on feedback from team members."
+        "Define business/functional requirements through the discussion with the customer.",
+        "Predict resources needed to reach objectives and manage resources effectively.",
+        "Responsible for directly liaising with project partners and customers to scope requirements on product customization related to the specific project.",
+        "Regular reporting on the status of the projects. Reduce risk, issues, and scope projects when needed.",
+        "Follow up on the progress of the work (team/project/production support), guide project initiatives, and communicate statuses to project stakeholders on a regular basis, ensuring adequate communication between project collaborators.",
+        "Guide and coach the team and organize the use of Agile/Scrum practices and values; support and educate the Product Owner, especially to refining and managing the product backlog.",
+        "Mentor team leads to develop their project management discipline.",
+        "Contribute to improving processes and support the development of the PMO.",
+        "Willing to build a career path as a Division Manager."
       ],
       "skills": [
-        "Up to 2 years of professional experience in UX/UI design.",
-        "Good communication in English.",
-        "Proficiency in design tools such as Adobe Creative Suite, Sketch, Figma, or similar.",
-        "Knowledge of design systems and their implementation.",
-        "Basic understanding of front-end development technologies (HTML, CSS, etc.).",
-        "Portfolio showcasing design projects and problem-solving skills.",
-        "Communication and collaboration skills.",
-        "Ability to receive and incorporate feedback to improve designs.",
-        "Familiarity with user interface guidelines for various platforms (iOS, Android).",
-        "Experience with motion design and/or micro-interactions is a plus."
+        "Bachelor’s degree in computer science, information technology, or a related field.",
+        "Fluent in English with Strong analytical, communication and presentations skill.",
+        "At least 3 years experience in Project Manager.",
+        "Having experience in managing team size <8 mems, or leading >10 mems.",
+        "Excellent negotiation skill and project management skills, including estimating, planning, organising, and leading.",
+        "Experience the design docs such as basic/detailed design, non-functional requirements, system architecture, etc.",
+        "Strong understanding of software development, computer systems, security, infrastructure, databases and data storage systems,…",
+        "Excellent analytical skills.",
+        "Strong understanding and having experienced of software development lifecycle, full life cycle and agile methodologies.",
+        "At least 3 years experience in Software Development.",
+        "Project Management Professional (PMP) certification preferred."
       ]
     },
     {
       "id": 2,
-      "title": "UX/UI Designer (Mid/Sen)",
-      "location": "All",
-      "description": "Proficiency in design tools such as Adobe Creative Suite, Sketch, Figma, or similar.",
-      "type": "designer",
-      "level": "Middle/ Senior",
-      "highlight": 6,
+      "title": "Process Quality Assurance",
+      "location": "All Offices",
+      "description": "Having knowledge of ISO and software project development process is an advantage.",
+      "type": "tester",
+      "level": "All Level",
+      "highlight": 2,
       "jobDescription": [
-        "Create wireframes, user flows, and prototypes to visualize and communicate design ideas.",
-        "Iterate on designs based on feedback and user testing results.",
-        "Develop visually appealing and user-friendly interfaces for web and mobile applications.",
-        "Collaborate with the development team to ensure design feasibility and consistency.",
-        "Create and maintain design system for products.",
-        "Work closely with developers, product managers, and other stakeholders, participate in design reviews and iterate based on feedback from team members."
+        "Ensure the quality process of the project and the company.",
+        "Plan and implement control/audit process of software project implementation.",
+        "Collect & analyze data, making reports to evaluate the quality indicators of the project.",
+        "Build, control, and improve company internal processes.",
+        "Participate in ISO/process training for new employees in the company.",
+        "Perform other tasks as assigned by the Director."
       ],
       "skills": [
-        "Up to 5 years of professional experience in UX/UI design.",
-        "Excellent communication in English.",
-        "Advanced proficiency in design tools such as Adobe Creative Suite, Sketch, Figma, or similar.",
-        "Deep understanding of design systems and their implementation.",
-        "Strong grasp of front-end development technologies (HTML, CSS, JavaScript, etc.).",
-        "Extensive portfolio showcasing complex design projects and problem-solving skills.",
-        "Strong communication and collaboration skills, including experience working in cross-functional teams.",
-        "Proven ability to lead design projects from concept to completion, incorporating feedback effectively.",
-        "Expertise in user interface guidelines for various platforms (iOS, Android).",
-        "Experience in motion design and/or micro-interactions."
+        "Having at least 1-year experience in the field of quality assurance (Process Quality Assurance – PQA).",
+        "Preference will be given to candidates who have experience in the field of software project quality assurance.",
+        "Have the ability to collect and analyze data.",
+        "Knowing ISO/Agile Scrum and software project development process is an advantage.",
+        "Having good foreign language skills (English) is an advantage.",
+        "Having excellent time and work management skills."
       ]
     },
     {
       "id": 3,
-      "title": "FrontEnd Developer (Mid/Sen)",
-      "location": "All",
-      "description": "Proficient in at least one and has experience with different frontend frameworks: Angular, React, Vue.",
+      "title": "Sale Support",
+      "location": "All Offices",
+      "description": "Proficient in English of all skills.",
+      "type": "backoffice",
+      "level": "All Level",
+      "highlight": 3,
+      "jobDescription": [
+        "Monitor, manage, and report the level and status of all projects.",
+        "Constantly update the information, documents, and requirements of the project, to get involved with stakeholders.",
+        "Manage all documents like contracts and agreements of all projects.",
+        "Secretary for all meetings to highlight crucial information related to the project.",
+        "Operate and monitor sales campaigns on many different platforms to approach potential clients.",
+        "Prepare necessary documents for bidding and join bidding on new projects.",
+        "Support communication between the development team and clients when needed.",
+        "Handle other tasks following BOA and manager requirements.",
+        "You will be trained to understand the process of every project and project and unlock your potential paths."
+      ],
+      "skills": [
+        "Good analytical skills to diagnose problems quickly, and able to work effectively with the clients for any problem-solving matters.",
+        "Experienced with marketing and matching platforms is a bonus.",
+        "Proficient in English of all skills. IELTS with a minimum of 6.0 is a bonus."
+      ]
+    },
+    {
+      "id": 4,
+      "title": ".NET Developer (Mid/Sen)",
+      "location": "All Offices",
+      "description": "Proficient in using C# and strong knowledge of their ecosystem.",
       "type": "dev",
       "level": "Middle/ Senior",
-      "highlight": 8,
+      "highlight": 4,
+      "jobDescription": [
+        "NCC is looking for a .NET Developer with experience in building high-performing, scalable, enterprise-grade applications.",
+        "Analyze system requirements.",
+        "Participate in system design and implementation.",
+        "Perform as a key member in technical problem resolution on projects under experienced team leaders.",
+        "Be able to act as a team leader, managing a small number of developers on specific projects."
+      ],
+      "skills": [
+        "Communication skills: Intermediate-level English (good in all areas, especially writing and speaking).",
+        "Strong knowledge of .NET framework/.NET Core.",
+        "Proficient in using C# and strong knowledge of their ecosystem.",
+        "Skill for writing reusable libraries.",
+        "Familiar with various design and architectural patterns.",
+        "Understanding of fundamental design principles for building a scalable application.",
+        "Experience creating database schemas that represent and support business processes.",
+        "Solid soft skills: group discussion leading, teamwork, problem-solving, and presentations.",
+        "Must be independent, responsible, and self-motivated with the ability to learn and achieve superior results.",
+        "Possessing strong methodologies when researching new technologies."
+      ]
+    },
+    {
+      "id": 5,
+      "title": "FrontEnd Developer (Mid/Sen)",
+      "location": "All",
+      "description": "Fluent and have experience with Angular frameworks.",
+      "type": "dev",
+      "level": "Junior/ Middle",
+      "highlight": 5,
       "jobDescription": [
         "Build responsive and interactive websites, working closely with our team and our clients.",
         "Follow best practices and coding standards to ensure we have clean codes.",
@@ -89,99 +142,343 @@
       ]
     },
     {
-      "id": 4,
-      "title": "NodeJS Developer (Mid/Sen)",
-      "location": "All",
-      "description": "Proficient in building enterprise applications using JavaScript stacks and SQL/NoSQL databases.",
-      "type": "dev",
-      "level": "Middle/ Senior",
-      "highlight": 3,
-      "jobDescription": [
-        "Proficient in building enterprise applications using JavaScript stacks and SQL/NoSQL databases.",
-        "Developing scalable and secure backend services.",
-        "Integration with frontend technologies and APIs.",
-        "Database management and optimization.",
-        "Testing and debugging applications."
-      ],
-      "skills": [
-        "Experience in Node.js and JavaScript frameworks like Express.js.",
-        "Knowledge of SQL and NoSQL databases (e.g., MySQL, MongoDB).",
-        "Ability to design and implement scalable backend services.",
-        "Understanding of RESTful API design principles.",
-        "Experience in unit testing and debugging techniques.",
-        "Knowledge of security best practices in web development."
-      ]
-    },
-    {
-      "id": 5,
-      "title": "React Native Developer",
-      "location": "All",
-      "description": "Have experienced with at least one of the following Redux, Rudux Saga, Redux Thunk",
-      "type": "dev",
-      "level": "Junior/ Middle",
-      "highlight": 5,
-      "jobDescription": [
-        "Experience with Redux, Redux Saga, or Redux Thunk for state management.",
-        "Building cross-platform mobile applications using React Native.",
-        "Integration with native modules and third-party libraries.",
-        "Version control and collaboration using Git.",
-        "Understanding of mobile performance optimization."
-      ],
-      "skills": [
-        "Proficiency in React Native framework.",
-        "Knowledge of Redux or other state management libraries.",
-        "Ability to develop and deploy cross-platform mobile applications.",
-        "Experience with RESTful APIs and asynchronous programming.",
-        "Version control and code collaboration using Git.",
-        "Problem-solving skills in mobile application development."
-      ]
-    },
-    {
       "id": 6,
-      "title": "IT Support",
-      "location": "hanoi1",
-      "description": "Graduated from College/University in IT field.",
+      "title": "Python Developer",
+      "location": "All Offices",
+      "description": "Proficient in Flask, Django, Pyspark.",
       "type": "dev",
-      "level": "Junior",
-      "highlight": 2,
+      "level": "All Level",
+      "highlight": 6,
       "jobDescription": [
-        "Providing technical support and troubleshooting for IT-related issues.",
-        "Installing and configuring hardware and software.",
-        "Network management and system monitoring.",
-        "User training and documentation.",
-        "Maintaining IT inventory and asset management."
+        "Build responsive and interactive websites, working closely with our team and our clients.",
+        "Follow best practices and coding standards to ensure we have clean codes.",
+        "Respond to client inquiries and requests in a timely manner.",
+        "Work as part of a team to meet the demanding project requirements.",
+        "Work in a multidisciplinary team with other professionals (such as back-end developers, web designers, and Professional Foreign Developers)."
       ],
       "skills": [
-        "Knowledge in hardware and software troubleshooting.",
-        "Understanding of network protocols and services.",
-        "Ability to install and configure computer systems.",
-        "Effective communication and customer service skills.",
-        "Documentation and reporting skills.",
-        "Ability to prioritize and manage tasks efficiently."
+        "Demonstrate problem-solving skills.",
+        "An eagerness to learn and apply new technology.",
+        "Proven hands-on Software Development experience.",
+        "Proven working experience in Python development.",
+        "Strong understanding of Git.",
+        "Proficient in Flask, Django, Pyspark.",
+        "A good understanding of algorithms and data structures. Proficient in logical thinking.",
+        "Good communication in English."
       ]
     },
     {
       "id": 7,
-      "title": "Sale IT (US/UK/Japan Market)",
-      "location": "hanoi2",
-      "description": "Having at least 2 years of experience in Sales IT.",
-      "type": "backoffice",
-      "level": "Middle/ Junior",
-      "highlight": 4,
+      "title": "Java Developer (Mid/Sen)",
+      "location": "All Offices",
+      "description": "Proficient in Java Web & Enterprise (EE) technologies, system design, technical troubleshooting, and problem-solving.",
+      "type": "dev",
+      "level": "Middle/ Senior",
+      "highlight": 7,
       "jobDescription": [
-        "Managing and developing client accounts in US/UK/Japan markets.",
-        "Understanding client needs and proposing suitable IT solutions.",
-        "Negotiating contracts and closing sales deals.",
-        "Market research and competitor analysis.",
-        "Providing post-sales support and customer service."
+        "We are looking for a Java Developer with experience in building high-performing, scalable enterprise-grade applications.",
+        "Analyze system requirements.",
+        "Participate in system design and implementation.",
+        "Perform as a key member in technical problem resolution on projects under experienced team leaders.",
+        "Be able to act as a team leader, managing a small number of developers on specific projects."
       ],
       "skills": [
-        "Proven experience in IT sales, preferably in US/UK/Japan markets.",
-        "Strong negotiation and sales closing skills.",
-        "Understanding of IT solutions and services.",
-        "Market analysis and client relationship management.",
-        "Excellent communication and presentation skills.",
-        "Ability to work independently and as part of a team."
+        "Communication skills: Intermediate-level English (good in all areas, especially writing and speaking).",
+        "Strong knowledge of Java Web & Enterprise (EE) technologies, system design, technical troubleshooting, and problem-solving.",
+        "Strong in database design and programming.",
+        "Solid soft skills: group discussion leading, teamwork, problem-solving, and presentations.",
+        "Must be independent, responsible, and self-motivated with the ability to learn and achieve superior results.",
+        "Possessing strong methodologies when researching new technologies.",
+        "Knowledge of cloud-based development.",
+        "Experienced in open-source solutions such as CMS, CRM, E-commerce, Portal, and social networks.",
+        "Experience building distributed systems and microservices.",
+        "Experience with CI/CD approach and tools such as Docker and Kubernetes.",
+        "Experience in NoSQL databases e.g. Redis.",
+        "Experience with message queues, particularly Kafka.",
+        "Experience working with Unix-like OS(es).",
+        "Experience in High Load applications development."
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Internship Programs - Business Analyst",
+      "location": "Da Nang",
+      "description": "Good communication in both English(Speaking) & Vietnamese.",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 8,
+      "jobDescription": [
+        "Requirement and transfer to the development team.",
+        "Create Business Requirement Specification, Technical Requirement Specification, User story.",
+        "Ensure that each item of the sprint backlog includes all the necessary information, so the development team can address all customers’ needs.",
+        "Create acceptance criteria for User stories to define features for product deliverables in consideration of various user flows, scenarios, and edge cases.",
+        "Test or work with QA/QC to ensure the quality of products. Will be trained properly and involved in real projects. Like defining requirements, writing and performing test cases, logging bugs on Jira, and more…"
+      ],
+      "skills": [
+        "Education: Bachelor’s degree in economics, Business Management, B2B, Finance, Communication…",
+        "No experience required, sales experience is an advantage.",
+        "Self-independence in terms of prioritizing, time management and organizational skills.",
+        "Willing to learn quickly and flexible in adapting to feedback.",
+        "Proficiency in English will be an advantage (Reading, Writing, Listening, Speaking)."
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Internship Programs - Business Development",
+      "location": "Ha Noi 1",
+      "description": "Good communication in both English(Speaking) & Vietnamese.",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 9,
+      "jobDescription": [
+        "Assist sales team in their business development activities.",
+        "Assist in creating sales-related material.",
+        "Participate in team meetings for sales, marketing, and development.",
+        "Observe and support in sales meetings.",
+        "Acquire a good knowledge of our team/platforms and products.",
+        "Other tasks assigned by the Manager."
+      ],
+      "skills": [
+        "Education: Bachelor’s degree in economics, Business Management, B2B, Finance, Communication…",
+        "No experience required, sales experience is an advantage.",
+        "Self-independence in terms of prioritizing, time management and organizational skills.",
+        "Willing to learn quickly and flexible in adapting to feedback.",
+        "Proficiency in English will be an advantage (Reading, Writing, Listening, Speaking)."
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Internship Programs - PQA",
+      "location": "All Offices",
+      "description": "Interest and passion for software quality assurance.",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 10,
+      "jobDescription": [
+        "Support ensuring the quality of project and company operations.",
+        "Participate in planning and implementing control/audit processes for software project deployment.",
+        "Assist in data collection and analysis, reporting on project quality metrics.",
+        "Support building, managing, and improving internal company processes.",
+        "Perform other tasks as directed by management."
+      ],
+      "skills": [
+        "Either Full-time or Part-time (Minimum 30 hours/week but more hours are welcomed).",
+        "Interest and passion for software quality assurance.",
+        "Ability to learn quickly and adapt to practical work.",
+        "Basic understanding of ISO, Agile Scrum, and software development processes is advantageous.",
+        "Good English language skills are a plus."
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Internship Programs - AI",
+      "location": "Sai Gon",
+      "description": "Full-time or Part-time (Minimum 30hs/week)",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 11,
+      "jobDescription": [
+        "Your tasks will be discussed in more detail during the interview.",
+        "Will be trained in techniques using deep learning to handle natural language."
+      ],
+      "skills": [
+        "Either Full-time or Part-time (Minimum 30 hours/week but more hours are welcomed).",
+        "Must have a laptop with minimum requirements: 8GB RAM, SSD and i3.",
+        "Must have a basic understanding of Python, OOP (Object Oriented Programming) and Database.",
+        "Good logical thinking in programming.",
+        "Show your senior your progress (like test or demo)."
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Internship Programs - FrontEnd",
+      "location": "All Offices",
+      "description": "Full-time or Part-time (Minimum 30hs/week)",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 12,
+      "jobDescription": [
+        "Will be trained using popular framework: Angular, VueJS, and ReactJS, which not limit to: Git (Git command, Git visual studio code); Basic JavaScript and TypeScript.",
+        "Our senior will responsible for your training."
+      ],
+      "skills": [
+        "Either Full-time or Part-time (Minimum 30hs/week but more hours is welcomed).",
+        "Must have a laptop with minimum requirements: 8GB Ram, SSD and i3.",
+        "Must have a basic understanding of HTML, CSS, Bootstrap and JavaScript.",
+        "Good logical thinking in programming.",
+        "Show your senior your progress (like test or demo)."
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Internship Programs - Python",
+      "location": "Ha Noi 2, Sai Gon",
+      "description": "Full-time or Part-time (Minimum 30hs/week)",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 13,
+      "jobDescription": [
+        "Your tasks will be discussed in more detail during the interview.",
+        "Will be trained in techniques using deep learning to handle natural language."
+      ],
+      "skills": [
+        "Either Full-time or Part-time (Minimum 30 hours/week but more hours are welcomed).",
+        "Must have a laptop with minimum requirements: 8GB RAM, SSD and i3.",
+        "Must have a basic understanding of Python, OOP (Object Oriented Programming) and Database.",
+        "Good logical thinking in programming.",
+        "Show your senior your progress (like test or demo)."
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Internship Programs - .Net",
+      "location": "Ha Noi 3",
+      "description": "Full-time or Part-time (Minimum 30hs/week)",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 14,
+      "jobDescription": [
+        "Your tasks will be discussed in more details during the interview.",
+        "Can participate in training course like Restful API, Web Application Framework – ASP.NET Boilerplate."
+      ],
+      "skills": [
+        "Either Full-time or Part-time (Minimum 30 hours/week but more hours are welcomed).",
+        "Must have a laptop with minimum requirements: 8GB RAM, SSD and i3.",
+        "Must have a good basic understanding of Java/.Net, OOP (Object Oriented Programming) and Database.",
+        "Good logical thinking in programming.",
+        "Show your senior your progress (like test or demo)."
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Internship Programs - NodeJS",
+      "location": "Quy Nhon",
+      "description": "Full-time or Part-time (Minimum 30hs/week)",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 15,
+      "jobDescription": [
+        "Your tasks will be discussed in more detail during the interview.",
+        "Participate in back-end Framework Nodejs training course."
+      ],
+      "skills": [
+        "Either Full-time or Part-time (Minimum 30hs/week but more hours is welcomed).",
+        "Must have a laptop with minimum requirements: 8GB Ram, SSD and i3.",
+        "Must have a good basic understanding of Java, OOP (Object Oriented Programming) and Database.",
+        "Good logical thinking in programming.",
+        "Show your senior your progress (like test or demo)."
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Internship Programs - Tester",
+      "location": "Ha Noi 3, Sai Gon",
+      "description": "Full-time or Part-time (Minimum 30hs/week)",
+      "type": "tester",
+      "level": "Intern",
+      "highlight": 16,
+      "jobDescription": [
+        "Analyze Project requirements, and create a Q&A list to make clear requirements.",
+        "Create Test case, execute Test case.",
+        "Log Bug on the Bug tracking system.",
+        "Report test results to the Test Leader and Development team daily.",
+        "Will be trained properly and involved in real projects. Like defining requirements, writing and performing test cases, logging bugs on Jira, and more…"
+      ],
+      "skills": [
+        "Either Full-time or Part-time (Minimum 30hs/week but more hours is welcomed).",
+        "Must have a laptop with minimum requirements: 8GB Ram, SSD and i3.",
+        "Students at 4th or 5th years of information technology majors or youth who wants to move to Tester job.",
+        "Active, eager to learn new things.",
+        "High responsibility in work.",
+        "Ability to work independently and in group.",
+        "Proficient in English will be an advantage (Reading, Writing, Listening, Speaking)."
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Internship Programs - PHP",
+      "location": "Ha Noi 3",
+      "description": "Full-time or Part-time (Minimum 30hs/week)",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 17,
+      "jobDescription": [
+        "Your tasks will be discussed in more details during the interview.",
+        "Will be trained in PHP Laravel, Vue, and 1 other CMS framework."
+      ],
+      "skills": [
+        "Either Full-time or Part-time (Minimum 30 hours/week but more hours are welcomed).",
+        "Must have a laptop with minimum requirements: 8GB Ram, SSD and i3.",
+        "Must have a good basic understanding of PHP, HTML, CSS, Bootstrap, and JavaScript.",
+        "Good logical thinking in programming.",
+        "Having knowledge of the Laravel framework is an advantage.",
+        "Good English Reading skills can research documents.",
+        "Show your senior your progress (like a test or demo)."
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Internship Programs - React Native",
+      "location": "Ha Noi 2, Ha Noi 3, Quy Nhon",
+      "description": "Full-time or Part-time (Minimum 30hs/week)",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 18,
+      "jobDescription": [
+        "Your tasks will be discussed in more details during the interview.",
+        "Our senior will responsible for your training."
+      ],
+      "skills": [
+        "Either Full-time or Part-time (Minimum 30hs/week but more hours is welcomed).",
+        "Must have a laptop with minimum requirements: 8GB Ram, SSD and i3.",
+        "Must have a basic understanding of React Native, Redux, Component, Push notification, JavaScript, ES6, and OOP.",
+        "Familiar with IDE tools like Xcode, Android Studio, and Visual Studio Code.",
+        "Integrate React Native with Backend APIs.",
+        "Good logical thinking in programming."
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Internship Programs - DevOps",
+      "location": "Ha Noi 1",
+      "description": "Full-time or Part-time (Minimum 30hs/week)",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 19,
+      "jobDescription": [
+        "Your tasks will be discussed in more details during the interview.",
+        "Will be trained by your mentor and the DevOps team"
+      ],
+      "skills": [
+        "Either Full-time or Part-time (Minimum 30hs/week but more hours is welcomed).",
+        "Must have a laptop with minimum requirements: 8GB Ram, SSD and i3.",
+        "Good logical thinking in programming.",
+        "Have basic under standing about Linux infrastructures , Agile workflow methodologies,…",
+        "Good interpersonal skills and communication with all levels of management.",
+        "Able to multitask, prioritize, and manage time efficiently.."
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Internship Programs - Golang",
+      "location": "Ha Noi 2",
+      "description": "Full-time or Part-time (Minimum 30hs/week)",
+      "type": "dev",
+      "level": "Intern",
+      "highlight": 20,
+      "jobDescription": [
+        "Participate in software application development using Go programming language (Golang).",
+        "Directly participate in the project: learn, analyze requirements, develop APIs, Microservices, and Restful APIs using Golang frameworks.",
+        "Collaborate with the systems analysis team, learn new trends, and propose development improvement ideas.",
+        "Build system design, design database, optimize application for maximum speed and scalability,…",
+        "Our senior will be responsible for your training."
+      ],
+      "skills": [
+        "Either Full-time or Part-time (Minimum 30hs/week but more hours is welcomed).",
+        "Must have a laptop with minimum requirements: 8GB Ram, SSD and i3.",
+        "Must have a good basic understanding of Golang, OOP (Object Oriented Programming) and Databases.",
+        "Good logical thinking in programming.",
+        "Show your senior your progress (like test or demo)."
       ]
     }
   ]
