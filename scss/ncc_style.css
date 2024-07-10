@@ -2479,11 +2479,9 @@
   #benefit .benefit-icon .benefit-item.icon-one,
   #benefit .benefit-icon .benefit-item.icon-two,
   #benefit .benefit-icon .benefit-item.icon-three,
-  #benefit .benefit-icon .benefit-item.icon-four {
+  #benefit .benefit-icon .benefit-item.icon-four,
+  #benefit .benefit-icon .benefit-item.icon-five  {
     grid-column: span 3;
-  }
-  #benefit .benefit-icon .benefit-item.icon-five {
-    grid-column: span 6;
   }
   #benefit .benefit-icon .benefit-item img {
     width: 110px;

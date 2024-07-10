@@ -3,7 +3,7 @@ import { jobItem } from './templates/jobItem.js';
 
 let listjobs = [];
 function fetchDataAndRender() {
-  fetch('./js/data/jobdata.json')
+  fetch('./js/data/jobData.json')
     .then((response) => response.json())
     .then((data) => {
       listjobs = data.LIST_JOB;
