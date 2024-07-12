@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const token = '9de9ba88456e4340a7362eb564a6fa28';
     const urlParams = new URLSearchParams(window.location.search);
     const jobId = urlParams.get('id'); 
-    
+
     const params = new URLSearchParams({
         module: 'API',
         method: 'Live.getLastVisitsDetails',
@@ -31,7 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(data => {
-            const totalPageviews = data[0].actions ?? 'Undefined';
+            let totalPageviews = 0;
+            data.forEach(visit => {
+                if (visit.referrerType === 'direct') {
+                    totalPageviews += visit.actions;
+                }
+            });
             document.getElementById('viewCount').innerText = totalPageviews;
         })
         .catch(error => {
