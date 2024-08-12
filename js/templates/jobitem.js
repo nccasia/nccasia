@@ -15,7 +15,7 @@ export function jobItem(job) {
           <div class="job-info">
             <div class="job-location">
               <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-              <a href="" target="_blank">${location}</a>
+              <a style="pointer-events: none" href="" target="_blank">${location}</a>
             </div>
             <div class="short-description">
               <h5 class="title">
