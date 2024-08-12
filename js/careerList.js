@@ -24,8 +24,23 @@ function getJobDescription(htmlContent) {
 }
 
 function getJobLevel(title) {
-  const match = title.match(/\(([^)]+)\)/);
-  return match ? match[1] : 'All Levels';
+  const titleLower = title.toLowerCase();
+  switch (true) {
+    case titleLower.includes('mid/sen'):
+      return 'Middle/Senior';
+    case titleLower.includes('middle') || titleLower.includes('mid'):
+      return 'Middle';
+    case titleLower.includes('senior') || titleLower.includes('sen'):
+      return 'Senior';
+    case titleLower.includes('junior') || titleLower.includes('jun'):
+      return 'Junior';
+    case titleLower.includes('internship') || titleLower.includes('intern'):
+      return 'Intern';
+    case titleLower.includes('fresher'):
+      return 'Fresher';
+    default:
+      return 'All Levels';
+  }
 }
 
 function getJobType(title) {
@@ -50,25 +65,25 @@ function renderJobItems(data) {
       const jobItem = document.createElement('div');
       jobItem.classList.add('job-item', 'swiper-slide');
       const description = getJobDescription(job.content.rendered);
-      const level = getJobLevel(job.title.rendered);
-      const jobType = getJobType(job.title.rendered);
+      const level = getJobLevel(job.meta.name_job);
+      const jobType = getJobType(job.meta.name_job);
       jobItem.innerHTML = `
         <div class="job-content">
           <div class="job-location">
             <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            <a>All Offices</a>
+            <a>${job.meta.address ? "job.meta.address" : "All Offices"}</a>
           </div>
           <a href="/jobdetails.html?id=${job.id}" class="job-icon">
-            <img src="/assets/images/listjob/${jobType}.png" alt="${job.title.rendered}" />
+            <img src="/assets/images/listjob/${jobType}.png" alt="${job.meta.name_job}" />
           </a>
           <div class="short-description">
             <h5 class="title">
               <a href="/jobdetails.html?id=${job.id}">
-                ${job.title.rendered}
+                ${job.meta.name_job}
               </a>
             </h5>
             <div class="description">
-              ${description}
+              ${job.meta.short_description ? job.meta.short_description : description}
             </div>
           </div>
           <div class="job-label">
@@ -77,7 +92,7 @@ function renderJobItems(data) {
           </div>
         </div>
         <div class="job-apply-button" onclick="addActivate(event)">
-          <a class="recruitment-apply-btn apply-button" data-title-attribute="${job.title.rendered}" data-location-attribute="All Offices" rel="nofollow">
+          <a class="recruitment-apply-btn apply-button" data-title-attribute="${job.meta.name_job}" data-location-attribute="All Offices" rel="nofollow">
             Apply now
           </a>
         </div>

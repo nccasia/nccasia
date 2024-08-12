@@ -1,7 +1,7 @@
 export function jobItem(job) {
-  const title = job.title?.rendered || '';
-  const location = 'All Offices';
-  const description = getJobDescription(job.content?.rendered || '');
+  const title = job.meta.name_job || '';
+  const location = job.meta.address ? job.meta.address : 'All Offices';
+  const description = job.meta.short_description ? job.meta.short_description : getJobDescription(job.content?.rendered || '')
   const type = getJobType(title);
   const level = getJobLevel(title);
 
@@ -53,7 +53,7 @@ function getJobDescription(htmlContent) {
 }
 
 function getJobType(title) {
-  const devKeywords = ["project manager", "developer", "frontend", "backend", "golang", "devops", "react native", "php", "nodejs", "java", "net", "python", "ai"];
+  const devKeywords = ["project manager", "developer", "frontend", "backend", "golang", "devops", "react native", "php", "nodejs", "java", "net", "python", "ai", "ruby"];
   const testerKeywords = ["tester", "process quality assurance", "pqa", "qa", "ba"];
 
   const lowerTitle = title.toLowerCase();
@@ -66,6 +66,21 @@ function getJobType(title) {
 }
 
 function getJobLevel(title) {
-  const match = title.match(/\(([^)]+)\)/);
-  return match ? match[1] : 'All Levels';
+  const titleLower = title.toLowerCase();
+  switch (true) {
+    case titleLower.includes('mid/sen'):
+      return 'Middle/Senior';
+    case titleLower.includes('middle') || titleLower.includes('mid'):
+      return 'Middle';
+    case titleLower.includes('senior') || titleLower.includes('sen'):
+      return 'Senior';
+    case titleLower.includes('junior') || titleLower.includes('jun'):
+      return 'Junior';
+    case titleLower.includes('internship') || titleLower.includes('intern'):
+      return 'Intern';
+    case titleLower.includes('fresher'):
+      return 'Fresher';
+    default:
+      return 'All Levels';
+  }
 }

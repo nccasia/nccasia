@@ -53,6 +53,7 @@ function renderJobDetails(job) {
         // jobDetail
         const jobDetail = document.querySelector('.left-content');
         jobDetail.innerHTML = job.content.rendered;
+        document.getElementById('viewCount').innerText = job.meta.post_views_count;
 
     } else {
         console.error(`Job with id ${jobId} not found.`);
@@ -81,10 +82,10 @@ async function renderSimilarJobs() {
 
             jobElement.innerHTML = `
                 <h5 class="title">
-                    <a href="/jobdetails.html?id=${job.id}">${job.title.rendered}</a>
+                    <a href="/jobdetails.html?id=${job.id}">${job.meta.name_job}</a>
                 </h5>
                 <div class="description">
-                    ${job.excerpt.rendered}
+                    ${job.meta.short_description}
                 </div>
                 <a href="/jobdetails.html?id=${job.id}">Read More</a>
             `;
