@@ -1,0 +1,149 @@
+{
+  "LIST_JOB": [
+    {
+      "id": 1,
+      "title": "NodeJS Developer (Mid/Sen)",
+      "location": "All Offices",
+      "description": "Proficient in building enterprise applications using JavaScript stacks and SQL/NoSQL databases.",
+      "type": "dev",
+      "level": "Middle/ Senior",
+      "highlight": 1,
+      "jobDescription": [
+        "Building System using Nodejs and related stacks.",
+        "Collaborate with team to ensure the project meets the deadline with high quality & performance.",
+        "Able to anticipate and solve difficulties that may come up during the project’s lifetime.",
+        "Take part in the project development process."
+      ],
+      "skills": [
+        "At least 3 year working with Nodejs.",
+        "Knowledge of or programming experience with Javascript Stack especially Nodejs.",
+        "Database: MySQL/MongoDB – Knowledge of RESTFul API, Webservices.",
+        "Knowledge of OOP and data Structure.",
+        "Ability to analyze and design software systems.",
+        "Ability to work, withstand high pressure, and aggressive work.",
+        "Ability to use development tools such as Postman, Swagger, and Chrome dev tools.",
+        "Ability to use programming languages such as Typescript, and Java.",
+        "Experienced/knowledge of Cloud services like AWS, and Google cloud.",
+        "Ability to work on Front-end frameworks like Angular, Reactjs, and Vuejs.",
+        "English skills, especially in reading technical documents.",
+        "Passionate about programming, smart, and solving problems."
+      ]
+    },
+    {
+      "id": 4,
+      "title": ".NET Developer (Mid/Sen)",
+      "location": "All Offices",
+      "description": "Proficient in using C# and strong knowledge of their ecosystem.",
+      "type": "dev",
+      "level": "Middle/ Senior",
+      "highlight": 4,
+      "jobDescription": [
+        "NCC is looking for a .NET Developer with experience in building high-performing, scalable, enterprise-grade applications.",
+        "Analyze system requirements.",
+        "Participate in system design and implementation.",
+        "Perform as a key member in technical problem resolution on projects under experienced team leaders.",
+        "Be able to act as a team leader, managing a small number of developers on specific projects."
+      ],
+      "skills": [
+        "Communication skills: Intermediate-level English (good in all areas, especially writing and speaking).",
+        "Strong knowledge of .NET framework/.NET Core.",
+        "Proficient in using C# and strong knowledge of their ecosystem.",
+        "Skill for writing reusable libraries.",
+        "Familiar with various design and architectural patterns.",
+        "Understanding of fundamental design principles for building a scalable application.",
+        "Experience creating database schemas that represent and support business processes.",
+        "Solid soft skills: group discussion leading, teamwork, problem-solving, and presentations.",
+        "Must be independent, responsible, and self-motivated with the ability to learn and achieve superior results.",
+        "Possessing strong methodologies when researching new technologies."
+      ]
+    },
+    {
+      "id": 5,
+      "title": "FrontEnd Developer (Mid/Sen)",
+      "location": "All",
+      "description": "Fluent and have experience with Angular frameworks.",
+      "type": "dev",
+      "level": "Junior/ Middle",
+      "highlight": 5,
+      "jobDescription": [
+        "Build responsive and interactive websites, working closely with our team and our clients.",
+        "Follow best practices and coding standards to ensure we have clean codes.",
+        "Respond to client inquiries and requests on time.",
+        "Work as part of a team to meet the demanding project requirements.",
+        "Work in a multidisciplinary team with other professionals such as back-end developers, web designers, and Professional Foreign Developers.",
+        "Work with your team to deliver projects with high efficiency, including giving direction to the team and decision-making on the project.",
+        "Support, and advise to solve hard issues in the whole company."
+      ],
+      "skills": [
+        "Demonstrate problem-solving skills.",
+        "An eagerness to learn and apply new technology.",
+        "Confidence in HTML and CSS development. HTML5/CSS3 and SASS/LESS are a bonus.",
+        "Deep understanding of JavaScript development (prefer ES6) and TypeScript.",
+        "Experience writing high-performance, reusable code for UI components.",
+        "Fluent in at least one and has Experience with different frontend frameworks: Angular, React, Vue.",
+        "Strong understanding of Git.",
+        "A good understanding of algorithms and data structures. Proficient in logical thinking.",
+        "Solid experience with modern build tools (Webpack, Docker, CICD,…).",
+        "Good command of English."
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Python Developer",
+      "location": "All Offices",
+      "description": "Proficient in Flask, Django, Pyspark.",
+      "type": "dev",
+      "level": "All Level",
+      "highlight": 6,
+      "jobDescription": [
+        "Build responsive and interactive websites, working closely with our team and our clients.",
+        "Follow best practices and coding standards to ensure we have clean codes.",
+        "Respond to client inquiries and requests in a timely manner.",
+        "Work as part of a team to meet the demanding project requirements.",
+        "Work in a multidisciplinary team with other professionals (such as back-end developers, web designers, and Professional Foreign Developers)."
+      ],
+      "skills": [
+        "Demonstrate problem-solving skills.",
+        "An eagerness to learn and apply new technology.",
+        "Proven hands-on Software Development experience.",
+        "Proven working experience in Python development.",
+        "Strong understanding of Git.",
+        "Proficient in Flask, Django, Pyspark.",
+        "A good understanding of algorithms and data structures. Proficient in logical thinking.",
+        "Good communication in English."
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Java Developer (Mid/Sen)",
+      "location": "All Offices",
+      "description": "Proficient in Java Web & Enterprise (EE) technologies, system design, technical troubleshooting, and problem-solving.",
+      "type": "dev",
+      "level": "Middle/ Senior",
+      "highlight": 7,
+      "jobDescription": [
+        "We are looking for a Java Developer with experience in building high-performing, scalable enterprise-grade applications.",
+        "Analyze system requirements.",
+        "Participate in system design and implementation.",
+        "Perform as a key member in technical problem resolution on projects under experienced team leaders.",
+        "Be able to act as a team leader, managing a small number of developers on specific projects."
+      ],
+      "skills": [
+        "Communication skills: Intermediate-level English (good in all areas, especially writing and speaking).",
+        "Strong knowledge of Java Web & Enterprise (EE) technologies, system design, technical troubleshooting, and problem-solving.",
+        "Strong in database design and programming.",
+        "Solid soft skills: group discussion leading, teamwork, problem-solving, and presentations.",
+        "Must be independent, responsible, and self-motivated with the ability to learn and achieve superior results.",
+        "Possessing strong methodologies when researching new technologies.",
+        "Knowledge of cloud-based development.",
+        "Experienced in open-source solutions such as CMS, CRM, E-commerce, Portal, and social networks.",
+        "Experience building distributed systems and microservices.",
+        "Experience with CI/CD approach and tools such as Docker and Kubernetes.",
+        "Experience in NoSQL databases e.g. Redis.",
+        "Experience with message queues, particularly Kafka.",
+        "Experience working with Unix-like OS(es).",
+        "Experience in High Load applications development."
+      ]
+    }
+  ]
+}

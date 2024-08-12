@@ -1,5 +1,5 @@
 import { getQueryParams } from './queryparams.js';
-import { jobItem } from './templates/jobItem.js';
+import { jobItem } from './templates/jobitem.js';
 
 let listjobs = [];
 function fetchDataAndRender() {

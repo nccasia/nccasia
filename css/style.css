@@ -1,14 +1,14 @@
 /* CSS for Whatsapp */
-.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root .Header__Name-sc-g402ia-2,
-.ButtonBase__Ellipsis-sc-p43e7i-5 
+.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root .HeaderName-sc-g402ia-2,
+.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root .ButtonBaseEllipsis-sc-p43e7i-5 
 {
   font-size: 25px;
 }
-.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root .Header__AnswerTime-sc-g402ia-3,
-.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root .ChatLayout__TimeBottom-sc-9frz4x-9 {
+.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root .HeaderAnswerTime-sc-g402ia-3,
+.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root .ChatLayoutTimeBottom-sc-9frz4x-9 {
   font-size: 20px;
 }
-.eapps-whatsapp-chat-8c694b57-b446-4317-9c95-ebe4186dff0f-custom-css-root  .ChatLayout__Text-sc-9frz4x-8 {
+.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root  .ChatLayout__Text-sc-9frz4x-8 {
   font-size: 20px;
   line-height: 15px;
   padding-top: 10px;
@@ -481,7 +481,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
 }
 #joblist .container .related-title {
   width: 100%;
@@ -1878,6 +1877,9 @@
     font-size: 22px;
     line-height: 30px;
   }
+  .search-box {
+    margin-top: 10%;
+  }
 }
 @media screen and (max-width: 1024px) {
   #page .search-page {
@@ -2295,6 +2297,7 @@
   }
   .search-page .container .search-box .search-content .search-input {
     padding: 6px;
+    width: 200px;
   }
   .search-page .container .search-box .search-filter {
     width: 100%;
@@ -2666,7 +2669,7 @@
   }
   #benefit .container .benefit-icon .benefit-item p {
     margin-top: 4px;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 24px;
     font-weight: 600;
     font-family: "Nunito", sans-serif;
