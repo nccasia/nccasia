@@ -3490,4 +3490,11 @@ html {
   font-family: "inherit", sans-serif;
 }
 
+.main-single-post #single-box .entry-content .entry-left-content .left-content h4 span {
+  color: #3e50af !important;
+}
+
+.ddict_btn {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */

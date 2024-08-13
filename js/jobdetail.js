@@ -28,7 +28,10 @@ formCareer.addEventListener("submit", function (event) {
 });
 
 function fetchDataAndRender() {
-    fetch('./js/data/jobdata.json')
+    const urlParams = new URLSearchParams(window.location.search);
+    const jobId = urlParams.get('id');
+
+    fetch(`https://career.ncc.asia/wp-json/wp/v2/posts/${jobId}`)
         .then((response) => response.json())
         .then((data) => {
             renderJobDetails(data);
@@ -40,69 +43,60 @@ function fetchDataAndRender() {
 }
 fetchDataAndRender();
 
-function renderJobDetails(data) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const jobId = parseInt(urlParams.get('id'));
-    const job = data.LIST_JOB.find(job => job.id === jobId);
-
+function renderJobDetails(job) {
     if (job) {
-        // breadcrumb_last
         const breadcrumbLast = document.querySelector('.breadcrumb_last');
-        breadcrumbLast.textContent = job.title;
+        breadcrumbLast.textContent = job.title.rendered;
         const nccthemeTitle = document.querySelector('.ncctheme-title');
-        nccthemeTitle.textContent = job.title;
+        nccthemeTitle.textContent = job.title.rendered;
 
-        // job description
-        const jobDescriptionList = document.querySelector('.job-description');
-        jobDescriptionList.innerHTML = '';
-        job.jobDescription.forEach(description => {
-            const li = document.createElement('li');
-            li.textContent = description;
-            jobDescriptionList.appendChild(li);
-        });
+        // jobDetail
+        const jobDetail = document.querySelector('.left-content');
+        jobDetail.innerHTML = job.content.rendered;
+        document.getElementById('viewCount').innerText = job.meta.post_views_count;
 
-        // job skill
-        const jobSkill = document.querySelector('.job-skill');
-        jobSkill.innerHTML = '';
-
-        job.skills.forEach(description => {
-            const li = document.createElement('li');
-            li.textContent = description;
-            jobSkill.appendChild(li);
-        });
     } else {
         console.error(`Job with id ${jobId} not found.`);
     }
 }
+async function renderSimilarJobs() {
+    try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const jobId = parseInt(urlParams.get('id'));
+        const response = await fetch('https://career.ncc.asia/wp-json/wp/v2/posts');
+        const data = await response.json();
 
-function renderSimilarJobs(data) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const jobId = parseInt(urlParams.get('id'));
-    const currentJob = data.LIST_JOB.find(job => job.id === jobId);
-    const similarJobsContainer = document.querySelector('.similar-jobs');
-    similarJobsContainer.innerHTML = '';
+        const currentJob = data.find(job => job.id === jobId);
+        if (!currentJob) {
+            console.error(`Job with id ${jobId} not found.`);
+            return;
+        }
 
-    const similarJobs = data.LIST_JOB
-        .filter(job => job.id !== jobId && job.type === currentJob.type);
+        const similarJobsContainer = document.querySelector('.similar-jobs');
+        similarJobsContainer.innerHTML = '';
 
-    similarJobs.forEach(job => {
-        const jobElement = document.createElement('div');
-        jobElement.classList.add('short-description');
+        const similarJobs = data.filter(job => job.id !== jobId && job.type === currentJob.type);
+        similarJobs.forEach(job => {
+            const jobElement = document.createElement('div');
+            jobElement.classList.add('short-description');
 
-        jobElement.innerHTML = `
-              <h5 class="title">
-                <a href="/jobdetails.html?id=${job.id}">${job.title}</a>
-              </h5>
-              <div class="description">
-                ${job.description}
-              </div>
-              <a href="/jobdetails.html?id=${job.id}">Read More</a>
+            jobElement.innerHTML = `
+                <h5 class="title">
+                    <a href="/jobdetails.html?id=${job.id}">${job.meta.name_job}</a>
+                </h5>
+                <div class="description">
+                    ${job.meta.short_description}
+                </div>
+                <a href="/jobdetails.html?id=${job.id}">Read More</a>
             `;
 
-        similarJobsContainer.appendChild(jobElement);
-    });
-
+            similarJobsContainer.appendChild(jobElement);
+        });
+    } catch (error) {
+        console.error('Error fetching similar jobs:', error);
+    }
 }
+
 function validateInputs() {
     let isValid = true;
 
