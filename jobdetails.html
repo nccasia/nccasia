@@ -131,26 +131,6 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-
-    <!-- Matomo -->
-    <script>
-      var _paq = window._paq = window._paq || [];
-      document.addEventListener('DOMContentLoaded', () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const jobId = urlParams.get('id'); 
-        _paq.push(['setSiteId', jobId]);  
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-      
-        (function() {
-          var u="https://examplehango.matomo.cloud/";
-          _paq.push(['setTrackerUrl', u+'matomo.php']);
-          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-          g.async=true; g.src='https://cdn.matomo.cloud/examplehango.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-        })();
-      });
-    </script>
-    <!-- End Matomo Code -->
   </head>
   <body>
     <div id="page" class="site">

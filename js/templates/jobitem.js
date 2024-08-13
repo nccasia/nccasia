@@ -4,7 +4,6 @@ export function jobItem(job) {
   const description = job.meta.short_description ? job.meta.short_description : getJobDescription(job.content?.rendered || '')
   const type = getJobType(title);
   const level = getJobLevel(title);
-
   return `
     <div class="job-lists-item" id="${job.id}">
       <div class="job-box">
