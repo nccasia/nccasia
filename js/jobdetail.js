@@ -49,14 +49,18 @@ function renderJobDetails(job) {
         breadcrumbLast.textContent = job.title.rendered;
         const nccthemeTitle = document.querySelector('.ncctheme-title');
         nccthemeTitle.textContent = job.title.rendered;
-
-        // jobDetail
         const jobDetail = document.querySelector('.left-content');
-        jobDetail.innerHTML = job.content.rendered;
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(job.content.rendered, 'text/html');
+        const invalidElement = doc.querySelector('img[src^="chrome-extension://"]');
+        if (invalidElement) {
+            invalidElement.remove();
+        }
+        jobDetail.innerHTML = doc.body.innerHTML;
         document.getElementById('viewCount').innerText = job.meta.post_views_count;
 
     } else {
-        console.error(`Job with id ${jobId} not found.`);
+        console.error(`Job with id ${job.id} not found.`);
     }
 }
 async function renderSimilarJobs() {
