@@ -1,7 +1,7 @@
 const locations = [
     { name: "HA NOI 1", url: "https://maps.app.goo.gl/4b1yWzyB8E2AQVpVA", address: "2nd Floor, CT3 The Pride, To Huu st, Ha Dong Dist" },
     { name: "VINH", url: "https://goo.gl/maps/tjkFGN3iDCEpG4fU7", address: "4th Floor, 138 Ha Huy Tap St., Vinh City" },
-    { name: "SAI GON", url: "https://goo.gl/maps/6uGkwv6dpVg66CNt7", address: "4th Floor, 120 Kha Van Can Str, Hiep Binh Chanh Ward, Thu Duc City" },
+    { name: "SAI GON", url: "https://maps.app.goo.gl/RZ6F4VG3mw8J4fPh9", address: "8th Floor, ST. MORITZ Tower, 1014 Pham Van Dong St., Thu Duc City , Ho Chi Minh City" },
     { name: "HA NOI 2", url: "https://goo.gl/maps/4qtJTTHFhKQ7bcmN9", address: "7th Floor, Vinfast My Dinh Building, 8 Pham Hung St., Cau Giay Dist." },
     { name: "QUY NHON", url: "https://goo.gl/maps/NGYZFbZ1kAG2mF2B7", address: "3rd Floor, Hibecco Building, 307 Nguyen Thi Minh Khai St. Quy Nhon City" },
     { name: "NCC Japan", url: "https://www.nccsoft.jp/", address: "2-35-5 Higashiyukigaya, Ota City, Tokyo, Japan 145-0065" },
