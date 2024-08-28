@@ -140,7 +140,7 @@
 .job-item {
   max-width: calc(25% - 30px);
   flex: 1;
-  min-width: 300px;
+  min-width: 250px;
   border-radius: 16px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -507,8 +507,14 @@
   height: 100%;
   z-index: 1;
   display: flex;
+  justify-content: flex-start;
   transition-property: transform;
   transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+  gap: 38.5px;
+}
+.swiper-wrapper-center {
+  display: flex;
+  justify-content: center;
   gap: 30px;
 }
 #joblist .container .job-box .swiper-control-button {
@@ -1869,6 +1875,12 @@
   margin: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .swiper-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
 @media screen and (max-width: 1240px) {
   .box-head .title-content .title {
     font-size: 50px;
