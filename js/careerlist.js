@@ -58,12 +58,19 @@ function getJobType(title) {
 
 function renderJobItems(data) {
   if (data && data.length > 0) {
-    const container = document.querySelector('.swiper-wrapper');
-    container.innerHTML = ''; 
+    const container = document.querySelector(".swiper-wrapper");
+    container.innerHTML = "";
+    let isLessThree = false;
+    if (data.length <= 4) {
+      container.classList.remove("swiper-wrapper");
+      container.classList.add("swiper-wrapper-center");
+    }
 
+    const box = document.querySelector(".swiper-wrapper-center");
+    box.innerHTML = "";
     data.forEach((job) => {
-      const jobItem = document.createElement('div');
-      jobItem.classList.add('job-item', 'swiper-slide');
+      const jobItem = document.createElement("div");
+      jobItem.classList.add("job-item", "swiper-slide");
       const description = getJobDescription(job.content.rendered);
       const level = getJobLevel(job.meta.name_job);
       const jobType = getJobType(job.meta.name_job);
@@ -74,7 +81,9 @@ function renderJobItems(data) {
             <a>${job.meta.address ? "job.meta.address" : "All Offices"}</a>
           </div>
           <a href="/jobdetails.html?id=${job.id}" class="job-icon">
-            <img src="/assets/images/listjob/${jobType}.png" alt="${job.meta.name_job}" />
+            <img src="/assets/images/listjob/${jobType}.png" alt="${
+        job.meta.name_job
+      }" />
           </a>
           <div class="short-description">
             <h5 class="title">
@@ -83,21 +92,31 @@ function renderJobItems(data) {
               </a>
             </h5>
             <div class="description">
-              ${job.meta.short_description ? job.meta.short_description : description}
+              ${
+                job.meta.short_description
+                  ? job.meta.short_description
+                  : description
+              }
             </div>
           </div>
           <div class="job-label">
-            <p class="job-type">${jobType || 'Unknown'}</p>
+          <!-- <p class="job-type">${jobType || "Unknown"}</p> -->
             <p class="job-level">${level}</p>
           </div>
         </div>
         <div class="job-apply-button" onclick="addActivate(event)">
-          <a class="recruitment-apply-btn apply-button" data-title-attribute="${job.meta.name_job}" data-location-attribute="All Offices" rel="nofollow">
+          <a class="recruitment-apply-btn apply-button" data-title-attribute="${
+            job.meta.name_job
+          }" data-location-attribute="All Offices" rel="nofollow">
             Apply now
           </a>
         </div>
       `;
-      container.appendChild(jobItem);
+      if (isLessThree) {
+        box.appendChild(jobItem);
+      } else {
+        container.appendChild(jobItem);
+      }
     });
   }
 }
