@@ -67,6 +67,7 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
       email: 'your-email',
       jobTitle: 'text-111',
       office: 'menu-618',
+      position: 'menu-718',
       aboutJob: 'text-628',
       file: 'file-297',
     };
@@ -78,7 +79,7 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
       formData[key] = formCareer.querySelector(`input[name="${field}"], select[name="${field}"]`).value;
     });
     
-    const { fullName, phoneNumber, email, jobTitle, office, aboutJob } = formData;
+    const { fullName, phoneNumber, email, jobTitle, office, position, aboutJob } = formData;
     const fileInput = formCareer.querySelector('input[name="file-297"]');
     const fileToUpload = fileInput.files[0];
 
@@ -107,6 +108,7 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
         email: email,
         jobTitle: jobTitle,
         office: office,
+        position: position,
         aboutJob: aboutJob,
         fileURL: downloadURL,
       });
@@ -117,6 +119,7 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
         email: email,
         jobTitle: jobTitle,
         office: office,
+        position: position,
         aboutJob: aboutJob,
         fileURL: downloadURL,
       });

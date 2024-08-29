@@ -197,6 +197,28 @@ window.addEventListener('click', function (event) {
   }
 });
 
+document.querySelector("form.wpcf7-form").addEventListener("submit", function (event) {
+    let valid = true;
+
+    document.querySelectorAll(".wpcf7-select").forEach(function (selectElement) {
+        const errorTip = selectElement.parentElement.querySelector(".wpcf7-not-valid-tip");
+
+        if (selectElement.value === "Select Office" || selectElement.value === "Select Position") {
+          errorTip.style.display = "block";
+          selectElement.setAttribute("aria-invalid", "true");
+          valid = false;
+        } else {
+          errorTip.style.display = "none";
+          selectElement.setAttribute("aria-invalid", "false");
+        }
+      });
+
+    if (!valid) {
+      event.preventDefault();
+    }
+});
+
+
 
 
 

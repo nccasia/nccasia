@@ -1210,6 +1210,7 @@
 #apply-form .container .apply-box {
   position: relative;
   max-width: 480px;
+  max-height: 96vh;
   margin: 0 auto;
   padding: 40px 24px;
   background-color: #fff;
