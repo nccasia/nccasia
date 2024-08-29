@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-import { getDatabase, ref, push, get } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
-import { getFirestore, addDoc, collection, getDocs} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+import { getFirestore, addDoc, collection } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-storage.js";
 
   const firebaseConfig = {
@@ -12,33 +12,10 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
     messagingSenderId: "526479590712",
     appId: "1:526479590712:web:c2ea75cf757d2d9ea66dcd"
   };
-  
 
   const app = initializeApp(firebaseConfig);
   const database = getDatabase(app);
-const firestore = getFirestore(app);
-  // Kiểm tra dữ liệu trong Firestore
-async function checkFirestoreData() {
-  const careerCollection = collection(firestore, "career");
-  const snapshot = await getDocs(careerCollection);
-  snapshot.forEach(doc => {
-    console.log(doc.id, "=>", doc.data());
-  });
-}
-
-// Kiểm tra dữ liệu trong Realtime Database
-async function checkRealtimeData() {
-  const careerRef = ref(database, "career");
-  const snapshot = await get(careerRef);
-  if (snapshot.exists()) {
-    console.log(snapshot.val());
-  } else {
-    console.log("No data available");
-  }
-}
-
-checkFirestoreData();
-checkRealtimeData();
+  const firestore = getFirestore(app);
   const storage = getStorage(app);
 
   const formCareer = document.querySelector(".wpcf7-form");
