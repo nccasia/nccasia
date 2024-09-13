@@ -19,7 +19,7 @@ const storage = getStorage(app);
 
 const formCareer = document.querySelector(".wpcf7-form");
 const textInputs = formCareer.querySelectorAll(
-    'input[type="text"], input[type="email"], input[type="file"]'
+  'input[type="text"], input[type="email"], input[type="file"], input[type="tel"], select.wpcf7-select'
 );
 const closeButton = document.querySelector(".close-button");
 formCareer.addEventListener("submit", function (event) {

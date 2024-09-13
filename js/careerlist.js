@@ -4,7 +4,6 @@ function fetchDataAndRender() {
       return response.json();
     }).then(data => {
       renderJobItems(data);
-
     }).catch(err => {
       console.error('Error fetching data:', err);
     });
@@ -60,14 +59,13 @@ function renderJobItems(data) {
   if (data && data.length > 0) {
     const container = document.querySelector(".swiper-wrapper");
     container.innerHTML = "";
-    let isLessThree = false;
-    if (data.length <= 4) {
-      container.classList.remove("swiper-wrapper");
-      container.classList.add("swiper-wrapper-center");
+
+    if (data.length > 4) {
+      container?.classList?.remove("justify-content-center");
+    } else {
+      container?.classList?.add("justify-content-center");
     }
 
-    const box = document.querySelector(".swiper-wrapper-center");
-    box.innerHTML = "";
     data.forEach((job) => {
       const jobItem = document.createElement("div");
       jobItem.classList.add("job-item", "swiper-slide");
@@ -112,11 +110,7 @@ function renderJobItems(data) {
           </a>
         </div>
       `;
-      if (isLessThree) {
-        box.appendChild(jobItem);
-      } else {
-        container.appendChild(jobItem);
-      }
+      container.appendChild(jobItem);
     });
   }
 }

@@ -19,10 +19,10 @@ function filterjobs(jobs, params) {
   return jobs.filter(job => {
     const titleRendered = job.meta.name_job.toLowerCase();
     const matchesName = !params.s || titleRendered.includes(params.s.toLowerCase());
-    const matchesAddress = !params.address || job.location && job.location.toLowerCase().includes(params.address.toLowerCase());
+    const matchesAddress = !job.location || !params.address || job.location && job.location.toLowerCase().includes(params.address.toLowerCase());
     const matchesCategory = !params.category || job.meta.name_job && job.meta.name_job.toLowerCase().includes(params.category.toLowerCase());
     const matchesLevel = !params.level || job.meta.name_job && job.meta.name_job.toLowerCase().includes(params.level.toLowerCase());
-
+    
     return matchesName && matchesAddress && matchesCategory && matchesLevel;
   });
 }

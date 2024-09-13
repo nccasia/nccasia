@@ -20,7 +20,7 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
 
   const formCareer = document.querySelector(".wpcf7-form");
   const textInputs = formCareer.querySelectorAll(
-    'input[type="text"], input[type="tel"], input[type="email"], input[type="file"]'
+    'input[type="text"], input[type="tel"], input[type="email"], input[type="file"], select.wpcf7-select'
   );
 
   formCareer.addEventListener("submit", function (event) {
