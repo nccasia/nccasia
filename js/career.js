@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("DOMContentLoaded", function () {
     document
       .querySelector(".see-more-button")
-      .addEventListener("click", function () {
+      ?.addEventListener("click", function () {
         var benefits = document.querySelector(".benefits");
         var benefitIcon = document.querySelector(".benefit-icon");
         var seeMore = document.querySelector(".see-more-button");
@@ -91,7 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
 // add active apply form
 function addActivate(event) {
   event.preventDefault();
-  document.getElementById("apply-form").classList.add("active");
+  const applyForm = document.getElementById("apply-form");
+  applyForm.classList.add("active");
+  const errorTip = applyForm.querySelectorAll(".wpcf7-not-valid-tip");
+  errorTip.forEach(error => {
+    error.style.display = "none";
+  })
 }
 
 // remove active apply form
@@ -195,27 +200,6 @@ window.addEventListener('click', function (event) {
   if (event.target.contains(applyForm) || event.target.contains(container)) {
     removeActive();
   }
-});
-
-document.querySelector("form.wpcf7-form").addEventListener("submit", function (event) {
-    let valid = true;
-
-    document.querySelectorAll(".wpcf7-select").forEach(function (selectElement) {
-        const errorTip = selectElement.parentElement.querySelector(".wpcf7-not-valid-tip");
-
-        if (selectElement.value === "Select Office" || selectElement.value === "Select Position") {
-          errorTip.style.display = "block";
-          selectElement.setAttribute("aria-invalid", "true");
-          valid = false;
-        } else {
-          errorTip.style.display = "none";
-          selectElement.setAttribute("aria-invalid", "false");
-        }
-      });
-
-    if (!valid) {
-      event.preventDefault();
-    }
 });
 
 

@@ -34,12 +34,13 @@
         height: 100%;
         z-index: 1;
         display: flex;
+        flex-wrap: wrap;
         transition-property: transform;
         transition-timing-function: var(
           --swiper-wrapper-transition-timing-function,
           initial
         );
-        gap: 18px;
+        gap: 30px;
       }
 
       .swiper-control-button {

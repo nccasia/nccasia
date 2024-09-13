@@ -23,7 +23,6 @@ export function jobItem(job) {
               <div class="description">${description}</div>
             </div>
             <div class="job-label">
-              <p class="job-type">${type}</p>
               <p class="job-level">${level}</p>
             </div>
           </div>
