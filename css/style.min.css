@@ -253,7 +253,6 @@ img {
   color: var(--blue-color);
 }
 .heading .heading_text {
-  width: 277px;
   display: inline-block;
 }
 .heading .heading-content {
@@ -264,6 +263,14 @@ img {
   width: 350px;
   display: inline-block;
 }
+.heading h1 {
+  font-family: "Nunito";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+}
+
 .heading h2 {
   font-family: "Nunito";
   font-weight: 700;
@@ -395,9 +402,21 @@ img {
 .navbar-collapse {
   display: none;
 }
-.about {
+.about,
+.service,
+.our,
+.ecosystem,
+.project,
+.family,
+.ncc_project,
+.contact {
   padding: 96px 0;
 }
+
+.description_page {
+  padding-top: 50px;
+}
+
 .about_box {
   display: flex;
   flex-direction: column;
@@ -438,7 +457,7 @@ img {
 .link_dowmload-profile {
   display: flex;
   background-color: var(--blue-color);
-  max-width: 415px;
+  max-width: 450px;
   max-height: 55px;
   justify-content: center;
   align-items: center;
@@ -456,9 +475,7 @@ img {
   line-height: 130%;
   color: var(--white-color);
 }
-.our {
-  padding: 96px 0;
-}
+
 .our-image {
   width: 100%;
   display: flex;
@@ -522,6 +539,7 @@ img {
   padding: 60px 0 0;
 }
 .our_image-img img {
+  min-height: 100px;
   max-width: 180px;
   max-height: 180px;
   display: inline-block;
@@ -540,6 +558,7 @@ img {
 .project_image-img {
   width: 180px;
   display: inline-block;
+  min-height: 120px;
 }
 .our_image-img > img,
 .service_image-img > img,
@@ -596,15 +615,7 @@ img {
 .sub-button:hover {
   background: #aabff2;
 }
-.service {
-  padding: 96px 0;
-}
-.project,
-.family,
-.ncc_project,
-.contact {
-  padding: 96px 0;
-}
+
 .project_list,
 .ncc_project-box {
   margin-top: 80px;
@@ -612,10 +623,9 @@ img {
 .family_image {
   width: 80%;
   height: auto;
+  min-height: 450px;
 }
-.ecosystem {
-  padding: 96px 0;
-}
+
 .ecosystem_list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -635,6 +645,7 @@ img {
   width: 100%;
   height: auto;
   display: inline-block;
+  min-height: 130px;
 }
 .heading_title-ecosystem > h3 {
   font-size: 18px;
@@ -745,6 +756,14 @@ img {
   padding: 48px 0 40px;
   gap: 28px;
 }
+.btn-contact-us {
+  padding: 12px 30px !important;
+}
+
+.wrapper-contact-us {
+  margin-top: 40px;
+}
+
 .button-primary {
   font-weight: 700;
   font-size: 24px;
@@ -1771,15 +1790,6 @@ img {
   .our_item > p {
     font-size: 24px;
   }
-  .project,
-  .family,
-  .ncc_project,
-  .contact {
-    padding: 40px 0;
-  }
-  .service {
-    padding: 40px 0;
-  }
   .grid-template {
     grid-gap: 16px;
   }
@@ -1804,7 +1814,15 @@ img {
   .grid {
     padding: 0 16px;
   }
-  .about {
+  .description_page,
+  .about,
+  .service,
+  .project,
+  .family,
+  .ncc_project,
+  .contact .our-image,
+  .our,
+  .ecosystem {
     padding: 40px 0;
   }
   .about_list {
@@ -1822,8 +1840,8 @@ img {
   .our-image {
     padding: 40px 0 0;
   }
-  .our {
-    padding: 40px 0;
+  .heading h1 {
+    font-size: 30px;
   }
   .heading h2 {
     font-size: 30px;
@@ -1845,9 +1863,16 @@ img {
   .family_image {
     padding-top: 36px;
     width: 100%;
+    min-height: auto;
   }
-  .ecosystem {
-    padding: 40px 0;
+  .ecosystem_images-img > img {
+    min-height: auto;
+  }
+  .our_image-img,
+  .service_image-img,
+  .project_image-img {
+    width: 180px;
+    min-height: auto;
   }
   .ecosystem_item {
     display: flex;
@@ -2008,7 +2033,7 @@ img {
 }
 @media (max-width: 680px) {
   .heading .heading_text {
-    width: 225px;
+    /* width: 225px; */
   }
   .heading .heading-content {
     width: 240px;
@@ -2062,16 +2087,20 @@ img {
 }
 
 /* CSS for Whatsapp */
-.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root .HeaderName-sc-g402ia-2,
-.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root .ButtonBaseEllipsis-sc-p43e7i-5 
-{
+.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root
+  .HeaderName-sc-g402ia-2,
+.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root
+  .ButtonBaseEllipsis-sc-p43e7i-5 {
   font-size: 25px;
 }
-.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root .HeaderAnswerTime-sc-g402ia-3,
-.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root .ChatLayoutTimeBottom-sc-9frz4x-9 {
+.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root
+  .HeaderAnswerTime-sc-g402ia-3,
+.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root
+  .ChatLayoutTimeBottom-sc-9frz4x-9 {
   font-size: 20px;
 }
-.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root  .ChatLayout__Text-sc-9frz4x-8 {
+.eapps-whatsapp-chat-8fb9a87a-d2b0-4a74-b70b-10f4071e4d8b-custom-css-root
+  .ChatLayout__Text-sc-9frz4x-8 {
   font-size: 20px;
   line-height: 15px;
   padding-top: 10px;
