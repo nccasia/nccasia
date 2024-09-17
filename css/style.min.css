@@ -286,7 +286,7 @@ img {
   margin-top: 24px;
   color: var(--blue-color);
 }
-.heading_title > h3 {
+.heading_title > h3, .heading_title .increment  {
   font-family: "Nunito";
   font-weight: 700;
   font-size: 24px;
