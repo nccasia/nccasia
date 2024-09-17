@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "sass": "^1.71.1"
+    "clean-css-cli": "^5.6.3",
+    "sass": "^1.71.1",
+    "terser": "^5.32.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass scss/ncc_style.scss css/style.css --watch"
+    "start": "sass scss/ncc_style.scss css/style.css --watch",
+    "minify-index-js": "terser js/templates/footer.js js/main.min.js -o minify/index.min.js",
+    "minify-index-css": "cleancss -o minify/index.min.css css/style.min.css"
   },
   "keywords": [],
   "author": "",
