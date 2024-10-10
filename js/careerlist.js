@@ -3,6 +3,7 @@ function fetchDataAndRender() {
     fetch(apiUrl).then(response => {
       return response.json();
     }).then(data => {
+      if (!data) return 
       renderJobItems(data);
     }).catch(err => {
       console.error('Error fetching data:', err);
@@ -55,6 +56,22 @@ function getJobType(title) {
   return 'backoffice';
 }
 
+function getOfficeLocationFromKey(addressKey) {
+  const addressMap = {
+    'all': 'All Offices',
+    'hanoi': 'Hà Nội',
+    'hanoi1': 'Hà Nội 1',
+    'hanoi2': 'Hà Nội 2',
+    'hanoi3': 'Hà Nội 3',
+    'quynhon': 'Quy Nhơn',
+    'danang': 'Đà Nẵng',
+    'vinh': 'Vinh',
+    'saigon': 'Sài Gòn'
+  };
+
+  return addressMap[addressKey?.toLowerCase()] || 'All Offices';
+}
+
 function renderJobItems(data) {
   if (data && data.length > 0) {
     const container = document.querySelector(".swiper-wrapper");
@@ -68,15 +85,17 @@ function renderJobItems(data) {
 
     data.forEach((job) => {
       const jobItem = document.createElement("div");
+      const { name_job, address } = job.meta || {}
       jobItem.classList.add("job-item", "swiper-slide");
       const description = getJobDescription(job.content.rendered);
-      const level = getJobLevel(job.meta.name_job);
-      const jobType = getJobType(job.meta.name_job);
+      const level = getJobLevel(name_job);
+      const jobType = getJobType(name_job);
+      const officeLocation = getOfficeLocationFromKey(address);
       jobItem.innerHTML = `
         <div class="job-content">
           <div class="job-location">
             <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-            <a>${job.meta.address ? "job.meta.address" : "All Offices"}</a>
+            <a>${officeLocation}</a>
           </div>
           <a href="/jobdetails.html?id=${job.id}" class="job-icon">
             <img src="/assets/images/listjob/${jobType}.png" alt="${
