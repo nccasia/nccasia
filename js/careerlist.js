@@ -56,20 +56,27 @@ function getJobType(title) {
   return 'backoffice';
 }
 
-function getOfficeLocationFromKey(addressKey) {
-  const addressMap = {
-    'all': 'All Offices',
-    'hanoi': 'Hà Nội',
-    'hanoi1': 'Hà Nội 1',
-    'hanoi2': 'Hà Nội 2',
-    'hanoi3': 'Hà Nội 3',
-    'quynhon': 'Quy Nhơn',
-    'danang': 'Đà Nẵng',
-    'vinh': 'Vinh',
-    'saigon': 'Sài Gòn'
-  };
+const addressMap = {
+  "Ha Noi": "Hà Nội",
+  "Ha Noi 1": "Hà Nội 1",
+  "Ha Noi 2": "Hà Nội 2",
+  "Ha Noi 3": "Hà Nội 3",
+  "Quy Nhon": "Quy Nhơn",
+  "Sai Gon": "Sài Gòn",
+  "Vinh": "Vinh",
+  "Da Nang": "Đà Nẵng"
+};
 
-  return addressMap[addressKey?.toLowerCase()] || 'All Offices';
+function formatOfficeLocations(addresses) {
+  if (addresses.includes("All Offices")) {
+    return "All Offices";
+  }
+  const uniqueAddresses = new Set(addresses);
+  const converted = Array.from(uniqueAddresses).map(address => addressMap[address] || address);
+  if (converted.length === 1) {
+      return converted[0];
+  }
+  return converted.join(', ');
 }
 
 function renderJobItems(data) {
@@ -85,12 +92,12 @@ function renderJobItems(data) {
 
     data.forEach((job) => {
       const jobItem = document.createElement("div");
-      const { name_job, address } = job.meta || {}
+      const { name_job } = job.meta || {}
       jobItem.classList.add("job-item", "swiper-slide");
       const description = getJobDescription(job.content.rendered);
       const level = getJobLevel(name_job);
       const jobType = getJobType(name_job);
-      const officeLocation = getOfficeLocationFromKey(address);
+      const officeLocation = formatOfficeLocations(job?.address);
       jobItem.innerHTML = `
         <div class="job-content">
           <div class="job-location">
