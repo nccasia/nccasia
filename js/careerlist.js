@@ -56,23 +56,12 @@ function getJobType(title) {
   return 'backoffice';
 }
 
-const addressMap = {
-  "Ha Noi": "Hà Nội",
-  "Ha Noi 1": "Hà Nội 1",
-  "Ha Noi 2": "Hà Nội 2",
-  "Ha Noi 3": "Hà Nội 3",
-  "Quy Nhon": "Quy Nhơn",
-  "Sai Gon": "Sài Gòn",
-  "Vinh": "Vinh",
-  "Da Nang": "Đà Nẵng"
-};
-
 function formatOfficeLocations(addresses) {
-  if (addresses.includes("All Offices")) {
+  if (addresses.includes("All Offices") || addresses === '') {
     return "All Offices";
   }
   const uniqueAddresses = new Set(addresses);
-  const converted = Array.from(uniqueAddresses).map(address => addressMap[address] || address);
+  const converted = Array.from(uniqueAddresses); 
   if (converted.length === 1) {
       return converted[0];
   }
