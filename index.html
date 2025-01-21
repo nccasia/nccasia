@@ -93,7 +93,11 @@
                     <div class="header_link-button header_link-career"><a class="careers" href="career.html">Careers</a></div>
                     <div class="header_link-button header_link-contact"><a class="contactUs" chref="#contact">Contact Us</a></div>
                 </div>
-                <div class="language-selector">
+                <div class="languages">
+                    <span id="enBtn" class="option active" data-lang="en">EN</span>
+                    <span id="deBtn" class="option" data-lang="de">DE</span>
+                </div>
+                <!-- <div class="language-selector">
                     <div class="selected-language">
                         <img src="https://flagcdn.com/w40/gb.png" alt="English Flag" class="flag">
                         <span style="padding-top: 5px;">English</span>
@@ -108,7 +112,7 @@
                         English
                       </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
             <div class="menu-icon"><button type="submit" aria-label="menu-btn" class="menu-icon-btn"><span
                         class="menu-icon-close"></span></button></div>
@@ -142,7 +146,11 @@
                 <div class="nav-button">
                     <ul>
                         <li>
-                            <div class="language-selector-mobile nav-link nav-link_width hover title-t">
+                            <div class="languages-mobile">
+                                <span id="enBtn-mobile" class="option active" data-lang="en">EN</span>
+                                <span id="deBtn-mobile" class="option" data-lang="de">DE</span>
+                            </div>
+                            <!-- <div class="language-selector-mobile nav-link nav-link_width hover title-t">
                                 <div class="selected-language-mobile">
                                     <img src="https://flagcdn.com/w40/gb.png" alt="English Flag" class="flag">
                                     <span style="padding-top: 5px;">English</span>
@@ -157,7 +165,7 @@
                                     English
                                   </li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </li>
                     </ul>
                 </div>
@@ -1183,71 +1191,116 @@
         });
 
         document.addEventListener("DOMContentLoaded", () => {
-            const selectedLanguage = document.querySelector(".selected-language");
-            const languageOptions = document.querySelector(".language-options");
-            const options = document.querySelectorAll(".language-option");
-
-            selectedLanguage.addEventListener("click", () => {
-                languageOptions.classList.toggle("hidden");
-            });
-
+            const options = document.querySelectorAll(".languages .option");
             options.forEach(option => {
                
-                option.addEventListener("click", (event) => {
+               option.addEventListener("click", (event) => {
+                    const enBtn = document.getElementById("enBtn");
+                    const deBtn = document.getElementById("deBtn");
                     const selectedLang = option.getAttribute('data-lang');
-                    const selectedFlag = option.querySelector('img').src;
+                   
                     const selectedText = option.textContent.trim();
-                    selectedLanguage.querySelector('img').src = selectedFlag;
-                    selectedLanguage.querySelector('span').textContent = selectedText;
-                    languageOptions.classList.add('hidden');
                     if(selectedLang === 'de'){
+                        enBtn.classList.remove("active");
+                        deBtn.classList.add('active');
                         OnChangeLanguage('en');
                     }else{
+                        enBtn.classList.add('active');
+                        deBtn.classList.remove('active');
                         OnChangeLanguage('de');
                     }
-                });
-            });
-
-            document.addEventListener("click", (event) => {
-                if (!event.target.closest(".language-selector")) {
-                   languageOptions.classList.add("hidden");
-                }
-              });
-              
+               });
+           });
         });
 
         document.addEventListener("DOMContentLoaded", () => {
-            const selectedLanguage = document.querySelector(".selected-language-mobile");
-            const languageOptions = document.querySelector(".language-options-mobile");
-            const options = document.querySelectorAll(".language-option-mobile");
-            selectedLanguage.addEventListener("click", () => {
-                languageOptions.classList.toggle("hidden");
-            });
-            const navbar = document.querySelector('.navbar-collapse.web-b');
+            const options = document.querySelectorAll(".languages-mobile .option");
             options.forEach(option => {
-                option.addEventListener("click", (event) => {
+               
+               option.addEventListener("click", (event) => {
+                    const enBtn = document.getElementById("enBtn-mobile");
+                    const deBtn = document.getElementById("deBtn-mobile");
                     const selectedLang = option.getAttribute('data-lang');
-                    const selectedFlag = option.querySelector('img').src;
                     const selectedText = option.textContent.trim();
-                    selectedLanguage.querySelector('img').src = selectedFlag;
-                    selectedLanguage.querySelector('span').textContent = selectedText;
-                    languageOptions.classList.add('hidden');
                     if(selectedLang === 'de'){
+                        enBtn.classList.remove("active");
+                        deBtn.classList.add('active');
                         OnChangeLanguage('en');
                     }else{
+                        enBtn.classList.add('active');
+                        deBtn.classList.remove('active');
                         OnChangeLanguage('de');
                     }
-                    navbar.classList.remove('navbar-collapse-active');
-                });
-            });
-
-            document.addEventListener("click", (event) => {
-                if (!event.target.closest(".language-selector-mobile")) {
-                   languageOptions.classList.add("hidden");
-                }
-              });
-              
+               });
+           });
         });
+
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     const selectedLanguage = document.querySelector(".selected-language");
+        //     const languageOptions = document.querySelector(".language-options");
+        //     const options = document.querySelectorAll(".language-option");
+
+        //     selectedLanguage.addEventListener("click", () => {
+        //         languageOptions.classList.toggle("hidden");
+        //     });
+
+        //     options.forEach(option => {
+               
+        //         option.addEventListener("click", (event) => {
+        //             const selectedLang = option.getAttribute('data-lang');
+        //             const selectedFlag = option.querySelector('img').src;
+        //             const selectedText = option.textContent.trim();
+        //             selectedLanguage.querySelector('img').src = selectedFlag;
+        //             selectedLanguage.querySelector('span').textContent = selectedText;
+        //             languageOptions.classList.add('hidden');
+        //             if(selectedLang === 'de'){
+        //                 OnChangeLanguage('en');
+        //             }else{
+        //                 OnChangeLanguage('de');
+        //             }
+        //         });
+        //     });
+
+        //     document.addEventListener("click", (event) => {
+        //         if (!event.target.closest(".language-selector")) {
+        //            languageOptions.classList.add("hidden");
+        //         }
+        //       });
+              
+        // });
+
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     const selectedLanguage = document.querySelector(".selected-language-mobile");
+        //     const languageOptions = document.querySelector(".language-options-mobile");
+        //     const options = document.querySelectorAll(".language-option-mobile");
+        //     selectedLanguage.addEventListener("click", () => {
+        //         languageOptions.classList.toggle("hidden");
+        //     });
+        //     const navbar = document.querySelector('.navbar-collapse.web-b');
+        //     options.forEach(option => {
+        //         option.addEventListener("click", (event) => {
+        //             const selectedLang = option.getAttribute('data-lang');
+        //             const selectedFlag = option.querySelector('img').src;
+        //             const selectedText = option.textContent.trim();
+        //             selectedLanguage.querySelector('img').src = selectedFlag;
+        //             selectedLanguage.querySelector('span').textContent = selectedText;
+        //             languageOptions.classList.add('hidden');
+        //             if(selectedLang === 'de'){
+        //                 OnChangeLanguage('en');
+        //             }else{
+        //                 OnChangeLanguage('de');
+        //             }
+        //             navbar.classList.remove('navbar-collapse-active');
+        //         });
+        //     });
+
+        //     document.addEventListener("click", (event) => {
+        //         if (!event.target.closest(".language-selector-mobile")) {
+        //            languageOptions.classList.add("hidden");
+        //         }
+        //       });
+              
+        // });
     </script>
 </body>
 </html>
