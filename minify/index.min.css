@@ -2479,13 +2479,20 @@
     padding-top: 10px;
   }
 
-  .languages .option, .languages-mobile .option{
-      font-size: 14px;
-      font-size: 22px;
-      color: #fff;
-      padding: 0 6px;
-      cursor: pointer;
+  .languages .option {
+    font-size: 22px;
+    color: #fff;
+    padding: 0 6px;
+    cursor: pointer;
   }
+
+  .languages-mobile .option{
+    font-size: 32px;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+  }
+
   .languages .option.active, .languages-mobile .option.active{
     font-weight: 600;
     border: 1px solid #fff;
@@ -2497,7 +2504,7 @@
   }
 
   .languages-mobile .option.active{
-    padding: 1px 30px;
+    width: 130px;
   }
 
   .language-selector {
