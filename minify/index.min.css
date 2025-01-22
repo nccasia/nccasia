@@ -2481,16 +2481,23 @@
 
   .languages .option, .languages-mobile .option{
       font-size: 14px;
-      padding: 0 6px;
       font-size: 22px;
       color: #fff;
+      padding: 0 6px;
       cursor: pointer;
   }
   .languages .option.active, .languages-mobile .option.active{
     font-weight: 600;
     border: 1px solid #fff;
     border-radius: 4px;
+  }
+
+  .languages .option.active{
     padding: 1px 13px;
+  }
+
+  .languages-mobile .option.active{
+    padding: 1px 30px;
   }
 
   .language-selector {
