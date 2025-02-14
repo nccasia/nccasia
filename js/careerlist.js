@@ -1,5 +1,5 @@
 function fetchDataAndRender() {
-  var apiUrl = 'https://career.ncc.asia/wp-json/wp/v2/posts?per_page=-1';
+  var apiUrl = 'https://career.ncc.asia/wp-json/wp/v2/posts?per_page=100';
     fetch(apiUrl).then(response => {
       return response.json();
     }).then(data => {
