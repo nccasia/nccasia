@@ -78,7 +78,7 @@ function renderFooter() {
                         <div class="footer_social-image"><a href="https://twitter.com/nccsoft" aria-label="twitter"
                                 target="_blank"><img loading="lazy" src="./assets/images/tweet.svg" width="40"
                                     height="40" alt=""></a></div>
-                        <div class="footer_social-image"><a href="https://www.facebook.com/nccsoft.com.vn"
+                        <div class="footer_social-image"><a href="https://www.facebook.com/nccplusvietnam"
                                 aria-label="facebook" target="_blank"><img loading="lazy"
                                     src="./assets/images/facebook.svg" width="40" height="40" alt=""></a></div>
                         <div class="footer_social-image"><a href="/" aria-label="google"><img loading="lazy"
