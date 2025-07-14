@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256">
+  <!-- Circle background and outline -->
+  <circle cx="128" cy="128" r="120" fill="#aabff2" stroke="#3e50af" stroke-width="10"/>
+
+  <!-- Centered and larger "in" text -->
+  <g transform="translate(55, 55) scale(2)">
+    <path fill="#3e50af" d="M16.5 8C16.5 3.58 12.92 0 8.5 0S.5 3.58.5 8s3.58 8 8 8 8-3.58 8-8zM1 24h15v48H1V24zm22.62 0h14.4v6.56h.2c2.04-3.87 7.04-7.92 14.52-7.92 15.52 0 18.36 10.2 18.36 23.45V72H55V48.53c0-5.58-.1-12.76-7.78-12.76-7.8 0-9 6.1-9 12.37V72H23V24z"/>
+  </g>
+</svg>
