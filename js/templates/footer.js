@@ -41,7 +41,7 @@ function renderFooter() {
                                     height="120" alt=""></div>
                             <div class="footer_head_item_bottom">
                                 <p class="footer_head-item-phone-text">(+84) 2466874606</p>
-                                <p class="footer_head-item-email-text">info@ncc.asia
+                                <p class="footer_head-item-email-text">info@ncc.plus
                             </div>
                         </div>
                         </div>
@@ -64,7 +64,7 @@ function renderFooter() {
                     <div class="grid nav_footer">
                         <div class="nav_footer-head">
                             <p class="footer_head-item-phone-text">(+84) 2466874606</p>
-                            <p class="footer_head-item-email-text">info@ncc.asia</p>
+                            <p class="footer_head-item-email-text">info@ncc.plus</p>
                         </div>
                         <div class="nav_footer-adreess">
                              ${footerItemsHTML.join('')}
