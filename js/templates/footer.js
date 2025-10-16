@@ -5,7 +5,7 @@ const locations = [
     { name: "HA NOI 2", url: "https://goo.gl/maps/4qtJTTHFhKQ7bcmN9", address: "7th Floor, VinFast My Dinh Building, 8 Pham Hung Street, Tu Liem, Ha Noi" },
     { name: "QUY NHON", url: "https://goo.gl/maps/NGYZFbZ1kAG2mF2B7", address: "3rd Floor, Hibecco Building, 307 Nguyen Thi Minh Khai Street, Quy Nhon Nam, Gia Lai" },
     { name: "NCC Japan", url: "https://www.nccsoft.jp/", address: "2-35-5 Higashiyukigaya, Ota City, Tokyo, Japan 145-0065" },
-    { name: "HA NOI 3", url: "https://goo.gl/maps/VykV996Pra8XCUYo8", address: "5th Floor, Hong Ha Tower, 89 Thinh Liet Street, Thinh Liet, Ha Noi" },
+    { name: "HA NOI 3", url: "https://goo.gl/maps/VykV996Pra8XCUYo8", address: "8th floor, Vinaconex Diamond Tower, 459C Bach Mai street, Bach Mai, Ha Noi" },
     { name: "DA NANG", url: "https://goo.gl/maps/euZRpDDAFZsXb4tX6", address: "3rd Floor, TP Building, 268 30/4 Street, Hoa Cuong, Da Nang" }
 ]
 
