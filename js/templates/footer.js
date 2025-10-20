@@ -1,8 +1,8 @@
 const locations = [
-    { name: "HA NOI 1", url: "https://maps.app.goo.gl/4b1yWzyB8E2AQVpVA", address: "2nd Floor, CT3 The Pride, To Huu Street, Ha Dong, Ha Noi" },
-    { name: "VINH", url: "https://goo.gl/maps/tjkFGN3iDCEpG4fU7", address: "4th Floor, HD Building, Vinh – Cua Lo Boulevard, Block 17, Vinh Phu Ward, Nghe An" },
+    { name: "HA NOI 1", url: "https://maps.app.goo.gl/syTZPumdRQHG1LGc8", address: "2nd Floor, CT3 The Pride, To Huu Street, Ha Dong, Ha Noi" },
+    { name: "VINH", url: "https://maps.app.goo.gl/Y4Pxwj9QA2AYquPF6", address: "4th Floor, HD Building, Vinh – Cua Lo Boulevard, Block 17, Vinh Phu Ward, Nghe An" },
     { name: "SAI GON", url: "https://maps.app.goo.gl/RZ6F4VG3mw8J4fPh9", address: "8th Floor, ST. MORITZ Tower, 1014 Pham Van Dong Street, Hiep Binh, Ho Chi Minh City" },
-    { name: "HA NOI 2", url: "https://goo.gl/maps/4qtJTTHFhKQ7bcmN9", address: "7th Floor, VinFast My Dinh Building, 8 Pham Hung Street, Tu Liem, Ha Noi" },
+    { name: "HA NOI 2", url: "https://maps.app.goo.gl/mVwyDsnrMj9VKUuK8", address: "7th Floor, VinFast My Dinh Building, 8 Pham Hung Street, Tu Liem, Ha Noi" },
     { name: "QUY NHON", url: "https://goo.gl/maps/NGYZFbZ1kAG2mF2B7", address: "3rd Floor, Hibecco Building, 307 Nguyen Thi Minh Khai Street, Quy Nhon Nam, Gia Lai" },
     { name: "NCC Japan", url: "https://www.nccsoft.jp/", address: "2-35-5 Higashiyukigaya, Ota City, Tokyo, Japan 145-0065" },
     { name: "HA NOI 3", url: "https://maps.app.goo.gl/ji5pgKhryNy9F2VW8", address: "8th Floor, Vinaconex Diamond Tower, 459C Bach Mai street, Bach Mai, Ha Noi" },
