@@ -6,7 +6,7 @@ const locations = [
     { name: "QUY NHON", url: "https://goo.gl/maps/NGYZFbZ1kAG2mF2B7", address: "3rd Floor, Hibecco Building, 307 Nguyen Thi Minh Khai Street, Quy Nhon Nam, Gia Lai" },
     { name: "NCC Japan", url: "https://www.nccsoft.jp/", address: "2-35-5 Higashiyukigaya, Ota City, Tokyo, Japan 145-0065" },
     { name: "HA NOI 3", url: "https://maps.app.goo.gl/ji5pgKhryNy9F2VW8", address: "8th Floor, Vinaconex Diamond Tower, 459C Bach Mai street, Bach Mai, Ha Noi" },
-    { name: "DA NANG", url: "https://goo.gl/maps/euZRpDDAFZsXb4tX6", address: "3rd Floor, TP Building, 268 30/4 Street, Hoa Cuong, Da Nang" }
+    { name: "DA NANG", url: "https://maps.app.goo.gl/y2DiRNfGTfWkGGoi8", address: "NCC Building, 498 - 500 Nguyen Huu Tho Street, Cam Le, Da Nang" }
 ]
 
 function footerItem(location) {
